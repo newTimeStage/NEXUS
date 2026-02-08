@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLunar } from 'chinese-lunar-calendar';
+
+// 获取当前日期
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth() + 1;
+const date = today.getDate();
+
+// 数字转汉字数字函数
+function numToChinese(num: number): string {
+  const chineseNums = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+  if (num <= 10) {
+    return chineseNums[num];
+  } else if (num < 20) {
+    return `十${chineseNums[num % 10]}`;
+  } else if (num === 20) {
+    return '二十';
+  } else if (num < 30) {
+    return `二十${chineseNums[num % 10]}`;
+  } else {
+    return '三十';
+  }
+}
+
+// 获取农历日期
+const lunarDate = getLunar(year, month, date);
+
+// 格式化农历日期
+const lunarMonth = lunarDate.isLeap ? `闰${numToChinese(lunarDate.lunarMonth)}` : numToChinese(lunarDate.lunarMonth);
+const lunarDay = numToChinese(lunarDate.lunarDate);
+const lunarFullDate = `${lunarDate.lunarYear}${lunarMonth}月${lunarDay}日`;
+
+// 获取节气信息
+const solarTerm = lunarDate.solarTerm || '';
+
+// 恒经历计算函数
+function calculateHengJingLi(currentDate: Date): string {
+  // 定义恒经历各单位的换算关系
+  // 大单位（基于年数）
+  const nianInShi = 30; // 1世=30年
+  const shiInYun = 12;   // 1运=12世
+  const yunInHui = 30;   // 1会=30运
+  const huiInYuan = 12;  // 1元=12会
+
+  // 小单位（基于1瞬=20秒）
+  const shunInSeconds = 20;
+  const keInShun = 12;    // 1刻=12瞬
+  const shiInKe = 30;     // 1时=30刻
+  const riInShi = 12;     // 1日=12时
+  const yueInRi = 30;     // 1月=30日
+
+  // 计算总秒数对应的单位
+  const keInSeconds = keInShun * shunInSeconds;
+  const shiInSeconds = shiInKe * keInSeconds;
+  const riInSeconds = riInShi * shiInSeconds;
+  const yueInSeconds = yueInRi * riInSeconds;
+
+  // 纪元起始：公元前67017年冬至
+  const epochOffset = 67017; // 从纪元到公元1年的年数
+
+  // 步骤1：确定当前恒经历年份（以冬至为界）
+  // 冬至通常在12月21或22日，这里简化为12月21日
+  const gregorianYear = currentDate.getFullYear();
+  const hengJingLiYear = (currentDate.getMonth() === 11 && currentDate.getDate() >= 21) ? gregorianYear : gregorianYear - 1;
+
+  // 步骤2：计算从纪元到当前恒经历年份的总年数
+  const totalYears = hengJingLiYear + epochOffset;
+
+  // 步骤3：计算元、会、运、世、年
+  const yuan = Math.floor(totalYears / (huiInYuan * yunInHui * shiInYun * nianInShi)) + 1;
+  const remainingAfterYuan = totalYears % (huiInYuan * yunInHui * shiInYun * nianInShi);
+
+  const hui = Math.floor(remainingAfterYuan / (yunInHui * shiInYun * nianInShi)) + 1;
+  const remainingAfterHui = remainingAfterYuan % (yunInHui * shiInYun * nianInShi);
+
+  const yun = Math.floor(remainingAfterHui / (shiInYun * nianInShi)) + 1;
+  const remainingAfterYun = remainingAfterHui % (shiInYun * nianInShi);
+
+  const shi = Math.floor(remainingAfterYun / nianInShi) + 1;
+  const nian = (remainingAfterYun % nianInShi) + 1;
+
+  // 步骤4：计算月、日、时、刻、瞬（基于当前冬至到现在的时间差）
+  // 确定当前恒经历年份的冬至日期（简化为12月21日）
+  const winterSolstice = new Date(hengJingLiYear, 11, 21, 0, 0, 0);
+
+  const totalSeconds = Math.floor((currentDate.getTime() - winterSolstice.getTime()) / 1000);
+
+  // 计算各小单位
+  const calculatedYue = Math.floor(totalSeconds / yueInSeconds) + 1;
+  const calculatedRi = (Math.floor(totalSeconds / riInSeconds) % yueInRi) + 1;
+  const calculatedShi = (Math.floor(totalSeconds / shiInSeconds) % riInShi) + 1;
+  const calculatedKe = (Math.floor(totalSeconds / keInSeconds) % shiInKe) + 1;
+  const calculatedShun = (Math.floor(totalSeconds / shunInSeconds) % keInShun) + 1;
+
+  // 格式化恒经历字符串
+  return `${yuan}元${hui}会${yun}运${shi}世${nian}年${calculatedYue}月${calculatedRi}日${calculatedShi}时${calculatedKe}刻${calculatedShun}瞬`;
+}
+
+// 计算当前恒经历
+const hengJingLi = calculateHengJingLi(today);
+
+// 计算其他纪年
+// 1. 上元纪年（昊天纪元）：以公元前7737年为上元1年
+const calculateShangYuanJiNian = (currentDate: Date): string => {
+  return `上元${currentDate.getFullYear() + 7737}年`;
+};
+
+// 2. 天元纪年（黄帝纪元）：以公元前2697年为开元1年
+const calculateKaiYuanJiNian = (currentDate: Date): string => {
+  return `天元${currentDate.getFullYear() + 2697}年`;
+};
+
+// 3. 始元纪年（汉平帝纪元）：以公元1年为始元1年
+const calculateShiYuanJiNian = (currentDate: Date): string => {
+  return `始元${currentDate.getFullYear()}年`;
+};
+
+// 计算当前各种纪年
+const shangYuanJiNian = calculateShangYuanJiNian(today);
+const kaiYuanJiNian = calculateKaiYuanJiNian(today);
+const shiYuanJiNian = calculateShiYuanJiNian(today);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <h2>系</h2>
+    <p>载人类史，一切系于此</p>
+    <div class="other-calendars">
+      <span class="shang-yuan-jin-nian" style="font-size:2.25em;">{shangYuanJiNian}</span>
+      <span class="kai-yuan-jin-nian" style="font-size:2.25em;">{kaiYuanJiNian}</span>
+      <span class="shi-yuan-jin-nian" style="font-size:2.25em;">{shiYuanJiNian}</span>
+    </div>
+    <div class="date-info">
+      <span class="lunar-date">
+        {lunarFullDate}
+        {solarTerm && ` · ${solarTerm}`}
+      </span>
+      <span class="gregorian-date">{today.toLocaleDateString('zh-CN')}</span>
+      <span class="heng-jing-li" id="heng-jing-li" style="font-size:2.25em;">{hengJingLi}</span>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h3>志曰</h3>
+    <blockquote>
+      録人群文明发展之实，俾后嗣毋更始。
+    </blockquote>
+  </section>
+
+  <section class="principles">
+    <h3>立极三枢</h3>
+    <div class="principles-grid">
+      <div class="principle-item">
+        <h4>秉中</h4>
+        <p>超然政教之外，不役于权势，不惑于宗派，不囿于时识。惟实是存，惟真是守，以立万世公信之基。</p>
+      </div>
+      <div class="principle-item">
+        <h4>纳洪</h4>
+        <p>文明之迹，无论华夷显隐、盛衰远近，靡不载录。包举宇内，无遗无偏，以成其大。</p>
+      </div>
+      <div class="principle-item">
+        <h4>守贞</h4>
+        <p>考事必溯其源，证言必核其实。参伍以通其变，析疑以存其真，使源流清澈，永世不淆。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="structure">
+    <h3>结构体例</h3>
+    <p>文明三阶，法天、地、人三才之序。立四部，定十三门，经纬昭然，使源流不紊。</p>
+    <div class="structure-grid">
+      <div class="structure-item">
+        <h4><a href="/文明根基/">甲部：文明根基</a></h4>
+      </div>
+      <div class="structure-item">
+        <h4><a href="/演进轨迹/">乙部：演进轨迹</a></h4>
+      </div>
+      <div class="structure-item">
+        <h4><a href="/制度与创造/">丙部：制度与创造</a></h4>
+      </div>
+      <div class="structure-item">
+        <h4><a href="/主体与未来/">丁部：主体与未来</a></h4>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // @ts-nocheck
+    // 恒经历计算函数（JavaScript版本）
+    function calculateHengJingLi(currentDate) {
+      // 定义恒经历各单位的换算关系
+      // 大单位（基于年数）
+      const nianInShi = 30; // 1世=30年
+      const shiInYun = 12;   // 1运=12世
+      const yunInHui = 30;   // 1会=30运
+      const huiInYuan = 12;  // 1元=12会
+
+      // 小单位（基于1瞬=20秒）
+      const shunInSeconds = 20;
+      const keInShun = 12;    // 1刻=12瞬
+      const shiInKe = 30;     // 1时=30刻
+      const riInShi = 12;     // 1日=12时
+      const yueInRi = 30;     // 1月=30日
+
+      // 计算总秒数对应的单位
+      const keInSeconds = keInShun * shunInSeconds;
+      const shiInSeconds = shiInKe * keInSeconds;
+      const riInSeconds = riInShi * shiInSeconds;
+      const yueInSeconds = yueInRi * riInSeconds;
+
+      // 纪元起始：公元前67017年冬至
+      const epochOffset = 67017; // 从纪元到公元1年的年数
+
+      // 步骤1：确定当前恒经历年份（以冬至为界）
+      const gregorianYear = currentDate.getFullYear();
+
+      // 冬至通常在12月21或22日，这里简化为12月21日
+      const hengJingLiYear = (currentDate.getMonth() === 11 && currentDate.getDate() >= 21) ? gregorianYear : gregorianYear - 1;
+
+      // 步骤2：计算从纪元到当前恒经历年份的总年数
+      const totalYears = hengJingLiYear + epochOffset;
+
+      // 步骤3：计算元、会、运、世、年
+      const yuan = Math.floor(totalYears / (huiInYuan * yunInHui * shiInYun * nianInShi)) + 1;
+      const remainingAfterYuan = totalYears % (huiInYuan * yunInHui * shiInYun * nianInShi);
+
+      const hui = Math.floor(remainingAfterYuan / (yunInHui * shiInYun * nianInShi)) + 1;
+      const remainingAfterHui = remainingAfterYuan % (yunInHui * shiInYun * nianInShi);
+
+      const yun = Math.floor(remainingAfterHui / (shiInYun * nianInShi)) + 1;
+      const remainingAfterYun = remainingAfterHui % (shiInYun * nianInShi);
+
+      const shi = Math.floor(remainingAfterYun / nianInShi) + 1;
+      const nian = (remainingAfterYun % nianInShi) + 1;
+
+      // 步骤4：计算月、日、时、刻、瞬（基于当前冬至到现在的时间差）
+      // 确定当前恒经历年份的冬至日期（简化为12月21日）
+      const winterSolstice = new Date(hengJingLiYear, 11, 21, 0, 0, 0);
+
+      const totalSeconds = Math.floor((currentDate.getTime() - winterSolstice.getTime()) / 1000);
+
+      // 计算各小单位
+      const calculatedYue = Math.floor(totalSeconds / yueInSeconds) + 1;
+      const calculatedRi = (Math.floor(totalSeconds / riInSeconds) % yueInRi) + 1;
+      const calculatedShi = (Math.floor(totalSeconds / shiInSeconds) % riInShi) + 1;
+      const calculatedKe = (Math.floor(totalSeconds / keInSeconds) % shiInKe) + 1;
+      const calculatedShun = (Math.floor(totalSeconds / shunInSeconds) % keInShun) + 1;
+
+      // 格式化恒经历字符串
+      return `${yuan}元${hui}会${yun}运${shi}世${nian}年${calculatedYue}月${calculatedRi}日${calculatedShi}时${calculatedKe}刻${calculatedShun}瞬`;
+    }
+
+    // 更新恒经历显示
+    function updateHengJingLi() {
+      const element = document.getElementById('heng-jing-li');
+      if (element) {
+        element.textContent = calculateHengJingLi(new Date());
+      }
+    }
+
+    // 初始更新
+    updateHengJingLi();
+
+    // 每20秒更新一次（1瞬=20秒）
+    setInterval(updateHengJingLi, 20000);
+  </script>
+</BaseLayout>

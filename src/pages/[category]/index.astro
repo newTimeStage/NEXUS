@@ -1,0 +1,386 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// 导出getStaticPaths函数生成静态路径
+export async function getStaticPaths() {
+  const validCategories = ['文明根基', '演进轨迹', '制度与创造', '主体与未来'];
+  return validCategories.map(category => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params as { category: string };
+
+// 获取该分类下的所有文章
+let articles: any[] = [];
+if (category === '文明根基') {
+  articles = await getCollection('文明根基');
+} else if (category === '演进轨迹') {
+  articles = await getCollection('演进轨迹');
+} else if (category === '制度与创造') {
+  articles = await getCollection('制度与创造');
+} else if (category === '主体与未来') {
+  articles = await getCollection('主体与未来');
+}
+
+// 获取分类介绍文章
+const introductionArticle = articles.find(article => article.id.endsWith('部序.md'));
+// 获取介绍文章的Content组件
+const { Content: IntroductionContent } = introductionArticle ? await introductionArticle.render() : { Content: null };
+// 过滤掉介绍文章，只显示普通文章
+const normalArticles = articles.filter(article => !article.id.endsWith('部序.md'));
+
+// 构建目录树结构的函数
+function buildDirectoryTree(articles: any[]) {
+  const tree: any = {};
+
+  articles.forEach(article => {
+    const pathParts = article.id.split('/');
+    let currentLevel = tree;
+
+    // 构建目录结构
+    for (let i = 0; i < pathParts.length - 1; i++) {
+      const part = pathParts[i];
+      if (!currentLevel[part]) {
+        currentLevel[part] = {
+          type: 'directory',
+          children: {}
+        };
+      }
+      currentLevel = currentLevel[part].children;
+    }
+
+    // 添加文件
+    const fileName = pathParts[pathParts.length - 1];
+    const fileNameWithoutExt = fileName.replace('.md', '');
+    currentLevel[fileNameWithoutExt] = {
+      type: 'file',
+      article
+    };
+  });
+
+  // 输出构建的目录树，以便调试
+  console.log('Built directory tree:', tree);
+
+  return tree;
+}
+
+// 为所有分类构建目录树
+let directoryTree = null;
+
+// 输出文章id信息，以便调试
+console.log(`${category} articles:`, normalArticles.map(a => a.id));
+
+// 构建目录树
+directoryTree = buildDirectoryTree(normalArticles);
+
+// 输出目录树信息，以便调试
+console.log('Directory tree:', directoryTree);
+
+// 检查目录树是否为空
+if (!directoryTree || Object.keys(directoryTree).length === 0) {
+  console.log('Directory tree is empty!');
+} else {
+  console.log('Directory tree has keys:', Object.keys(directoryTree));
+}
+---
+
+<BaseLayout>
+  <section class="category-index">
+    { introductionArticle && IntroductionContent && (
+      <div class="category-introduction">
+        <IntroductionContent />
+      </div>
+    ) }
+
+    { directoryTree ? (
+      <div class="directory-tree">
+        <h2 class="articles-list-title">目录结构</h2>
+        <div class="tree-container">
+          <!-- 递归渲染目录树 -->
+          <!-- 直接在HTML中渲染目录树，确保服务器端渲染正确 -->
+          <div id="directory-tree-content">
+            {Object.entries(directoryTree).sort(([keyA, itemA], [keyB, itemB]) => {
+              const typeA = itemA.type;
+              const typeB = itemB.type;
+              // 文件排在文件夹前面
+              if (typeA === 'file' && typeB === 'directory') return -1;
+              if (typeA === 'directory' && typeB === 'file') return 1;
+              // 类型相同则按名称排序
+              return keyA.localeCompare(keyB);
+            }).map(([key, item]) => {
+              // 递归渲染目录节点的函数
+              function renderTreeNode(nodeKey: string, nodeItem: any) {
+                const typedNode = nodeItem as { type: string; children?: any; article?: any };
+                if (typedNode.type === 'directory' && typedNode.children) {
+                  return (
+                    <div class="directory-item">
+                      <div class="directory-header">{nodeKey}</div>
+                      <div class="directory-children hidden">
+                        {Object.entries(typedNode.children).sort(([childKeyA, childItemA], [childKeyB, childItemB]) => {
+                          const childTypeA = childItemA.type;
+                          const childTypeB = childItemB.type;
+                          // 文件排在文件夹前面
+                          if (childTypeA === 'file' && childTypeB === 'directory') return -1;
+                          if (childTypeA === 'directory' && childTypeB === 'file') return 1;
+                          // 类型相同则按名称排序
+                          return childKeyA.localeCompare(childKeyB);
+                        }).map(([childKey, childItem]) =>
+                          renderTreeNode(childKey, childItem)
+                        )}
+                      </div>
+                    </div>
+                  );
+                } else if (typedNode.type === 'file' && typedNode.article) {
+                  // 从文章ID中提取slug（文件名，不包含扩展名）
+                  const slug = typedNode.article.id.split('/').pop()?.replace('.md', '') || '';
+                  return (
+                    <div class="file-item">
+                      <a href={`/${category}/${slug}`}>
+                        {typedNode.article.data.title}
+                      </a>
+                    </div>
+                  );
+                }
+                return null;
+              }
+
+              return renderTreeNode(key, item);
+            })}
+          </div>
+
+          <script>
+            // 添加目录点击事件，实现展开/折叠功能
+            document.addEventListener('DOMContentLoaded', () => {
+              const directoryHeaders = document.querySelectorAll('.directory-header');
+              directoryHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                  const childrenElement = header.nextElementSibling;
+                  if (childrenElement && childrenElement.classList.contains('directory-children')) {
+                    childrenElement.classList.toggle('hidden');
+                  }
+                });
+              });
+            });
+          </script>
+        </div>
+      </div>
+    ) : (
+      <p class="no-articles">该分类下暂无文章。</p>
+    ) }
+  </section>
+</BaseLayout>
+
+<style>
+.category-index {
+  padding: 2rem 0;
+}
+
+.category-introduction {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.category-introduction h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.category-introduction h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.category-introduction h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  color: var(--text-primary);
+}
+
+.category-introduction p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.category-introduction ul {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.category-introduction li {
+  margin-bottom: 0.5rem;
+}
+
+.articles-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.articles-list-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.article-preview {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.article-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-preview-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-preview-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.article-preview-title a:hover {
+  color: var(--accent-color);
+}
+
+.article-preview-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.no-articles {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  padding: 2rem 0;
+}
+
+/* 目录树样式 */
+.directory-tree {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.tree-container {
+  margin-top: 1rem;
+}
+
+.directory-item {
+  margin-bottom: 0.5rem;
+}
+
+.directory-header {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 0.5rem;
+}
+
+.directory-header:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.directory-children {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.directory-children.hidden {
+  display: none;
+}
+
+.file-item {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-left: 3px solid var(--accent-color);
+}
+
+.file-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.file-item a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.empty-message {
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .category-introduction {
+    padding: 1.5rem;
+  }
+
+  .category-introduction h1 {
+    font-size: 2rem;
+  }
+
+  .category-introduction h2 {
+    font-size: 1.5rem;
+  }
+
+  .category-introduction h3 {
+    font-size: 1.25rem;
+  }
+
+  .articles-list-title {
+    font-size: 1.5rem;
+  }
+
+  .article-preview {
+    padding: 1.5rem;
+  }
+
+  .article-preview-title {
+    font-size: 1.25rem;
+  }
+
+  .directory-tree {
+    padding: 1.5rem;
+  }
+
+  .directory-children {
+    margin-left: 1.5rem;
+  }
+}
+</style>

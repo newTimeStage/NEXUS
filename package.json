@@ -1,0 +1,26 @@
+{
+  "name": "nexus",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.10",
+    "astro": "^4.0.0",
+    "chinese-lunar-calendar": "^1.0.1",
+    "date-chinese": "^2.1.4",
+    "katex": "^0.16.27",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.5.0",
+    "typescript": "^5.3.0"
+  }
+}

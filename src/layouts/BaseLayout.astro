@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS - 人类文明记载</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">NEXUS</h1>
+        <nav class="nav">
+          <a href="/">首页</a>
+          <a href="/文明根基/">文明根基</a>
+          <a href="/演进轨迹/">演进轨迹</a>
+          <a href="/制度与创造/">制度与创造</a>
+          <a href="/主体与未来/">主体与未来</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <span class="theme-icon">🌞</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 NEXUS 人类文明记载</p>
+        <p>秉中 · 纳洪 · 守贞</p>
+      </div>
+    </footer>
+
+    <script>
+      // 主题切换逻辑
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+        if (themeIcon) {
+          // 初始化主题
+          const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', savedTheme);
+          themeIcon.textContent = savedTheme === 'dark' ? '🌞' : '🌙';
+
+          // 切换主题
+          themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '🌞' : '🌙';
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
