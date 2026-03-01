@@ -4,7 +4,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkVideo from './src/plugins/remark-video.js';
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://nexus.pages.dev',
   output: 'static',
   markdown: {
     remarkPlugins: [remarkMath, remarkVideo],
