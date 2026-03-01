@@ -1590,9 +1590,9 @@ declare module 'astro:content' {
   collection: "演进轨迹";
   data: InferEntrySchema<"演进轨迹">
 } & { render(): Render[".md"] };
-"事册之载/11-禪通纪/01-伏羲朝代/10伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪.md": {
-	id: "事册之载/11-禪通纪/01-伏羲朝代/10伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪.md";
-  slug: "事册之载/11-禪通纪/01-伏羲朝代/10伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪";
+"事册之载/11-禪通纪/01-伏羲朝代/10-伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪.md": {
+	id: "事册之载/11-禪通纪/01-伏羲朝代/10-伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪.md";
+  slug: "事册之载/11-禪通纪/01-伏羲朝代/10-伏羲氏/01-昊天廿九世帝圭嬜伏羲氏纪";
   body: string;
   collection: "演进轨迹";
   data: InferEntrySchema<"演进轨迹">
@@ -3112,5 +3112,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../../src/content/config.js");
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
