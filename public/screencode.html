@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0; overflow: hidden; height: 100%;">
+<body style="margin: 0; padding: 0; overflow: hidden; height: 100%;">
+<canvas id="life"></canvas>
+<script>
+    const cRanMEn = false;
+
+    const cE = 2.71828;
+    const cPi = 3.1415926;
+
+    const cTypeScale = 3;
+    const cPartiScale = 1024;
+    const cRgbRange = 255;
+    const cPartiSize = 2;
+
+    const cHeat = 0.2;
+
+    // 动态获取窗口尺寸
+    let cWidth = window.innerWidth;
+    let cHeigh = window.innerHeight;
+    const cFree = 0.02;  /* 0~1 */
+    let cSrcPosX = (1-cFree)*cWidth/2;
+    let cSrcPosY = (1-cFree)*cHeigh/2;
+
+    // 获取canvas元素并设置尺寸
+    const canvas = document.getElementById('life');
+    canvas.width = cWidth;
+    canvas.height = cHeigh;
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', function() {
+        cWidth = window.innerWidth;
+        cHeigh = window.innerHeight;
+        cSrcPosX = (1-cFree)*cWidth/2;
+        cSrcPosY = (1-cFree)*cHeigh/2;
+        canvas.width = cWidth;
+        canvas.height = cHeigh;
+    });
+
+    const cSingle = 0.1; /* 0~1 */
+
+    const cDstncMx = cPartiSize*cPartiScale*cSingle;  /* 有效作用距离 */
+    const cStrgWkDst = cPartiSize + 1.5;   /* 强作用生效距离 */
+
+    const cSpeedLight = 2; // m/s
+
+    fHeartSet = ()=>{
+        HeartEn = false;
+        TstVal = Math.random()-0.5;
+        if(TstVal>0){
+            HeartEn = true;
+        }
+        return HeartEn;
+    }
+
+    sHeartEn = fHeartSet();
+
+    sHeartVal = cHeat;
+
+    sBody = canvas.getContext('2d');
+
+    fDraw = (x,y,c,width,height)=>{
+        sBody.fillStyle = c;
+        sBody.fillRect(x,y,width,height);
+    }
+
+    /* 生成随机位置 */
+    fGetRanPos = ()=>{
+        PosX = Math.random()*cWidth*cFree + cSrcPosX;
+        PosY = Math.random()*cHeigh*cFree + cSrcPosY;
+        return {"x":PosX, "y":PosY};
+    }
+    /* 生成随机质量 */
+    fGetRandM = ()=>{
+        RandM = 1;
+        // if(false == sHeartEn){
+        //     SgnValM = Math.random() - 0.5;
+        //     SgnM = SgnValM/Math.sqrt(SgnValM*SgnValM);
+        //     RandM = SgnM*Math.random();
+        // }
+        return RandM;
+    }
+    /* 生成关联质量 */
+    sCorreM = [];
+    fGetCorreM = (correNum)=>{
+        CorreM = [];
+        for(CorIdx=0; CorIdx<correNum; CorIdx++){
+            SngVal = Math.random() - 0.5;
+            Sng = SngVal/Math.sqrt(SngVal*SngVal);
+            CorreM.push(Sng*Math.random());
+        }
+        return CorreM;
+    }
+    /* 生成单粒子 */
+    fParticle = (m,pos,c)=>{
+        return {"m":m, "x":pos.x, "y":pos.y, "vx":0, "vy":0, "color":c };
+    }
+    /* 生成粒子群 */
+    sParticles = [];
+    fCreat = (num, color)=>{
+        Group = [];
+        for(i=0; i<num; i++){
+            Group.push(fParticle(fGetRandM(), fGetRanPos(), color));
+            sParticles.push(Group[i]);
+        }
+        return Group;
+    }
+    /* 生成粒子类 */
+    sPartiTypes = [];
+    fPartiType = (typeNum)=>{
+        PartiType = [];
+        PartiTotalNum = 0;
+        for(typIdx=0; typIdx<typeNum; typIdx++){
+            PartiPerTypTotal = Math.random()*cPartiScale;
+            PartiType.push(fCreat(PartiPerTypTotal,"rgb("+cRgbRange*Math.random()+", "+cRgbRange*Math.random()+", "+cRgbRange*Math.random()+")"));
+            sPartiTypes.push(PartiType[typIdx]);
+            PartiTotalNum += PartiPerTypTotal;
+        }
+        sCorreM = fGetCorreM(PartiTotalNum);
+        return PartiType;
+    }
+    /*平直空间坐标反演*/
+    fFlatCoordinate = (particle)=>{
+        Parti = particle;
+        if(particle.x<=0 || particle.x>=cWidth || particle.y<=0 || particle.y>=cHeigh)
+        {
+            if(particle.x<=0){
+                Parti.x = cWidth;
+                Parti.y = cHeigh - particle.y;
+            } else if(particle.x>=cWidth){
+                Parti.x = 0;
+                Parti.y = cHeigh - particle.y;
+            } else if(particle.y<=0){
+                Parti.x = cWidth - particle.x;
+                Parti.y = cHeigh;
+            } else if(particle.y>=cHeigh){
+                Parti.x = cWidth - particle.x;
+                Parti.y = 0;
+            }
+        }
+        return Parti;
+    }
+    /* 粒子规则 */
+    fRules = (particlesA, particlesB, perM)=>{
+        for(pIdxA=0; pIdxA<particlesA.length; pIdxA++){
+            Fx = 0;
+            Fy = 0;
+            for(pIdxB=0; pIdxB<particlesB.length; pIdxB++){
+                A = particlesA[pIdxA];
+                B = particlesB[pIdxB];
+                Dx = A.x - B.x;
+                Dy = A.y - B.y;
+                DstncMux = Dx*Dx + Dy*Dy;
+                Dstnc = Math.sqrt(DstncMux)
+                if(Dstnc>0 && Dstnc<cDstncMx){
+                    Fab = perM*A.m*B.m/Dstnc;
+                    if(Dstnc<=cStrgWkDst){
+                        Fab = Math.abs(Fab)*cSpeedLight;
+                    }
+                    Fx += (Fab*Dx);
+                    Fy += (Fab*Dy);
+                }
+            }
+            A.vx = (A.vx + Fx)*0.5;
+            A.vy = (A.vy + Fy)*0.5;
+            A.x += A.vx;
+            A.y += A.vy;
+            if(A.x<=0 || A.x>=cWidth){
+                A.vx *= -1;
+            }
+            if(A.y<=0 || A.y>=cHeigh){
+                A.vy *= -1;
+            }
+
+            // A = fFlatCoordinate(A);
+        }
+    }
+    /* 生成粒子类群 */
+    sPartiTypes = fPartiType(cTypeScale);
+    /* 粒子演化 */
+    fPartiExechange = (typeNum)=>{
+        PartiIdx = 0;
+        for(aIdx=0; aIdx<typeNum; aIdx++){
+            for(bIdx=0; bIdx<typeNum; bIdx++){
+                PartiCurrM = 1;
+                if(true == sHeartEn){
+                    sHeartVal *= Math.random();
+                    HrtSgnVl = 0.5-Math.random();
+                    HrtSgn = HrtSgnVl/Math.sqrt(HrtSgnVl*HrtSgnVl);
+                    PartiCurrM = HrtSgn*sCorreM[PartiIdx];
+                } else{
+                    PartiCurrM = sCorreM[PartiIdx];
+                }
+                fRules(sPartiTypes[aIdx], sPartiTypes[bIdx], PartiCurrM);
+                PartiIdx++;
+            }
+        }
+    }
+
+    fUpdate = ()=>{
+        // sPartiTypes = fPartiType(cTypeScale);
+        fPartiExechange(cTypeScale);
+
+        sBody.clearRect(0,0,cWidth,cHeigh);
+        fDraw(0,0,"black", cWidth, cHeigh);
+        for(i=0; i<sParticles.length; i++){
+            fDraw(sParticles[i].x, sParticles[i].y, sParticles[i].color, cPartiSize, cPartiSize);
+        }
+        requestAnimationFrame(fUpdate);
+    }
+
+    fUpdate();
+
+    // fGenRan = (heat)=>{
+    //     return (0.5 - Math.random())*Math.random()*heat;
+    // }
+
+
+
+</script>
+</body>
+</html>

@@ -118,7 +118,10 @@ if (!directoryTree || Object.keys(directoryTree).length === 0) {
                 if (typedNode.type === 'directory' && typedNode.children) {
                   return (
                     <div class="directory-item">
-                      <div class="directory-header">{nodeKey}</div>
+                      <div class="directory-header" onclick="toggleDirectory(this)">
+                        <span class="toggle-icon">▶</span>
+                        <span class="directory-name">{nodeKey}</span>
+                      </div>
                       <div class="directory-children hidden">
                         {Object.entries(typedNode.children).sort(([childKeyA, childItemA], [childKeyB, childItemB]) => {
                           const typedChildItemA = childItemA as { type: string };
@@ -150,6 +153,24 @@ if (!directoryTree || Object.keys(directoryTree).length === 0) {
               return renderTreeNode(key, item);
             })}
           </div>
+
+          <script is:inline>
+            function toggleDirectory(element) {
+              const children = element.nextElementSibling;
+              const icon = element.querySelector('.toggle-icon');
+
+              if (children && children.classList.contains('hidden')) {
+                children.classList.remove('hidden');
+                if (icon) icon.textContent = '▼';
+              } else if (children) {
+                children.classList.add('hidden');
+                if (icon) icon.textContent = '▶';
+              }
+            }
+
+            // 确保函数在全局作用域可用
+            window.toggleDirectory = toggleDirectory;
+          </script>
         </div>
       </div>
     ) : (
