@@ -28,6 +28,9 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Create .assetsignore file
+        run: echo "_worker.js" > dist/.assetsignore
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
