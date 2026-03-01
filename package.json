@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/markdown-remark": "^6.3.10",
-    "astro": "^4.0.0",
+    "astro": "^5.18.0",
     "chinese-lunar-calendar": "^1.0.1",
     "date-chinese": "^2.1.4",
     "katex": "^0.16.27",
