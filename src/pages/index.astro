@@ -64,21 +64,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     // @ts-nocheck
-    // 数字转汉字数字函数
-    function numToChinese(num) {
-      const chineseNums = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
-      if (num <= 10) {
-        return chineseNums[num];
-      } else if (num < 20) {
-        return `十${chineseNums[num % 10]}`;
-      } else if (num === 20) {
-        return '二十';
-      } else if (num < 30) {
-        return `二十${chineseNums[num % 10]}`;
-      } else {
-        return '三十';
-      }
-    }
 
     // 恒经历计算函数
     function calculateHengJingLi(currentDate) {
@@ -212,12 +197,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }
       }
 
-      // 简化处理：只显示公历日期，不依赖外部库
+      // 更新农历日期
       const lunarElement = document.getElementById('lunar-date');
       if (lunarElement) {
         try {
-          lunarElement.textContent = '农历日期';
+          // 使用 chinese-lunar-calendar 库（正确的 API）
+          import('chinese-lunar-calendar').then((LunarCalendar) => {
+            // 获取库的默认导出（CommonJS 模块）
+            const calendar = LunarCalendar.default || LunarCalendar;
+            const lunar = calendar.getLunar(today.getFullYear(), today.getMonth() + 1, today.getDate());
+
+            // 农历月份（转换为汉字）
+            const monthNames = ['正', '二', '三', '四', '五', '六', '七', '八', '九', '十', '冬', '腊'];
+            const lunarMonth = lunar.isLeap ? '闰' + monthNames[lunar.lunarMonth - 1] + '月' : monthNames[lunar.lunarMonth - 1] + '月';
+
+            // 农历日期（转换为汉字）
+            const dayNames = ['初一', '初二', '初三', '初四', '初五', '初六', '初七', '初八', '初九', '初十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '廿一', '廿二', '廿三', '廿四', '廿五', '廿六', '廿七', '廿八', '廿九', '三十'];
+            const lunarDay = dayNames[lunar.lunarDate - 1];
+
+            // 节气（如"立夏"）
+            const solarTerm = lunar.solarTerm || '';
+
+            // 组合显示：使用库返回的干支年份
+            lunarElement.textContent = `${lunar.lunarYear} 生肖${lunar.zodiac} ${lunarMonth} ${lunarDay}日 ${solarTerm}`;
+            console.log('Lunar date updated:', lunarElement.textContent);
+          }).catch((error) => {
+            console.error('Error with chinese-lunar-calendar:', error);
+            // 降级处理：使用 date-chinese 库
+            try {
+              import('date-chinese').then((DateChinese) => {
+                const lunar = new DateChinese.Lunar(today.getFullYear(), today.getMonth() + 1, today.getDate());
+                const month = lunar.getMonth();
+                const day = lunar.getDay();
+
+                // 天干地支年份
+                const tianGan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+                const diZhi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+                const yearGanZhi = tianGan[(today.getFullYear() - 4) % 10] + diZhi[(today.getFullYear() - 4) % 12];
+
+                // 农历月份（转换为汉字）
+                const monthNames = ['正', '二', '三', '四', '五', '六', '七', '八', '九', '十', '冬', '腊'];
+                const lunarMonth = month > 0 ? monthNames[month - 1] + '月' : '闰' + monthNames[-month - 1] + '月';
+
+                // 农历日期（转换为汉字）
+                const dayNames = ['初一', '初二', '初三', '初四', '初五', '初六', '初七', '初八', '初九', '初十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '廿一', '廿二', '廿三', '廿四', '廿五', '廿六', '廿七', '廿八', '廿九', '三十'];
+                const lunarDay = dayNames[day - 1];
+
+                // 组合显示
+                lunarElement.textContent = `${yearGanZhi}年 ${lunarMonth} ${lunarDay}`;
+                console.log('Fallback lunar date updated:', lunarElement.textContent);
+              }).catch((error2) => {
+                console.error('Error with date-chinese:', error2);
+                lunarElement.textContent = '农历日期';
+              });
+            } catch (e2) {
+              console.error('Error with date-chinese:', e2);
+              lunarElement.textContent = '农历日期';
+            }
+          });
         } catch (e) {
+          console.error('Error in lunar date update:', e);
           lunarElement.textContent = '农历日期';
         }
       }

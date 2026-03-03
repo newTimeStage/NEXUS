@@ -1,6 +1,6 @@
 ---
 title: 丁部：主体与未来
-author: NEXUS Editorial Team
+author: 长史整理
 date: 2024-01-01
 category: 主体与未来
 ---

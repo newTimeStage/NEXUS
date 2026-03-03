@@ -1,6 +1,6 @@
 ---
 title: 叁曰 天文传
-author: NEXUS Editorial Team
+author: 长史整理
 date: 2024-01-01
 category: 文明根基
 ---

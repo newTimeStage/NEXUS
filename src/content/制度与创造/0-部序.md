@@ -1,6 +1,6 @@
 ---
 title: 丙部：制度与创造
-author: NEXUS Editorial Team
+author: 长史整理
 date: 2024-01-01
 category: 制度与创造
 ---

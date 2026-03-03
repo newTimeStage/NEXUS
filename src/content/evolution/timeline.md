@@ -1,6 +1,6 @@
 ---
 title: 肆曰 时序纲
-author: NEXUS Editorial Team
+author: 长史整理
 date: 2024-01-01
 category: 演进轨迹
 ---
