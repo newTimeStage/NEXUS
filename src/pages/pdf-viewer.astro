@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <div class="pdf-viewer-container">
+    <h1 id="pdf-title">PDF 文档</h1>
+    <div class="pdf-embed">
+      <iframe id="pdf-iframe" width="100%" height="800px" style="border: none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // 从 URL 参数中获取 PDF 链接和标题
+    const urlParams = new URLSearchParams(window.location.search);
+    const pdfUrl = urlParams.get('url');
+    const pdfTitle = urlParams.get('title');
+
+    // 设置标题
+    const titleElement = document.getElementById('pdf-title');
+    if (pdfTitle && titleElement) {
+      titleElement.textContent = pdfTitle;
+    }
+
+    // 设置 iframe 源
+    const iframeElement = document.getElementById('pdf-iframe') as HTMLIFrameElement;
+    if (pdfUrl && iframeElement) {
+      iframeElement.src = pdfUrl;
+    }
+  </script>
+
+  <style>
+    .pdf-viewer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .pdf-viewer-container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .pdf-embed {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .pdf-embed iframe {
+      display: block;
+    }
+  </style>
+</BaseLayout>

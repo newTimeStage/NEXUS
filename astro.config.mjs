@@ -7,7 +7,7 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
 export default defineConfig({
-  site: 'https://nexus.pages.dev',
+  site: 'https://nexus-6gs.pages.dev/',
   output: 'static',
   adapter: cloudflare(),
   integrations: [],

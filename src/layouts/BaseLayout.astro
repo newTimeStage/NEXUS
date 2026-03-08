@@ -63,6 +63,40 @@
           });
         }
       }
+
+      // 链接处理逻辑
+      document.addEventListener('DOMContentLoaded', function() {
+        // 获取所有链接
+        const links = document.querySelectorAll('a');
+
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href) {
+            // 检查是否是PDF链接
+            const isPdf = href.toLowerCase().endsWith('.pdf');
+            // 检查是否是外部链接
+            const isExternal = /^https?:\/\//i.test(href) && !href.includes(window.location.hostname);
+
+            if (isPdf || isExternal) {
+              // 阻止默认点击行为
+              link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 获取链接文本作为标题
+                const title = link.textContent.trim() || '外部链接';
+                // 构建查看器URL
+                let targetUrl = href;
+                // 如果是相对路径，转换为绝对路径
+                if (!/^https?:\/\//i.test(href) && !href.startsWith('/')) {
+                  targetUrl = '/' + href;
+                }
+                const viewerUrl = `/pdf-viewer?url=${encodeURIComponent(targetUrl)}&title=${encodeURIComponent(title)}`;
+                // 打开查看器页面
+                window.location.href = viewerUrl;
+              });
+            }
+          }
+        });
+      });
     </script>
   </body>
 </html>
