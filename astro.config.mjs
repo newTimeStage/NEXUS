@@ -3,6 +3,7 @@ import cloudflare from '@astrojs/cloudflare';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkVideo from './src/plugins/remark-video.js';
+import remarkEntityAnnotation from './src/plugins/remark-entity-annotation.js';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -12,7 +13,7 @@ export default defineConfig({
   adapter: cloudflare(),
   integrations: [],
   markdown: {
-    remarkPlugins: [remarkMath, remarkVideo],
+    remarkPlugins: [remarkMath, remarkVideo, remarkEntityAnnotation],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: 'github-dark',

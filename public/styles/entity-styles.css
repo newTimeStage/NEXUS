@@ -1,0 +1,481 @@
+/**
+ * NEXUS 实体标注样式
+ * 参考：shiji-kb 的 shiji-styles.css
+ * 
+ * 实体类型配色方案：
+ * - 人名：暖金色，象征人物的重要性
+ * - 地名：青蓝色，象征大地山河
+ * - 官职：紫罗兰，象征权力与地位
+ * - 时间：琥珀色，象征历史流逝
+ * - 朝代：深红色，象征王朝更替
+ * - 邦国：深绿色，象征领土疆域
+ * - 制度：灰蓝色，象征规范制度
+ * - 族群：棕色，象征民族渊源
+ * - 器物：银灰色，象征文明创造
+ * - 天文：深紫色，象征星空奥秘
+ * - 神话：紫红色，象征传说神秘
+ * - 生物：翠绿色，象征生命活力
+ * - 数量：橙色，象征计量统计
+ * - 典籍：藏青色，象征知识传承
+ * - 礼仪：粉色，象征礼仪文明
+ * - 刑法：深灰色，象征律法严明
+ * - 思想：靛蓝色，象征智慧思辨
+ * - 身份：米色，象征社会角色
+ */
+
+/* ========================================
+   基础实体样式
+   ======================================== */
+
+/* 通用实体样式 */
+[class^="entity-"] {
+  padding: 1px 4px;
+  margin: 0 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline;
+}
+
+[class^="entity-"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 亮色主题实体样式 */
+:root {
+  /* 人名 */
+  --entity-person-bg: #fef3c7;
+  --entity-person-text: #92400e;
+  --entity-person-border: #f59e0b;
+  
+  /* 地名 */
+  --entity-place-bg: #dbeafe;
+  --entity-place-text: #1e40af;
+  --entity-place-border: #3b82f6;
+  
+  /* 官职 */
+  --entity-official-bg: #f3e8ff;
+  --entity-official-text: #6b21a8;
+  --entity-official-border: #a855f7;
+  
+  /* 时间 */
+  --entity-time-bg: #fef4e6;
+  --entity-time-text: #c2410c;
+  --entity-time-border: #f97316;
+  
+  /* 朝代 */
+  --entity-dynasty-bg: #fee2e2;
+  --entity-dynasty-text: #991b1b;
+  --entity-dynasty-border: #ef4444;
+  
+  /* 邦国 */
+  --entity-state-bg: #d1fae5;
+  --entity-state-text: #065f46;
+  --entity-state-border: #10b981;
+  
+  /* 制度 */
+  --entity-institution-bg: #e0e7ff;
+  --entity-institution-text: #3730a3;
+  --entity-institution-border: #6366f1;
+  
+  /* 族群 */
+  --entity-tribe-bg: #fef2e6;
+  --entity-tribe-text: #78350f;
+  --entity-tribe-border: #d97706;
+  
+  /* 身份 */
+  --entity-identity-bg: #f5f5dc;
+  --entity-identity-text: #5c4033;
+  --entity-identity-border: #8b7355;
+  
+  /* 器物 */
+  --entity-artifact-bg: #f3f4f6;
+  --entity-artifact-text: #4b5563;
+  --entity-artifact-border: #9ca3af;
+  
+  /* 天文 */
+  --entity-astronomy-bg: #ede9fe;
+  --entity-astronomy-text: #5b21b6;
+  --entity-astronomy-border: #8b5cf6;
+  
+  /* 神话 */
+  --entity-mythical-bg: #fce7f3;
+  --entity-mythical-text: #9d174d;
+  --entity-mythical-border: #ec4899;
+  
+  /* 生物 */
+  --entity-biology-bg: #d1fae5;
+  --entity-biology-text: #065f46;
+  --entity-biology-border: #10b981;
+  
+  /* 数量 */
+  --entity-quantity-bg: #ffedd5;
+  --entity-quantity-text: #c2410c;
+  --entity-quantity-border: #f97316;
+  
+  /* 典籍 */
+  --entity-book-bg: #e0f2fe;
+  --entity-book-text: #0c4a6e;
+  --entity-book-border: #0ea5e9;
+  
+  /* 礼仪 */
+  --entity-ritual-bg: #fce7f3;
+  --entity-ritual-text: #831843;
+  --entity-ritual-border: #db2777;
+  
+  /* 刑法 */
+  --entity-legal-bg: #e5e7eb;
+  --entity-legal-text: #1f2937;
+  --entity-legal-border: #6b7280;
+  
+  /* 思想 */
+  --entity-concept-bg: #e0e7ff;
+  --entity-concept-text: #312e81;
+  --entity-concept-border: #6366f1;
+}
+
+/* 暗色主题实体样式 */
+[data-theme="dark"] {
+  /* 人名 */
+  --entity-person-bg: #78350f;
+  --entity-person-text: #fef3c7;
+  --entity-person-border: #f59e0b;
+  
+  /* 地名 */
+  --entity-place-bg: #1e3a5f;
+  --entity-place-text: #bfdbfe;
+  --entity-place-border: #60a5fa;
+  
+  /* 官职 */
+  --entity-official-bg: #581c87;
+  --entity-official-text: #f3e8ff;
+  --entity-official-border: #c084fc;
+  
+  /* 时间 */
+  --entity-time-bg: #7c2d12;
+  --entity-time-text: #fed7aa;
+  --entity-time-border: #fb923c;
+  
+  /* 朝代 */
+  --entity-dynasty-bg: #7f1d1d;
+  --entity-dynasty-text: #fecaca;
+  --entity-dynasty-border: #f87171;
+  
+  /* 邦国 */
+  --entity-state-bg: #064e3b;
+  --entity-state-text: #a7f3d0;
+  --entity-state-border: #34d399;
+  
+  /* 制度 */
+  --entity-institution-bg: #312e81;
+  --entity-institution-text: #c7d2fe;
+  --entity-institution-border: #818cf8;
+  
+  /* 族群 */
+  --entity-tribe-bg: #78350f;
+  --entity-tribe-text: #fed7aa;
+  --entity-tribe-border: #fbbf24;
+  
+  /* 身份 */
+  --entity-identity-bg: #5c4033;
+  --entity-identity-text: #f5f5dc;
+  --entity-identity-border: #a08060;
+  
+  /* 器物 */
+  --entity-artifact-bg: #374151;
+  --entity-artifact-text: #e5e7eb;
+  --entity-artifact-border: #9ca3af;
+  
+  /* 天文 */
+  --entity-astronomy-bg: #4c1d95;
+  --entity-astronomy-text: #ede9fe;
+  --entity-astronomy-border: #a78bfa;
+  
+  /* 神话 */
+  --entity-mythical-bg: #831843;
+  --entity-mythical-text: #fce7f3;
+  --entity-mythical-border: #f472b6;
+  
+  /* 生物 */
+  --entity-biology-bg: #064e3b;
+  --entity-biology-text: #a7f3d0;
+  --entity-biology-border: #34d399;
+  
+  /* 数量 */
+  --entity-quantity-bg: #7c2d12;
+  --entity-quantity-text: #fed7aa;
+  --entity-quantity-border: #fb923c;
+  
+  /* 典籍 */
+  --entity-book-bg: #0c4a6e;
+  --entity-book-text: #bae6fd;
+  --entity-book-border: #38bdf8;
+  
+  /* 礼仪 */
+  --entity-ritual-bg: #831843;
+  --entity-ritual-text: #fce7f3;
+  --entity-ritual-border: #f472b6;
+  
+  /* 刑法 */
+  --entity-legal-bg: #374151;
+  --entity-legal-text: #e5e7eb;
+  --entity-legal-border: #9ca3af;
+  
+  /* 思想 */
+  --entity-concept-bg: #312e81;
+  --entity-concept-text: #c7d2fe;
+  --entity-concept-border: #818cf8;
+}
+
+/* ========================================
+   各类实体样式定义
+   ======================================== */
+
+/* 人名 */
+.entity-person {
+  background-color: var(--entity-person-bg);
+  color: var(--entity-person-text);
+  border-bottom: 2px solid var(--entity-person-border);
+}
+
+/* 地名 */
+.entity-place {
+  background-color: var(--entity-place-bg);
+  color: var(--entity-place-text);
+  border-bottom: 2px solid var(--entity-place-border);
+}
+
+/* 官职 */
+.entity-official {
+  background-color: var(--entity-official-bg);
+  color: var(--entity-official-text);
+  border-bottom: 2px solid var(--entity-official-border);
+}
+
+/* 时间 */
+.entity-time {
+  background-color: var(--entity-time-bg);
+  color: var(--entity-time-text);
+  border-bottom: 2px solid var(--entity-time-border);
+}
+
+/* 朝代/氏族 */
+.entity-dynasty {
+  background-color: var(--entity-dynasty-bg);
+  color: var(--entity-dynasty-text);
+  border-bottom: 2px solid var(--entity-dynasty-border);
+}
+
+/* 邦国 */
+.entity-state {
+  background-color: var(--entity-state-bg);
+  color: var(--entity-state-text);
+  border-bottom: 2px solid var(--entity-state-border);
+}
+
+/* 制度 */
+.entity-institution {
+  background-color: var(--entity-institution-bg);
+  color: var(--entity-institution-text);
+  border-bottom: 2px solid var(--entity-institution-border);
+}
+
+/* 族群 */
+.entity-tribe {
+  background-color: var(--entity-tribe-bg);
+  color: var(--entity-tribe-text);
+  border-bottom: 2px solid var(--entity-tribe-border);
+}
+
+/* 身份 */
+.entity-identity {
+  background-color: var(--entity-identity-bg);
+  color: var(--entity-identity-text);
+  border-bottom: 2px solid var(--entity-identity-border);
+}
+
+/* 器物 */
+.entity-artifact {
+  background-color: var(--entity-artifact-bg);
+  color: var(--entity-artifact-text);
+  border-bottom: 2px solid var(--entity-artifact-border);
+}
+
+/* 天文 */
+.entity-astronomy {
+  background-color: var(--entity-astronomy-bg);
+  color: var(--entity-astronomy-text);
+  border-bottom: 2px solid var(--entity-astronomy-border);
+}
+
+/* 神话 */
+.entity-mythical {
+  background-color: var(--entity-mythical-bg);
+  color: var(--entity-mythical-text);
+  border-bottom: 2px solid var(--entity-mythical-border);
+  font-style: italic;
+}
+
+/* 生物 */
+.entity-biology {
+  background-color: var(--entity-biology-bg);
+  color: var(--entity-biology-text);
+  border-bottom: 2px solid var(--entity-biology-border);
+}
+
+/* 数量 */
+.entity-quantity {
+  background-color: var(--entity-quantity-bg);
+  color: var(--entity-quantity-text);
+  border-bottom: 2px solid var(--entity-quantity-border);
+  font-weight: 500;
+}
+
+/* 典籍 */
+.entity-book {
+  background-color: var(--entity-book-bg);
+  color: var(--entity-book-text);
+  border-bottom: 2px solid var(--entity-book-border);
+}
+
+/* 礼仪 */
+.entity-ritual {
+  background-color: var(--entity-ritual-bg);
+  color: var(--entity-ritual-text);
+  border-bottom: 2px solid var(--entity-ritual-border);
+}
+
+/* 刑法 */
+.entity-legal {
+  background-color: var(--entity-legal-bg);
+  color: var(--entity-legal-text);
+  border-bottom: 2px solid var(--entity-legal-border);
+}
+
+/* 思想 */
+.entity-concept {
+  background-color: var(--entity-concept-bg);
+  color: var(--entity-concept-text);
+  border-bottom: 2px solid var(--entity-concept-border);
+  font-style: italic;
+}
+
+/* ========================================
+   引号内容高亮
+   ======================================== */
+
+.quoted-content {
+  background-color: rgba(255, 235, 205, 0.3);
+  border-left: 3px solid var(--accent-color);
+  padding: 2px 6px;
+  margin: 0 2px;
+  display: inline;
+  font-style: normal;
+}
+
+[data-theme="dark"] .quoted-content {
+  background-color: rgba(255, 235, 205, 0.1);
+}
+
+/* ========================================
+   段落编号（Purple Numbers）
+   ======================================== */
+
+.para-num {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 1px 6px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-family: 'Courier New', monospace;
+  text-decoration: none;
+  vertical-align: super;
+  transition: all 0.2s ease;
+}
+
+.para-num:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.para-num:target {
+  background-color: var(--accent-color);
+  color: white;
+  animation: highlight-pulse 1s ease-out;
+}
+
+@keyframes highlight-pulse {
+  0% {
+    background-color: var(--accent-hover);
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: var(--accent-color);
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   实体图例（可选）
+   ======================================== */
+
+.entity-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border-bottom: 2px solid;
+}
+
+/* ========================================
+   响应式调整
+   ======================================== */
+
+@media (max-width: 768px) {
+  [class^="entity-"] {
+    padding: 1px 2px;
+    margin: 0 1px;
+  }
+  
+  .para-num {
+    font-size: 0.7em;
+    padding: 1px 4px;
+  }
+}
+
+/* ========================================
+   打印样式
+   ======================================== */
+
+@media print {
+  [class^="entity-"] {
+    border: 1px solid #999;
+    background-color: transparent !important;
+  }
+  
+  .para-num {
+    border: 1px solid #ccc;
+    background-color: transparent !important;
+  }
+}
