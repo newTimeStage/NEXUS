@@ -1,145 +1,244 @@
 /**
  * NEXUS 实体标注插件
- * 
- * 功能：将简洁的实体标记语法转换为带CSS样式的HTML
- * 参考：shiji-kb 项目的 render_shiji_html.py
- * 
- * 标记语法：
- * - 〖@人名〗 → <span class="entity-person">人名</span>
- * - 〖=地名〗 → <span class="entity-place">地名</span>
- * - 〖;官职〗 → <span class="entity-official">官职</span>
- * - 〖%时间〗 → <span class="entity-time">时间</span>
- * - 〖&朝代〗 → <span class="entity-dynasty">朝代</span>
- * - 〖'邦国〗 → <span class="entity-state">邦国</span>
- * - 〖^制度〗 → <span class="entity-institution">制度</span>
- * - 〖~族群〗 → <span class="entity-tribe">族群</span>
- * - 〖•器物〗 → <span class="entity-artifact">器物</span>
- * - 〖!天文〗 → <span class="entity-astronomy">天文</span>
- * - 〖?神话〗 → <span class="entity-mythical">神话</span>
- * - 〖+生物〗 → <span class="entity-biology">生物</span>
- * - 〖$数量〗 → <span class="entity-quantity">数量</span>
- * - 〖{典籍〗 → <span class="entity-book">《典籍》</span>
- * - 〖:礼仪〗 → <span class="entity-ritual">礼仪</span>
- * - 〖[刑法〗 → <span class="entity-legal">刑法</span>
- * - 〖_思想〗 → <span class="entity-concept">思想</span>
- * - 〖#身份〗 → <span class="entity-identity">身份</span>
- * 
+ *
+ * 目标：在保留 shiji-kb 风格符号标注的同时，提供“标签前缀”语法，
+ * 避免与 Markdown 常见符号（如 [、_、{）产生输入与阅读冲突。
+ *
+ * 推荐语法（更稳健）：
+ * - 〖person:孔子〗 / 〖p:孔子〗
+ * - 〖place:长安〗 / 〖loc:长安〗
+ * - 〖legal:五刑〗（替代旧式 〖[五刑〗）
+ * - 〖concept:仁义〗（替代旧式 〖_仁义〗）
+ * - 〖book:尚书〗（替代旧式 〖{尚书〗）
+ *
+ * 兼容语法（旧版保留）：
+ * - 〖@孔子〗、〖=长安〗、〖;丞相〗 ...
+ *
  * 消歧语法：
- * - 〖@简称|全名〗 → 显示"简称"，链接到"全名"
- * 
- * 段落编号：
- * - [数字] 或 [数字.数字] → 可点击的锚点链接
+ * - 〖person:始皇|秦始皇〗
+ * - 〖@始皇|秦始皇〗
  */
 
 import { visit } from 'unist-util-visit';
 
-// 实体类型映射表
-const ENTITY_PATTERNS = [
-  // 人名
-  { pattern: /〖@([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-person', title: '人名', type: 'person', useCanonical: true },
-  { pattern: /〖@([^〖〗]+)〗/g, className: 'entity-person', title: '人名', type: 'person' },
-  
-  // 地名
-  { pattern: /〖=([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-place', title: '地名', type: 'place', useCanonical: true },
-  { pattern: /〖=([^〖〗]+)〗/g, className: 'entity-place', title: '地名', type: 'place' },
-  
-  // 官职
-  { pattern: /〖;([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-official', title: '官职', type: 'official', useCanonical: true },
-  { pattern: /〖;([^〖〗]+)〗/g, className: 'entity-official', title: '官职', type: 'official' },
-  
-  // 时间
-  { pattern: /〖%([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-time', title: '时间', type: 'time', useCanonical: true },
-  { pattern: /〖%([^〖〗]+)〗/g, className: 'entity-time', title: '时间', type: 'time' },
-  
-  // 朝代/氏族
-  { pattern: /〖&([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-dynasty', title: '氏族', type: 'dynasty', useCanonical: true },
-  { pattern: /〖&([^〖〗]+)〗/g, className: 'entity-dynasty', title: '氏族', type: 'dynasty' },
-  
-  // 邦国
-  { pattern: /〖'([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-state', title: '邦国', type: 'state', useCanonical: true },
-  { pattern: /〖'([^〖〗]+)〗/g, className: 'entity-state', title: '邦国', type: 'state' },
-  
-  // 制度
-  { pattern: /〖\^([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-institution', title: '制度', type: 'institution', useCanonical: true },
-  { pattern: /〖\^([^〖〗]+)〗/g, className: 'entity-institution', title: '制度', type: 'institution' },
-  
-  // 族群
-  { pattern: /〖~([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-tribe', title: '族群', type: 'tribe', useCanonical: true },
-  { pattern: /〖~([^〖〗]+)〗/g, className: 'entity-tribe', title: '族群', type: 'tribe' },
-  
-  // 身份
-  { pattern: /〖#([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-identity', title: '身份', type: 'identity', useCanonical: true },
-  { pattern: /〖#([^〖〗]+)〗/g, className: 'entity-identity', title: '身份', type: 'identity' },
-  
-  // 器物
-  { pattern: /〖•([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-artifact', title: '器物', type: 'artifact', useCanonical: true },
-  { pattern: /〖•([^〖〗]+)〗/g, className: 'entity-artifact', title: '器物', type: 'artifact' },
-  
-  // 天文
-  { pattern: /〖!([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-astronomy', title: '天文/历法', type: 'astronomy', useCanonical: true },
-  { pattern: /〖!([^〖〗]+)〗/g, className: 'entity-astronomy', title: '天文/历法', type: 'astronomy' },
-  
-  // 神话
-  { pattern: /〖\?([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-mythical', title: '神话/传说', type: 'mythical', useCanonical: true },
-  { pattern: /〖\?([^〖〗]+)〗/g, className: 'entity-mythical', title: '神话/传说', type: 'mythical' },
-  
-  // 生物
-  { pattern: /〖\+([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-biology', title: '生物', type: 'biology', useCanonical: true },
-  { pattern: /〖\+([^〖〗]+)〗/g, className: 'entity-biology', title: '生物', type: 'biology' },
-  
-  // 数量
-  { pattern: /〖\$([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-quantity', title: '数量', type: 'quantity', useCanonical: true },
-  { pattern: /〖\$([^〖〗]+)〗/g, className: 'entity-quantity', title: '数量', type: 'quantity' },
-  
-  // 典籍
-  { pattern: /〖\{([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-book', title: '典籍', type: 'book', useCanonical: true, wrapBook: true },
-  { pattern: /〖\{([^〖〗]+)〗/g, className: 'entity-book', title: '典籍', type: 'book', wrapBook: true },
-  
-  // 礼仪
-  { pattern: /〖:([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-ritual', title: '礼仪', type: 'ritual', useCanonical: true },
-  { pattern: /〖:([^〖〗]+)〗/g, className: 'entity-ritual', title: '礼仪', type: 'ritual' },
-  
-  // 刑法
-  { pattern: /〖\[([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-legal', title: '刑法', type: 'legal', useCanonical: true },
-  { pattern: /〖\[([^〖〗]+)〗/g, className: 'entity-legal', title: '刑法', type: 'legal' },
-  
-  // 思想
-  { pattern: /〖_([^〖〗|]+)\|([^〖〗]+)〗/g, className: 'entity-concept', title: '思想', type: 'concept', useCanonical: true },
-  { pattern: /〖_([^〖〗]+)〗/g, className: 'entity-concept', title: '思想', type: 'concept' },
-];
+const ENTITY_DEFINITIONS = {
+  person: {
+    className: 'entity-person',
+    title: '人名',
+    type: 'person',
+    wrapBook: false,
+    markers: ['@'],
+    labels: ['person', 'p', '人物', '人名'],
+  },
+  place: {
+    className: 'entity-place',
+    title: '地名',
+    type: 'place',
+    wrapBook: false,
+    markers: ['='],
+    labels: ['place', 'loc', 'l', '地名', '地点'],
+  },
+  official: {
+    className: 'entity-official',
+    title: '官职',
+    type: 'official',
+    wrapBook: false,
+    markers: [';'],
+    labels: ['official', 'office', '官职', '职官'],
+  },
+  time: {
+    className: 'entity-time',
+    title: '时间',
+    type: 'time',
+    wrapBook: false,
+    markers: ['%'],
+    labels: ['time', 't', '时间', '时点'],
+  },
+  dynasty: {
+    className: 'entity-dynasty',
+    title: '氏族',
+    type: 'dynasty',
+    wrapBook: false,
+    markers: ['&'],
+    labels: ['dynasty', 'clan', '朝代', '氏族'],
+  },
+  state: {
+    className: 'entity-state',
+    title: '邦国',
+    type: 'state',
+    wrapBook: false,
+    markers: ["'"],
+    labels: ['state', 'country', '邦国', '国家'],
+  },
+  institution: {
+    className: 'entity-institution',
+    title: '制度',
+    type: 'institution',
+    wrapBook: false,
+    markers: ['^'],
+    labels: ['institution', 'inst', '制度'],
+  },
+  tribe: {
+    className: 'entity-tribe',
+    title: '族群',
+    type: 'tribe',
+    wrapBook: false,
+    markers: ['~'],
+    labels: ['tribe', 'ethnic', '族群', '民族'],
+  },
+  identity: {
+    className: 'entity-identity',
+    title: '身份',
+    type: 'identity',
+    wrapBook: false,
+    markers: ['#'],
+    labels: ['identity', 'role', '身份'],
+  },
+  artifact: {
+    className: 'entity-artifact',
+    title: '器物',
+    type: 'artifact',
+    wrapBook: false,
+    markers: ['•'],
+    labels: ['artifact', 'obj', '器物', '器具'],
+  },
+  astronomy: {
+    className: 'entity-astronomy',
+    title: '天文/历法',
+    type: 'astronomy',
+    wrapBook: false,
+    markers: ['!'],
+    labels: ['astronomy', 'astro', '天文', '历法'],
+  },
+  mythical: {
+    className: 'entity-mythical',
+    title: '神话/传说',
+    type: 'mythical',
+    wrapBook: false,
+    markers: ['?'],
+    labels: ['myth', 'mythical', '神话', '传说'],
+  },
+  biology: {
+    className: 'entity-biology',
+    title: '生物',
+    type: 'biology',
+    wrapBook: false,
+    markers: ['+'],
+    labels: ['biology', 'bio', '生物'],
+  },
+  quantity: {
+    className: 'entity-quantity',
+    title: '数量',
+    type: 'quantity',
+    wrapBook: false,
+    markers: ['$'],
+    labels: ['quantity', 'qty', '数量', '数值'],
+  },
+  book: {
+    className: 'entity-book',
+    title: '典籍',
+    type: 'book',
+    wrapBook: true,
+    markers: ['{'],
+    labels: ['book', 'text', '典籍', '文献'],
+  },
+  ritual: {
+    className: 'entity-ritual',
+    title: '礼仪',
+    type: 'ritual',
+    wrapBook: false,
+    markers: [':'],
+    labels: ['ritual', '礼仪', '礼制'],
+  },
+  legal: {
+    className: 'entity-legal',
+    title: '刑法',
+    type: 'legal',
+    wrapBook: false,
+    markers: ['['],
+    labels: ['legal', 'law', '刑法', '法令'],
+  },
+  concept: {
+    className: 'entity-concept',
+    title: '思想',
+    type: 'concept',
+    wrapBook: false,
+    markers: ['_'],
+    labels: ['concept', 'idea', '思想', '观念'],
+  },
+};
 
-// 段落编号模式
-const PARAGRAPH_NUMBER_PATTERN = /(?<!["'>])\[(\d+(?:\.\d+)*)\]/g;
-
-/**
- * 转换实体标注为HTML
- */
-function convertEntities(text) {
-  let result = text;
-  
-  // 按优先级处理实体标注（先处理消歧格式，再处理简单格式）
-  for (const entity of ENTITY_PATTERNS) {
-    if (entity.useCanonical) {
-      // 消歧格式：〖@简称|全名〗
-      result = result.replace(entity.pattern, (match, display, canonical) => {
-        const displayText = entity.wrapBook ? `《${display}》` : display;
-        return `<span class="${entity.className}" title="${entity.title}：${canonical}" data-canonical="${canonical}" data-type="${entity.type}">${displayText}</span>`;
-      });
-    } else {
-      // 简单格式：〖@人名〗
-      result = result.replace(entity.pattern, (match, content) => {
-        const displayText = entity.wrapBook ? `《${content}》` : content;
-        return `<span class="${entity.className}" title="${entity.title}" data-type="${entity.type}">${displayText}</span>`;
-      });
-    }
-  }
-  
-  return result;
+const PREFIX_TO_ENTITY = new Map();
+for (const [key, config] of Object.entries(ENTITY_DEFINITIONS)) {
+  for (const marker of config.markers) PREFIX_TO_ENTITY.set(marker, key);
+  for (const label of config.labels) PREFIX_TO_ENTITY.set(label.toLowerCase(), key);
 }
 
-/**
- * 转换段落编号为锚点
- */
+const ENTITY_BLOCK_PATTERN = /〖([^〖〗]+)〗/g;
+const PARAGRAPH_NUMBER_PATTERN = /(?<!["'>])\[(\d+(?:\.\d+)*)\]/g;
+
+function escapeHtml(text) {
+  return text
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+
+function buildEntitySpan(def, display, canonical) {
+  const safeDisplay = escapeHtml(display.trim());
+  const safeCanonical = canonical ? escapeHtml(canonical.trim()) : null;
+  const displayText = def.wrapBook ? `《${safeDisplay}》` : safeDisplay;
+
+  if (safeCanonical) {
+    return `<span class="${def.className}" title="${def.title}：${safeCanonical}" data-canonical="${safeCanonical}" data-type="${def.type}">${displayText}</span>`;
+  }
+
+  return `<span class="${def.className}" title="${def.title}" data-type="${def.type}">${displayText}</span>`;
+}
+
+function parseEntityToken(rawToken) {
+  const token = rawToken.trim();
+  if (!token) return null;
+
+  // 前缀语法：person:孔子 或 p:孔子
+  const labelMatch = token.match(/^([A-Za-z\u4e00-\u9fff]+)\s*:\s*(.+)$/u);
+  if (labelMatch) {
+    const rawPrefix = labelMatch[1].toLowerCase();
+    const payload = labelMatch[2].trim();
+    const entityKey = PREFIX_TO_ENTITY.get(rawPrefix);
+    if (!entityKey || !payload) return null;
+
+    const [display, canonical] = payload.split('|').map((part) => part.trim());
+    if (!display) return null;
+
+    return { def: ENTITY_DEFINITIONS[entityKey], display, canonical };
+  }
+
+  // 旧符号语法：@孔子
+  const marker = token.charAt(0);
+  const entityKey = PREFIX_TO_ENTITY.get(marker);
+  if (!entityKey) return null;
+
+  const payload = token.slice(1).trim();
+  if (!payload) return null;
+
+  const [display, canonical] = payload.split('|').map((part) => part.trim());
+  if (!display) return null;
+
+  return { def: ENTITY_DEFINITIONS[entityKey], display, canonical };
+}
+
+function convertEntities(text) {
+  return text.replace(ENTITY_BLOCK_PATTERN, (match, token) => {
+    const parsed = parseEntityToken(token);
+    if (!parsed) return match;
+
+    const { def, display, canonical } = parsed;
+    return buildEntitySpan(def, display, canonical);
+  });
+}
+
 function convertParagraphNumbers(text) {
   return text.replace(PARAGRAPH_NUMBER_PATTERN, (match, num) => {
     const pnId = `pn-${num}`;
@@ -147,44 +246,30 @@ function convertParagraphNumbers(text) {
   });
 }
 
-/**
- * 处理引号内容高亮
- */
 function convertQuotes(text) {
-  // 中文双引号
-  text = text.replace(/[""]([^""<>]+)[""]/g, '<span class="quoted-content">"$1"</span>');
-  // 中文单引号
-  text = text.replace(/['']([^''<>]+)['']/g, "<span class='quoted-content'>'$1'</span>");
-  // 日式引号
+  text = text.replace(/"([^"<>]+)"/g, '<span class="quoted-content">"$1"</span>');
+  text = text.replace(/'([^'<>]+)'/g, "<span class='quoted-content'>'$1'</span>");
   text = text.replace(/「([^」<>]+)」/g, '<span class="quoted-content">「$1」</span>');
   text = text.replace(/『([^』<>]+)』/g, '<span class="quoted-content">『$1』</span>');
-  
   return text;
 }
 
-/**
- * Remark 插件主函数
- */
 export default function remarkEntityAnnotation() {
   return (tree) => {
     visit(tree, 'text', (node, index, parent) => {
       if (typeof node.value !== 'string') return;
-      
+
       let text = node.value;
-      
-      // 检查是否需要处理
       const hasEntity = /〖[^〖〗]+〗/.test(text);
       const hasParaNum = /\[\d+(?:\.\d+)*\]/.test(text);
-      const hasQuote = /[""「」『』]/.test(text);
-      
+      const hasQuote = /["'「」『』]/.test(text);
+
       if (!hasEntity && !hasParaNum && !hasQuote) return;
-      
-      // 转换处理
+
       text = convertEntities(text);
       text = convertParagraphNumbers(text);
       text = convertQuotes(text);
-      
-      // 如果文本被转换为HTML，替换为html节点
+
       if (text !== node.value && /<[a-z][^>]*>/.test(text)) {
         parent.children[index] = {
           type: 'html',
@@ -195,40 +280,35 @@ export default function remarkEntityAnnotation() {
   };
 }
 
-/**
- * Rehype 插件：为实体添加索引链接（可选）
- * 这个插件可以在构建时生成实体索引页面
- */
 export function rehypeEntityIndex() {
   return (tree, file) => {
-    // 收集所有实体用于索引
     const entities = new Map();
-    
+
     visit(tree, 'element', (node) => {
-      if (node.properties?.className?.some(c => c.startsWith('entity-'))) {
-        const entityType = node.properties.className.find(c => c.startsWith('entity-'))?.replace('entity-', '');
+      if (node.properties?.className?.some((c) => c.startsWith('entity-'))) {
+        const entityType = node.properties.className
+          .find((c) => c.startsWith('entity-'))
+          ?.replace('entity-', '');
         const entityText = node.children?.[0]?.value;
         const canonical = node.properties?.dataCanonical || entityText;
-        
+
         if (entityType && entityText) {
           const key = `${entityType}:${canonical}`;
           if (!entities.has(key)) {
             entities.set(key, {
               type: entityType,
               text: entityText,
-              canonical: canonical,
+              canonical,
               occurrences: [],
             });
           }
           entities.get(key).occurrences.push({
             file: file.path,
-            // 可以添加更多位置信息
           });
         }
       }
     });
-    
-    // 将实体信息附加到文件数据中
+
     file.data.entities = entities;
   };
 }
