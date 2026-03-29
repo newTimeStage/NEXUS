@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:赤禅",
+    "target": "entity:person:革兰",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝革兰暴亡后，众推祝融氏女酋赤禅就帝位"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:赤禅",
+    "target": "entity:person:洛矛",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝赤禅属意己子洛矛嗣位"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:达耳",
+    "target": "entity:person:荷曲",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "达耳为上帝荷曲姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:达耳",
+    "target": "entity:person:荷曲",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝荷曲崩，姪达耳立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:达耳",
+    "target": "entity:person:媒兰",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立姪媒兰，以治厥流"
+  }
+]

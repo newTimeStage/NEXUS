@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:临魁",
+    "target": "entity:person:听訞",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "听訞生男于具茨山宫，上帝神农子也，名曰临魁"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:临魁",
+    "target": "entity:person:神农",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "听訞生男于具茨山宫，上帝神农子也，名曰临魁"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:临魁",
+    "target": "entity:person:羭纥",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝羭纥食火芥子而亡于华阳之巅，遗命长子临魁嗣立"
+  },
+  {
+    "id": "rel-004",
+    "type": "reigns_over",
+    "source": "entity:person:临魁",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:2", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "乃立，迁都陈留。帝临魁之政，男耕而食，妇织而衣，刑措不用而治，甲兵不兴而王"
+  }
+]

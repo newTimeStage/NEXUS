@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rel-001",
+    "type": "participates_in",
+    "source": "entity:person:提挺氏",
+    "target": "event:revolt:提挺氏投掷败强",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载提挺氏之民参与了投掷败强的事件"
+  },
+  {
+    "id": "rel-002",
+    "type": "participates_in",
+    "source": "entity:person:提挺氏",
+    "target": "event:science:投掷猎法始生",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载提挺氏之民发明了投掷猎法"
+  },
+  {
+    "id": "rel-003",
+    "type": "participates_in",
+    "source": "entity:person:提挺氏",
+    "target": "event:science:提挺氏凿石为斧",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载提挺氏之民凿石为斧"
+  },
+  {
+    "id": "rel-004",
+    "type": "occurs_in",
+    "source": "event:revolt:提挺氏投掷败强",
+    "target": "entity:place:大荒",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载事件发生在大荒时期"
+  },
+  {
+    "id": "rel-005",
+    "type": "occurs_on",
+    "source": "event:revolt:提挺氏投掷败强",
+    "target": "entity:time:混沌世",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载事件发生在混沌世之末"
+  },
+  {
+    "id": "rel-006",
+    "type": "occurs_on",
+    "source": "event:science:投掷猎法始生",
+    "target": "entity:time:混沌世",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载事件发生在混沌世之末"
+  },
+  {
+    "id": "rel-007",
+    "type": "occurs_on",
+    "source": "event:science:提挺氏凿石为斧",
+    "target": "entity:time:混沌世",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确记载事件发生在混沌世之末"
+  }
+]

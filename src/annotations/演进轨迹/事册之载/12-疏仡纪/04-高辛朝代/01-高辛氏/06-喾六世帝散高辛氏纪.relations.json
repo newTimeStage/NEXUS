@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:散",
+    "target": "entity:person:长昼",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "密伯长昼妇鸿有娠，生男于密邑，名散"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:长昼",
+    "target": "entity:tribe:大鸿氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇大鸿氏女酋"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:散",
+    "target": "entity:person:长昼",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝长昼崩，天子散立"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:散",
+    "target": "entity:tribe:鹳兜氏",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时鹳兜氏强，帝以国事计，纳其族女为妇，结姻盟"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-xiangwei-001",
+      "type": "member_of",
+      "source": "entity:person:象伟",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象伟为中央氏女"
+    },
+    {
+      "id": "rel-xiangwei-002",
+      "type": "succeeds",
+      "source": "entity:person:象伟",
+      "target": "entity:person:象团",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团崩而象伟立"
+    },
+    {
+      "id": "rel-xiangwei-003",
+      "type": "governs",
+      "source": "entity:person:象伟",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象伟居象邑"
+    },
+    {
+      "id": "rel-xiangwei-004",
+      "type": "appoints",
+      "source": "entity:person:象伟",
+      "target": "entity:person:节触",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象伟立侄节触为嗣"
+    },
+    {
+      "id": "rel-xiangwei-005",
+      "type": "part_of",
+      "source": "entity:tribe:中央氏",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "中央氏居天下中，为伏羲氏支"
+    }
+  ]
+}

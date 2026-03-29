@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:规辛",
+    "target": "entity:person:茜河",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝茜河崩，诸部酋共废混沌氏政，推规辛嗣立"
+  }
+]

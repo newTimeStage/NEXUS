@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:赤哲",
+    "target": "entity:person:茴芒",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "猷茴芒薨而姪赤哲立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:赤哲",
+    "target": "entity:person:茴芒",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "猷茴芒薨而姪赤哲立"
+  }
+]

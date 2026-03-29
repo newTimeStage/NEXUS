@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:常",
+    "target": "entity:person:豕",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千三百有八岁，轩辕氏生男一于武安，上帝豕之子，帝本之弟，名常。父豕之少妇封于此，遂生常"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:常",
+    "target": "entity:person:本",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝豕之子，帝本之弟，名常。父豕崩，传位于长兄本"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:常",
+    "target": "entity:person:本",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "常骤起，伪传遗诏曰："少主冲龄，难堪社稷。武安伯文韬武略，我崩后当承大统。"帝本愤绝而崩。群臣慑常威命，莫敢言。弟常立"
+  },
+  {
+    "id": "rel-004",
+    "type": "uncle_of",
+    "source": "entity:person:常",
+    "target": "entity:person:号",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝本欲嗣立小子号，命弟常相帝。帝既立，徙兄上帝之小子号于汾水"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:person:常",
+    "target": "entity:person:号",
+    "evidence": ["para:5", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝既立，徙兄上帝之小子号于汾水。号虽幼，聪颖善骑射，隐忍就封，阴图恢复。时号居汾水十余载，势日盛。是载春，号举兵反，分道逼都"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:常",
+    "target": "entity:tribe:魁隗",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝虽得位，然众心未附。乃联姻魁隗、神农之裔，以制本族"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:常",
+    "target": "entity:tribe:神农",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝虽得位，然众心未附。乃联姻魁隗、神农之裔，以制本族"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:常",
+    "target": "entity:person:鸿",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封神农氏后鸿于焉地，鸿遂建方邦于"
+  }
+]

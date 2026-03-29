@@ -1,0 +1,102 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:喾",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔上帝喾初就封沁阳，聘娵訾酋女常仪为元妇。帝斯绩十祀，妇常仪生鸷"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:常仪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝斯绩十祀，妇常仪生鸷"
+  },
+  {
+    "id": "rel-003",
+    "type": "brother_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:弃",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "有异母弟三：弃，封邰，姬姓，为邰伯"
+  },
+  {
+    "id": "rel-004",
+    "type": "brother_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:契",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "契，封商，子姓，为商伯"
+  },
+  {
+    "id": "rel-005",
+    "type": "brother_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:尧",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "尧，封唐，姜姓，为唐伯"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:鸷",
+    "target": "entity:person:喾",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾崩，遗命传鸷。鸷葬父，即立，号帝鸷，都沁阳"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:尧",
+    "target": "entity:person:羿",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "唐伯尧自结族旅，合羿伐十日，诛九酋，存一为长"
+  },
+  {
+    "id": "rel-008",
+    "type": "rivals_with",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "诸酋遂废鸷，立尧为天子。唐伯尧会诸酋入，帝知不敌，禅位"
+  },
+  {
+    "id": "rel-009",
+    "type": "succeeds",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "诸酋遂废鸷，立尧为天子。帝知不敌，禅位"
+  },
+  {
+    "id": "rel-010",
+    "type": "same_as",
+    "source": "entity:person:鸷",
+    "target": "entity:person:挚",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名帝挚"
+  }
+]

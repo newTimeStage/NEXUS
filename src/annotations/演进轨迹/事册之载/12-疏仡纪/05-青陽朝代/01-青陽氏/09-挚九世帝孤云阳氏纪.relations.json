@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:孤",
+    "target": "entity:person:山叭",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔帝咣哴三十祀，上帝就封安皋，娶伊祁氏女，居焉。帝向妹八祀，上帝纳伊祁氏少女为妇。九祀，生孤，姜姓云阳氏。后帝向妹崩，上帝立，迎妇与子孤入，孤少居宫。帝山叭十五祀，封子孤于汝邑"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:孤",
+    "target": "entity:identity:伊祁氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子汝伯孤娶伊祁氏女，立室"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:孤",
+    "target": "entity:person:山叭",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝山叭十五祀，封子孤于汝邑。帝山叭崩，子孤立。以宝丰宫陋，令南营新都"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:孤",
+    "target": "entity:tribe:祝融氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇祝融氏生子于汝邑，名沟次"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:沟次",
+    "target": "entity:person:孤",
+    "evidence": ["para:4", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇祝融氏生子于汝邑，名沟次。帝封四子沟次于鸣皋"
+  },
+  {
+    "id": "rel-006",
+    "type": "spouse_of",
+    "source": "entity:person:孤",
+    "target": "entity:identity:伊祁氏",
+    "evidence": ["para:5", "para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝年五十三，娶神农伊祁氏女为妃，封于龙门。妃伊祁氏生子于龙门，名控卯"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:控卯",
+    "target": "entity:person:孤",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妃伊祁氏生子于龙门，名控卯。帝爱之，常居龙门嬉。子控卯聪颖，帝私语曰：儿速长，父以天位授汝。遂遗后患"
+  },
+  {
+    "id": "rel-008",
+    "type": "succeeds",
+    "source": "entity:person:沟次",
+    "target": "entity:person:孤",
+    "evidence": ["para:7", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封四子沟次于鸣皋。子沟次敢为，治鸣皋，筑城宫，奢逾都。帝欲立为天子，然念子控卯及众子，诸子有才，未决。夏，都博望疫痢，帝染疾，崩于宫。遗命立沟次为天子"
+  },
+  {
+    "id": "rel-009",
+    "type": "same_as",
+    "source": "entity:person:孤",
+    "target": "entity:person:挚",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

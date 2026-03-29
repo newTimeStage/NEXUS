@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "grandson_of",
+    "source": "entity:person:大耀",
+    "target": "entity:person:节",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "大耀为上帝节之孙"
+  },
+  {
+    "id": "rel-002",
+    "type": "nephew_of",
+    "source": "entity:person:大耀",
+    "target": "entity:person:太河",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "大耀为上帝太河之甥"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:大耀",
+    "target": "entity:person:太河",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝太河崩而甥大耀立"
+  },
+  {
+    "id": "rel-004",
+    "type": "appoints",
+    "source": "entity:person:大耀",
+    "target": "entity:person:节芒",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立小子节芒"
+  }
+]

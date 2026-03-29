@@ -1,0 +1,32 @@
+{
+  // Each entry defines how to annotate the HTML generated from a corresponding MD file in src/content
+  // The build output is scanned for HTML files that share the same basename as the MD file.
+  // For example, src/content/intro.md -> dist/intro.html. The tool will annotate those HTML pages.
+  "annotations": [
+    {
+      "md": "intro.md",
+      "notes": [
+        {
+          "id": "intro-note-1",
+          "label": "Note",
+          "content": "这是一段关于引言的标注内容，帮助读者快速了解该部分的设计意图。"
+        },
+        {
+          "id": "intro-note-2",
+          "label": "Tip",
+          "content": "在本节后提供一个快速跳转，便于读者回到目录位置。"
+        }
+      ]
+    },
+    {
+      "md": "getting-started.md",
+      "notes": [
+        {
+          "id": "gs-note-1",
+          "label": "Note",
+          "content": "此处说明了启动所需的前提条件。"
+        }
+      ]
+    }
+  ]
+}

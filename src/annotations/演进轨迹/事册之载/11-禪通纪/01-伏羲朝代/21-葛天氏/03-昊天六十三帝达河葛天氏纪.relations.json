@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:达河",
+    "target": "entity:person:峙龙",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "达河为上帝峙龙姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:达河",
+    "target": "entity:person:峙龙",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝峙龙崩，姪达河立"
+  }
+]

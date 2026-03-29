@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:伏纪",
+    "target": "entity:person:桑味",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝桑味崩，相伏纪践祚"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:桑味",
+    "target": "entity:person:伏纪",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝桑味徵入天邑，拜为相，摄理天纲，立为嗣"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:伏纪",
+    "target": "entity:person:随嬄",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立姪随嬄"
+  }
+]

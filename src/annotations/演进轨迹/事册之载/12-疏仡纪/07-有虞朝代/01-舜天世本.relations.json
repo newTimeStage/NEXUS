@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:有虞氏",
+    "target": "entity:tribe:天虞氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "曰若稽古有虞氏，源出东夷少昊白虎部水伯天虞之裔"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:person:瞽叟",
+    "target": "entity:person:舜",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天虞氏庶子瞽叟娶邹屠氏女握登，生舜于姚墟"
+  },
+  {
+    "id": "rel-003",
+    "type": "mother_of",
+    "source": "entity:person:握登",
+    "target": "entity:person:舜",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天虞氏庶子瞽叟娶邹屠氏女握登，生舜于姚墟"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:陶唐氏",
+    "target": "entity:tribe:邹屠",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝尧陶唐氏立，会羿共伐邹屠天虞于朝阳、东平"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:tribe:陶唐氏",
+    "target": "entity:tribe:天虞",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝尧陶唐氏立，会羿共伐邹屠天虞于朝阳、东平"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:舜",
+    "target": "entity:identity:帝尧",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝尧密擢为摄政。舜既秉政，结党树威，权倾于天。帝尧崩，舜立"
+  },
+  {
+    "id": "rel-007",
+    "type": "same_as",
+    "source": "entity:person:舜",
+    "target": "entity:identity:虞天",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "乃徙都蒲阪，更号曰虞，立虞天"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-quqin-001",
+      "type": "member_of",
+      "source": "entity:person:曲秦",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "曲秦为中央氏女"
+    },
+    {
+      "id": "rel-quqin-002",
+      "type": "relative_of",
+      "source": "entity:person:曲秦",
+      "target": "entity:person:伏案",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "曲秦为帝伏案侄"
+    },
+    {
+      "id": "rel-quqin-003",
+      "type": "succeeds",
+      "source": "entity:person:曲秦",
+      "target": "entity:person:伏案",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏案崩而曲秦立"
+    },
+    {
+      "id": "rel-quqin-004",
+      "type": "governs",
+      "source": "entity:person:曲秦",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "曲秦居象邑"
+    }
+  ]
+}

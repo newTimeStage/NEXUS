@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:person:昌块",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千三百有三岁，轩辕氏生男一于临漪，名昌块，本轩辕氏之胄，姬姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:昌块",
+    "target": "entity:person:老童",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与丹水老童、重黎同宗"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:昌块",
+    "target": "entity:person:重黎",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与丹水老童、重黎同宗"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:昌块",
+    "target": "entity:person:江阳",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝江阳崩，群宗竞立，昌块以轩辕正胤之重，与诸氏酋豪论难，卒折群雄而承天位"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:person:昌块",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔者蚩尤构难，上帝振旅于此；今九黎或北遁燕蓟，或南汇荆蛮，遂为轩辕汤沐之邑"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔者蚩尤构难，上帝振旅于此；今九黎或北遁燕蓟，或南汇荆蛮，遂为轩辕汤沐之邑"
+  }
+]

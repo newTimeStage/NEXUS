@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-hegui-001",
+      "type": "member_of",
+      "source": "entity:person:河圭",
+      "target": "entity:tribe:栗陆氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "河圭为栗陆氏女"
+    },
+    {
+      "id": "rel-hegui-002",
+      "type": "relative_of",
+      "source": "entity:person:河圭",
+      "target": "entity:person:起望",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "河圭为帝起望侄"
+    },
+    {
+      "id": "rel-hegui-003",
+      "type": "succeeds",
+      "source": "entity:person:河圭",
+      "target": "entity:person:起望",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "起望崩而河圭立"
+    },
+    {
+      "id": "rel-hegui-004",
+      "type": "governs",
+      "source": "entity:person:河圭",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "河圭居象邑"
+    },
+    {
+      "id": "rel-hegui-005",
+      "type": "appoints",
+      "source": "entity:person:河圭",
+      "target": "entity:person:圭嬜",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "河圭遗命圭嬜嗣立"
+    }
+  ]
+}

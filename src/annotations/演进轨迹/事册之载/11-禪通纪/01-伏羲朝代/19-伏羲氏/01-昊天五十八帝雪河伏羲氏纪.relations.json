@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:雪河",
+    "target": "entity:person:掮师",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝掮师崩，遗命还政于伏羲氏，酋雪河黜昊英氏之政而自立"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:雪河",
+    "target": "entity:person:汝信",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立有巢氏酋汝信"
+  }
+]

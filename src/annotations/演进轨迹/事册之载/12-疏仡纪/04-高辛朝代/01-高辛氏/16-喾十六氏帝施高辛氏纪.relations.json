@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:施",
+    "target": "entity:person:亲义",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "云生男，名曰施，姜姓高辛氏"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:亲义",
+    "target": "entity:person:云",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "后伯阏为媒，娶为妇，越二年，云生男，名曰施"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:施",
+    "target": "entity:person:亲义",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝亲义崩，天子施立"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:森辈",
+    "target": "entity:person:施",
+    "evidence": ["para:6", "para:7", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封长子森辈于大河之南。子森伯森辈娶轩辕氏女为妇，生子山回。帝召子森方伯森辈入，辅天相帝，立为天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:山回",
+    "target": "entity:person:森辈",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子森伯森辈娶轩辕氏女为妇，生子山回"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:森辈",
+    "target": "entity:person:施",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝召子森方伯森辈入，辅天相帝，立为天子"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:施",
+    "target": "entity:person:实沈",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "公叔实沈老耄，请归就方于夏土，帝拜以为冢宰"
+  }
+]

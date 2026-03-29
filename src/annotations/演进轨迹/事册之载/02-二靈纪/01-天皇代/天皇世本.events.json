@@ -1,0 +1,99 @@
+[
+  {
+    "id": "evt-001",
+    "title": "火的发现与利用",
+    "type": "science",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [],
+    "places": [],
+    "summary": "初民不知火用，天雷焚林，后见兽焚者肉香，始知火利，取白灼之木作炬储火种"
+  },
+  {
+    "id": "evt-002",
+    "title": "权力象征的建立",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [],
+    "places": [],
+    "summary": "天下大者执王罚罪，掌火利民，被尊为皇，万王之王也"
+  },
+  {
+    "id": "evt-003",
+    "title": "石斧与权柄制度的创立",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [
+      "提挺氏"
+    ],
+    "places": [
+      "谷"
+    ],
+    "summary": "提挺氏凿石为石斧，削木为柄，象征权力，以此罚不恭，分食田猎之利"
+  },
+  {
+    "id": "evt-004",
+    "title": "正义与刑罚制度的确立",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [
+      "提挺氏"
+    ],
+    "places": [
+      "坟",
+      "谷"
+    ],
+    "summary": "提挺氏建立权柄之始，以权罚罪，以坟记事，民见坟葬以为训诫，始有治理"
+  },
+  {
+    "id": "evt-005",
+    "title": "三天干八地支的创制",
+    "type": "science",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "4"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [
+      "提挺氏"
+    ],
+    "places": [],
+    "summary": "提挺氏制作三天干以表田器，述八地支以传狩术，狩法始明"
+  },
+  {
+    "id": "evt-006",
+    "title": "提挺氏的分族统治",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/01-天皇代/天皇世本",
+    "paragraphs": [
+      "4"
+    ],
+    "time_text": "上古时代",
+    "year": null,
+    "people": [
+      "提挺氏"
+    ],
+    "places": [],
+    "summary": "提挺氏分十三头，各自为大，诸大王奉提挺为天，分其利"
+  }
+]

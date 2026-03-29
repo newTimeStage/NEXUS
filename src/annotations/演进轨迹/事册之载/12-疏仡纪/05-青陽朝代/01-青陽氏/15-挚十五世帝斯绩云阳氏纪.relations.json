@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:美",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝长幅九祀，生子斯绩于沁阳。帝美五祀，封子斯绩于亳，司河南旧都。立斯绩为天子"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "一妃于帝美五祀生子斯遂于美邑。斯绩闻而忧，问上帝，上帝觉其危，恐启乱，即于帝美廿三祀，封斯遂于沁阳，立斯绩为天子。议乃止，兄弟稍和"
+  },
+  {
+    "id": "rel-003",
+    "type": "brother_of",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:伊丁",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "后娶伊祁氏女，帝美七祀，生子伊丁"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:美",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝长幅崩，天子斯绩立，都美邑，命更名曰承留"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:斯绩",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇常仪生鸷"
+  },
+  {
+    "id": "rel-006",
+    "type": "spouse_of",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:常仪",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇常仪生鸷"
+  },
+  {
+    "id": "rel-007",
+    "type": "same_as",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:挚",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

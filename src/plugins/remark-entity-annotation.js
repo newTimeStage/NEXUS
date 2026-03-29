@@ -1,22 +1,22 @@
 /**
  * NEXUS 实体标注插件
  *
- * 目标：在保留 shiji-kb 风格符号标注的同时，提供“标签前缀”语法，
+ * 目标：在保留 Markdown 风格符号标注的同时，提供“标签前缀”语法，
  * 避免与 Markdown 常见符号（如 [、_、{）产生输入与阅读冲突。
  *
  * 推荐语法（更稳健）：
- * - 〖person:孔子〗 / 〖p:孔子〗
- * - 〖place:长安〗 / 〖loc:长安〗
- * - 〖legal:五刑〗（替代旧式 〖[五刑〗）
- * - 〖concept:仁义〗（替代旧式 〖_仁义〗）
- * - 〖book:尚书〗（替代旧式 〖{尚书〗）
+ * - 【person:孔子】 / 【p:孔子】
+ * - 【place:长安】 / 【loc:长安】
+ * - 【legal:五刑】（替代旧式 【[五刑】）
+ * - 【concept:仁义】（替代旧式 【_仁义】）
+ * - 【book:尚书】（替代旧式 【{尚书】）
  *
  * 兼容语法（旧版保留）：
- * - 〖@孔子〗、〖=长安〗、〖;丞相〗 ...
+ * - 【@孔子】、【=长安】、【;丞相】 ...
  *
  * 消歧语法：
- * - 〖person:始皇|秦始皇〗
- * - 〖@始皇|秦始皇〗
+ * - 【person:始皇|秦始皇】
+ * - 【@始皇|秦始皇】
  */
 
 import { visit } from 'unist-util-visit';
@@ -166,6 +166,14 @@ const ENTITY_DEFINITIONS = {
     markers: ['_'],
     labels: ['concept', 'idea', '思想', '观念'],
   },
+  disaster: {
+    className: 'entity-disaster',
+    title: '灾难',
+    type: 'disaster',
+    wrapBook: false,
+    markers: ['!'],
+    labels: ['disaster', '灾难'],
+  },
 };
 
 const PREFIX_TO_ENTITY = new Map();
@@ -174,7 +182,7 @@ for (const [key, config] of Object.entries(ENTITY_DEFINITIONS)) {
   for (const label of config.labels) PREFIX_TO_ENTITY.set(label.toLowerCase(), key);
 }
 
-const ENTITY_BLOCK_PATTERN = /〖([^〖〗]+)〗/g;
+const ENTITY_BLOCK_PATTERN = /【([^【】]+)】/g;
 const PARAGRAPH_NUMBER_PATTERN = /(?<!["'>])\[(\d+(?:\.\d+)*)\]/g;
 
 function escapeHtml(text) {
@@ -191,10 +199,10 @@ function buildEntitySpan(def, display, canonical) {
   const displayText = def.wrapBook ? `《${safeDisplay}》` : safeDisplay;
 
   if (safeCanonical) {
-    return `<span class="${def.className}" title="${def.title}：${safeCanonical}" data-canonical="${safeCanonical}" data-type="${def.type}">${displayText}</span>`;
+    return `<span class="${def.className}" title='${def.title}：${safeCanonical}' data-canonical="${safeCanonical}" data-type="${def.type}">${displayText}</span>`;
   }
 
-  return `<span class="${def.className}" title="${def.title}" data-type="${def.type}">${displayText}</span>`;
+  return `<span class="${def.className}" title='${def.title}' data-type="${def.type}">${displayText}</span>`;
 }
 
 function parseEntityToken(rawToken) {
@@ -242,16 +250,96 @@ function convertEntities(text) {
 function convertParagraphNumbers(text) {
   return text.replace(PARAGRAPH_NUMBER_PATTERN, (match, num) => {
     const pnId = `pn-${num}`;
-    return `<a href="#${pnId}" id="${pnId}" class="para-num" title="段落编号 ${num}，点击跳转">${num}</a>`;
+    return `<a href="#${pnId}" id="${pnId}" class="para-num" title='段落编号 ${num}，点击跳转'>${num}</a>`;
   });
 }
 
 function convertQuotes(text) {
-  text = text.replace(/"([^"<>]+)"/g, '<span class="quoted-content">"$1"</span>');
-  text = text.replace(/'([^'<>]+)'/g, "<span class='quoted-content'>'$1'</span>");
-  text = text.replace(/「([^」<>]+)」/g, '<span class="quoted-content">「$1」</span>');
-  text = text.replace(/『([^』<>]+)』/g, '<span class="quoted-content">『$1』</span>');
-  return text;
+  let result = '';
+  let inTag = false;
+  let inAttributeValue = false;
+  let i = 0;
+  while (i < text.length) {
+    if (text[i] === '<') {
+      inTag = true;
+      inAttributeValue = false;
+      result += text[i];
+      i++;
+      continue;
+    }
+    if (text[i] === '>') {
+      inTag = false;
+      inAttributeValue = false;
+      result += text[i];
+      i++;
+      continue;
+    }
+    if (inTag) {
+      if (text[i] === '=') {
+        inAttributeValue = true;
+      } else if (text[i] === ' ') {
+        inAttributeValue = false;
+      }
+      result += text[i];
+      i++;
+      continue;
+    }
+    // not in tag
+    if (text[i] === '"') {
+      // find the closing "
+      let j = i + 1;
+      while (j < text.length && text[j] !== '"' && text[j] !== '<') {
+        j++;
+      }
+      if (j < text.length && text[j] === '"') {
+        // valid "text"
+        const inner = text.substring(i + 1, j);
+        result += '<span class="quoted-content">"' + inner + '"</span>';
+        i = j + 1;
+        continue;
+      }
+    }
+    if (text[i] === "'") {
+      // similar for '
+      let j = i + 1;
+      while (j < text.length && text[j] !== "'" && text[j] !== '<') {
+        j++;
+      }
+      if (j < text.length && text[j] === "'") {
+        const inner = text.substring(i + 1, j);
+        result += "<span class='quoted-content'>'" + inner + "'</span>";
+        i = j + 1;
+        continue;
+      }
+    }
+    if (text[i] === '「') {
+      let j = i + 1;
+      while (j < text.length && text[j] !== '」' && text[j] !== '<') {
+        j++;
+      }
+      if (j < text.length && text[j] === '」') {
+        const inner = text.substring(i + 1, j);
+        result += '<span class="quoted-content">「' + inner + '」</span>';
+        i = j + 1;
+        continue;
+      }
+    }
+    if (text[i] === '『') {
+      let j = i + 1;
+      while (j < text.length && text[j] !== '』' && text[j] !== '<') {
+        j++;
+      }
+      if (j < text.length && text[j] === '』') {
+        const inner = text.substring(i + 1, j);
+        result += '<span class="quoted-content">『' + inner + '』</span>';
+        i = j + 1;
+        continue;
+      }
+    }
+    result += text[i];
+    i++;
+  }
+  return result;
 }
 
 export default function remarkEntityAnnotation() {
@@ -260,15 +348,15 @@ export default function remarkEntityAnnotation() {
       if (typeof node.value !== 'string') return;
 
       let text = node.value;
-      const hasEntity = /〖[^〖〗]+〗/.test(text);
+      const hasEntity = /【[^【】]+】/.test(text);
       const hasParaNum = /\[\d+(?:\.\d+)*\]/.test(text);
       const hasQuote = /["'「」『』]/.test(text);
 
       if (!hasEntity && !hasParaNum && !hasQuote) return;
 
+      text = convertQuotes(text);
       text = convertEntities(text);
       text = convertParagraphNumbers(text);
-      text = convertQuotes(text);
 
       if (text !== node.value && /<[a-z][^>]*>/.test(text)) {
         parent.children[index] = {

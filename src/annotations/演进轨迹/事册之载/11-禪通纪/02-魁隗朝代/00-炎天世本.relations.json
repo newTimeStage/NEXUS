@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "branch_of",
+    "source": "entity:tribe:少典氏",
+    "target": "entity:tribe:燧人氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "曰若稽古少典氏，燧人氏支也"
+  },
+  {
+    "id": "rel-002",
+    "type": "allied_with",
+    "source": "entity:tribe:少典氏",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世与有蟜氏姻盟"
+  },
+  {
+    "id": "rel-003",
+    "type": "renamed_to",
+    "source": "entity:identity:风",
+    "target": "entity:identity:姜",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少典氏酋弃风姓，更姓为姜"
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "id": "rel-001",
+    "type": "same_as",
+    "source": "entity:myth:天皇",
+    "target": "entity:myth:众父之父",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文\"所谓天皇，众父之父，万王之王也\"直接定义"
+  },
+  {
+    "id": "rel-002",
+    "type": "same_as",
+    "source": "entity:concept:皇",
+    "target": "entity:concept:煌",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文\"皇者，煌之初文也\""
+  },
+  {
+    "id": "rel-003",
+    "type": "elaborates",
+    "source": "para:2",
+    "target": "entity:concept:权",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "段落[2]展开说明权的含义与重要性"
+  },
+  {
+    "id": "rel-004",
+    "type": "precedes",
+    "source": "event:science:火的发现与利用",
+    "target": "event:politics:权力象征的建立",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "inferred",
+    "confidence": "high",
+    "note": "火的发现使得掌握火利的人获得权力基础"
+  },
+  {
+    "id": "rel-005",
+    "type": "precedes",
+    "source": "event:politics:权力象征的建立",
+    "target": "event:politics:石斧与权柄制度的创立",
+    "evidence": [
+      "para:2",
+      "para:3"
+    ],
+    "status": "inferred",
+    "confidence": "high",
+    "note": "权力象征的确立为石斧权柄制度的创立奠定基础"
+  },
+  {
+    "id": "rel-006",
+    "type": "supports",
+    "source": "entity:artifact:石斧",
+    "target": "entity:concept:权",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文\"王者，以象石斧之本义，权之所在\""
+  },
+  {
+    "id": "rel-007",
+    "type": "part_of",
+    "source": "event:politics:正义与刑罚制度的确立",
+    "target": "event:politics:石斧与权柄制度的创立",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "正义刑罚制度是权柄制度的重要组成部分"
+  },
+  {
+    "id": "rel-008",
+    "type": "interprets",
+    "source": "entity:artifact:坟",
+    "target": "entity:concept:权",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文\"此磊石为坟以记事、封土为墓以葬死\"体现权柄用以记录和教化"
+  },
+  {
+    "id": "rel-009",
+    "type": "cites",
+    "source": "para:3",
+    "target": "entity:myth:谷神",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "正文引用谷神作为人初有神的证据"
+  },
+  {
+    "id": "rel-010",
+    "type": "elaborates",
+    "source": "para:4",
+    "target": "entity:artifact:三天干",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "段落[4]说明三天干的用途为表田器"
+  },
+  {
+    "id": "rel-011",
+    "type": "elaborates",
+    "source": "para:4",
+    "target": "entity:artifact:八地支",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "段落[4]说明八地支的用途为传狩术"
+  },
+  {
+    "id": "rel-012",
+    "type": "supports",
+    "source": "entity:science:三天干八地支",
+    "target": "entity:action:狩法",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文\"述八地支以传狩术，狩法始明\""
+  },
+  {
+    "id": "rel-013",
+    "type": "same_as",
+    "source": "entity:tribe:提挺氏",
+    "target": "entity:identity:父",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "inferred",
+    "confidence": "medium",
+    "note": "提挺氏在创制权柄制度时被称为\"父\"，指众父之首"
+  },
+  {
+    "id": "rel-014",
+    "type": "refers_to",
+    "source": "para:1",
+    "target": "entity:concept:天",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "段落[1]对天的含义进行定义说明"
+  }
+]

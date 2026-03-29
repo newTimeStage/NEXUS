@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:黄",
+    "target": "entity:person:大迥",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋大迥媾于有蟜氏，生男一于轩辕谷，名曰黄。酋大迥薨，子黄立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:黄",
+    "target": "entity:person:大迥",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋大迥薨，子黄立"
+  },
+  {
+    "id": "rel-003",
+    "type": "marries",
+    "source": "entity:person:大迥",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋大迥媾于有蟜氏"
+  },
+  {
+    "id": "rel-004",
+    "type": "founder_of",
+    "source": "entity:person:黄",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "故号有轩辕之氏也，世曰轩辕氏"
+  }
+]

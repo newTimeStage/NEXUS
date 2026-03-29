@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:墙烁",
+    "target": "entity:person:因康",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝因康禅位，墙烁行帝事"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:墙烁",
+    "target": "entity:person:泽治",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立姪泽治"
+  }
+]

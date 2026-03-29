@@ -1,0 +1,74 @@
+[
+  {
+    "id": "rel-001",
+    "type": "part_of",
+    "source": "entity:person:地皇",
+    "target": "entity:tribe:三皇",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "地皇是三皇时代的首位统治者"
+  },
+  {
+    "id": "rel-002",
+    "type": "successor_of",
+    "source": "entity:person:地皇",
+    "target": "entity:tribe:世提挺氏",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世提挺氏末，地皇时代开始"
+  },
+  {
+    "id": "rel-003",
+    "type": "named_after",
+    "source": "entity:tribe:通姓氏",
+    "target": "entity:person:地皇",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "地皇命名通姓氏，象征了新的宗法秩序"
+  },
+  {
+    "id": "rel-004",
+    "type": "caused_by",
+    "source": "entity:person:姆觉者",
+    "target": "entity:astronomy:日月星三光",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "姆觉者定日月星三光，以分昼夜"
+  },
+  {
+    "id": "rel-005",
+    "type": "predecessor_of",
+    "source": "entity:person:地皇",
+    "target": "entity:tribe:通姓氏",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "medium",
+    "note": "地皇之后，姓氏制度逐步确立，众多族群形成"
+  },
+  {
+    "id": "rel-006",
+    "type": "located_in",
+    "source": "entity:disaster:水没天",
+    "target": "entity:state:天下",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "大洪水影响天下十二头地域"
+  }
+]

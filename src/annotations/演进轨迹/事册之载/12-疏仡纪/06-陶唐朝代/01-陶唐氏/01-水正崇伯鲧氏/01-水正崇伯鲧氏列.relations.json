@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:鲧",
+    "target": "entity:person:禹",
+    "evidence": ["para:2", "para:3", "para:5", "para:6", "para:7", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "崇伯鲧妇志生子禹，姒姓夏后氏。崇伯鲧寄命于子禹，使首戴钩铃，胸画北斗，足纹字迹，名之文命。时鲧子禹年十九，虎背熊腰，长九尺九寸，常从父治水。帝密命禹为司空，代父治水。禹方治水，未及省父，后闻丧，望祭泣泪。子禹化悲为力，誓成父业，以取信天下。暗志父为尧舜所害，必报之。仍用鲧法，筑堤掘沟，复用息石息壤镇水"
+  },
+  {
+    "id": "rel-002",
+    "type": "husband_of",
+    "source": "entity:person:鲧",
+    "target": "entity:person:志",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妻修已氏女志为妇。崇伯鲧妇志生子禹"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:鲧",
+    "target": "entity:person:密",
+    "evidence": ["para:1", "para:3", "para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "尧帝遣子密视水，密妄责水事，鲧怒而廷争，密惭，遂结怨。尧帝密素不悦鲧，谓众曰：\"鲧负族倨傲，弗可大用。\"鲧怒谓信史：\"得天道者为帝，得地道者为三公。吾得地道，不吾三公，帝之不公也！\"舜以鲧盗息石、息壤之罪捕之"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:person:鲧",
+    "target": "entity:person:舜",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "忽闻帝密立舜为嗣，位列三公之首。舜曰：\"今有四凶为乱，崇伯鲧其一也。欲安天下，当除四凶。\"舜以鲧盗息石、息壤之罪捕之，强徙其族于羽山"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:鲧",
+    "target": "entity:identity:崇伯鲧",
+    "evidence": ["para:1", "para:2", "para:3", "para:4", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封鲧于崇，氏后号崇伯鲧"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:禹",
+    "target": "entity:identity:文命",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "崇伯鲧寄命于子禹，使首戴钩铃，胸画北斗，足纹字迹，名之文命"
+  },
+  {
+    "id": "rel-007",
+    "type": "same_as",
+    "source": "entity:person:禹",
+    "target": "entity:identity:大禹",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "十三年足遍山川，民呼大禹"
+  },
+  {
+    "id": "rel-008",
+    "type": "husband_of",
+    "source": "entity:person:禹",
+    "target": "entity:person:娇",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子禹治水至涂山，遇涂山氏女娇，悦而妻之"
+  },
+  {
+    "id": "rel-009",
+    "type": "father_of",
+    "source": "entity:person:禹",
+    "target": "entity:person:启",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "后闻生子，名之曰启"
+  }
+]

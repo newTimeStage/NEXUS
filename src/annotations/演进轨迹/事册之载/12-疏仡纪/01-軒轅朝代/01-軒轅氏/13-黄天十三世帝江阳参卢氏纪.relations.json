@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:person:江阳",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝豕，统合八纮，封神农氏之后于卢地，赐姓曰祁，故世谓参卢氏"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:江阳",
+    "target": "entity:tribe:轩辕",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "参卢氏酋赘入轩辕氏，列鼎铉位，就封白龟山，妇轩辕有娠"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:江阳",
+    "target": "entity:person:仡谅",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "及父薨，嗣爵入庭。黄帝仡谅贤其能，命掌天官"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:江阳",
+    "target": "entity:person:仡谅",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝仡谅崩，群臣共推江阳嗣位"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:person:江阳",
+    "target": "entity:person:鸿",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝诏庭议天下势，当是时也，黄天政衰，内衅日炽。缙云、帝鸿诸族竞逐"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:person:江阳",
+    "target": "entity:tribe:缙云",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝诏庭议天下势，当是时也，黄天政衰，内衅日炽。缙云、帝鸿诸族竞逐"
+  },
+  {
+    "id": "rel-007",
+    "type": "rivals_with",
+    "source": "entity:person:江阳",
+    "target": "entity:tribe:少昊部",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊部寖强，闻天庭多故，遂厉兵犯天。帝遣师御之，三战皆北。少昊乘胜长驱，旌麾直指天畿"
+  },
+  {
+    "id": "rel-008",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕",
+    "target": "entity:tribe:少昊部",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊部寖强，闻天庭多故，遂厉兵犯天。帝遣师御之，三战皆北"
+  }
+]

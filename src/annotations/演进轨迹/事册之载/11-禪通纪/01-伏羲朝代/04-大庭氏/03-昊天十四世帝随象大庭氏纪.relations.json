@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-suixiang-001",
+      "type": "member_of",
+      "source": "entity:person:随象",
+      "target": "entity:tribe:大庭氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随象为大庭氏男"
+    },
+    {
+      "id": "rel-suixiang-002",
+      "type": "relative_of",
+      "source": "entity:person:随象",
+      "target": "entity:person:姯印",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随象为帝姯印孙子"
+    },
+    {
+      "id": "rel-suixiang-003",
+      "type": "succeeds",
+      "source": "entity:person:随象",
+      "target": "entity:person:姯印",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "姯印崩而随象立"
+    },
+    {
+      "id": "rel-suixiang-004",
+      "type": "opposes",
+      "source": "entity:person:伏显",
+      "target": "entity:person:随象",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏显代随象为帝"
+    }
+  ]
+}

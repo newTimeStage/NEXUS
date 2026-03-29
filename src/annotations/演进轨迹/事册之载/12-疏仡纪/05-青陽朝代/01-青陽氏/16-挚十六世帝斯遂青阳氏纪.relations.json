@@ -1,0 +1,132 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:美",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔帝美立，纳六妃。一妃于帝美五祀生子斯遂于美邑。帝美廿三祀，封子斯遂于沁阳"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:斯绩",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "言闻于兄斯绩，斯绩问父。兄斯绩立于美邑，命纳天下姬于后"
+  },
+  {
+    "id": "rel-003",
+    "type": "spouse_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:常仪",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝斯绩元祀，弟斯遂娶娵訾氏少女常仪，为元妇"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:鸷",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "是岁，弟妇常仪生子，名鸷，亦曰匡二"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:鸷",
+    "target": "entity:person:匡二",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "名鸷，亦曰匡二"
+  },
+  {
+    "id": "rel-006",
+    "type": "spouse_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:姜嫄",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋妻以女姜嫄，为婚"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:弃",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "姜嫄有身，帝斯绩五祀，生子受惊，母弃于山，山民养之，名曰弃"
+  },
+  {
+    "id": "rel-008",
+    "type": "spouse_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:简狄",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "斯遂娶其少女简狄"
+  },
+  {
+    "id": "rel-009",
+    "type": "son_of",
+    "source": "entity:person:契",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "简狄有身，帝斯绩十二祀，生子，名契"
+  },
+  {
+    "id": "rel-010",
+    "type": "succeeds",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:斯绩",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "斯遂闻兄暴亡，以为时可，托故帝亡于佞，兴师清天浊。天庭失意臣皆出，推斯遂为帝"
+  },
+  {
+    "id": "rel-011",
+    "type": "spouse_of",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:庆都",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝娶其少女庆都，封于丹陵"
+  },
+  {
+    "id": "rel-012",
+    "type": "son_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇庆都有身，生子于于丹陵，名尧，姜姓"
+  },
+  {
+    "id": "rel-013",
+    "type": "same_as",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:喾",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名帝喾"
+  }
+]

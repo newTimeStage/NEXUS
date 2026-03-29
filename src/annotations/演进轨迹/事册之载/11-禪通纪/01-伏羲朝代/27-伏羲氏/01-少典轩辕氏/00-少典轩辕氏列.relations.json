@@ -1,0 +1,34 @@
+{
+  "relations": [
+    {
+      "id": "rel-xuanyuan-001",
+      "type": "part_of",
+      "source": "entity:tribe:轩辕氏",
+      "target": "entity:tribe:少典氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "轩辕氏本出少典氏"
+    },
+    {
+      "id": "rel-xuanyuan-002",
+      "type": "spouse_of",
+      "source": "entity:tribe:少典氏",
+      "target": "entity:tribe:有蟜氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "少典氏世与有蟜氏媾合"
+    },
+    {
+      "id": "rel-xuanyuan-003",
+      "type": "governs",
+      "source": "entity:person:轩辕",
+      "target": "entity:place:轩辕谷",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "轩辕生于轩辕谷"
+    }
+  ]
+}

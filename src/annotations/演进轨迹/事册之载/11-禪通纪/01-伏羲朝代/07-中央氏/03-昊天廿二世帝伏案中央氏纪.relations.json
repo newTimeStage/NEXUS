@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-fuan-001",
+      "type": "member_of",
+      "source": "entity:person:伏案",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏案为中央氏女"
+    },
+    {
+      "id": "rel-fuan-002",
+      "type": "relative_of",
+      "source": "entity:person:伏案",
+      "target": "entity:person:节触",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏案为帝节触侄"
+    },
+    {
+      "id": "rel-fuan-003",
+      "type": "succeeds",
+      "source": "entity:person:伏案",
+      "target": "entity:person:节触",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "节触崩而伏案立"
+    },
+    {
+      "id": "rel-fuan-004",
+      "type": "governs",
+      "source": "entity:person:伏案",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏案居象邑"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:姜赤鸠",
+    "target": "entity:person:信",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋信薨，侄姜赤鸠立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:姜赤鸠",
+    "target": "entity:person:信",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋信薨，侄姜赤鸠立"
+  }
+]

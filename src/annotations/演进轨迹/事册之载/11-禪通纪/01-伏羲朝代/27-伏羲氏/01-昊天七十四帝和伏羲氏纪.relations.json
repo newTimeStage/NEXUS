@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:和",
+    "target": "entity:person:节曲",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝节曲崩，男和立"
+  },
+  {
+    "id": "rel-002",
+    "type": "conflicts_with",
+    "source": "entity:tribe:女娲氏",
+    "target": "entity:person:和",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝立新制，行均平婚制，守者叛之，女娲氏烈争，以风和罔遵上帝训诰、坏乱政典为辞，拒受约命，遂反天自立"
+  }
+]

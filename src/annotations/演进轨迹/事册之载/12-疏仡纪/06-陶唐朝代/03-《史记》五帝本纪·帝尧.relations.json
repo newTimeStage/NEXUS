@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "same_as",
+    "source": "entity:person:放勋",
+    "target": "entity:identity:帝尧",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝尧者，放勋"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:identity:帝尧",
+    "target": "entity:person:丹朱",
+    "evidence": ["para:4", "para:13"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "嗣子丹朱开明。尧知子丹朱之不肖，不足授天下"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:舜",
+    "target": "entity:identity:帝尧",
+    "evidence": ["para:6", "para:7", "para:8", "para:13"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "有矜在民间，曰虞舜。於是尧妻之二女，观其德於二女。尧以为圣，召舜曰：\"女谋事至而言可绩，三年矣。女登帝位。\"於是帝尧老，命舜摄行天子之政，以观天命。尧辟位凡二十八年而崩。卒授舜以天下"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:identity:帝尧",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:4", "para:12"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "讙兜曰：\"共工旁聚布功，可用。\"尧曰：\"共工善言，其用僻，似恭漫天，不可。\"讙兜进言共工，尧曰不可而试之工师，共工果淫辟。请流共工於幽陵"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:identity:帝尧",
+    "target": "entity:person:鲧",
+    "evidence": ["para:4", "para:5", "para:12"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "皆曰鲧可。尧曰：\"鲧负命毁族，不可。\"岳曰：\"异哉，试不可用而已。\"尧於是听岳用鲧。九岁，功用不成。四岳举鲧治鸿水，尧以为不可，岳彊请试之，试之而无功。殛鲧於羽山"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:舜",
+    "target": "entity:identity:帝舜",
+    "evidence": ["para:13"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "夫而后之中国践天子位焉，是为帝舜"
+  }
+]

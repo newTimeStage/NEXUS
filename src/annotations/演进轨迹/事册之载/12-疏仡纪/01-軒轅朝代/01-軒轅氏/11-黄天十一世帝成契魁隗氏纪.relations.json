@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:person:成契",
+    "target": "entity:tribe:魁隗氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔炎帝魁隗氏之胄，共工之胤也"
+  },
+  {
+    "id": "rel-002",
+    "type": "descendant_of",
+    "source": "entity:person:成契",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔炎帝魁隗氏之胄，共工之胤也"
+  },
+  {
+    "id": "rel-003",
+    "type": "descendant_of",
+    "source": "entity:person:成契",
+    "target": "entity:person:鬼臾蓲",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其先鬼臾蓲，佐上帝姬芒，掌星象、制兵书，世司天官"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:成契",
+    "target": "entity:person:恚文",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "成契以赘婿入轩辕氏，为上帝恚文之股肱，后嗣天位。成契于黄天上元三千五百有八岁赘入轩辕氏，以雄才见重于帝恚文"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:成契",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "成契以赘婿入轩辕氏，为上帝恚文之股肱。尝偶遇轩辕氏贵女，英华绝代，遂缔姻好"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:成契",
+    "target": "entity:person:恚文",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝恚文崩，群臣推成契继立"
+  }
+]

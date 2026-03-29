@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:节曲",
+    "target": "entity:person:苍芒",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "节曲为上帝苍芒姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:节曲",
+    "target": "entity:person:苍芒",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝苍芒崩，节曲立"
+  }
+]

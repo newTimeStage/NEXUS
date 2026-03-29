@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rel-001",
+    "type": "originates_from",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:共工氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏本共工氏也"
+  },
+  {
+    "id": "rel-002",
+    "type": "same_origin",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:魁隗氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与魁隗氏同出于少典氏"
+  },
+  {
+    "id": "rel-003",
+    "type": "originates_from",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:少典氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "同出于少典氏"
+  },
+  {
+    "id": "rel-004",
+    "type": "mother_of",
+    "source": "entity:person:登",
+    "target": "entity:person:羭纥",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "烈山氏酋登生男于潬渚，名之曰羭纥"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:登",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "烈山氏酋登生男于潬渚，名之曰羭纥"
+  },
+  {
+    "id": "rel-006",
+    "type": "leader_of",
+    "source": "entity:person:羭纥",
+    "target": "entity:tribe:烈山氏",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "众佥之为烈山氏酋"
+  },
+  {
+    "id": "rel-007",
+    "type": "merges_with",
+    "source": "entity:tribe:烈山氏",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋率氏归并于神农氏"
+  },
+  {
+    "id": "rel-008",
+    "type": "defeats",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:魁隗氏",
+    "evidence": ["para:14"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏酋羭纥率众往伐，克魁隗氏"
+  },
+  {
+    "id": "rel-009",
+    "type": "succeeds",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:共工",
+    "evidence": ["para:14"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝共工逊位。天下万邦共推神农氏酋即帝位"
+  },
+  {
+    "id": "rel-010",
+    "type": "father_of",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:临魁",
+    "evidence": ["para:20", "para:22"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封长子临魁于烈山氏之地，遗命嗣立长子临魁"
+  },
+  {
+    "id": "rel-011",
+    "type": "father_of",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:石年",
+    "evidence": ["para:20"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封小子石年于伊祁氏之地"
+  },
+  {
+    "id": "rel-012",
+    "type": "husband_of",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:听訞",
+    "evidence": ["para:22"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "平生唯娶听訞一妻"
+  }
+]

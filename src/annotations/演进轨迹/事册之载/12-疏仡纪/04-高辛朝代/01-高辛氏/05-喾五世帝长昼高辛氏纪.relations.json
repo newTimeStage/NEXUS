@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:长昼",
+    "target": "entity:person:香莫",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在天子香莫，未登天帝位，就方龙门，及年弱冠，纳娵訾氏女为妇，于上元四千四百廿八岁生子名长昼"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:香莫",
+    "target": "entity:tribe:娵訾氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "纳娵訾氏女为妇"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:长昼",
+    "target": "entity:person:香莫",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝香莫崩，天子长昼立"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:散",
+    "target": "entity:person:长昼",
+    "evidence": ["para:2", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封子散于密方。帝诏子散入，封天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:散",
+    "target": "entity:tribe:鹳兜氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子散聘鹳兜氏女为妇"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:长昼",
+    "target": "entity:tribe:大鸿氏",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封大鸿氏于须水"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:千龙",
+    "target": "entity:person:散",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子密伯散妇生千龙"
+  }
+]

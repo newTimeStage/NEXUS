@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "member_of",
+    "source": "entity:person:团暤",
+    "target": "entity:tribe:伏羲氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "团暤为伏羲氏成员"
+  },
+  {
+    "id": "rel-002",
+    "type": "participates_in",
+    "source": "entity:person:团暤",
+    "target": "event:reign:团暤继位",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "团暤参与继位事件"
+  },
+  {
+    "id": "rel-003",
+    "type": "participates_in",
+    "source": "entity:person:团暤",
+    "target": "event:death:团暤去世",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "团暤参与去世事件"
+  }
+]

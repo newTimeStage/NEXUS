@@ -1,6 +1,6 @@
-/* 全局变量定义 */
+/* ?????? */
 :root {
-  /* 亮色主题 */
+  /* ???? */
   --bg-primary: #f8f5f0;
   --bg-secondary: #f0ede6;
   --bg-tertiary: #e8e4dd;
@@ -12,7 +12,7 @@
   --accent-hover: #948678;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  /* Markdown相关变量 */
+  /* Markdown???? */
   --code-bg: #f0ede6;
   --code-text: #2c2a26;
   --table-header-bg: #e8e4dd;
@@ -20,7 +20,7 @@
   --font-mono: 'Courier New', Courier, monospace;
 }
 
-/* 暗色主题 */
+/* ???? */
 [data-theme="dark"] {
   --bg-primary: #1a1917;
   --bg-secondary: #2c2a26;
@@ -32,14 +32,14 @@
   --accent-color: #a89b8c;
   --accent-hover: #b8aa9c;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  /* Markdown相关变量 */
+  /* Markdown???? */
   --code-bg: #2c2a26;
   --code-text: #f8f5f0;
   --table-header-bg: #3d3a35;
   --table-row-bg: #2c2a26;
 }
 
-/* 重置样式 */
+/* ???? */
 * {
   margin: 0;
   padding: 0;
@@ -54,14 +54,14 @@ body {
   transition: var(--transition);
 }
 
-/* 容器 */
+/* ?? */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* 头部 */
+/* ?? */
 .header {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
@@ -119,7 +119,7 @@ body {
   width: 100%;
 }
 
-/* 主题切换按钮 */
+/* ?????? */
 .theme-toggle {
   background: none;
   border: none;
@@ -139,13 +139,13 @@ body {
   transform: rotate(180deg);
 }
 
-/* 主体内容 */
+/* ???? */
 .main {
   padding: 2rem 0;
   min-height: calc(100vh - 180px);
 }
 
-/* 英雄区域 */
+/* ???? */
 .hero {
   text-align: center;
   padding: 4rem 0;
@@ -167,7 +167,7 @@ body {
   font-style: italic;
 }
 
-/* 日期信息样式 */
+/* ?????? */
 .date-info {
   margin-top: 2rem;
   display: flex;
@@ -188,7 +188,7 @@ body {
   font-family: 'Noto Serif SC', serif;
 }
 
-/* 恒经历样式 */
+/* ????? */
 .heng-jing-li {
   font-size: 1.1rem;
   color: var(--text-primary);
@@ -209,7 +209,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* 其他纪年样式 */
+/* ?????? */
 .other-calendars {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +241,7 @@ body {
   font-weight: 500;
 }
 
-/* 介绍区域 */
+/* ???? */
 .intro {
   text-align: center;
   padding: 2rem 0;
@@ -265,7 +265,7 @@ body {
   text-align: left;
 }
 
-/* 原则区域 */
+/* ???? */
 .principles {
   padding: 2rem 0;
   margin-bottom: 2rem;
@@ -309,7 +309,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* 结构区域 */
+/* ???? */
 .structure {
   padding: 2rem 0;
   margin-bottom: 2rem;
@@ -375,7 +375,7 @@ body {
 }
 
 .structure-item a::before {
-  content: '•';
+  content: '?';
   position: absolute;
   left: 0;
   color: var(--accent-color);
@@ -389,7 +389,7 @@ body {
   padding-left: 2rem;
 }
 
-/* 页脚 */
+/* ?? */
 .footer {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -403,7 +403,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* 目录树样式 */
+/* ????? */
 .directory-tree {
   margin-top: 2rem;
 }
@@ -480,7 +480,7 @@ body {
   padding-left: 0.5rem;
 }
 
-/* 列表样式 */
+/* ???? */
 ul, ol {
   margin: 1rem 0;
   padding-left: 2rem;
@@ -499,7 +499,7 @@ li {
   line-height: 1.6;
 }
 
-/* 表格样式 */
+/* ???? */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -534,7 +534,7 @@ tr:hover {
   transition: var(--transition);
 }
 
-/* 响应式设计 */
+/* ????? */
 @media (max-width: 768px) {
   .header .container {
     flex-direction: column;
@@ -565,7 +565,7 @@ tr:hover {
     padding-left: 1rem;
   }
 
-  /* 响应式表格 */
+  /* ????? */
   table {
     font-size: 0.9rem;
   }
@@ -597,10 +597,166 @@ tr:hover {
     padding: 1rem 0;
   }
 
-  /* 响应式表格 */
+  /* ????? */
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+}
+
+/* ???? */
+.cc-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+}
+
+.cc-modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cc-modal-content {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  max-width: 800px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.cc-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: 0;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.cc-close:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.cc-modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.cc-modal-content h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 10px;
+}
+
+.cc-modal-content h4 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.annotation-file {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.annotation-file:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.cc-modal-content pre {
+  white-space: pre-wrap;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.cc-modal-content p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.cc-modal-content strong {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* ????? */
+@media (max-width: 768px) {
+  .cc-modal-content {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .cc-modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cc-modal-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .cc-modal-content h4 {
+    font-size: 1rem;
+  }
+
+  .cc-modal-content pre {
+    font-size: 0.8rem;
+    padding: 10px;
   }
 }

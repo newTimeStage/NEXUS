@@ -1,0 +1,64 @@
+{
+  "relations": [
+    {
+      "id": "rel-fuan-001",
+      "type": "member_of",
+      "source": "entity:person:伏安",
+      "target": "entity:tribe:栗陆氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安为栗陆氏女"
+    },
+    {
+      "id": "rel-fuan-002",
+      "type": "appoints",
+      "source": "entity:person:伏安",
+      "target": "entity:person:晁安",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安倡举晁安为帝"
+    },
+    {
+      "id": "rel-fuan-003",
+      "type": "opposes",
+      "source": "entity:person:伏安",
+      "target": "entity:person:晁安",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安弑帝晁安篡位"
+    },
+    {
+      "id": "rel-fuan-004",
+      "type": "succeeds",
+      "source": "entity:person:伏安",
+      "target": "entity:person:晁安",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安弑晁安而篡位"
+    },
+    {
+      "id": "rel-fuan-005",
+      "type": "governs",
+      "source": "entity:person:伏安",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安葬于象邑"
+    },
+    {
+      "id": "rel-fuan-006",
+      "type": "part_of",
+      "source": "entity:tribe:栗陆氏",
+      "target": "entity:tribe:燧人氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "栗陆氏为燧人氏北徙之风姓支裔"
+    }
+  ]
+}

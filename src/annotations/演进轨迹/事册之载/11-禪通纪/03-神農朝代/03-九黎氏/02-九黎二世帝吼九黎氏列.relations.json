@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:吼",
+    "target": "entity:person:虺",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤氏生男于岔地，帝虺之子，名吼"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:吼",
+    "target": "entity:person:虺",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝虺崩，子吼嗣位"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:吼",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遗诏子蚩尤践祚"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时轩辕氏作强，窥伺冀地之沃土。轩辕氏酋阴徙民沿桑水东进，据张北、赤地。帝恃强轻之，轩辕氏遂隐蓄力，积粮训兵，待时以争冀"
+  },
+  {
+    "id": "rel-005",
+    "type": "alias_of",
+    "source": "entity:identity:九黎帝吼",
+    "target": "entity:person:吼",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祀名九黎帝吼"
+  }
+]

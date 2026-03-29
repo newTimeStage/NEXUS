@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:金乌",
+    "target": "entity:person:规辛",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "金乌为上帝规辛之姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:金乌",
+    "target": "entity:person:规辛",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝规辛崩，姪金乌立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:规辛",
+    "target": "entity:person:金乌",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝规辛衰而嗣立之，荐诸上帝多氏"
+  }
+]

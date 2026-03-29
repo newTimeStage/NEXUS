@@ -1,0 +1,64 @@
+{
+  "relations": [
+    {
+      "id": "rel-qinmao-001",
+      "type": "member_of",
+      "source": "entity:person:秦矛",
+      "target": "entity:tribe:尊卢氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "秦矛为尊卢氏女"
+    },
+    {
+      "id": "rel-qinmao-002",
+      "type": "succeeds",
+      "source": "entity:person:秦矛",
+      "target": "entity:person:团暤",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团暤崩而秦矛立"
+    },
+    {
+      "id": "rel-qinmao-003",
+      "type": "governs",
+      "source": "entity:person:秦矛",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "秦矛居象邑"
+    },
+    {
+      "id": "rel-qinmao-004",
+      "type": "appoints",
+      "source": "entity:person:秦矛",
+      "target": "entity:person:革池",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "秦矛立己女革池为嗣"
+    },
+    {
+      "id": "rel-qinmao-005",
+      "type": "parent_of",
+      "source": "entity:person:秦矛",
+      "target": "entity:person:革池",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "革池为秦矛之女"
+    },
+    {
+      "id": "rel-qinmao-006",
+      "type": "part_of",
+      "source": "entity:tribe:尊卢氏",
+      "target": "entity:tribe:燧人氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "尊卢氏为燧人氏支"
+    }
+  ]
+}

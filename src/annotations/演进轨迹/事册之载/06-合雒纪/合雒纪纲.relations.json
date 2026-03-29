@@ -1,0 +1,158 @@
+[
+  {
+    "id": "rel-helo-001",
+    "type": "founder_of",
+    "source": "entity:person:巢皇",
+    "target": "entity:institution:居处之制",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢皇创造木居，建立居处制度"
+  },
+  {
+    "id": "rel-helo-002",
+    "type": "founder_of",
+    "source": "entity:person:巢皇",
+    "target": "entity:institution:婚制",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢皇立婚制以绝血胤之乱"
+  },
+  {
+    "id": "rel-helo-003",
+    "type": "enabled",
+    "source": "entity:person:巢皇",
+    "target": "entity:concept:伦常之肇端",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢皇的制度建立使人知上下之别，为伦常开端"
+  },
+  {
+    "id": "rel-helo-004",
+    "type": "inventor_of",
+    "source": "entity:person:燧皇",
+    "target": "entity:artifact:火",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇钻燧取火，革腥臊之烹饪方式"
+  },
+  {
+    "id": "rel-helo-005",
+    "type": "creator_of",
+    "source": "entity:person:燧皇",
+    "target": "entity:artifact:符篆",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇初刻符篆，象征文明之始"
+  },
+  {
+    "id": "rel-helo-006",
+    "type": "established",
+    "source": "entity:person:燧皇",
+    "target": "entity:artifact:绳纹",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇通过揉绳建立结绳记事系统"
+  },
+  {
+    "id": "rel-helo-007",
+    "type": "founder_of",
+    "source": "entity:person:燧皇",
+    "target": "entity:institution:四佐",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇立四佐以均食货"
+  },
+  {
+    "id": "rel-helo-008",
+    "type": "succeeded_by",
+    "source": "entity:person:巢皇",
+    "target": "entity:person:燧皇",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "二圣相承，巢皇后继者为燧皇"
+  },
+  {
+    "id": "rel-helo-009",
+    "type": "precedes",
+    "source": "entity:person:巢皇",
+    "target": "entity:person:燧皇",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢皇启居处之制，燧皇开烹爨之源"
+  },
+  {
+    "id": "rel-helo-010",
+    "type": "established",
+    "source": "entity:person:巢皇",
+    "target": "entity:concept:人伦之基",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢皇定人伦之基"
+  },
+  {
+    "id": "rel-helo-011",
+    "type": "established",
+    "source": "entity:person:燧皇",
+    "target": "entity:astronomy:天文之极",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇立天文之极"
+  },
+  {
+    "id": "rel-helo-012",
+    "type": "demonstrates",
+    "source": "entity:concept:巢燧之道",
+    "target": "entity:concept:文明代明",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巢燧之道如日月之代明，象征文明演进"
+  },
+  {
+    "id": "rel-helo-013",
+    "type": "foundation_of",
+    "source": "entity:person:巢皇",
+    "target": "entity:person:后之王者",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "medium",
+    "note": "巢皇燧皇之道为后世王者之基础"
+  }
+]

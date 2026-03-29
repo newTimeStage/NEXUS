@@ -1,0 +1,212 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:高阳氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "故高阳氏原出姬姓轩辕氏，黄天之胄裔"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:昌意",
+    "target": "entity:person:芒",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "乃遣天子昌意镇其地"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:莽",
+    "target": "entity:person:昌意",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "后嗣入朝云司彘，生莽，为高阳氏始"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:韩流",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在高阳氏酋韩流，赘入少昊氏，妇蜀山氏女昌仆"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:韩流",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇蜀山氏女昌仆，生颛聆于若水"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇蜀山氏女昌仆，生颛聆于若水"
+  },
+  {
+    "id": "rel-007",
+    "type": "succeeds",
+    "source": "entity:person:韩流",
+    "target": "entity:person:魁粤",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "彘伯魁粤卒，传位于韩流"
+  },
+  {
+    "id": "rel-008",
+    "type": "nephew_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊上帝匠敬异其才，召入相帝"
+  },
+  {
+    "id": "rel-009",
+    "type": "uncle_of",
+    "source": "entity:person:匠敬",
+    "target": "entity:person:颛聆",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊上帝匠敬异其才，召入相帝"
+  },
+  {
+    "id": "rel-010",
+    "type": "succeeds",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝嘉其德，遂禅天位"
+  },
+  {
+    "id": "rel-011",
+    "type": "same_as",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:颛顼",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛聆践祚，更名颛顼"
+  },
+  {
+    "id": "rel-012",
+    "type": "rivals_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝革少昊鸟官之制"
+  },
+  {
+    "id": "rel-013",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:重",
+    "evidence": ["para:4", "para:8", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "命重为木正。帝命重帅师伐灭。帝乃命重司天神之道"
+  },
+  {
+    "id": "rel-014",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:该",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "该为金正"
+  },
+  {
+    "id": "rel-015",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:修熙",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "修熙共治水正"
+  },
+  {
+    "id": "rel-016",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:句龙",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "句龙掌土正"
+  },
+  {
+    "id": "rel-017",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:黎",
+    "evidence": ["para:4", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黎典火正。黎掌兆民之务"
+  },
+  {
+    "id": "rel-018",
+    "type": "rivals_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:tribe:郐氏",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "有郐氏乱德，以人醮鬼，帝命重帅师伐灭"
+  },
+  {
+    "id": "rel-019",
+    "type": "rivals_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "九黎乱德，巫觋惑众"
+  },
+  {
+    "id": "rel-020",
+    "type": "allies_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:tribe:飞龙氏",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "乃诏飞龙氏作《承云》、《五英》之乐"
+  },
+  {
+    "id": "rel-021",
+    "type": "rivals_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:姜术器",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔祝融氏姜术器之裔叛，上帝命六师征之"
+  }
+]

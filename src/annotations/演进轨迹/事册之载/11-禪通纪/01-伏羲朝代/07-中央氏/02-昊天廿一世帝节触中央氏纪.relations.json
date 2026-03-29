@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-jiechu-001",
+      "type": "member_of",
+      "source": "entity:person:节触",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "节触为中央氏女"
+    },
+    {
+      "id": "rel-jiechu-002",
+      "type": "relative_of",
+      "source": "entity:person:节触",
+      "target": "entity:person:象伟",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "节触为帝象伟侄"
+    },
+    {
+      "id": "rel-jiechu-003",
+      "type": "succeeds",
+      "source": "entity:person:节触",
+      "target": "entity:person:象伟",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象伟崩而节触立"
+    },
+    {
+      "id": "rel-jiechu-004",
+      "type": "governs",
+      "source": "entity:person:节触",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "节触居象邑"
+    }
+  ]
+}

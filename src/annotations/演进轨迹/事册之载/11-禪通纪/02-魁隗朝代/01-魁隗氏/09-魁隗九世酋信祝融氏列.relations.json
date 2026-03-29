@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "brother_of",
+    "source": "entity:person:姜信",
+    "target": "entity:person:噎鸣",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋噎鸣薨，弟姜信立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:姜信",
+    "target": "entity:person:噎鸣",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋噎鸣薨，弟姜信立"
+  }
+]

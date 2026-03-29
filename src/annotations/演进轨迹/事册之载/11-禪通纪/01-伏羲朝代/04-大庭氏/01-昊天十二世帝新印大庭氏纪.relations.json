@@ -1,0 +1,64 @@
+{
+  "relations": [
+    {
+      "id": "rel-xinyin-001",
+      "type": "member_of",
+      "source": "entity:person:新印",
+      "target": "entity:tribe:大庭氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "新印为大庭氏女"
+    },
+    {
+      "id": "rel-xinyin-002",
+      "type": "governs",
+      "source": "entity:person:新印",
+      "target": "entity:tribe:大庭氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "新印为大庭氏酋"
+    },
+    {
+      "id": "rel-xinyin-003",
+      "type": "succeeds",
+      "source": "entity:person:新印",
+      "target": "entity:person:印矛",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "印矛卒而新印立"
+    },
+    {
+      "id": "rel-xinyin-004",
+      "type": "governs",
+      "source": "entity:person:新印",
+      "target": "entity:place:大邑庭",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "新印居大邑庭"
+    },
+    {
+      "id": "rel-xinyin-005",
+      "type": "establishes",
+      "source": "entity:person:新印",
+      "target": "entity:institution:禁公佥举帝",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "新印禁公佥举帝"
+    },
+    {
+      "id": "rel-xinyin-006",
+      "type": "part_of",
+      "source": "entity:tribe:大庭氏",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "大庭氏为伏羲氏支"
+    }
+  ]
+}

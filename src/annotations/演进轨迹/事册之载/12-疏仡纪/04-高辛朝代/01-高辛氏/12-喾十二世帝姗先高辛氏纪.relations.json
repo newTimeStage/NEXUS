@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:姗先",
+    "target": "entity:person:牡",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝牡，少封于临颍，娶于本土，生生姗先"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:姗先",
+    "target": "entity:person:牡",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝牡崩，天子姗先立"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:森浸",
+    "target": "entity:person:姗先",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝虽纳多妇，然十数载，惟得三子：长曰森浸"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:阏",
+    "target": "entity:person:姗先",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "次曰阏"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:实沈",
+    "target": "entity:person:姗先",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "季曰实沈"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:person:阏",
+    "target": "entity:person:实沈",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "阏伯、实沈皆尚勇，恒相争斗"
+  },
+  {
+    "id": "rel-007",
+    "type": "succeeds",
+    "source": "entity:person:森浸",
+    "target": "entity:person:姗先",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "立森浸为天子"
+  }
+]

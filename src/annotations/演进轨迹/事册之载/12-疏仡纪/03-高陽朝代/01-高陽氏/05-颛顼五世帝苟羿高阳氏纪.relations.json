@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:苟羿",
+    "target": "entity:person:上强",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛顼上元四千有八十二岁，天帝上强之三妇有娠，生苟羿，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:苟羿",
+    "target": "entity:person:上强",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝上强崩，天子苟羿嗣立于顿丘"
+  }
+]

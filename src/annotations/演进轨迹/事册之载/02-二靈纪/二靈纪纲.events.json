@@ -1,0 +1,80 @@
+[
+  {
+    "id": "evt-001",
+    "title": "天皇敷五教",
+    "type": "reform",
+    "article": "演进轨迹/事册之载/02-二靈纪/二靈纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "二靈纪天皇时期",
+    "year": -1000000,
+    "people": [
+      "天皇"
+    ],
+    "places": [],
+    "summary": "天皇观察天火、陨石等自然现象，建立五教制度"
+  },
+  {
+    "id": "evt-002",
+    "title": "洪水滔天",
+    "type": "disaster",
+    "article": "演进轨迹/事册之载/02-二靈纪/二靈纪纲",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "地皇前时期",
+    "year": -900000,
+    "people": [],
+    "places": [],
+    "summary": "洪水滔天导致氏族涣散"
+  },
+  {
+    "id": "evt-003",
+    "title": "地皇授时合婚",
+    "type": "reform",
+    "article": "演进轨迹/事册之载/02-二靈纪/二靈纪纲",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "地皇时期",
+    "year": -800000,
+    "people": [
+      "地皇"
+    ],
+    "places": [],
+    "summary": "地皇正三光以授时，联四姓而合婚，建立婚媾之礼和连逋之制"
+  },
+  {
+    "id": "evt-004",
+    "title": "人皇裂土分疆",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/二靈纪纲",
+    "paragraphs": [
+      "4"
+    ],
+    "time_text": "人皇时期",
+    "year": -700000,
+    "people": [
+      "人皇"
+    ],
+    "places": [],
+    "summary": "人皇御宇，裂土分疆，建立中央统摄的秩序"
+  },
+  {
+    "id": "evt-005",
+    "title": "三皇建天立极",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/二靈纪纲",
+    "paragraphs": [
+      "5"
+    ],
+    "time_text": "三皇时期",
+    "year": -600000,
+    "people": [
+      "三皇"
+    ],
+    "places": [],
+    "summary": "三皇建天立极，彰石斧之权，显火德，调阴阳，正人伦"
+  }
+]

@@ -1,0 +1,414 @@
+{
+  "relations": [
+    {
+      "id": "rel-fuxi-001",
+      "type": "parent_of",
+      "source": "entity:person:华胥",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "3"}, {"para": "27"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "华胥为伏羲之母"
+    },
+    {
+      "id": "rel-fuxi-002",
+      "type": "parent_of",
+      "source": "entity:person:风",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "风为伏羲之父"
+    },
+    {
+      "id": "rel-fuxi-003",
+      "type": "parent_of",
+      "source": "entity:myth:雷神",
+      "target": "entity:person:女娲",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "雷神为女娲之父"
+    },
+    {
+      "id": "rel-fuxi-004",
+      "type": "parent_of",
+      "source": "entity:person:云",
+      "target": "entity:person:女娲",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "云为女娲之母"
+    },
+    {
+      "id": "rel-fuxi-005",
+      "type": "spouse_of",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:女娲",
+      "evidence": [{"para": "11"}, {"para": "22"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲与女娲为夫妻"
+    },
+    {
+      "id": "rel-fuxi-006",
+      "type": "parent_of",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:炎",
+      "evidence": [{"para": "13"}, {"para": "15"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲为炎之父"
+    },
+    {
+      "id": "rel-fuxi-007",
+      "type": "parent_of",
+      "source": "entity:person:女娲",
+      "target": "entity:person:炎",
+      "evidence": [{"para": "15"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲为炎之母"
+    },
+    {
+      "id": "rel-fuxi-008",
+      "type": "teacher_of",
+      "source": "entity:person:鹿巫",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "鹿巫教诲伏羲天地之道"
+    },
+    {
+      "id": "rel-fuxi-009",
+      "type": "teacher_of",
+      "source": "entity:person:燧人长史",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "12"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "燧人长史授伏羲图、书、帝天之术"
+    },
+    {
+      "id": "rel-fuxi-010",
+      "type": "opposes",
+      "source": "entity:myth:雷神",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "2"}, {"para": "7"}, {"para": "27"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "雷神与伏羲为敌对关系"
+    },
+    {
+      "id": "rel-fuxi-011",
+      "type": "succeeds",
+      "source": "entity:person:女娲",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "28"}],
+      "status": "inferred",
+      "confidence": "medium",
+      "note": "伏羲崩后女娲立为女皇"
+    },
+    {
+      "id": "rel-fuxi-012",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:有龙氏",
+      "evidence": [{"para": "14"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲立有龙氏"
+    },
+    {
+      "id": "rel-fuxi-013",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:place:宛丘",
+      "evidence": [{"para": "24"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲建邦立居曰宛丘"
+    },
+    {
+      "id": "rel-fuxi-014",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:传教台",
+      "evidence": [{"para": "24"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲立传教台"
+    },
+    {
+      "id": "rel-fuxi-015",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:巫政制",
+      "evidence": [{"para": "32"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲立巫政制"
+    },
+    {
+      "id": "rel-fuxi-016",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:上元太初历",
+      "evidence": [{"para": "29"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲制上元太初历"
+    },
+    {
+      "id": "rel-fuxi-017",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:book:连山",
+      "evidence": [{"para": "24"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲作卦有八，名曰连山"
+    },
+    {
+      "id": "rel-fuxi-018",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:共工氏",
+      "evidence": [{"para": "30"}, {"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命共工氏为柱下史、上相"
+    },
+    {
+      "id": "rel-fuxi-019",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命柏皇氏为下相"
+    },
+    {
+      "id": "rel-fuxi-020",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:大庭氏",
+      "evidence": [{"para": "32"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命大庭氏为居龙官"
+    },
+    {
+      "id": "rel-fuxi-021",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:朱襄氏",
+      "evidence": [{"para": "32"}, {"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命朱襄氏为飞龙官、左监"
+    },
+    {
+      "id": "rel-fuxi-022",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:昊英氏",
+      "evidence": [{"para": "32"}, {"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命昊英氏为潜龙官、右监"
+    },
+    {
+      "id": "rel-fuxi-023",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:栗陆氏",
+      "evidence": [{"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命栗陆氏居北为冬官"
+    },
+    {
+      "id": "rel-fuxi-024",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:赫胥氏",
+      "evidence": [{"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命赫胥氏居南为夏官"
+    },
+    {
+      "id": "rel-fuxi-025",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:葛天氏",
+      "evidence": [{"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命葛天氏居东为春官"
+    },
+    {
+      "id": "rel-fuxi-026",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:阴康氏",
+      "evidence": [{"para": "32"}, {"para": "33"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命阴康氏为土龙官、中官"
+    },
+    {
+      "id": "rel-fuxi-027",
+      "type": "member_of",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:骊鹿氏",
+      "evidence": [{"para": "3"}, {"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "鹿巫收伏羲为子，伏羲长于骊鹿氏"
+    },
+    {
+      "id": "rel-fuxi-028",
+      "type": "participates_in",
+      "source": "entity:person:伏羲",
+      "target": "event:war:华胥骊鹿二氏伐雷神",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲参与华胥骊鹿二氏伐雷神"
+    },
+    {
+      "id": "rel-fuxi-029",
+      "type": "participates_in",
+      "source": "entity:person:伏羲",
+      "target": "event:war:雷神之死",
+      "evidence": [{"para": "27"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲参与雷神之战"
+    },
+    {
+      "id": "rel-fuxi-030",
+      "type": "occurs_in",
+      "source": "event:birth:伏羲诞生",
+      "target": "entity:place:伊洛泽",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲诞生于伊洛泽"
+    },
+    {
+      "id": "rel-fuxi-031",
+      "type": "occurs_in",
+      "source": "event:death:伏羲崩",
+      "target": "entity:place:桐柏山",
+      "evidence": [{"para": "44"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲崩于桐柏山"
+    },
+    {
+      "id": "rel-fuxi-032",
+      "type": "causes",
+      "source": "event:disaster:大洪水",
+      "target": "event:social:伏羲女娲重逢",
+      "evidence": [{"para": "10"}, {"para": "11"}],
+      "status": "inferred",
+      "confidence": "medium",
+      "note": "大洪水导致伏羲女娲重逢"
+    },
+    {
+      "id": "rel-fuxi-033",
+      "type": "precedes",
+      "source": "event:birth:伏羲诞生",
+      "target": "event:birth:女娲诞生",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲先于女娲诞生"
+    },
+    {
+      "id": "rel-fuxi-034",
+      "type": "precedes",
+      "source": "event:politics:伏羲称帝",
+      "target": "event:death:伏羲崩",
+      "evidence": [{"para": "28"}, {"para": "44"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲称帝先于伏羲崩"
+    },
+    {
+      "id": "rel-fuxi-035",
+      "type": "influences",
+      "source": "entity:person:伏羲",
+      "target": "entity:concept:八卦",
+      "evidence": [{"para": "24"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲创八卦"
+    },
+    {
+      "id": "rel-fuxi-036",
+      "type": "influences",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:历法",
+      "evidence": [{"para": "29"}, {"para": "31"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲制上元太初历、周天历度"
+    },
+    {
+      "id": "rel-fuxi-037",
+      "type": "part_of",
+      "source": "entity:tribe:华胥氏",
+      "target": "entity:dynasty:燧人世",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "华胥氏为燧人世末期部落"
+    },
+    {
+      "id": "rel-fuxi-038",
+      "type": "part_of",
+      "source": "entity:tribe:雷泽氏",
+      "target": "entity:person:燧人氏",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "雷泽氏为燧人氏旁支"
+    },
+    {
+      "id": "rel-fuxi-039",
+      "type": "governs",
+      "source": "entity:person:伏羲",
+      "target": "entity:tribe:有龙氏",
+      "evidence": [{"para": "14"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲为有龙氏酋"
+    },
+    {
+      "id": "rel-fuxi-040",
+      "type": "governs",
+      "source": "entity:person:鹿神",
+      "target": "entity:tribe:骊鹿氏",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "鹿神为骊鹿氏酋"
+    },
+    {
+      "id": "rel-fuxi-041",
+      "type": "governs",
+      "source": "entity:myth:雷神",
+      "target": "entity:tribe:雷泽氏",
+      "evidence": [{"para": "1"}, {"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "雷神为雷泽氏酋"
+    }
+  ]
+}

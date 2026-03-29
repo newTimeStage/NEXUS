@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "daughter_of",
+    "source": "entity:person:任姒",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在有蟜氏女酋任姒"
+  },
+  {
+    "id": "rel-002",
+    "type": "mother_of",
+    "source": "entity:person:任姒",
+    "target": "entity:person:魁隗",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "任姒为有蟜氏女酋，与少典多男交，孕而不知其父...故名曰魁隗"
+  },
+  {
+    "id": "rel-003",
+    "type": "married_to",
+    "source": "entity:person:魁隗",
+    "target": "entity:person:听訞",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "女酋听訞慕其才，请赘为婿，愿以酋位相让。魁隗欣然应允，旋为赤水大酋"
+  },
+  {
+    "id": "rel-004",
+    "type": "defeats",
+    "source": "entity:person:魁隗",
+    "target": "entity:person:节芒",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昊天帝节芒惊悸暴亡，各部求降。赤帝魁隗军轻取宛丘，乃告天称帝，更元炎天"
+  },
+  {
+    "id": "rel-005",
+    "type": "allied_with",
+    "source": "entity:tribe:少典氏",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔少典有蟜二氏互为婚姻，少典男往有蟜走婚，男至少典寻配"
+  }
+]

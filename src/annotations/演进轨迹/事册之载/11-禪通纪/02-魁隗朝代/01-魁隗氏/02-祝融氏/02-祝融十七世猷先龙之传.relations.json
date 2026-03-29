@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:西岳",
+    "target": "entity:person:先龙",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "西岳生先龙"
+  }
+]

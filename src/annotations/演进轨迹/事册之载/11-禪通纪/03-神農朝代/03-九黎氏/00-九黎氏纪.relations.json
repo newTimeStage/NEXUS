@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:三苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三苗者，三柯之苗也"
+  },
+  {
+    "id": "rel-002",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯约苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-003",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯乌苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-004",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯挪苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-005",
+    "type": "descendant_of",
+    "source": "entity:tribe:三柯",
+    "target": "entity:tribe:葊兹氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "皆葊兹氏支也"
+  },
+  {
+    "id": "rel-006",
+    "type": "founder_of",
+    "source": "entity:person:蚩尤",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "柯挪作强，号蚩尤氏，酋鼿作九黎之阵，一统三苗"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "北合九黎，南盟少昊，融苗夷于一体"
+  },
+  {
+    "id": "rel-008",
+    "type": "appoints",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:玄枵",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "建灵台于冀北之野，命玄枵司虚危之星"
+  }
+]

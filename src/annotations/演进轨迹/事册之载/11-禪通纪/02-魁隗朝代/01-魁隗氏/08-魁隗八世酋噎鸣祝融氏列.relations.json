@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:句龙",
+    "target": "entity:person:噎鸣",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "句龙生噎鸣与信"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:person:句龙",
+    "target": "entity:person:信",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "句龙生噎鸣与信"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:姜噎鸣",
+    "target": "entity:person:后土",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋后土薨，子姜噎鸣立"
+  }
+]

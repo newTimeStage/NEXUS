@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:裘",
+    "target": "entity:person:栔",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "裘生，帝江崩，舅栔立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:裘",
+    "target": "entity:person:栔",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝栔衰而立以为天子。尧帝栔崩，天子裘立"
+  },
+  {
+    "id": "rel-003",
+    "type": "nephew_of",
+    "source": "entity:person:密",
+    "target": "entity:person:裘",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "侄密元妇散宜氏女，生子曰朱"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:密",
+    "target": "entity:person:裘",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝孙密入，帝立为天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:裘",
+    "target": "entity:identity:尧帝裘",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名尧帝裘"
+  }
+]

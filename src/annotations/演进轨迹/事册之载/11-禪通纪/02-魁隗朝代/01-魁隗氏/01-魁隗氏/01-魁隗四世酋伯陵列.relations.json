@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:戏器",
+    "target": "entity:person:节并",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝节并崩，帝戏器立"
+  },
+  {
+    "id": "rel-002",
+    "type": "grandson_of",
+    "source": "entity:person:伯夷",
+    "target": "entity:person:伯陵",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯陵之孙曰伯夷"
+  },
+  {
+    "id": "rel-003",
+    "type": "descendant_of",
+    "source": "entity:person:许由",
+    "target": "entity:person:伯夷",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯夷之后曰许由"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "relations": [
+    {
+      "id": "rel-yijie-001",
+      "type": "member_of",
+      "source": "entity:person:嬑节",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬑节为伏羲氏之裔女"
+    },
+    {
+      "id": "rel-yijie-002",
+      "type": "succeeds",
+      "source": "entity:person:嬑节",
+      "target": "entity:person:俊",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊崩而嬑节立"
+    },
+    {
+      "id": "rel-yijie-003",
+      "type": "establishes",
+      "source": "entity:person:嬑节",
+      "target": "entity:institution:市",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬑节命天下共诸产业，市兴"
+    }
+  ]
+}

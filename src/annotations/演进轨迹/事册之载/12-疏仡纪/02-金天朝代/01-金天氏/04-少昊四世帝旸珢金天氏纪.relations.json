@@ -1,0 +1,182 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:旸珢",
+    "target": "entity:person:箐",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝箐，妇羲和氏女，黄天上元三千七百六十五岁，生男一于育黎，名旸珢"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:旸珢",
+    "target": "entity:person:箐",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝箐奇其才，召入枢廷佐政。历试诸难，乃定储位"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:旸珢",
+    "target": "entity:person:箐",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝箐崩，天子旸珢嗣立"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:旸珢",
+    "target": "entity:tribe:羲和",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝命羲和、重黎二氏，立天表于昆仑墟，测日晷，察璇玑"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:旸珢",
+    "target": "entity:tribe:重黎",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝命羲和、重黎二氏，立天表于昆仑墟，测日晷，察璇玑"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:tribe:昌意",
+    "target": "entity:tribe:常羲",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昌意（常羲）兔族十二支"
+  },
+  {
+    "id": "rel-007",
+    "type": "descendant_of",
+    "source": "entity:tribe:蚩部",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤生蚩部、尤部、邹部、屠部、邹屠部五支"
+  },
+  {
+    "id": "rel-008",
+    "type": "descendant_of",
+    "source": "entity:tribe:尤部",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤生蚩部、尤部、邹部、屠部、邹屠部五支"
+  },
+  {
+    "id": "rel-009",
+    "type": "descendant_of",
+    "source": "entity:tribe:邹部",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤生蚩部、尤部、邹部、屠部、邹屠部五支"
+  },
+  {
+    "id": "rel-010",
+    "type": "descendant_of",
+    "source": "entity:tribe:屠部",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤生蚩部、尤部、邹部、屠部、邹屠部五支"
+  },
+  {
+    "id": "rel-011",
+    "type": "descendant_of",
+    "source": "entity:tribe:邹屠部",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤生蚩部、尤部、邹部、屠部、邹屠部五支"
+  },
+  {
+    "id": "rel-012",
+    "type": "same_as",
+    "source": "entity:tribe:老",
+    "target": "entity:tribe:耆",
+    "evidence": ["para:13"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "重生老（耆）童、大章、重氏、熏氏、句芒、东氏、中氏、仲氏、榆氏、程氏、温氏、苏氏、芈氏十三支"
+  },
+  {
+    "id": "rel-013",
+    "type": "same_as",
+    "source": "entity:tribe:天吴",
+    "target": "entity:tribe:虞",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天吴（虞）国"
+  },
+  {
+    "id": "rel-014",
+    "type": "same_as",
+    "source": "entity:tribe:黑齿国",
+    "target": "entity:tribe:黑夷",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黑齿国（黑夷）"
+  },
+  {
+    "id": "rel-015",
+    "type": "same_as",
+    "source": "entity:tribe:玄股国",
+    "target": "entity:tribe:玄夷",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "玄股国（玄夷）"
+  },
+  {
+    "id": "rel-016",
+    "type": "same_as",
+    "source": "entity:tribe:劳民国",
+    "target": "entity:tribe:崂夷",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "劳民国（崂夷）"
+  },
+  {
+    "id": "rel-017",
+    "type": "same_as",
+    "source": "entity:tribe:司幽国",
+    "target": "entity:tribe:奚人",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "司幽国（奚人）"
+  },
+  {
+    "id": "rel-018",
+    "type": "same_as",
+    "source": "entity:tribe:白民国",
+    "target": "entity:tribe:白夷",
+    "evidence": ["para:16"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "白民国（白夷）"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:苍芒",
+    "target": "entity:person:渭茂",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝渭茂崩，无怀氏酋苍芒立"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:苍芒",
+    "target": "entity:person:节曲",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立姪节曲"
+  }
+]

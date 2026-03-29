@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "ancestor_of",
+    "source": "entity:person:灵恝",
+    "target": "entity:identity:氐",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "灵恝之后曰氐"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:明",
+    "target": "entity:person:承",
+    "evidence": ["para:1", "para:2", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏生男于河阳之南，伊川之地。炎帝承之子也，名曰明，姜姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:明",
+    "target": "entity:person:承",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝承崩，子明立"
+  },
+  {
+    "id": "rel-003",
+    "type": "father_of",
+    "source": "entity:person:明",
+    "target": "entity:person:桑",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝之三女叛婚拒嫁，长女曰桑"
+  },
+  {
+    "id": "rel-004",
+    "type": "father_of",
+    "source": "entity:person:明",
+    "target": "entity:person:娃",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "次女曰娃"
+  },
+  {
+    "id": "rel-005",
+    "type": "father_of",
+    "source": "entity:person:明",
+    "target": "entity:person:瑶姬",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三女曰瑶姬"
+  },
+  {
+    "id": "rel-006",
+    "type": "father_of",
+    "source": "entity:person:明",
+    "target": "entity:person:宜",
+    "evidence": ["para:12"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立长子宜"
+  },
+  {
+    "id": "rel-007",
+    "type": "rivals_with",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:史皇仓颉氏",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇仓颉氏作强，起于大河之北，公然称帝，都阳城，与炎帝神农氏并立"
+  }
+]

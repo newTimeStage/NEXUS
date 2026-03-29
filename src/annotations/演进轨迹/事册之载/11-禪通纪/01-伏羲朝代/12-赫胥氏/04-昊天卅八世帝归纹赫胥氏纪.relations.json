@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:肆杤",
+    "target": "entity:person:归纹",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝肆杤异其才，荐于天，立为嗣"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:归纹",
+    "target": "entity:person:肆杤",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝肆杤崩，嗣归纹立"
+  },
+  {
+    "id": "rel-003",
+    "type": "member_of",
+    "source": "entity:person:归纹",
+    "target": "entity:tribe:赫胥氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "归纹为赫胥氏成员"
+  },
+  {
+    "id": "rel-004",
+    "type": "participates_in",
+    "source": "entity:person:归纹",
+    "target": "event:reign:归纹继位",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "归纹参与继位事件"
+  }
+]

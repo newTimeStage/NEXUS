@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-chaoan-001",
+      "type": "member_of",
+      "source": "entity:person:晁安",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "晁安为伏羲氏男"
+    },
+    {
+      "id": "rel-chaoan-002",
+      "type": "succeeds",
+      "source": "entity:person:晁安",
+      "target": "entity:person:随秦",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随秦病殁而晁安立"
+    },
+    {
+      "id": "rel-chaoan-003",
+      "type": "governs",
+      "source": "entity:person:晁安",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "晁安居象邑"
+    },
+    {
+      "id": "rel-chaoan-004",
+      "type": "opposes",
+      "source": "entity:person:伏安",
+      "target": "entity:person:晁安",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安弑帝晁安"
+    },
+    {
+      "id": "rel-chaoan-005",
+      "type": "appoints",
+      "source": "entity:person:晁安",
+      "target": "entity:person:伏安",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "晁安授权伏安以代政"
+    }
+  ]
+}

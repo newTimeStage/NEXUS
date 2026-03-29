@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-guangyin-001",
+      "type": "member_of",
+      "source": "entity:person:姯印",
+      "target": "entity:tribe:大庭氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "姯印为大庭氏女"
+    },
+    {
+      "id": "rel-guangyin-002",
+      "type": "relative_of",
+      "source": "entity:person:姯印",
+      "target": "entity:person:新印",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "姯印为帝新印侄"
+    },
+    {
+      "id": "rel-guangyin-003",
+      "type": "succeeds",
+      "source": "entity:person:姯印",
+      "target": "entity:person:新印",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "新印崩而姯印立"
+    },
+    {
+      "id": "rel-guangyin-004",
+      "type": "governs",
+      "source": "entity:person:姯印",
+      "target": "entity:place:大邑庭",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "姯印居大邑庭"
+    },
+    {
+      "id": "rel-guangyin-005",
+      "type": "governs",
+      "source": "entity:person:姯印",
+      "target": "entity:place:临潼",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "姯印迁临潼"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:少典",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄帝者，少典之子，姓公孙，名曰轩辕"
+  },
+  {
+    "id": "rel-002",
+    "type": "same_as",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:轩辕",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄帝者，少典之子，姓公孙，名曰轩辕。而诸侯咸尊轩辕为天子，代神农氏，是为黄帝"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:轩辕",
+    "target": "entity:person:炎帝",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕乃修德振兵，治五气，蓺五种，抚万民，度四方，教熊罴貔貅貙虎，以与炎帝战於阪泉之野。三战，然后得其志"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "而蚩尤最为暴，莫能伐。蚩尤作乱，不用帝命。於是黄帝乃徵师诸侯，与蚩尤战於涿鹿之野，遂禽杀蚩尤"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:轩辕",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "而诸侯咸尊轩辕为天子，代神农氏，是为黄帝"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:tribe:荤粥",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "北逐荤粥，合符釜山，而邑于涿鹿之阿"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:风后",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "举风后、力牧、常先、大鸿以治民"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:力牧",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "举风后、力牧、常先、大鸿以治民"
+  },
+  {
+    "id": "rel-009",
+    "type": "allies_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:常先",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "举风后、力牧、常先、大鸿以治民"
+  },
+  {
+    "id": "rel-010",
+    "type": "allies_with",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:大鸿",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "举风后、力牧、常先、大鸿以治民"
+  },
+  {
+    "id": "rel-011",
+    "type": "spouse_of",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:嫘祖",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄帝居轩辕之丘，而娶於西陵之女，是为嫘祖。嫘祖为黄帝正妃"
+  },
+  {
+    "id": "rel-012",
+    "type": "father_of",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:玄嚣",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "嫘祖为黄帝正妃，生二子，其后皆有天下：其一曰玄嚣，是为青阳"
+  },
+  {
+    "id": "rel-013",
+    "type": "father_of",
+    "source": "entity:person:黄帝",
+    "target": "entity:person:昌意",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "嫘祖为黄帝正妃，生二子，其后皆有天下：其二曰昌意，降居若水"
+  },
+  {
+    "id": "rel-014",
+    "type": "same_as",
+    "source": "entity:person:玄嚣",
+    "target": "entity:identity:青阳",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其一曰玄嚣，是为青阳，青阳降居江水"
+  },
+  {
+    "id": "rel-015",
+    "type": "spouse_of",
+    "source": "entity:person:昌意",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昌意娶蜀山氏女，曰昌仆"
+  },
+  {
+    "id": "rel-016",
+    "type": "father_of",
+    "source": "entity:person:昌意",
+    "target": "entity:person:高阳",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昌意娶蜀山氏女，曰昌仆，生高阳，高阳有圣德焉"
+  },
+  {
+    "id": "rel-017",
+    "type": "same_as",
+    "source": "entity:person:高阳",
+    "target": "entity:person:颛顼",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其孙昌意之子高阳立，是为帝颛顼也"
+  },
+  {
+    "id": "rel-018",
+    "type": "succeeds",
+    "source": "entity:person:高阳",
+    "target": "entity:person:黄帝",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄帝崩，葬桥山。其孙昌意之子高阳立，是为帝颛顼也"
+  }
+]

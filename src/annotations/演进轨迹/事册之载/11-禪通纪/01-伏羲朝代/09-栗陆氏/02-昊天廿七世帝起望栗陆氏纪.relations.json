@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-qiwang-001",
+      "type": "member_of",
+      "source": "entity:person:起望",
+      "target": "entity:tribe:栗陆氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "起望为栗陆氏女"
+    },
+    {
+      "id": "rel-qiwang-002",
+      "type": "relative_of",
+      "source": "entity:person:起望",
+      "target": "entity:person:伏安",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "起望为帝伏安侄"
+    },
+    {
+      "id": "rel-qiwang-003",
+      "type": "adopted_by",
+      "source": "entity:person:起望",
+      "target": "entity:person:伏安",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安养起望为女"
+    },
+    {
+      "id": "rel-qiwang-004",
+      "type": "succeeds",
+      "source": "entity:person:起望",
+      "target": "entity:person:伏安",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏安崩而起望立"
+    },
+    {
+      "id": "rel-qiwang-005",
+      "type": "governs",
+      "source": "entity:person:起望",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "起望居象邑"
+    }
+  ]
+}

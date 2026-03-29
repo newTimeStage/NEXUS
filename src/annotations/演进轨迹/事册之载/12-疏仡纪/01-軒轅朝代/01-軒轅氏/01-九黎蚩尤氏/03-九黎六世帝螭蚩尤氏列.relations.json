@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:螭",
+    "target": "entity:person:回虻",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千二百五十四岁，蚩尤氏生男于雾灵之野，帝回虻少妃之子也，名曰螭。帝回虻崩，子螭立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:螭",
+    "target": "entity:person:回虻",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝回虻崩，子螭立，都雾灵"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:螭",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕氏分兵两道逾燕山而东，骤攻蚩尤之族。时帝螭以远遁无患，未尝设备。轩辕军至，戮其民无遗，耄稚不免，九黎之祸酷矣。帝螭闻报骇愕，知不可敌，乃率众弃都南奔"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕氏分兵两道逾燕山而东，骤攻蚩尤之族。轩辕军至，戮其民无遗，耄稚不免，九黎之祸酷矣"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:密",
+    "target": "entity:person:栔",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔帝栔初立，帝栔十六祀，密生。帝栔卅四祀辛卯，密年十九，入辅"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:密",
+    "target": "entity:person:裘",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "尧帝裘立，召入辅。尧帝裘衰，立密为天子。上元五千五百七十三岁在丙辰，尧帝裘崩，天子密立"
+  },
+  {
+    "id": "rel-003",
+    "type": "same_as",
+    "source": "entity:person:密",
+    "target": "entity:identity:尧帝密",
+    "evidence": ["para:24"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名尧帝密"
+  },
+  {
+    "id": "rel-004",
+    "type": "father_of",
+    "source": "entity:person:密",
+    "target": "entity:person:朱",
+    "evidence": ["para:6", "para:7", "para:24"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "或言子朱结党觊位，帝怒，封之于丹水。众欲立子朱，帝曰：\"朱不肖，利一人而害万民，不可。\"帝命召子丹伯朱入"
+  },
+  {
+    "id": "rel-005",
+    "type": "descendant_of",
+    "source": "entity:person:舜",
+    "target": "entity:person:颛顼",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "舜乃颛顼高阳氏之裔，世为贵胄。颛顼生穷蝉，穷蝉十传至敬康，敬康十传至勾芒，勾芒十传至桥牛，桥牛十传至瞽叟，瞽叟生舜"
+  },
+  {
+    "id": "rel-006",
+    "type": "father_of",
+    "source": "entity:person:瞽叟",
+    "target": "entity:person:舜",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "桥牛十传至瞽叟，瞽叟生舜"
+  },
+  {
+    "id": "rel-007",
+    "type": "brother_of",
+    "source": "entity:person:象",
+    "target": "entity:person:舜",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "舜母蚤亡，瞽叟更娶妇，生象"
+  },
+  {
+    "id": "rel-008",
+    "type": "succeeds",
+    "source": "entity:person:舜",
+    "target": "entity:person:密",
+    "evidence": ["para:24"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "舜继立，徙都蒲阪，号虞，陶唐氏绝"
+  },
+  {
+    "id": "rel-009",
+    "type": "son_of",
+    "source": "entity:person:禹",
+    "target": "entity:person:鲧",
+    "evidence": ["para:9", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "鲧子禹请戴罪治水，舜荐于帝。帝命禹为司空，继父治水"
+  }
+]

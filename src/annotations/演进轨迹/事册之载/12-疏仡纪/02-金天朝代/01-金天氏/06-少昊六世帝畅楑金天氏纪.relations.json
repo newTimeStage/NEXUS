@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:畅楑",
+    "target": "entity:person:琨",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝琨，以羲和氏女清为少妇。黄天上元三千八百卅七岁，妇清梦觉有娠，诞畅楑于清青宫，己姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:琨",
+    "target": "entity:person:清",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝琨，以羲和氏女清为少妇"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:畅楑",
+    "target": "entity:person:琨",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝琨崩，天子畅楑立"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:少昊",
+    "target": "entity:identity:黄天",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "然自少昊弛黄天旧制，纵民自为巫政，致邦国鳞立，祭坛星布"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:昌吉",
+    "target": "entity:person:畅楑",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封小子昌吉于莒邑"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:巴加",
+    "target": "entity:person:将肃",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "巴加生于帝立库廿六岁戊辰。帝将肃崩，子巴加立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:巴加",
+    "target": "entity:person:将肃",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝将肃崩，子巴加立"
+  }
+]

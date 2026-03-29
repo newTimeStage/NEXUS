@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-guanxiang-001",
+      "type": "member_of",
+      "source": "entity:person:冠象",
+      "target": "entity:tribe:骊连氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "冠象为骊连氏男"
+    },
+    {
+      "id": "rel-guanxiang-002",
+      "type": "relative_of",
+      "source": "entity:person:冠象",
+      "target": "entity:person:团良",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "冠象为帝团良甥"
+    },
+    {
+      "id": "rel-guanxiang-003",
+      "type": "appointed_by",
+      "source": "entity:person:冠象",
+      "target": "entity:person:团良",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良命冠象率壮五百讨天敌"
+    },
+    {
+      "id": "rel-guanxiang-004",
+      "type": "succeeds",
+      "source": "entity:person:冠象",
+      "target": "entity:person:团良",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良崩而冠象立"
+    },
+    {
+      "id": "rel-guanxiang-005",
+      "type": "governs",
+      "source": "entity:person:冠象",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "冠象居象邑"
+    }
+  ]
+}

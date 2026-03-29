@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:节",
+    "target": "entity:person:和",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "节为上帝和之侄"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:节",
+    "target": "entity:person:和",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝和崩，侄节立"
+  },
+  {
+    "id": "rel-003",
+    "type": "conflicts_with",
+    "source": "entity:tribe:女娲氏",
+    "target": "entity:person:节",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "女娲氏酋抗命曰：伏羲女娲之昊天，乃初二帝共缔，当分治天下，或迭掌帝权。帝节拒之。女娲氏酋怒，率部筑城於宛丘之西，名十八岗，号女娲邑，自立自治，不仰于昊天之下"
+  }
+]

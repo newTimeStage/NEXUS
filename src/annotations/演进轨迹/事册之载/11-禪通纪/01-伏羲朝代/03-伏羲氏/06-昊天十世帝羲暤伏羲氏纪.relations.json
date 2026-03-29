@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-xihao-001",
+      "type": "member_of",
+      "source": "entity:person:羲暤",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲暤为伏羲氏洛部男"
+    },
+    {
+      "id": "rel-xihao-002",
+      "type": "establishes",
+      "source": "entity:person:羲暤",
+      "target": "entity:artifact:刀笔陶书",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲暤始磨石为刻，书文于甲、屯，刀笔陶书始明于世"
+    },
+    {
+      "id": "rel-xihao-003",
+      "type": "succeeds",
+      "source": "entity:person:羲暤",
+      "target": "entity:person:伏泰",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏泰崩而羲暤立"
+    },
+    {
+      "id": "rel-xihao-004",
+      "type": "governs",
+      "source": "entity:person:羲暤",
+      "target": "entity:place:密",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲暤居密"
+    },
+    {
+      "id": "rel-xihao-005",
+      "type": "governs",
+      "source": "entity:person:羲暤",
+      "target": "entity:place:临潼",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲暤迁临潼"
+    }
+  ]
+}

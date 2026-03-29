@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "brother_of",
+    "source": "entity:person:姜笪",
+    "target": "entity:person:捷个",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋捷个薨，弟姜笪立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:姜笪",
+    "target": "entity:person:捷个",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋捷个薨，弟姜笪立"
+  }
+]

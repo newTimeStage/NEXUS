@@ -1,0 +1,34 @@
+{
+  "relations": [
+    {
+      "id": "rel-fuxian-001",
+      "type": "member_of",
+      "source": "entity:person:伏显",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏显为柏皇氏女酋"
+    },
+    {
+      "id": "rel-fuxian-002",
+      "type": "succeeds",
+      "source": "entity:person:伏显",
+      "target": "entity:person:随象",
+      "evidence": [{"para": "1"}, {"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随象弗治，伏显立为帝"
+    },
+    {
+      "id": "rel-fuxian-003",
+      "type": "governs",
+      "source": "entity:person:伏显",
+      "target": "entity:place:大邑遂",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏显居大邑遂"
+    }
+  ]
+}

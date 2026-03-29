@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:峙龙",
+    "target": "entity:person:诰",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "峙龙为上帝诰之姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:峙龙",
+    "target": "entity:person:诰",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝诰崩，姪峙龙立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:峙龙",
+    "target": "entity:person:达河",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝耄耋时，欲嗣立达河，使协政理"
+  }
+]

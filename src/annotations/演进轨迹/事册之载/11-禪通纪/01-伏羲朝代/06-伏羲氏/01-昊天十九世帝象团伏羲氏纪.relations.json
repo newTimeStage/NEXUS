@@ -1,0 +1,64 @@
+{
+  "relations": [
+    {
+      "id": "rel-xiangtuan-001",
+      "type": "member_of",
+      "source": "entity:person:象团",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团为伏羲氏女"
+    },
+    {
+      "id": "rel-xiangtuan-002",
+      "type": "descendant_of",
+      "source": "entity:person:象团",
+      "target": "entity:person:伏泰",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团为帝伏泰之苗裔"
+    },
+    {
+      "id": "rel-xiangtuan-003",
+      "type": "succeeds",
+      "source": "entity:person:象团",
+      "target": "entity:person:佘蓄",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "佘蓄闻象团立而暴毙"
+    },
+    {
+      "id": "rel-xiangtuan-004",
+      "type": "governs",
+      "source": "entity:person:象团",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团居象邑"
+    },
+    {
+      "id": "rel-xiangtuan-005",
+      "type": "appoints",
+      "source": "entity:person:象团",
+      "target": "entity:person:象伟",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团公立中央氏酋象伟为嗣"
+    },
+    {
+      "id": "rel-xiangtuan-006",
+      "type": "participates_in",
+      "source": "entity:person:象团",
+      "target": "event:war:象团伐野人",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "象团伐野人"
+    }
+  ]
+}

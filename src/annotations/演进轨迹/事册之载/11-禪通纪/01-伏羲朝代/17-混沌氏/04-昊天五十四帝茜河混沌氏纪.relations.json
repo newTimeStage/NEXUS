@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:茜河",
+    "target": "entity:person:鹏烁",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "茜河为上帝鹏烁之姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:茜河",
+    "target": "entity:person:鹏烁",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝鹏烁崩，姪茜河立"
+  }
+]

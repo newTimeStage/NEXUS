@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:冠象",
+    "target": "entity:person:团伏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝冠象寝疾遗命，以团伏继"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:团伏",
+    "target": "entity:person:冠象",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝冠象崩，团伏立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:团伏",
+    "target": "entity:person:伏义",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝立亲女伏义嗣"
+  },
+  {
+    "id": "rel-004",
+    "type": "member_of",
+    "source": "entity:person:团伏",
+    "target": "entity:tribe:骊连氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "团伏为骊连氏成员"
+  },
+  {
+    "id": "rel-005",
+    "type": "participates_in",
+    "source": "entity:person:团伏",
+    "target": "event:reign:团伏继位",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "团伏参与继位事件"
+  }
+]

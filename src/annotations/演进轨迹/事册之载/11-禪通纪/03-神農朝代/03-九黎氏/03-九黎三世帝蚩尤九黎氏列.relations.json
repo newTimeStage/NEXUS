@@ -1,0 +1,162 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:吼",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩尤氏生男于东暖泉之邑，帝吼之子也，希寄厚命，名曰蚩尤"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:吼",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝吼欲征轩辕氏，遘疾崩殂，子蚩尤立，戡乱治丧，暂寝兵事"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:person:夸父",
+    "evidence": ["para:4", "para:5", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝复联夸父、共工伐榆罔。帝怒，召少昊、夸父诸部迎战。帝虽得夸父、风伯驰援"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:4", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏裔孙夸父会东夷少昊犯神农氏界。帝怒，召少昊、夸父诸部迎战"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:4", "para:5", "para:8", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与神农氏军大战。帝复联夸父、共工伐榆罔。轩辕合神农二氏围剿"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:3", "para:5", "para:6", "para:7", "para:8", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝吼欲征轩辕氏。帝急回师，会战于东台山。轩辕氏酋邦卉会榆罔来攻。三岁九战，轩辕氏皆北。两氏盟于玉邦水畔。酋邦卉背盟，联榆罔来伐。轩辕合神农二氏围剿"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:tribe:轩辕氏",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:5", "para:6", "para:8", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "榆罔势孤，求援于轩辕氏。轩辕氏酋邦卉会榆罔来攻。轩辕合神农二氏围剿"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:榆罔",
+    "target": "entity:person:邦卉",
+    "evidence": ["para:5", "para:6", "para:8", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "榆罔势孤，求援于轩辕氏。轩辕氏酋邦卉会榆罔来攻。酋邦卉背盟，联榆罔来伐。轩辕合神农二氏围剿"
+  },
+  {
+    "id": "rel-009",
+    "type": "descendant_of",
+    "source": "entity:person:夸父",
+    "target": "entity:tribe:魁隗氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏裔孙夸父会东夷少昊犯神农氏界"
+  },
+  {
+    "id": "rel-010",
+    "type": "nephew_of",
+    "source": "entity:person:夸父",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝念同出魁隗氏之血脉，且夸父实为侄辈，以为机不可失"
+  },
+  {
+    "id": "rel-011",
+    "type": "allies_with",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:共工",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝复联夸父、共工伐榆罔"
+  },
+  {
+    "id": "rel-012",
+    "type": "allies_with",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:风伯",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝虽得夸父、风伯驰援，终难挽颓势"
+  },
+  {
+    "id": "rel-013",
+    "type": "alias_of",
+    "source": "entity:identity:九黎帝蚩尤",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祀名九黎帝蚩尤"
+  },
+  {
+    "id": "rel-014",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝率残部血战七昼夜，困于解地被执。酋邦卉恨甚，戮之于黎山之丘"
+  },
+  {
+    "id": "rel-015",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:灵夔",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋邦卉遣人刺帝族灵夔，制鼓震军心"
+  },
+  {
+    "id": "rel-016",
+    "type": "allies_with",
+    "source": "entity:person:刑天",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "柱下史刑天诈入刑场，夺帝遗骸，密葬濮阳西水坡"
+  }
+]

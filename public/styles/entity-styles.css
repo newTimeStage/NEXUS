@@ -1,6 +1,5 @@
 /**
  * NEXUS 实体标注样式
- * 参考：shiji-kb 的 shiji-styles.css
  * 
  * 实体类型配色方案：
  * - 人名：暖金色，象征人物的重要性
@@ -21,6 +20,7 @@
  * - 刑法：深灰色，象征律法严明
  * - 思想：靛蓝色，象征智慧思辨
  * - 身份：米色，象征社会角色
+ * - 灾难：深红色，象征灾难的严重性
  */
 
 /* ========================================
@@ -134,6 +134,21 @@
   --entity-concept-bg: #e0e7ff;
   --entity-concept-text: #312e81;
   --entity-concept-border: #6366f1;
+  
+  /* 行为 */
+  --entity-action-bg: #fef7ed;
+  --entity-action-text: #9a3412;
+  --entity-action-border: #ea580c;
+
+  /* 意识 */
+  --entity-consciousness-bg: #e4f7ff;
+  --entity-consciousness-text: #0b4a6f;
+  --entity-consciousness-border: #0284c7;
+  
+  /* 灾难 */
+  --entity-disaster-bg: #fee2e2;
+  --entity-disaster-text: #991b1b;
+  --entity-disaster-border: #ef4444;
 }
 
 /* 暗色主题实体样式 */
@@ -227,6 +242,20 @@
   --entity-concept-bg: #312e81;
   --entity-concept-text: #c7d2fe;
   --entity-concept-border: #818cf8;
+  
+  /* 行为 */
+  --entity-action-bg: #7c2d12;
+  --entity-action-text: #fed7aa;
+  --entity-action-border: #fb923c;
+  /* 意识 */
+  --entity-consciousness-bg: #1e3a5f;
+  --entity-consciousness-text: #dbeafe;
+  --entity-consciousness-border: #60a5fa;
+  
+  /* 灾难 */
+  --entity-disaster-bg: #7f1d1d;
+  --entity-disaster-text: #fecaca;
+  --entity-disaster-border: #f87171;
 }
 
 /* ========================================
@@ -360,6 +389,28 @@
   color: var(--entity-concept-text);
   border-bottom: 2px solid var(--entity-concept-border);
   font-style: italic;
+}
+
+/* 行为 */
+.entity-action {
+  background-color: var(--entity-action-bg);
+  color: var(--entity-action-text);
+  border-bottom: 2px solid var(--entity-action-border);
+}
+
+/* 意识 */
+.entity-consciousness {
+  background-color: var(--entity-consciousness-bg);
+  color: var(--entity-consciousness-text);
+  border-bottom: 2px solid var(--entity-consciousness-border);
+  font-style: italic;
+}
+
+/* 灾难 */
+.entity-disaster {
+  background-color: var(--entity-disaster-bg);
+  color: var(--entity-disaster-text);
+  border-bottom: 2px solid var(--entity-disaster-border);
 }
 
 /* ========================================

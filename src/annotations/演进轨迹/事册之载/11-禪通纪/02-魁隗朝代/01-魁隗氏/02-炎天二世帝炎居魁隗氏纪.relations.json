@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:炎居",
+    "target": "entity:person:魁隗",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏生男一于固川，姓姜，其母曰听訞，其父帝魁隗也，得名炎居"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:炎居",
+    "target": "entity:person:听訞",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏生男一于固川，姓姜，其母曰听訞，其父帝魁隗也，得名炎居"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:炎居",
+    "target": "entity:person:魁隗",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝节魁隗崩，子炎居立，迁都于祁连东麓，浪河之畔"
+  }
+]

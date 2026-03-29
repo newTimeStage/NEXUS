@@ -1,0 +1,152 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:豕",
+    "target": "entity:person:蔡",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千二百七十一岁，轩辕氏生男一于固安，帝蔡之子，名豕。帝蔡崩，子豕立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:豕",
+    "target": "entity:person:蔡",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝蔡崩，子豕立，都下洛，居涿鹿之南"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:祝融",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封大隗氏祝融果童于鄀，赐酉姓"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:果童",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封大隗氏祝融果童于鄀，赐酉姓"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:参卢",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封神农氏参卢于卢氏，赐祁姓"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:青阳",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封少昊青阳于江水，赐己姓"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:后土",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封后土于吉山，赐姞姓"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:卷章",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封卷章、重黎氏于丹水，赐依姓"
+  },
+  {
+    "id": "rel-009",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:重黎",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "封卷章、重黎氏于丹水，赐依姓"
+  },
+  {
+    "id": "rel-010",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:玄枵",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "青阳氏玄枵、苍林以圣德赐姬姓"
+  },
+  {
+    "id": "rel-011",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:苍林",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "青阳氏玄枵、苍林以圣德赐姬姓"
+  },
+  {
+    "id": "rel-012",
+    "type": "subordinate",
+    "source": "entity:tribe:炎帝",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝魁隗氏、神农氏、九黎蚩尤氏、东夷少昊氏诸部，或徙边陲，余皆归奉，甚有联姻轩辕氏而受重职者"
+  },
+  {
+    "id": "rel-013",
+    "type": "subordinate",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝魁隗氏、神农氏、九黎蚩尤氏、东夷少昊氏诸部，或徙边陲，余皆归奉，甚有联姻轩辕氏而受重职者"
+  },
+  {
+    "id": "rel-014",
+    "type": "subordinate",
+    "source": "entity:tribe:九黎",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝魁隗氏、神农氏、九黎蚩尤氏、东夷少昊氏诸部，或徙边陲，余皆归奉，甚有联姻轩辕氏而受重职者"
+  },
+  {
+    "id": "rel-015",
+    "type": "subordinate",
+    "source": "entity:tribe:少昊氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝魁隗氏、神农氏、九黎蚩尤氏、东夷少昊氏诸部，或徙边陲，余皆归奉，甚有联姻轩辕氏而受重职者"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "grandson_of",
+    "source": "entity:person:太河",
+    "target": "entity:person:和",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "太河为上帝和之孙"
+  },
+  {
+    "id": "rel-002",
+    "type": "nephew_of",
+    "source": "entity:person:太河",
+    "target": "entity:person:节",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "太河为上帝节之甥"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:太河",
+    "target": "entity:person:节",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝节崩，甥太河立"
+  },
+  {
+    "id": "rel-004",
+    "type": "conflicts_with",
+    "source": "entity:tribe:女娲氏",
+    "target": "entity:person:太河",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "女娲氏构兵于十八岗，数犯宛丘，天室不保，天柱将凶。帝率迁于宛丘，夯土筑垣，名之为都，以御不虞"
+  }
+]

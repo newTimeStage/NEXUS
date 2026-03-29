@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:掮师",
+    "target": "entity:person:金乌",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "掮师为上帝金乌侄"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:掮师",
+    "target": "entity:person:金乌",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝金乌崩，摄政侄掮师立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:金乌",
+    "target": "entity:person:掮师",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝金乌衰，荐厥诸上帝，嗣立掮师"
+  }
+]

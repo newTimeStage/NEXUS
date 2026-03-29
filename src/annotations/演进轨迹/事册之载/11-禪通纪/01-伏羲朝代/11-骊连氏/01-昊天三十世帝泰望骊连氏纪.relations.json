@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-taiwang-001",
+      "type": "member_of",
+      "source": "entity:person:泰望",
+      "target": "entity:tribe:骊连氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "泰望为骊连氏女"
+    },
+    {
+      "id": "rel-taiwang-002",
+      "type": "part_of",
+      "source": "entity:tribe:骊连氏",
+      "target": "entity:tribe:骊鹿氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "骊连氏本骊鹿氏也"
+    },
+    {
+      "id": "rel-taiwang-003",
+      "type": "succeeds",
+      "source": "entity:person:泰望",
+      "target": "entity:person:圭嬜",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "圭嬜崩而泰望立"
+    },
+    {
+      "id": "rel-taiwang-004",
+      "type": "governs",
+      "source": "entity:person:泰望",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "泰望居象邑"
+    }
+  ]
+}

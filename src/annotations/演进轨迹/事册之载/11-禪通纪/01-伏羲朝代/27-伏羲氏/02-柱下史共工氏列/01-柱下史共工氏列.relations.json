@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "conflicts_with",
+    "source": "entity:tribe:共工氏",
+    "target": "entity:person:女皇",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "共工氏酋始不恭昊天之明命，将行自立，女皇命火神祝融氏来伐，共工氏败"
+  },
+  {
+    "id": "rel-002",
+    "type": "defeated_by",
+    "source": "entity:tribe:共工氏",
+    "target": "entity:tribe:祝融氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "女皇命火神祝融氏来伐，共工氏败"
+  },
+  {
+    "id": "rel-003",
+    "type": "renamed_to",
+    "source": "entity:tribe:共工氏",
+    "target": "entity:identity:姜",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "徙于西土，居姜水之畔，改姓为姜，绝于昊天"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:神农",
+    "evidence": ["para:12"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农九世薨，十世酋羭纥立"
+  },
+  {
+    "id": "rel-005",
+    "type": "attacks",
+    "source": "entity:person:羭纥",
+    "target": "entity:person:魁隗",
+    "evidence": ["para:12"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农九世薨，十世酋羭纥立，始伐魁隗氏"
+  }
+]

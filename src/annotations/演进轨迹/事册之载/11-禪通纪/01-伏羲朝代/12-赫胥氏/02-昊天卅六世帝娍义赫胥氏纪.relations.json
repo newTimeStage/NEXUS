@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:伏义",
+    "target": "entity:person:娍义",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝伏义察娍义怀鸿鹄志，克任重责，遂告于天，咨于多酋群牧，咸推娍义嗣立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:娍义",
+    "target": "entity:person:伏义",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝伏义崩，娍义正位曰帝"
+  },
+  {
+    "id": "rel-003",
+    "type": "member_of",
+    "source": "entity:person:娍义",
+    "target": "entity:tribe:赫胥氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "娍义为赫胥氏成员"
+  },
+  {
+    "id": "rel-004",
+    "type": "participates_in",
+    "source": "entity:person:娍义",
+    "target": "event:reign:娍义继位",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "娍义参与继位事件"
+  }
+]

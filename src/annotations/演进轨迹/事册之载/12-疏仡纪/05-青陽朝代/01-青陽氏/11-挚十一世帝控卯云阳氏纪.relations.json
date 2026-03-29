@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:控卯",
+    "target": "entity:person:孤",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝孤廿三祀，生少子控卯，姜姓云阳氏。帝孤老得子，爱之甚"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:控卯",
+    "target": "entity:person:沟次",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子控卯年十三，帝孤疾崩，遗位四子沟次。子控卯失冀，屈为臣。巧事上帝，得信"
+  },
+  {
+    "id": "rel-003",
+    "type": "spouse_of",
+    "source": "entity:person:控卯",
+    "target": "entity:identity:伊祁氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次十五祀，控卯娶伊祁氏女为妃，盟伊祁氏。帝沟次十七祀，妃伊祁氏生三子川壻"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:川壻",
+    "target": "entity:person:控卯",
+    "evidence": ["para:2", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次十七祀，妃伊祁氏生三子川壻。帝封子川壻于西荒，子川壻就封，拓壻邑，号壻伯"
+  },
+  {
+    "id": "rel-005",
+    "type": "spouse_of",
+    "source": "entity:person:控卯",
+    "target": "entity:tribe:娵訾氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "控卯复娶娵訾氏女于亳邑，盟娵訾氏。帝沟次十八祀，娵訾氏生四子长幅"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:长幅",
+    "target": "entity:person:控卯",
+    "evidence": ["para:2", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次十八祀，娵訾氏生四子长幅。封子长幅于亳邑，号亳伯，使东西隔"
+  },
+  {
+    "id": "rel-007",
+    "type": "succeeds",
+    "source": "entity:person:控卯",
+    "target": "entity:person:沟次",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次淫暴崩。弟控卯闻而喜，托奔丧，举兵向鸣皋。都人惶，上帝众子弱，臣多附控卯。遂得位"
+  },
+  {
+    "id": "rel-008",
+    "type": "same_as",
+    "source": "entity:person:控卯",
+    "target": "entity:person:挚",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

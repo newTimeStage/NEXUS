@@ -1,0 +1,134 @@
+[
+  {
+    "id": "rel-001",
+    "type": "establishes",
+    "source": "entity:person:天皇",
+    "target": "entity:institution:五教",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文明确天皇敷五教"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeded",
+    "source": "entity:person:地皇",
+    "target": "entity:person:天皇",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文地皇继作"
+  },
+  {
+    "id": "rel-003",
+    "type": "establishes",
+    "source": "entity:person:地皇",
+    "target": "entity:institution:婚媾之礼",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文始通婚媾之礼"
+  },
+  {
+    "id": "rel-004",
+    "type": "establishes",
+    "source": "entity:person:地皇",
+    "target": "entity:institution:连逋之制",
+    "evidence": [
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文乃定连逋之制"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeded",
+    "source": "entity:person:人皇",
+    "target": "entity:person:地皇",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文逮至人皇御宇，继地皇"
+  },
+  {
+    "id": "rel-006",
+    "type": "establishes",
+    "source": "entity:person:人皇",
+    "target": "entity:institution:中央统摄",
+    "evidence": [
+      "para:4"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文中央统摄，居方宾服"
+  },
+  {
+    "id": "rel-007",
+    "type": "part_of",
+    "source": "entity:person:天皇",
+    "target": "entity:person:三皇",
+    "evidence": [
+      "para:5"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三皇包括天皇、地皇、人皇"
+  },
+  {
+    "id": "rel-008",
+    "type": "part_of",
+    "source": "entity:person:地皇",
+    "target": "entity:person:三皇",
+    "evidence": [
+      "para:5"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三皇包括天皇、地皇、人皇"
+  },
+  {
+    "id": "rel-009",
+    "type": "part_of",
+    "source": "entity:person:人皇",
+    "target": "entity:person:三皇",
+    "evidence": [
+      "para:5"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三皇包括天皇、地皇、人皇"
+  },
+  {
+    "id": "rel-010",
+    "type": "establishes",
+    "source": "entity:person:三皇",
+    "target": "entity:concept:阴阳",
+    "evidence": [
+      "para:5"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文阴阳和而万物育"
+  },
+  {
+    "id": "rel-011",
+    "type": "establishes",
+    "source": "entity:person:三皇",
+    "target": "entity:concept:人伦",
+    "evidence": [
+      "para:5"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "原文天地正而人伦叙"
+  }
+]

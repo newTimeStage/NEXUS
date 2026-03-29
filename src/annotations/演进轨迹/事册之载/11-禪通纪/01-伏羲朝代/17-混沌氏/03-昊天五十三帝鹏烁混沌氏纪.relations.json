@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:鹏烁",
+    "target": "entity:person:随嬄",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "鹏烁为上帝随嬄姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:鹏烁",
+    "target": "entity:person:随嬄",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝随嬄崩，姪鹏烁立"
+  }
+]

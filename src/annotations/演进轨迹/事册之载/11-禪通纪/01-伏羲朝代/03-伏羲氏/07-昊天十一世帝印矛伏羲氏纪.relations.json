@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-yinmao-001",
+      "type": "member_of",
+      "source": "entity:person:印矛",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "印矛为伏羲氏洛部女"
+    },
+    {
+      "id": "rel-yinmao-002",
+      "type": "succeeds",
+      "source": "entity:person:印矛",
+      "target": "entity:person:羲暤",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲暤崩而印矛立"
+    },
+    {
+      "id": "rel-yinmao-003",
+      "type": "governs",
+      "source": "entity:person:印矛",
+      "target": "entity:place:临潼",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "印矛居临潼"
+    },
+    {
+      "id": "rel-yinmao-004",
+      "type": "establishes",
+      "source": "entity:person:印矛",
+      "target": "entity:institution:佥举制",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "印矛大兴佥举之制"
+    }
+  ]
+}

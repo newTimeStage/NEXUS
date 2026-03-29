@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:继",
+    "target": "entity:person:角",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封子继居平顶山。帝立子继为天子"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:继",
+    "target": "entity:person:角",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝立子继为天子"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:裘",
+    "target": "entity:person:继",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天子妇生裘，六子"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:角",
+    "target": "entity:person:巴加",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾季世，帝巴加以角治水功，封昆阳。遂共废帝喾政，推角为帝。帝喾禅厥位，让于挚角。挚伯角入，受禅为帝"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:角",
+    "target": "entity:person:挚",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

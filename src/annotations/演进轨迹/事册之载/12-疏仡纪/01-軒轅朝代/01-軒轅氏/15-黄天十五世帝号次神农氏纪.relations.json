@@ -1,0 +1,102 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:号次",
+    "target": "entity:person:昌块",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝昌块妺子，甥也"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:号次",
+    "target": "entity:person:昌块",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝昌块崩，甥号次立"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:2", "para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊联三苗九黎，合炎裔共工、祝融诸部，大举犯天。少昊复联大隗氏、桃林夸父、兖州邹屠，举兵伐天。少昊酋风清喾复北伐涿鹿。帝兵甲寡弱，力不能拒，乃逊其位，北面称臣于少昊金天氏"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:三苗",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊联三苗九黎，合炎裔共工、祝融诸部，大举犯天"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊联三苗九黎，合炎裔共工、祝融诸部，大举犯天"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊联三苗九黎，合炎裔共工、祝融诸部，大举犯天"
+  },
+  {
+    "id": "rel-007",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:祝融",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷少昊联三苗九黎，合炎裔共工、祝融诸部，大举犯天"
+  },
+  {
+    "id": "rel-008",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:person:夸父",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊复联大隗氏、桃林夸父、兖州邹屠，举兵伐天。昔上帝封西陲之少昊、方雷二氏，竟与炎裔夸父盟叛，东迁踞渭水"
+  },
+  {
+    "id": "rel-009",
+    "type": "rivals_with",
+    "source": "entity:person:号次",
+    "target": "entity:person:风清喾",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊酋风清喾复北伐涿鹿。帝兵甲寡弱，力不能拒，乃逊其位，北面称臣于少昊金天氏"
+  },
+  {
+    "id": "rel-010",
+    "type": "subordinate",
+    "source": "entity:person:号次",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "乃逊其位，北面称臣于少昊金天氏。帝既失位，少昊仍封之于涿鹿"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:person:恚文",
+    "target": "entity:tribe:魁隗",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千四百五十五岁，祝融氏生男一于登邑，名恚文，姜姓，为祝融嫡脉，本魁隗祝融氏之胄"
+  },
+  {
+    "id": "rel-002",
+    "type": "descendant_of",
+    "source": "entity:person:恚文",
+    "target": "entity:tribe:祝融氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千四百五十五岁，祝融氏生男一于登邑，名恚文，姜姓，为祝融嫡脉，本魁隗祝融氏之胄"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:恚文",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "赘入轩辕氏。黄天上元三千四百七十五岁赘入轩辕氏，时帝贯俞倚为股肱"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:恚文",
+    "target": "entity:person:贯俞",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时帝贯俞倚为股肱，初参枢要，继总万机。恚文阴结朝士，渐摄政柄"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:恚文",
+    "target": "entity:person:贯俞",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝贯俞以淫逸暴卒，百官遂奉恚文践祚"
+  },
+  {
+    "id": "rel-006",
+    "type": "rivals_with",
+    "source": "entity:identity:姜",
+    "target": "entity:identity:姬",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "恚文阴结朝士，渐摄政柄，姬姓之权尽归姜姓"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-fuyi-001",
+      "type": "parent_of",
+      "source": "entity:person:团伏",
+      "target": "entity:person:伏义",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "帝团伏知伏义为己女"
+    },
+    {
+      "id": "rel-fuyi-002",
+      "type": "member_of",
+      "source": "entity:person:伏义",
+      "target": "entity:tribe:赫胥氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏义为赫胥氏女"
+    },
+    {
+      "id": "rel-fuyi-003",
+      "type": "succeeds",
+      "source": "entity:person:伏义",
+      "target": "entity:person:团伏",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团伏崩而伏义立"
+    },
+    {
+      "id": "rel-fuyi-004",
+      "type": "governs",
+      "source": "entity:person:伏义",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏义居象邑"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:泽治",
+    "target": "entity:person:墙烁",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "泽治为上帝墙烁姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:泽治",
+    "target": "entity:person:墙烁",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝墙烁崩而泽治立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:泽治",
+    "target": "entity:person:渭茂",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝知势不可挽，弗敢嗣立本氏之后，遂荐伏羲氏少酋渭茂以嗣"
+  }
+]

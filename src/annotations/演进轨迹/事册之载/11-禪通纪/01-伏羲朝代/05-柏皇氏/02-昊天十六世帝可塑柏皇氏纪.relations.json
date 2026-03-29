@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-keshu-001",
+      "type": "member_of",
+      "source": "entity:person:可塑",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "可塑为柏皇氏女"
+    },
+    {
+      "id": "rel-keshu-002",
+      "type": "relative_of",
+      "source": "entity:person:可塑",
+      "target": "entity:person:伏显",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "可塑为帝伏显侄"
+    },
+    {
+      "id": "rel-keshu-003",
+      "type": "succeeds",
+      "source": "entity:person:可塑",
+      "target": "entity:person:伏显",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏显崩而可塑立"
+    },
+    {
+      "id": "rel-keshu-004",
+      "type": "governs",
+      "source": "entity:person:可塑",
+      "target": "entity:place:大邑遂",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "可塑居大邑遂"
+    }
+  ]
+}

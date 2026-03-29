@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:identity:黄天",
+    "target": "entity:identity:炎天",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎天亡绝，黄天继立"
+  }
+]

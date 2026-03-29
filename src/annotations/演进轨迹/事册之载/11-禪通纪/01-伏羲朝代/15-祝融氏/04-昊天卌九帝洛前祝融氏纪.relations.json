@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:洛前",
+    "target": "entity:person:洛矛",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "洛前为帝洛矛之侄"
+  },
+  {
+    "id": "rel-002",
+    "type": "nephew_of",
+    "source": "entity:person:洛前",
+    "target": "entity:person:附前",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "洛前为帝附前之侄"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:洛前",
+    "target": "entity:person:附前",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝附前崩，侄洛前立"
+  }
+]

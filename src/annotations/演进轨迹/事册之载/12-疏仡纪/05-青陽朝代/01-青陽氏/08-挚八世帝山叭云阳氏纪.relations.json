@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:山叭",
+    "target": "entity:person:咣哴",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝咣哴五祀，帝咣哴梦会祁向妹，纳为妇，宠甚，事皆咨之。帝咣哴十祀，妇向妹孕，帝筑曷宫于唐水滨。翌祀春，妇向妹生子于曷宫，名曰山叭，姜姓云阳氏"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:山叭",
+    "target": "entity:person:向妹",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝咣哴五祀，帝咣哴梦会祁向妹，纳为妇，宠甚，事皆咨之。帝咣哴十祀，妇向妹孕，帝筑曷宫于唐水滨。翌祀春，妇向妹生子于曷宫，名曰山叭，姜姓云阳氏。山叭少寡言敦厚，母忧其受欺，教之，效微，心焦"
+  },
+  {
+    "id": "rel-003",
+    "type": "spouse_of",
+    "source": "entity:person:山叭",
+    "target": "entity:identity:伊祁氏",
+    "evidence": ["para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝向妹八祀，子山叭遇伊祁氏女，相爱，纳为妇。帝向妹九祀，子妇生孤。冬，帝立伊祁氏为妇，议徙都事"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:孤",
+    "target": "entity:person:山叭",
+    "evidence": ["para:3", "para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝向妹九祀，子妇生孤。帝封子孤于汝邑"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:山叭",
+    "target": "entity:person:向妹",
+    "evidence": ["para:2", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝咣哴卌一祀，帝咣哴崩，遗命子山叭立。妇向妹恐子懦，难服众，遂自立为帝。山叭无怨，支之。帝向妹疾笃，执子山叭手曰：儿懦，吾忧。山叭泣对：母勿忧，儿不负。向妹颔首而逝。子山叭立于留山"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:山叭",
+    "target": "entity:person:挚",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

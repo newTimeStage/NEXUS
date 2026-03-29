@@ -1,0 +1,34 @@
+{
+  "relations": [
+    {
+      "id": "rel-shiyi-001",
+      "type": "parent_of",
+      "source": "entity:person:嬟移",
+      "target": "entity:person:师嬟",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬟移生师嬟"
+    },
+    {
+      "id": "rel-shiyi-002",
+      "type": "succeeds",
+      "source": "entity:person:师嬟",
+      "target": "entity:person:嬟移",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬟移崩而师嬟立"
+    },
+    {
+      "id": "rel-shiyi-003",
+      "type": "governs",
+      "source": "entity:person:师嬟",
+      "target": "entity:place:汶上",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "师嬟居汶上"
+    }
+  ]
+}

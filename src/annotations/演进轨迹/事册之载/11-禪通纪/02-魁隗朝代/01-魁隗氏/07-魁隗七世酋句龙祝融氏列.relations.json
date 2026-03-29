@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:共工",
+    "target": "entity:person:术器",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "共工生术器与句龙"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:person:共工",
+    "target": "entity:person:句龙",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "共工生术器与句龙"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:姜句龙",
+    "target": "entity:person:共工",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋共工薨，子姜句龙立"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-yiyi-001",
+      "type": "parent_of",
+      "source": "entity:person:娥",
+      "target": "entity:person:嬟移",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "娥为嬟移之母"
+    },
+    {
+      "id": "rel-yiyi-002",
+      "type": "succeeds",
+      "source": "entity:person:嬟移",
+      "target": "entity:person:女娲",
+      "evidence": [{"para": "1"}, {"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "娲姆崩而嬟移立"
+    },
+    {
+      "id": "rel-yiyi-003",
+      "type": "opposes",
+      "source": "entity:person:遂人氏",
+      "target": "entity:person:嬟移",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "遂人氏逆，嬟皇伐之"
+    },
+    {
+      "id": "rel-yiyi-004",
+      "type": "participates_in",
+      "source": "entity:person:嬟移",
+      "target": "event:war:伐遂人氏",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬟皇率壮女伐遂人氏"
+    },
+    {
+      "id": "rel-yiyi-005",
+      "type": "governs",
+      "source": "entity:person:嬟移",
+      "target": "entity:place:汶上",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬟皇迁汶上"
+    }
+  ]
+}

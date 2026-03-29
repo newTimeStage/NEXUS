@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:贵尤",
+    "target": "entity:person:卜习",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛顼上元四千二百四十岁，天帝卜习之妇有娠，生男一于顿丘，名贵尤，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:贵尤",
+    "target": "entity:person:卜习",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝卜习崩，天子贵尤立"
+  }
+]

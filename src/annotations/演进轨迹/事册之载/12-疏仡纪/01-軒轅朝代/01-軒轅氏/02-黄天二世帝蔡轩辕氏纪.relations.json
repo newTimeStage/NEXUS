@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:蔡",
+    "target": "entity:person:芒",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千二百卅二岁，轩辕氏生男一于泰山，帝芒子也，名蔡。帝芒崩，子蔡立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:蔡",
+    "target": "entity:person:芒",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝芒崩，子蔡立，都涿鹿之大邑焉"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:蔡",
+    "target": "entity:person:螭",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "九黎蚩尤氏五世帝回虻崩，子螭立。帝蔡闻之，召群臣议曰：“蚩尤蛮暴，若纵其坐大，必为北疆患。当乘其弱击之，可弭后忧。”遂简锐卒三千，秣马厉兵，俟秋征讨"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕氏",
+    "target": "entity:tribe:蚩尤",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遣训卒三千北逾燕山，突袭蚩尤。天师奋击，焚其庐舍，戮其顽抗。蚩尤遗众仓皇南遁，终徙冀东"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕氏",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "九黎蚩尤氏五世帝回虻崩，子螭立。帝蔡闻之，召群臣议曰：“蚩尤蛮暴，若纵其坐大，必为北疆患。当乘其弱击之，可弭后忧。”"
+  }
+]

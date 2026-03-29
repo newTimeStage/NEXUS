@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:佳琚",
+    "target": "entity:person:祥象",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛顼上元四千三百廿七岁，天帝祥象之妇有娠，生男一于顿丘，名佳琚，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:佳琚",
+    "target": "entity:person:祥象",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝祥象崩，天子佳琚立"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:佳琚",
+    "target": "entity:person:高辛氏伯喾美",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝命重臣高辛氏伯喾美率众东征，克共工，诸伯共推为天帝"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:颛顼",
+    "target": "entity:tribe:共工氏",
+    "evidence": ["para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "共工氏洪淹帝都，颛顼北徙。共工氏北侵日亟，胁颛顼称臣。帝不屈，战于高阳"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:tribe:颛顼",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "会少昊遗族于野"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:tribe:颛顼",
+    "target": "entity:tribe:夸父",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "幸至大人之国，炎天夸父之胄存焉"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:tribe:颛顼",
+    "target": "entity:tribe:噎鸣",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔噎鸣司辰于日月之山，两族世好。遂得庇居"
+  }
+]

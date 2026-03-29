@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:杜里",
+    "target": "entity:person:没",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝没，少封于鲁，妇于鲁，生子名杜里"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:杜里",
+    "target": "entity:person:没",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝没亲往征，未料中伏，天师败绩，帝仅以身免。归而遘疾，竟崩。天子杜里立"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:杜里",
+    "target": "entity:tribe:防风氏",
+    "evidence": ["para:2", "para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "防风氏起于太湖，渐强，数犯于天。帝没屡征不克。防风氏酋闻上帝没晏驾，益肆猖狂，僭称天，号吴王。防风氏乘胜驰骋，尽据西陲故土，甘都遂陷"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:牡",
+    "target": "entity:person:杜里",
+    "evidence": ["para:5", "para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封子牡于临颍，为方伯。临颍伯妇生子名姗先"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:姗先",
+    "target": "entity:person:牡",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "临颍伯妇生子名姗先"
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "evt-earth-001",
+    "title": "大洪水事件",
+    "type": "disaster",
+    "article": "演进轨迹/事册之载/02-二靈纪/02-地皇代/地皇世本",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "世提挺氏末",
+    "year": 700000,
+    "people": [],
+    "places": [],
+    "summary": "世提挺氏末年发生大洪水，天下十二头亦没其一"
+  },
+  {
+    "id": "evt-earth-002",
+    "title": "姆觉者定三光",
+    "type": "science",
+    "article": "演进轨迹/事册之载/02-二靈纪/02-地皇代/地皇世本",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "水灾之后",
+    "year": 700000,
+    "people": [
+      "姆觉者"
+    ],
+    "places": [],
+    "summary": "姆觉者定日月星三光，以分昼夜，月始明，以利地"
+  },
+  {
+    "id": "evt-earth-003",
+    "title": "地皇即位",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/02-地皇代/地皇世本",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "水灾后期",
+    "year": 700000,
+    "people": [
+      "地皇"
+    ],
+    "places": [],
+    "summary": "十大王推崇姆觉者为地皇，其号曰地皇"
+  },
+  {
+    "id": "evt-earth-004",
+    "title": "地皇世系记录",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/02-二靈纪/02-地皇代/地皇世本",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "地皇时代",
+    "year": 700000,
+    "people": [
+      "地皇"
+    ],
+    "places": [],
+    "summary": "地皇生子三世，子孙相传，记其寿命，通纪四姓、二世、五姓"
+  }
+]

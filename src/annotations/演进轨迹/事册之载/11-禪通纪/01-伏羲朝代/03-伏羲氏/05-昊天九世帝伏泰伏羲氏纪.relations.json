@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-futai-001",
+      "type": "parent_of",
+      "source": "entity:person:嬑节",
+      "target": "entity:person:伏泰",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬑节生伏泰"
+    },
+    {
+      "id": "rel-futai-002",
+      "type": "member_of",
+      "source": "entity:person:伏泰",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏泰为伏羲氏之苗裔"
+    },
+    {
+      "id": "rel-futai-003",
+      "type": "succeeds",
+      "source": "entity:person:伏泰",
+      "target": "entity:person:嬑节",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "嬑节崩而伏泰立"
+    },
+    {
+      "id": "rel-futai-004",
+      "type": "governs",
+      "source": "entity:person:伏泰",
+      "target": "entity:place:密",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏泰迁于密"
+    }
+  ]
+}

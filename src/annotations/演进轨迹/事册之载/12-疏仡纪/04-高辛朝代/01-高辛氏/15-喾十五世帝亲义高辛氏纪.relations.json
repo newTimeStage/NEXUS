@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:亲义",
+    "target": "entity:person:森浸",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝森浸，妇生小子亲义"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:亲义",
+    "target": "entity:person:谣",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝谣崩，弟亲义立"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:亲义",
+    "target": "entity:person:谣",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝谣崩，弟亲义立"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:亲义",
+    "target": "entity:person:云氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "亲义慕之，请阏伯为媒，娶以为妇。越二载，云氏有身，诞子名曰施"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:施",
+    "target": "entity:person:亲义",
+    "evidence": ["para:4", "para:7", "para:8", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "云氏有身，诞子名曰施。帝封子施居商方为伯。子亳伯施得元子名森辈。召子亳伯施入，辅天相帝。秋，帝立子施为天子"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:森辈",
+    "target": "entity:person:施",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子亳伯施得元子名森辈"
+  },
+  {
+    "id": "rel-007",
+    "type": "succeeds",
+    "source": "entity:person:施",
+    "target": "entity:person:亲义",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "秋，帝立子施为天子"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:亲义",
+    "target": "entity:person:阏",
+    "evidence": ["para:1", "para:4", "para:7", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "亲义少好武，善事仲父阏伯。请阏伯为媒，娶以为妇。帝拜商伯阏为冢宰。伯阏冢宰薨，帝命立阏伯庙"
+  }
+]

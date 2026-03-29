@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:呛",
+    "target": "entity:person:继",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝继，上帝居天子位。帝继廿五祀乙亥，呛生于平顶山宫"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:呛",
+    "target": "entity:tribe:夸父氏",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂娶夸父氏女，立方于瀼。帝广纳嫔御，后妇夸父氏中老色衰，见疏，自请留瀼，帝许之"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:呛",
+    "target": "entity:person:裘",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝裘三十祀庚戌，上帝衰，召呛入，辅天，立为天子。帝裘崩，天子呛立"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:凯",
+    "target": "entity:person:呛",
+    "evidence": ["para:1", "para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "越二载壬子，妇生子于瀼，名凯，姜姓青阳氏。帝封子凯于鲁阳。帝召子凯入，辅天，立为天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:凯",
+    "target": "entity:person:呛",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝召子凯入，辅天，立为天子"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:呛",
+    "target": "entity:person:挚",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

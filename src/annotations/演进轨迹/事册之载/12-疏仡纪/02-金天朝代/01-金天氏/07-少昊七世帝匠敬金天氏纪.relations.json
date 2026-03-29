@@ -1,0 +1,112 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:匠敬",
+    "target": "entity:person:昌吉",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝畅楑，封小子昌吉于莒邑。天小子昌吉妇厥东夷，黄天上元三千八百九十岁，昌吉妇有娠，诞男一，名匠敬，己姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:昌吉",
+    "target": "entity:person:畅楑",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝畅楑，封小子昌吉于莒邑"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:匠敬",
+    "target": "entity:person:畅楑",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝畅楑奇其孙子，年暮召入相帝，欲传以重器。讵料天象难测，未及遗诏而遽崩。诸天子竞逐神器，廷争如沸。上帝畅楑崩，天孙子匠敬终以雄略服众，遂正天位"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:少昊",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "当是时也，少昊德衰，政弛法隳。诸伯僭礼，巫史擅权，九黎乱德，民神杂糅"
+  },
+  {
+    "id": "rel-005",
+    "type": "sister_of",
+    "source": "entity:person:昌仆",
+    "target": "entity:person:昌吉",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝有姊曰昌仆，号蜀山氏，掌星历于蜀。适黄帝裔韩流，生颛聆"
+  },
+  {
+    "id": "rel-006",
+    "type": "spouse_of",
+    "source": "entity:person:昌仆",
+    "target": "entity:person:韩流",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "适黄帝裔韩流，生颛聆"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:韩流",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "适黄帝裔韩流，生颛聆"
+  },
+  {
+    "id": "rel-008",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "适黄帝裔韩流，生颛聆"
+  },
+  {
+    "id": "rel-009",
+    "type": "nephew_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝有姊曰昌仆，号蜀山氏，掌星历于蜀。适黄帝裔韩流，生颛聆。此子幼通天文，长明治道，言政事如数经纬。帝虽宵旰焦劳，然势同累卵。闻甥颛聆俊才，乃征入庭"
+  },
+  {
+    "id": "rel-010",
+    "type": "uncle_of",
+    "source": "entity:person:匠敬",
+    "target": "entity:person:颛聆",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "闻甥颛聆俊才，乃征入庭"
+  },
+  {
+    "id": "rel-011",
+    "type": "succeeds",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛聆弱冠，政皆决于其手。帝知天命已移，遂禅天位于甥"
+  }
+]

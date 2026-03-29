@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:向妹",
+    "target": "entity:person:凯",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝凯三十祀，帝向妹生于云阳。是岁，上帝就封于云阳。天缘巧合，越十五年，二人婚配"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:向妹",
+    "target": "entity:person:咣哴",
+    "evidence": ["para:2", "para:4", "para:5", "para:6", "para:7", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝凯三十祀，帝向妹生于云阳。是岁，上帝就封于云阳。天缘巧合，越十五年，二人婚配。向妹密语二姊曰：夜梦入天，与天帝婚，为帝妇。此非虚也，天帝名咣哴，誓终身善我。时上帝在辇中，闻声耳熟，窥视大惊——此女正梦中妇也。遽下，呼曰：向妹！向妹视之，果梦中天帝，喜甚，不顾礼，相拥。盖二人同梦，上帝亦识向妹为梦中妇。上帝还天，诏纳向妹"
+  },
+  {
+    "id": "rel-003",
+    "type": "sister_of",
+    "source": "entity:person:向阳",
+    "target": "entity:person:向妹",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "向妹行三，上有姊向阳、向月，三人皆好武"
+  },
+  {
+    "id": "rel-004",
+    "type": "sister_of",
+    "source": "entity:person:向月",
+    "target": "entity:person:向妹",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "向妹行三，上有姊向阳、向月，三人皆好武"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:山叭",
+    "target": "entity:person:咣哴",
+    "evidence": ["para:9", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝咣哴十一祀，妇向妹生子于曷宫，名山叭。帝咣哴三十祀，上帝封子山叭于安皋"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:向妹",
+    "target": "entity:person:挚",
+    "evidence": ["para:13"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

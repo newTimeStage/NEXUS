@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:蚩啄",
+    "target": "entity:person:吼",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在帝吼，巡狼山，纳狼山氏之少女为妇，筑宫而居。玄天上元三千百九十四载，妇有娠，生蚩啄于狼山宫"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:蚩啄",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "蚩啄五岁而孤，及兄帝蚩尤践祚。兄帝蚩尤为轩辕所戕，族众乃奉蚩啄嗣位"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:蚩啄",
+    "target": "entity:tribe:轩辕",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "兄帝蚩尤为轩辕所戕，族众乃奉蚩啄嗣位，都沙邑。帝蚩啄既立，誓复兄仇，重整八十一部之众，乘轩辕南征，袭其故地"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:蚩啄",
+    "target": "entity:person:芒",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其子芒继为酋，深谙政略，变父之道，欲与蚩尤氏修好。令工绘蚩尤像，立祠祀之，布告四海曰：“蚩尤非死，乃登于天，神魄永佑其民。”帝感其诚，许盟"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:芒",
+    "target": "entity:person:邦卉",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕酋邦卉方戮蚩尤、夸父，陈兵河南，借炎帝榆罔之援东略诸夷。忽闻帝之北起，急旋师，中途婴疾而薨。其子芒继为酋"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:芒",
+    "target": "entity:person:榆罔",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "旋移师中原，与神农氏争为帝，迫榆罔逊天子位，俘厥纲纪。轩辕酋芒乃即帝于涿鹿"
+  },
+  {
+    "id": "rel-007",
+    "type": "rivals_with",
+    "source": "entity:person:蚩啄",
+    "target": "entity:person:黄帝",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝蚩啄虽与轩辕氏有盟，犹戒黄帝之强，缮甲治兵，严守边陲。黄帝亦惮蚩尤氏众骁勇，不敢北窥"
+  },
+  {
+    "id": "rel-008",
+    "type": "succeeds",
+    "source": "entity:identity:黄天",
+    "target": "entity:identity:炎天",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕酋芒乃即帝于涿鹿，祀诸天上帝，诰天下曰：“炎天即绝，黄天其立”"
+  }
+]

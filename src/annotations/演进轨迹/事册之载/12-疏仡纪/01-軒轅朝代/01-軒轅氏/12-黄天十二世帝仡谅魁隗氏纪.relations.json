@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:仡谅",
+    "target": "entity:person:成契",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝成契晏驾，遗命以天位授仡谅。群臣奉玺劝进，遂立于洎城"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:仡谅",
+    "target": "entity:tribe:轩辕",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "以入赘轩辕，赐姓酉"
+  },
+  {
+    "id": "rel-003",
+    "type": "descendant_of",
+    "source": "entity:person:仡谅",
+    "target": "entity:identity:炎",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "实兼炎黄之血"
+  },
+  {
+    "id": "rel-004",
+    "type": "descendant_of",
+    "source": "entity:person:仡谅",
+    "target": "entity:identity:黄",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "实兼炎黄之血"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:仡谅",
+    "target": "entity:person:风后",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "风后岭者，黄天四世帝姬本封大将风后于此"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:仡谅",
+    "target": "entity:person:姬本",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "风后岭者，黄天四世帝姬本封大将风后于此"
+  }
+]

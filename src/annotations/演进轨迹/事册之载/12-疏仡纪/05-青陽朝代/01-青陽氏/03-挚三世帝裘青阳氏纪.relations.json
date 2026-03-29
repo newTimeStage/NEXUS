@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:裘",
+    "target": "entity:person:继",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝继，子裘有兄有弟。帝继崩，天子裘立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:裘",
+    "target": "entity:person:继",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝继崩，天子裘立"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:呛",
+    "target": "entity:person:裘",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封子呛於瀼邑。帝召子瀼伯呛入，辅天相帝，立为天子"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:呛",
+    "target": "entity:person:裘",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝召子瀼伯呛入，辅天相帝，立为天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:凯",
+    "target": "entity:person:呛",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天子妇生凯於瀼邑"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:person:裘",
+    "target": "entity:person:挚",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

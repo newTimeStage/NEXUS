@@ -1,4 +1,9 @@
 ---
+/* @ts-nocheck */
+/* @ts-ignore */
+import fs from 'fs';
+/* @ts-ignore */
+import path from 'path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -9,13 +14,15 @@ export async function getStaticPaths() {
   const evolutionArticles = await getCollection('演进轨迹');
   const systemsArticles = await getCollection('制度与创造');
   const futureArticles = await getCollection('主体与未来');
+  const testArticles = await getCollection('测试');
 
   // 合并所有文章
   const allArticles = [
     ...civilizationRootsArticles,
     ...evolutionArticles,
     ...systemsArticles,
-    ...futureArticles
+    ...futureArticles,
+    ...testArticles,
   ];
 
   // 生成路径
@@ -31,6 +38,66 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await article.render();
+
+// article.id 是相对于集合根目录的路径，例如：事册之载/06-合雒纪/01-泰壹朝代/01-有巢氏/有巢氏纪.md
+// 集合名称是 article.collection，例如：演进轨迹
+// 完整的相对路径应该是：集合名称/article.id
+const articleId = article.id || '';
+const articleCollection = article.collection || '';
+const annotationRoot = path.resolve(process.cwd(), 'src', 'annotations');
+
+// 构建完整的文章路径（包含集合名称）
+// 例如：演进轨迹/事册之载/06-合雒纪/01-泰壹朝代/01-有巢氏/有巢氏纪.md
+const fullArticlePath = articleCollection + '/' + articleId;
+
+// 加载当前文章对应的标注文件
+function loadArticleAnnotations(articlePath: string): { path: string; content: string }[] {
+  const files: { path: string; content: string }[] = [];
+
+  // 去掉 .md 扩展名
+  const articlePathWithoutExt = articlePath.replace(/\.md$/, '');
+
+  // 构造标注文件路径
+  const eventsPath = path.join(annotationRoot, articlePathWithoutExt + '.events.json');
+  const relationsPath = path.join(annotationRoot, articlePathWithoutExt + '.relations.json');
+
+  // 读取事件标注文件
+  if (fs.existsSync(eventsPath)) {
+    try {
+      files.push({
+        path: eventsPath,
+        content: fs.readFileSync(eventsPath, 'utf8')
+      });
+    } catch (err) {
+      console.error('读取事件文件失败:', err);
+    }
+  }
+
+  // 读取关系标注文件
+  if (fs.existsSync(relationsPath)) {
+    try {
+      files.push({
+        path: relationsPath,
+        content: fs.readFileSync(relationsPath, 'utf8')
+      });
+    } catch (err) {
+      console.error('读取关系文件失败:', err);
+    }
+  }
+
+  return files;
+}
+
+// 加载当前文章的标注文件
+const articleAnnotationFiles = loadArticleAnnotations(fullArticlePath);
+
+// 构建标注数据
+const annotationData = {
+  files: articleAnnotationFiles.map((file: { path: string; content: string }) => ({
+    path: file.path.replace(annotationRoot, ''),
+    content: file.content
+  }))
+};
 ---
 
 <BaseLayout>
@@ -41,5 +108,15 @@ const { Content } = await article.render();
       <span class="date">日期: {article.data.date.toLocaleDateString()}</span>
     </div>
     <Content />
+    <div style="display: none;">
+      标注文件数量: {articleAnnotationFiles.length}
+      {articleAnnotationFiles.map(file => (
+        <div>{file.path}</div>
+      ))}
+    </div>
+    <script define:vars={{ annotationData }} is:inline>
+      window.__ANNOTATION_DATA__ = annotationData;
+      console.log('标注数据已加载：', annotationData);
+    </script>
   </article>
 </BaseLayout>

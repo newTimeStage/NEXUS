@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:卜习",
+    "target": "entity:person:美勾",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝美勾妇少昊氏之女，于颛顼上元四千二百十四岁诞男一于帝丘，名卜习，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:美勾",
+    "target": "entity:tribe:少昊氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇少昊氏之女"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:卜习",
+    "target": "entity:person:美勾",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝美勾崩，天子卜习立"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:person:卜习",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时共工之族治河失道，洪涛溃堤，若天吴肆虐。狂澜奔涌，直犯帝丘，城郭尽没"
+  }
+]

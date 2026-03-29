@@ -1,0 +1,114 @@
+{
+  "relations": [
+    {
+      "id": "rel-dijun-001",
+      "type": "parent_of",
+      "source": "entity:person:皇娥",
+      "target": "entity:person:俊",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "皇娥生俊"
+    },
+    {
+      "id": "rel-dijun-002",
+      "type": "parent_of",
+      "source": "entity:person:该",
+      "target": "entity:person:俊",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "该与皇娥相媾生俊"
+    },
+    {
+      "id": "rel-dijun-003",
+      "type": "spouse_of",
+      "source": "entity:person:俊",
+      "target": "entity:person:羲和",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "羲和为帝俊之妇"
+    },
+    {
+      "id": "rel-dijun-004",
+      "type": "spouse_of",
+      "source": "entity:person:俊",
+      "target": "entity:person:常羲",
+      "evidence": [{"para": "5"}, {"para": "8"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "常羲为帝俊之妻"
+    },
+    {
+      "id": "rel-dijun-005",
+      "type": "succeeds",
+      "source": "entity:person:俊",
+      "target": "entity:person:昊嬟",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊嬟溺没而俊立"
+    },
+    {
+      "id": "rel-dijun-006",
+      "type": "appoints",
+      "source": "entity:person:俊",
+      "target": "entity:person:羲和",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊命羲和主日"
+    },
+    {
+      "id": "rel-dijun-007",
+      "type": "appoints",
+      "source": "entity:person:俊",
+      "target": "entity:person:常羲",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊命常羲主月"
+    },
+    {
+      "id": "rel-dijun-008",
+      "type": "establishes",
+      "source": "entity:person:俊",
+      "target": "entity:institution:日月合历",
+      "evidence": [{"para": "8"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊与常羲作日月合历"
+    },
+    {
+      "id": "rel-dijun-009",
+      "type": "establishes",
+      "source": "entity:person:俊",
+      "target": "entity:astronomy:太岁少岁",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊定太岁少岁"
+    },
+    {
+      "id": "rel-dijun-010",
+      "type": "governs",
+      "source": "entity:person:俊",
+      "target": "entity:place:云阳",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊迁云阳"
+    },
+    {
+      "id": "rel-dijun-011",
+      "type": "same_as",
+      "source": "entity:person:俊",
+      "target": "entity:identity:少昊帝",
+      "evidence": [{"para": "9"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "俊世名少昊帝"
+    }
+  ]
+}

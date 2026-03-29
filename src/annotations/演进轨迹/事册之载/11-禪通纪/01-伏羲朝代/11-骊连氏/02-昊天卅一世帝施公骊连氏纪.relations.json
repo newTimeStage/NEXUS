@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-shigong-001",
+      "type": "member_of",
+      "source": "entity:person:施公",
+      "target": "entity:tribe:骊连氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "施公为骊连氏男"
+    },
+    {
+      "id": "rel-shigong-002",
+      "type": "relative_of",
+      "source": "entity:person:施公",
+      "target": "entity:person:泰望",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "施公为帝泰望侄"
+    },
+    {
+      "id": "rel-shigong-003",
+      "type": "succeeds",
+      "source": "entity:person:施公",
+      "target": "entity:person:泰望",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "泰望崩而施公立"
+    },
+    {
+      "id": "rel-shigong-004",
+      "type": "governs",
+      "source": "entity:person:施公",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "施公居象邑"
+    }
+  ]
+}

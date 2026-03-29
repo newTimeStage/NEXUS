@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:三苗氏",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三苗氏本三柯之苗裔也"
+  },
+  {
+    "id": "rel-002",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯约苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三柯之苗者，一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-003",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯乌苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三柯之苗者，一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-004",
+    "type": "subgroup_of",
+    "source": "entity:tribe:柯挪苗",
+    "target": "entity:tribe:三柯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "三柯之苗者，一曰柯约苗、二曰柯乌苗、三曰柯挪苗"
+  },
+  {
+    "id": "rel-005",
+    "type": "descendant_of",
+    "source": "entity:tribe:三柯",
+    "target": "entity:tribe:葊兹氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "皆葊兹氏支也"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:person:虺",
+    "target": "entity:person:鼿",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋鼿薨，遗命虺嗣位，酋虺厥立"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:tribe:三苗氏",
+    "target": "entity:tribe:少典氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与少典氏媾合而姜姓"
+  }
+]

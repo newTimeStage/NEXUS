@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:桑甘",
+    "target": "entity:person:千龙",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔帝千龙初立，聘大隗氏女为妇，生子桑甘"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:千龙",
+    "target": "entity:tribe:大隗氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "聘大隗氏女为妇"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:桑甘",
+    "target": "entity:person:千龙",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝千龙崩，天子桑甘立"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:桑甘",
+    "target": "entity:tribe:祝融氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝聘炎天苗裔祝融氏女为妇"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:没",
+    "target": "entity:person:桑甘",
+    "evidence": ["para:4", "para:7", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇生子没。帝封子没于鲁阳。诏子没入，立为天子"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:桑甘",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "联滍水九黎、祝融、夸父诸部"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:桑甘",
+    "target": "entity:tribe:夸父",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "联滍水九黎、祝融、夸父诸部"
+  },
+  {
+    "id": "rel-008",
+    "type": "son_of",
+    "source": "entity:person:杜里",
+    "target": "entity:person:没",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "鲁阳伯归于鲁，伯妇生子名杜里"
+  }
+]

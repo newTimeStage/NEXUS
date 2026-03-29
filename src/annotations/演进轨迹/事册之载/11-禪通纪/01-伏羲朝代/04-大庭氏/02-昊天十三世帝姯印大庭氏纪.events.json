@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "id": "evt-guangyin-001",
+      "title": "姯印诞生",
+      "type": "birth",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/04-大庭氏/02-昊天十三世帝姯印大庭氏纪",
+      "paragraphs": ["1"],
+      "time_text": "上元三百八十七载",
+      "year": 387,
+      "people": ["姯印", "新印"],
+      "places": ["蓝田"],
+      "summary": "大庭氏生女于蓝田，姓风，帝新印侄，得名姯印"
+    },
+    {
+      "id": "evt-guangyin-002",
+      "title": "姯印立为帝",
+      "type": "reign",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/04-大庭氏/02-昊天十三世帝姯印大庭氏纪",
+      "paragraphs": ["2"],
+      "time_text": "上元四百又三载于丙午",
+      "year": 403,
+      "people": ["姯印", "新印"],
+      "places": ["大邑庭"],
+      "summary": "帝新印崩而姯印立，年仅十六，居大邑庭"
+    },
+    {
+      "id": "evt-guangyin-003",
+      "title": "迁都临潼",
+      "type": "politics",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/04-大庭氏/02-昊天十三世帝姯印大庭氏纪",
+      "paragraphs": ["3"],
+      "time_text": "上元四百十七载于庚申",
+      "year": 417,
+      "people": ["姯印"],
+      "places": ["临潼"],
+      "summary": "帝迁临潼"
+    },
+    {
+      "id": "evt-guangyin-004",
+      "title": "姯印崩",
+      "type": "death",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/04-大庭氏/02-昊天十三世帝姯印大庭氏纪",
+      "paragraphs": ["4"],
+      "time_text": "上元四百六十七载于庚戌",
+      "year": 467,
+      "people": ["姯印"],
+      "places": ["骊山"],
+      "summary": "帝崩，葬骊山，寿计八十一岁，祀名上帝姯印"
+    }
+  ]
+}

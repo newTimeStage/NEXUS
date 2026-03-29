@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-suiqin-001",
+      "type": "member_of",
+      "source": "entity:person:随秦",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随秦为中央氏女"
+    },
+    {
+      "id": "rel-suiqin-002",
+      "type": "relative_of",
+      "source": "entity:person:随秦",
+      "target": "entity:person:曲秦",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随秦为帝曲秦侄"
+    },
+    {
+      "id": "rel-suiqin-003",
+      "type": "succeeds",
+      "source": "entity:person:随秦",
+      "target": "entity:person:曲秦",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "曲秦崩而随秦立"
+    },
+    {
+      "id": "rel-suiqin-004",
+      "type": "governs",
+      "source": "entity:person:随秦",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "随秦居象邑"
+    }
+  ]
+}

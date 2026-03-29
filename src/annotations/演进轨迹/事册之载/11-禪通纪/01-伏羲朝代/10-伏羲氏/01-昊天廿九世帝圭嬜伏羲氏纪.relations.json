@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-guijin-001",
+      "type": "member_of",
+      "source": "entity:person:圭嬜",
+      "target": "entity:tribe:伏羲氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "圭嬜为伏羲氏女"
+    },
+    {
+      "id": "rel-guijin-002",
+      "type": "succeeds",
+      "source": "entity:person:圭嬜",
+      "target": "entity:person:河圭",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "河圭崩而圭嬜立"
+    },
+    {
+      "id": "rel-guijin-003",
+      "type": "governs",
+      "source": "entity:person:圭嬜",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "圭嬜居象邑"
+    },
+    {
+      "id": "rel-guijin-004",
+      "type": "appoints",
+      "source": "entity:person:圭嬜",
+      "target": "entity:person:泰望",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "圭嬜立泰望为帝嗣"
+    }
+  ]
+}

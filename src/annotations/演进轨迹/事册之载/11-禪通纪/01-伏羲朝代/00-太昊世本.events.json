@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": "evt-taihao-001",
+      "title": "龙马负图",
+      "type": "myth",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/00-太昊世本",
+      "paragraphs": ["2"],
+      "time_text": "末甲八太七成，卅二易草木，草生月，雨降日，河泛时",
+      "year": null,
+      "people": ["伏羲"],
+      "places": ["崇山", "河"],
+      "summary": "龙马负图，分五色，文开五易，甲象崇山"
+    },
+    {
+      "id": "evt-taihao-002",
+      "title": "伏羲画八卦",
+      "type": "culture",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/00-太昊世本",
+      "paragraphs": ["2"],
+      "time_text": "末甲八太七成",
+      "year": null,
+      "people": ["伏羲"],
+      "places": [],
+      "summary": "伏羲始画八卦，皆连山，名易，君臣民物阴阳兵象始明于世"
+    },
+    {
+      "id": "evt-taihao-003",
+      "title": "造六书",
+      "type": "culture",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/00-太昊世本",
+      "paragraphs": ["2"],
+      "time_text": "图出后二成卅二易草木，木枯月",
+      "year": null,
+      "people": ["伏羲", "飞龙氏"],
+      "places": [],
+      "summary": "伏羲命臣飞龙氏造六书"
+    },
+    {
+      "id": "evt-taihao-004",
+      "title": "作甲历",
+      "type": "science",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/00-太昊世本",
+      "paragraphs": ["2"],
+      "time_text": "图出后草木一易，木王月",
+      "year": null,
+      "people": ["伏羲", "潜龙氏"],
+      "places": [],
+      "summary": "伏羲命臣潜龙氏作甲历"
+    },
+    {
+      "id": "evt-taihao-005",
+      "title": "太昊之世立大事十二",
+      "type": "culture",
+      "article": "演进轨迹/事册之载/11-禪通纪/01-伏羲朝代/00-太昊世本",
+      "paragraphs": ["3"],
+      "time_text": "太昊之世",
+      "year": null,
+      "people": ["伏羲"],
+      "places": [],
+      "summary": "太昊之世立大事十二：作圭表八卦太阳历、行上元太初历、作琴瑟音乐、造书契、创牧草栽培、制网罟、驯饲养多畜、作石晷候气、作树编织蓑、养蚕抽丝织布、对偶为婚、兽衣为聘"
+    }
+  ]
+}

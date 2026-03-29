@@ -1,0 +1,102 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:先龙",
+    "target": "entity:person:羌戎",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "先龙生羌戎"
+  },
+  {
+    "id": "rel-002",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:戎己",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-003",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:彭",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-004",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:秃",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-005",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:董",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-006",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:妘",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-007",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:曹",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-008",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:芈",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-009",
+    "type": "ancestor_of",
+    "source": "entity:person:羌戎",
+    "target": "entity:identity:斟",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "羌戎之后有戎己、彭、秃、董、妘、曹、芈、斟八姓"
+  },
+  {
+    "id": "rel-010",
+    "type": "allied_with",
+    "source": "entity:identity:楚",
+    "target": "entity:identity:周",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "芈姓作强，自立为楚，与周并立"
+  }
+]

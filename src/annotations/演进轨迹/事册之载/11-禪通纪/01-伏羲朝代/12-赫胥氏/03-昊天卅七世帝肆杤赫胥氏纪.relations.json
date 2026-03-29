@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:娍义",
+    "target": "entity:person:肆杤",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝娍义闻其能，召入象邑，俾佐政枢，后立为嗣"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:肆杤",
+    "target": "entity:person:娍义",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝娍义崩，嗣肆杤立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:肆杤",
+    "target": "entity:person:归纹",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝荐甥归纹于天，咨于多酋群牧，百辟咸诺"
+  },
+  {
+    "id": "rel-004",
+    "type": "member_of",
+    "source": "entity:person:肆杤",
+    "target": "entity:tribe:赫胥氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "肆杤为赫胥氏成员"
+  },
+  {
+    "id": "rel-005",
+    "type": "participates_in",
+    "source": "entity:person:肆杤",
+    "target": "event:reign:肆杤继位",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "肆杤参与继位事件"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:承",
+    "target": "entity:person:临魁",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏生男于陈留，炎帝临魁之小子也，名曰承"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:承",
+    "target": "entity:person:临魁",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝临魁崩，小子承立"
+  },
+  {
+    "id": "rel-003",
+    "type": "reigns_over",
+    "source": "entity:person:承",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "故帝为君时，神农氏益盛：五谷丰，六畜蕃，百工兴"
+  }
+]

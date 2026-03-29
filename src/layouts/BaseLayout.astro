@@ -7,6 +7,91 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/entity-styles.css" />
+    <style>
+      /* 弹窗样式 */
+      .cc-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .cc-modal.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .cc-modal-content {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 800px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .cc-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+      }
+
+      .cc-close:hover {
+        color: #000;
+      }
+
+      /* 事件和关系列表样式 */
+      .events-list, .relations-list {
+        margin-top: 15px;
+      }
+
+      .event-item, .relation-item {
+        background-color: #f9f9f9;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-left: 4px solid #3498db;
+      }
+
+      .relation-item {
+        border-left-color: #2ecc71;
+      }
+
+      .event-item h4, .relation-item h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .event-item p, .relation-item p {
+        margin: 5px 0;
+        line-height: 1.4;
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+        .cc-modal-content {
+          max-width: 90%;
+          max-height: 90vh;
+        }
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/chinese-lunar-calendar@1.0.1/dist/index.js"></script>
   </head>
   <body>
@@ -96,6 +181,231 @@
               });
             }
           }
+        });
+      });
+
+      // 实体标签点击弹窗（显示对应 *.events.json 与 *.relations.json 内容）
+      document.addEventListener('DOMContentLoaded', function() {
+        interface Window {
+          __ANNOTATION_DATA__?: { files: { path: string; content: string }[] };
+        }
+
+        let annotationData: { files: { path: string; content: string }[] } = { files: [] };
+
+        if (typeof window !== 'undefined' && (window as Window).__ANNOTATION_DATA__) {
+          annotationData = (window as Window).__ANNOTATION_DATA__ || { files: [] };
+          console.log('加载的标注文件数量：', annotationData.files?.length || 0);
+          console.log('加载的标注文件：', annotationData.files);
+        } else {
+          console.warn('未找到页面注释数据');
+        }
+
+        function escapeHtml(str: string): string {
+          return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+
+        function ensureModal(): HTMLElement {
+          let m = document.getElementById('cc-entity-modal') as HTMLElement | null;
+          if (m) return m;
+          m = document.createElement('div');
+          m.id = 'cc-entity-modal';
+          m.className = 'cc-modal';
+          m.innerHTML = `<div class="cc-modal-content">` +
+                        `<button class="cc-close" aria-label="关闭">×</button>` +
+                        `<div id="cc-entity-modal-body"></div>` +
+                        `</div>`;
+          document.body.appendChild(m);
+          const closeBtn = m.querySelector('.cc-close') as HTMLElement | null;
+          if (closeBtn) {
+            closeBtn.addEventListener('click', () => m.classList.remove('show'));
+          }
+          m.addEventListener('click', (e) => { if (e.target === m) m.classList.remove('show'); });
+          window.addEventListener('keydown', (e) => { if (e.key === 'Escape') m.classList.remove('show'); });
+          return m;
+        }
+
+        function showEntityModal(html: string): void {
+          const modal = ensureModal();
+          const body = document.getElementById('cc-entity-modal-body') as HTMLElement | null;
+          if (body) body.innerHTML = html;
+          modal.classList.add('show');
+        }
+
+        function buildEntityDetail(entityKey: string | null, entityName: string): string | null {
+          const matchedEvents: any[] = [];
+          const matchedRelations: any[] = [];
+          const needles = [entityName];
+          if (entityKey && entityKey !== entityName) {
+            needles.push(entityKey);
+          }
+
+          // 关系类型映射表
+          const relationTypeMap: { [key: string]: string } = {
+            'born_in': '出生于',
+            'inventor_of': '发明',
+            'taught': '教导',
+            'ruler_of': '统治',
+            'founder_of': '创立',
+            'moved_to': '迁移至',
+            'constructed': '建造',
+            'descendant_of': '后裔',
+            'occupies': '居住于',
+            'established': '建立',
+            'enabled': '促成',
+            'affected_by': '受影响',
+            'expansion_to': '扩展至',
+            'participates_in': '参与',
+            'occurs_in': '发生于',
+            'occurs_on': '发生时间',
+            'same_as': '等同于',
+            'part_of': '属于',
+            'precedes': '先于',
+            'supports': '支持',
+            'elaborates': '详述',
+            'cites': '引用',
+            'refers_to': '引用',
+            'caused_by': '由...引起',
+            'migrated_to': '迁移至'
+          };
+
+          // 获取友好的关系类型名称
+          function getFriendlyRelationType(type: string): string {
+            return relationTypeMap[type] || type;
+          }
+
+          // 清理实体标识符
+          function cleanEntityIdentifier(identifier: string): string {
+            // 移除前缀，如 entity:person:、event:science:等
+            let cleaned = identifier.replace(/^(entity|event):\w+:/, '');
+            // 替换下划线为空格
+            cleaned = cleaned.replace(/_/g, ' ');
+            return cleaned;
+          }
+
+          console.log('搜索关键词：', needles);
+          console.log('标注文件数量：', annotationData.files?.length || 0);
+
+          if (!needles.length || !needles[0]) return null;
+
+          const idxCompare = (text: string, needle: string): boolean => {
+            const l = text.toLowerCase();
+            const n = needle.toLowerCase();
+            return l.includes(n);
+          };
+
+          // 搜索所有标注文件
+          for (const file of annotationData.files || []) {
+            console.log('检查文件：', file.path);
+            try {
+              // 解析JSON内容
+              const data = JSON.parse(file.content);
+              
+              if (file.path.endsWith('.events.json')) {
+                // 检查事件文件
+                for (const event of data) {
+                  // 检查事件中是否包含关键词
+                  const eventText = JSON.stringify(event).toLowerCase();
+                  for (const needle of needles) {
+                    if (idxCompare(eventText, needle.toLowerCase())) {
+                      matchedEvents.push(event);
+                      break;
+                    }
+                  }
+                }
+              } else if (file.path.endsWith('.relations.json')) {
+                // 检查关系文件
+                for (const relation of data) {
+                  // 检查关系中是否包含关键词
+                  const relationText = JSON.stringify(relation).toLowerCase();
+                  for (const needle of needles) {
+                    if (idxCompare(relationText, needle.toLowerCase())) {
+                      matchedRelations.push(relation);
+                      break;
+                    }
+                  }
+                }
+              }
+            } catch (error) {
+              console.error('解析JSON文件失败：', file.path, error);
+            }
+          }
+
+          console.log('匹配事件数量：', matchedEvents.length);
+          console.log('匹配关系数量：', matchedRelations.length);
+
+          if (!matchedEvents.length && !matchedRelations.length) {
+            return `<p>未找到与 <strong>${escapeHtml(entityName)}</strong> 匹配的事件/关系内容。</p>`;
+          }
+
+          let out = `<h2>实体：${escapeHtml(entityName)}</h2>`;
+
+          // 显示匹配的事件
+          if (matchedEvents.length) {
+            out += `<h3>相关事件</h3>`;
+            out += `<div class="events-list">`;
+            for (const event of matchedEvents) {
+              out += `<div class="event-item">`;
+              out += `<h4>${escapeHtml(event.title || '无标题')}</h4>`;
+              if (event.time_text) {
+                out += `<p><strong>时间：</strong>${escapeHtml(event.time_text)}</p>`;
+              }
+              if (event.year) {
+                out += `<p><strong>年份：</strong>${escapeHtml(event.year.toString())}</p>`;
+              }
+              if (event.people && event.people.length) {
+                out += `<p><strong>人物：</strong>${event.people.map((p: string) => escapeHtml(p)).join('、')}</p>`;
+              }
+              if (event.places && event.places.length) {
+                out += `<p><strong>地点：</strong>${event.places.map((p: string) => escapeHtml(p)).join('、')}</p>`;
+              }
+              if (event.summary) {
+                out += `<p><strong>概述：</strong>${escapeHtml(event.summary)}</p>`;
+              }
+              out += `</div>`;
+            }
+            out += `</div>`;
+          }
+
+          // 显示匹配的关系
+          if (matchedRelations.length) {
+            out += `<h3>相关关系</h3>`;
+            out += `<div class="relations-list">`;
+            for (const relation of matchedRelations) {
+              out += `<div class="relation-item">`;
+              out += `<h4>${escapeHtml(getFriendlyRelationType(relation.type || '无类型'))}</h4>`;
+              if (relation.source) {
+                out += `<p><strong>来源：</strong>${escapeHtml(cleanEntityIdentifier(relation.source))}</p>`;
+              }
+              if (relation.target) {
+                out += `<p><strong>目标：</strong>${escapeHtml(cleanEntityIdentifier(relation.target))}</p>`;
+              }
+              if (relation.note) {
+                out += `<p><strong>说明：</strong>${escapeHtml(relation.note)}</p>`;
+              }
+              out += `</div>`;
+            }
+            out += `</div>`;
+          }
+
+          return out;
+        }
+
+        document.body.addEventListener('click', (e) => {
+          const target = e.target as HTMLElement;
+          if (!target) return;
+          const span = target.closest('[class^="entity-"]') as HTMLElement;
+          if (!span) return;
+          e.preventDefault();
+
+          const canonical = span.getAttribute('data-canonical');
+          const text = (span.textContent || '').trim();
+          const html = buildEntityDetail(canonical || text, text);
+          if (html) showEntityModal(html);
         });
       });
     </script>

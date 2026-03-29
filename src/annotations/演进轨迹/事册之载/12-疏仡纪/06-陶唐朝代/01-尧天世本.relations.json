@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:姜斯遂",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔帝挚青阳氏十六世帝姜斯遂（帝喾）娶陈锋氏女庆都为妇，封于丹陵。妇庆都于丹陵生子，名曰尧"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:庆都",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇庆都于丹陵生子，名曰尧"
+  },
+  {
+    "id": "rel-003",
+    "type": "same_as",
+    "source": "entity:person:姜斯遂",
+    "target": "entity:person:喾",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝挚青阳氏十六世帝姜斯遂（帝喾）"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:姜斯遂",
+    "target": "entity:person:庆都",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "娶陈锋氏女庆都为妇"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:place:丹陵",
+    "target": "entity:place:丹丘",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "丹陵，亦曰丹丘"
+  },
+  {
+    "id": "rel-006",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "与兄鸷共辅天"
+  },
+  {
+    "id": "rel-007",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:弃",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "逐尧及弟弃、契归封"
+  },
+  {
+    "id": "rel-008",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:契",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "逐尧及弟弃、契归封"
+  },
+  {
+    "id": "rel-009",
+    "type": "succeeds",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "唐伯尧率氏禳灾，一德归心，天下诸方多氏，拥尧代鸷，号陶唐氏"
+  }
+]

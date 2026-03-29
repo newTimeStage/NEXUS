@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "niece_of",
+    "source": "entity:person:随嬄",
+    "target": "entity:person:伏纪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "随嬄为上帝伏纪姪"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:随嬄",
+    "target": "entity:person:伏纪",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝伏纪崩，姪随嬄立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:随嬄",
+    "target": "entity:person:鹏烁",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝佥举姪鹏烁嗣立"
+  }
+]

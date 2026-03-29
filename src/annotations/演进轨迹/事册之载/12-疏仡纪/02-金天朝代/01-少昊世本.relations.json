@@ -1,0 +1,232 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:少昊氏",
+    "target": "entity:tribe:伏羲氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "曰若稽古伏羲氏，徙居河渎之阴，支裔蕃衍，少昊氏乃其一"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:俊",
+    "target": "entity:person:该",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其先为昊天七世上帝俊。父金天氏酋该，上帝昊义之子也"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:俊",
+    "target": "entity:person:皇娥",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "父金天氏酋该，上帝昊义之子也；母曰皇娥，亦名书戚。皇娥媾于该遂孕"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:皇娥",
+    "target": "entity:person:该",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "是夕有流星贯虹，坠于穷桑之野，皇娥媾于该遂孕"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:皇娥",
+    "target": "entity:person:书戚",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "母曰皇娥，亦名书戚"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:identity:金天氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遇白帝金天氏于滨，弦歌相和，情洽忘归"
+  },
+  {
+    "id": "rel-007",
+    "type": "same_as",
+    "source": "entity:person:俊",
+    "target": "entity:identity:穷桑氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "以其生乎穷桑，故号穷桑氏"
+  },
+  {
+    "id": "rel-008",
+    "type": "same_as",
+    "source": "entity:person:俊",
+    "target": "entity:identity:桑丘氏",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "以其生乎穷桑，故号穷桑氏，亦曰桑丘氏"
+  },
+  {
+    "id": "rel-009",
+    "type": "same_as",
+    "source": "entity:person:俊",
+    "target": "entity:identity:金天氏",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世称金天氏、或曰金穷氏"
+  },
+  {
+    "id": "rel-010",
+    "type": "same_as",
+    "source": "entity:person:俊",
+    "target": "entity:identity:金穷氏",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世称金天氏、或曰金穷氏"
+  },
+  {
+    "id": "rel-011",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:person:勾芒",
+    "evidence": ["para:6", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "今存勾芒常羲观测之迹。联句芒、羲和、常羲诸部"
+  },
+  {
+    "id": "rel-012",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:person:常羲",
+    "evidence": ["para:6", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "今存勾芒常羲观测之迹。联句芒、羲和、常羲诸部"
+  },
+  {
+    "id": "rel-013",
+    "type": "allies_with",
+    "source": "entity:person:豕",
+    "target": "entity:person:己鸷",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天三世帝豕封少昊青阳玄枵为东夷司马鸟师，赐姓己氏，更名己鸷"
+  },
+  {
+    "id": "rel-014",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:person:羲和",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "联句芒、羲和、常羲诸部"
+  },
+  {
+    "id": "rel-015",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:tribe:三苗",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "率三苗九黎复德兴邦"
+  },
+  {
+    "id": "rel-016",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "率三苗九黎复德兴邦"
+  },
+  {
+    "id": "rel-017",
+    "type": "allies_with",
+    "source": "entity:person:俊",
+    "target": "entity:tribe:防风氏",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "当海浸洪潦之厄，与防风氏共辟渤海之北"
+  },
+  {
+    "id": "rel-018",
+    "type": "rivals_with",
+    "source": "entity:person:清喾",
+    "target": "entity:person:号次",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时黄天十五世帝号次在位，少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众，举兵克轩辕氏，终使帝号次逊位"
+  },
+  {
+    "id": "rel-019",
+    "type": "rivals_with",
+    "source": "entity:tribe:少昊",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众，举兵克轩辕氏"
+  },
+  {
+    "id": "rel-020",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众"
+  },
+  {
+    "id": "rel-021",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:祝融",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众"
+  },
+  {
+    "id": "rel-022",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:person:夸父",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众"
+  },
+  {
+    "id": "rel-023",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊氏酋清喾率诸族，合共工、祝融、夸父、蚩尤之众"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:高辛氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "父系承轩辕氏之脉"
+  },
+  {
+    "id": "rel-002",
+    "type": "descendant_of",
+    "source": "entity:tribe:高辛氏",
+    "target": "entity:identity:炎帝",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "母系继炎帝之祚"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:tribe:高辛氏",
+    "target": "entity:tribe:颛顼",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "渐为颛顼股肱"
+  },
+  {
+    "id": "rel-004",
+    "type": "brother_of",
+    "source": "entity:person:姜夏",
+    "target": "entity:person:姜岌",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子幼，弟姜夏嗣位"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:姜夏",
+    "target": "entity:person:姜岌",
+    "evidence": ["para:2"],
+    "status": "inferred",
+    "confidence": "medium",
+    "note": "姜岌崩，子幼，弟姜夏嗣位"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:姜未",
+    "target": "entity:person:姜夏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "姜夏传子姜未"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:姜夏",
+    "target": "entity:tribe:夸父",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "盟夸父、祝融之族"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:姜夏",
+    "target": "entity:tribe:祝融",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "盟夸父、祝融之族"
+  },
+  {
+    "id": "rel-009",
+    "type": "son_of",
+    "source": "entity:person:喾美",
+    "target": "entity:person:姜未",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "姜未传子喾美"
+  },
+  {
+    "id": "rel-010",
+    "type": "allies_with",
+    "source": "entity:person:喾美",
+    "target": "entity:tribe:颛顼",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "喾美者，佐颛顼有功"
+  },
+  {
+    "id": "rel-011",
+    "type": "rivals_with",
+    "source": "entity:person:喾美",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "既立，躬伐共工，共工北窜"
+  },
+  {
+    "id": "rel-012",
+    "type": "succeeds",
+    "source": "entity:person:喾美",
+    "target": "entity:tribe:颛顼",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时颛顼德衰，诸伯共推喾美践祚，乃开喾天"
+  }
+]

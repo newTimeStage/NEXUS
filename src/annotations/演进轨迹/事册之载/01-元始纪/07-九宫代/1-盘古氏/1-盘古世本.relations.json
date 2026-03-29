@@ -1,0 +1,39 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:tribe:提挺氏",
+    "target": "entity:tribe:盘古氏",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "提挺氏是盘古氏的祖先"
+  },
+  {
+    "id": "rel-002",
+    "type": "part_of",
+    "source": "entity:tribe:混沌氏",
+    "target": "entity:tribe:盘古氏",
+    "evidence": [
+      "para:2",
+      "para:3"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "混沌氏是盘古氏的一部分"
+  },
+  {
+    "id": "rel-003",
+    "type": "same_as",
+    "source": "entity:myth:燧天",
+    "target": "entity:myth:昊天",
+    "evidence": [
+      "para:2"
+    ],
+    "status": "asserted",
+    "confidence": "medium",
+    "note": "燧天可能是昊天的别名或同一人物"
+  }
+]

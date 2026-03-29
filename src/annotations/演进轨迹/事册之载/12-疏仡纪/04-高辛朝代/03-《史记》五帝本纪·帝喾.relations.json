@@ -1,0 +1,102 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:蟜极",
+    "target": "entity:person:玄嚣",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "高辛父曰蟜极，蟜极父曰玄嚣"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:玄嚣",
+    "target": "entity:person:黄帝",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "玄嚣父曰黄帝"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:喾",
+    "target": "entity:person:蟜极",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "高辛父曰蟜极"
+  },
+  {
+    "id": "rel-004",
+    "type": "spouse_of",
+    "source": "entity:person:喾",
+    "target": "entity:tribe:陈锋氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾娶陈锋氏女，生放勋"
+  },
+  {
+    "id": "rel-005",
+    "type": "spouse_of",
+    "source": "entity:person:喾",
+    "target": "entity:tribe:娵訾氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "娶娵訾氏女，生挚"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:放勋",
+    "target": "entity:person:喾",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾娶陈锋氏女，生放勋"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:挚",
+    "target": "entity:person:喾",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "娶娵訾氏女，生挚"
+  },
+  {
+    "id": "rel-008",
+    "type": "succeeds",
+    "source": "entity:person:挚",
+    "target": "entity:person:喾",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾崩，而挚代立"
+  },
+  {
+    "id": "rel-009",
+    "type": "succeeds",
+    "source": "entity:person:放勋",
+    "target": "entity:person:挚",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝挚立，不善，而弟放勋立，是为帝尧"
+  },
+  {
+    "id": "rel-010",
+    "type": "same_as",
+    "source": "entity:person:放勋",
+    "target": "entity:person:尧",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "而弟放勋立，是为帝尧"
+  }
+]

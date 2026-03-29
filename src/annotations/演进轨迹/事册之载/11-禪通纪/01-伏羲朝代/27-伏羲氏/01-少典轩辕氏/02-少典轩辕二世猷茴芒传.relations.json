@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:茴芒",
+    "target": "entity:person:矛术",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "猷矛术薨而姪茴芒立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:茴芒",
+    "target": "entity:person:矛术",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "猷矛术薨而姪茴芒立"
+  }
+]

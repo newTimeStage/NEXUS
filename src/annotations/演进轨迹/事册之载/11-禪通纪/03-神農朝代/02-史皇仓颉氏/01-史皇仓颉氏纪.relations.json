@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:颉",
+    "target": "entity:person:候冈",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇氏女酋候冈生男于洛水之畔，名颉，风姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "alias_of",
+    "source": "entity:person:仓颉",
+    "target": "entity:person:颉",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "成而为酋率氏，号曰仓颉氏。仓帝仓颉立"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:tribe:史皇二世",
+    "target": "entity:person:颉",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇五世帝颉薨，葬濮邑之郊，史皇二世立"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:tribe:史皇三世",
+    "target": "entity:tribe:史皇二世",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇二世薨，三世立"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:tribe:史皇四世",
+    "target": "entity:tribe:史皇三世",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇三世薨，四世立"
+  },
+  {
+    "id": "rel-006",
+    "type": "succeeds",
+    "source": "entity:tribe:史皇五世",
+    "target": "entity:tribe:史皇四世",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史皇四世薨，五世立"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:tribe:史皇氏",
+    "target": "entity:tribe:燧人氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧人氏之长史，世与史皇氏媾合"
+  },
+  {
+    "id": "rel-008",
+    "type": "rivals_with",
+    "source": "entity:tribe:仓颉氏",
+    "target": "entity:identity:炎帝",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋作文为字，炎帝明闻之大怒来伐，酋率氏破阵"
+  },
+  {
+    "id": "rel-009",
+    "type": "rivals_with",
+    "source": "entity:tribe:史皇",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:6", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕氏北来为争，为帝所败而北走。轩辕氏北来侵，帝率氏而降"
+  }
+]

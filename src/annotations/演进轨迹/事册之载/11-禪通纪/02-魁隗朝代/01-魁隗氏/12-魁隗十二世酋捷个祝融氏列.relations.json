@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:墙夷",
+    "target": "entity:person:伯夷",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "墙夷生伯夷"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:姜捷个",
+    "target": "entity:person:墙夷",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋墙夷薨，弟姜捷个立"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:姜捷个",
+    "target": "entity:person:墙夷",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋墙夷薨，弟姜捷个立"
+  },
+  {
+    "id": "rel-004",
+    "type": "descendant_of",
+    "source": "entity:person:伯夷",
+    "target": "entity:person:四岳",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯夷之后有四岳、子牙、子牙之后有小白"
+  },
+  {
+    "id": "rel-005",
+    "type": "descendant_of",
+    "source": "entity:person:伯夷",
+    "target": "entity:person:子牙",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯夷之后有四岳、子牙、子牙之后有小白"
+  }
+]

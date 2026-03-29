@@ -1,0 +1,194 @@
+{
+  "relations": [
+    {
+      "id": "rel-nuwa-001",
+      "type": "succeeds",
+      "source": "entity:person:女娲",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲崩而女娲立为女皇"
+    },
+    {
+      "id": "rel-nuwa-002",
+      "type": "governs",
+      "source": "entity:person:女娲",
+      "target": "entity:place:汝阳",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲居汝阳"
+    },
+    {
+      "id": "rel-nuwa-003",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:中央氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命中央氏为上相"
+    },
+    {
+      "id": "rel-nuwa-004",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命柏皇氏为下相"
+    },
+    {
+      "id": "rel-nuwa-005",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:共工氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命共工氏为地官"
+    },
+    {
+      "id": "rel-nuwa-006",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:朱襄氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命朱襄氏为史官"
+    },
+    {
+      "id": "rel-nuwa-007",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:昊英氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命昊英氏为历官"
+    },
+    {
+      "id": "rel-nuwa-008",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:person:羲仲",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命羲仲为春官木正"
+    },
+    {
+      "id": "rel-nuwa-009",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:person:羲叔",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命羲叔为夏官火正"
+    },
+    {
+      "id": "rel-nuwa-010",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:person:和仲",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命和仲为秋官金正"
+    },
+    {
+      "id": "rel-nuwa-011",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:person:和叔",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命和叔为冬官水正"
+    },
+    {
+      "id": "rel-nuwa-012",
+      "type": "opposes",
+      "source": "entity:tribe:共工氏",
+      "target": "entity:person:女娲",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "共工氏不恭女皇之命，欲行叛立"
+    },
+    {
+      "id": "rel-nuwa-013",
+      "type": "appoints",
+      "source": "entity:person:女娲",
+      "target": "entity:person:祝融",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲命祝融率部北伐共工氏"
+    },
+    {
+      "id": "rel-nuwa-014",
+      "type": "causes",
+      "source": "event:revolt:共工氏叛乱",
+      "target": "event:disaster:不周山崩",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "共工氏败西奔，怒击不周山"
+    },
+    {
+      "id": "rel-nuwa-015",
+      "type": "causes",
+      "source": "event:disaster:不周山崩",
+      "target": "event:disaster:河大泛滥",
+      "evidence": [{"para": "3"}],
+      "status": "inferred",
+      "confidence": "medium",
+      "note": "表木绝而不知天行，河大泛而人弗觉"
+    },
+    {
+      "id": "rel-nuwa-016",
+      "type": "establishes",
+      "source": "entity:person:女娲",
+      "target": "entity:ritual:对偶婚媾",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲立对偶婚媾之制"
+    },
+    {
+      "id": "rel-nuwa-017",
+      "type": "participates_in",
+      "source": "entity:person:祝融",
+      "target": "event:revolt:共工氏叛乱",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "祝融率部北伐共工氏"
+    },
+    {
+      "id": "rel-nuwa-018",
+      "type": "participates_in",
+      "source": "entity:tribe:共工氏",
+      "target": "event:revolt:共工氏叛乱",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "共工氏叛乱"
+    },
+    {
+      "id": "rel-nuwa-019",
+      "type": "member_of",
+      "source": "entity:person:女娲",
+      "target": "entity:tribe:雷泽氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "女娲生于雷泽氏"
+    }
+  ]
+}

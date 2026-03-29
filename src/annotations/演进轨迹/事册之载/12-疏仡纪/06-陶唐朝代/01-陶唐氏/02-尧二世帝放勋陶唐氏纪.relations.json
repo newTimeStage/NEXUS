@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:伊祁氏",
+    "target": "entity:person:神农氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "曰若稽古伊祁氏，本炎天上帝神农氏后"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:放勋",
+    "target": "entity:person:女英",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝尧悦之，赘以为婿，嫔以女英"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_in_law_of",
+    "source": "entity:person:放勋",
+    "target": "entity:person:尧",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝尧悦之，赘以为婿，嫔以女英。入天就庭，谦恭勤事，上帝器其能，命摄政"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:放勋",
+    "target": "entity:person:尧",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝衰而禅厥位，亲率群臣多酋，荐放勋于诸天上帝。帝尧崩，放勋立，都平阳"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:放勋",
+    "target": "entity:identity:尧帝",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名尧帝"
+  }
+]

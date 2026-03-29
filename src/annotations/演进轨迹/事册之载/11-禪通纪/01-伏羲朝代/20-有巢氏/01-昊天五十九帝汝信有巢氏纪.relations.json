@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:汝信",
+    "target": "entity:person:雪河",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝雪河崩，群臣奉遗命，立有巢氏酋汝信承帝事"
+  }
+]

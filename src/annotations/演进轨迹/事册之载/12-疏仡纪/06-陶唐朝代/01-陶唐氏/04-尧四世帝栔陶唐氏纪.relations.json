@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:栔",
+    "target": "entity:person:江",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝江衰，效上帝传贤，择吉日，率臣祀山川，荐起于天，立为天子。尧帝江崩，天子栔立，都于美邑"
+  },
+  {
+    "id": "rel-002",
+    "type": "nephew_of",
+    "source": "entity:person:裘",
+    "target": "entity:person:栔",
+    "evidence": ["para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妹生子曰裘。帝命甥裘，年十七，为司马，主军治安"
+  },
+  {
+    "id": "rel-003",
+    "type": "nephew_of",
+    "source": "entity:person:密",
+    "target": "entity:person:栔",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "春，侄密生，姜姓陶唐氏"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:裘",
+    "target": "entity:person:栔",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝疲，无力政，咨于四岳以推嗣。举甥裘，四岳赞。遂率众祀神，荐裘于天，立为天子"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:person:栔",
+    "target": "entity:identity:尧帝栔",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名尧帝栔"
+  }
+]

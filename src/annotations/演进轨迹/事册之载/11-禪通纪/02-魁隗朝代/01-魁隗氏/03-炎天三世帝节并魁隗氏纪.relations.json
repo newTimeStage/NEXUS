@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:炎居",
+    "target": "entity:person:节并",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝炎居生三子曰节并、伯陵、灵恝"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:person:炎居",
+    "target": "entity:person:伯陵",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝炎居生三子曰节并、伯陵、灵恝"
+  },
+  {
+    "id": "rel-003",
+    "type": "father_of",
+    "source": "entity:person:炎居",
+    "target": "entity:person:灵恝",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝炎居生三子曰节并、伯陵、灵恝"
+  },
+  {
+    "id": "rel-004",
+    "type": "niece_of",
+    "source": "entity:person:节并",
+    "target": "entity:person:炎居",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏生女于固川之原，姓姜，帝炎居姪也，得名节并"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:节并",
+    "target": "entity:person:炎居",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝炎居崩于大邑浪，姪节并立，居固川之原"
+  }
+]

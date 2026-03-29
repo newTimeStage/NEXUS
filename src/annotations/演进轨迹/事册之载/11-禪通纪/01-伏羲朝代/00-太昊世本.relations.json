@@ -1,0 +1,174 @@
+{
+  "relations": [
+    {
+      "id": "rel-taihao-001",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:astronomy:八卦",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲始画八卦"
+    },
+    {
+      "id": "rel-taihao-002",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:book:连山",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲作连山"
+    },
+    {
+      "id": "rel-taihao-003",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:book:易",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲作易"
+    },
+    {
+      "id": "rel-taihao-004",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:飞龙氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命臣飞龙氏造六书"
+    },
+    {
+      "id": "rel-taihao-005",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:潜龙氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命臣潜龙氏作甲历"
+    },
+    {
+      "id": "rel-taihao-006",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:降龙氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命降龙氏何率万民"
+    },
+    {
+      "id": "rel-taihao-007",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:水龙氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命水龙氏平治水土"
+    },
+    {
+      "id": "rel-taihao-008",
+      "type": "appoints",
+      "source": "entity:person:伏羲",
+      "target": "entity:person:火龙氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命火龙氏炮治器用"
+    },
+    {
+      "id": "rel-taihao-009",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:六书",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命飞龙氏造六书"
+    },
+    {
+      "id": "rel-taihao-010",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:甲历",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲命潜龙氏作甲历"
+    },
+    {
+      "id": "rel-taihao-011",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:上元太初历",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "太昊之世行上元太初历"
+    },
+    {
+      "id": "rel-taihao-012",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:institution:文教",
+      "evidence": [{"para": "1"}, {"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲兴文教"
+    },
+    {
+      "id": "rel-taihao-013",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:ritual:礼乐",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "太昊之世作琴瑟音乐，礼乐始明"
+    },
+    {
+      "id": "rel-taihao-014",
+      "type": "establishes",
+      "source": "entity:person:伏羲",
+      "target": "entity:ritual:婚礼",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "太昊之世兽衣为聘，婚礼为信"
+    },
+    {
+      "id": "rel-taihao-015",
+      "type": "influences",
+      "source": "entity:person:伏羲",
+      "target": "entity:concept:文明",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "太昊之世，人文显，实文明肇基之金阶"
+    },
+    {
+      "id": "rel-taihao-016",
+      "type": "part_of",
+      "source": "entity:person:伏羲氏",
+      "target": "entity:person:燧人氏",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "伏羲氏本燧人氏支也"
+    },
+    {
+      "id": "rel-taihao-017",
+      "type": "same_as",
+      "source": "entity:myth:太昊",
+      "target": "entity:person:伏羲",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "天下之民号曰太昊"
+    }
+  ]
+}

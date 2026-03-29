@@ -1,0 +1,162 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:连邦",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕氏生男一于龙门，酋连邦子，名邦卉。酋连邦薨，子邦卉立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:连邦",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋连邦薨，子邦卉立"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕氏",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:2", "para:4", "para:5", "para:6", "para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏为炎天之正位，然政衰民怨，贪黩横行。酋观时变，阴蓄大志，欲取天下。大战涿鹿之野。轩辕、神农联军与蚩尤、东夷、共工、夸父四部鏖兵三载"
+  },
+  {
+    "id": "rel-004",
+    "type": "rivals_with",
+    "source": "entity:tribe:轩辕氏",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:3", "para:4", "para:5", "para:6", "para:7", "para:8", "para:9", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋虽扩土数十部，然力不敌蚩尤，遂各守疆界。蚩尤势益张，尽据河北，南侵东土。蚩尤善战，持铜兵，大破帝榆罔。蚩尤急旋师北援。大战涿鹿之野。酋邦卉知其难克，遂请和。酋自忖谋略不逮蚩尤。酋邦卉命应龙壅河水灌蚩尤城。酋用玄女之谋，遣死士隳蚩尤族灵夔。轩辕追围解地，擒蚩尤"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:6", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕、神农联军与蚩尤、东夷、共工、夸父四部鏖兵三载。轩辕初败北走，帝榆罔返截杀之"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:蚩尤",
+    "target": "entity:tribe:东夷",
+    "evidence": ["para:4", "para:5", "para:6", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷、共工、夸父合请蚩尤氏共击神农。蚩尤善战，持铜兵，大破帝榆罔。蚩尤急旋师北援，会共工、夸父合战轩辕氏于东台山"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:共工",
+    "evidence": ["para:4", "para:5", "para:6", "para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷、共工、夸父合请蚩尤氏共击神农。蚩尤急旋师北援，会共工、夸父合战轩辕氏于东台山"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:蚩尤",
+    "target": "entity:person:夸父",
+    "evidence": ["para:4", "para:5", "para:6", "para:7", "para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "东夷、共工、夸父合请蚩尤氏共击神农。蚩尤急旋师北援，会共工、夸父合战轩辕氏于东台山。冬十月斩夸父"
+  },
+  {
+    "id": "rel-009",
+    "type": "succeeds",
+    "source": "entity:person:芒",
+    "target": "entity:person:邦卉",
+    "evidence": ["para:11"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "未及陟位而遽崩。子芒嗣立，乃即帝位"
+  },
+  {
+    "id": "rel-010",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:仓颉",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "率轩辕氏北伐仓颉氏。仓颉五世昏弱，轩辕克阳武，降其众，史皇仓颉氏亡"
+  },
+  {
+    "id": "rel-011",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:蚩尤",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "轩辕追围解地，擒蚩尤，戮于黎丘"
+  },
+  {
+    "id": "rel-012",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:灵夔",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遣死士隳蚩尤族灵夔，制鼓乱其军心"
+  },
+  {
+    "id": "rel-013",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:刑天",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋邦卉诛蚩尤氏之长史刑天，灭其史"
+  },
+  {
+    "id": "rel-014",
+    "type": "kills",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:夸父",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "冬十月斩夸父"
+  },
+  {
+    "id": "rel-015",
+    "type": "allies_with",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:玄女",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋用玄女之谋"
+  },
+  {
+    "id": "rel-016",
+    "type": "allies_with",
+    "source": "entity:person:邦卉",
+    "target": "entity:person:应龙",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋邦卉命应龙壅河水灌蚩尤城"
+  }
+]

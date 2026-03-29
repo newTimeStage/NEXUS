@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-yuhan-001",
+      "type": "member_of",
+      "source": "entity:person:郁莟",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "郁莟为柏皇氏女"
+    },
+    {
+      "id": "rel-yuhan-002",
+      "type": "relative_of",
+      "source": "entity:person:郁莟",
+      "target": "entity:person:可塑",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "郁莟为帝可塑侄"
+    },
+    {
+      "id": "rel-yuhan-003",
+      "type": "succeeds",
+      "source": "entity:person:郁莟",
+      "target": "entity:person:可塑",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "可塑崩而郁莟立"
+    },
+    {
+      "id": "rel-yuhan-004",
+      "type": "governs",
+      "source": "entity:person:郁莟",
+      "target": "entity:place:大邑遂",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "郁莟居大邑遂"
+    }
+  ]
+}

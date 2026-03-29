@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "parent_of",
+    "source": "entity:person:赤禅",
+    "target": "entity:person:附前",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝赤禅生男于太邑白，姓风，得名附前"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:附前",
+    "target": "entity:person:洛矛",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝洛矛崩，群佥兄附前立"
+  },
+  {
+    "id": "rel-003",
+    "type": "brother_of",
+    "source": "entity:person:附前",
+    "target": "entity:person:洛矛",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "附前为洛矛之兄"
+  }
+]

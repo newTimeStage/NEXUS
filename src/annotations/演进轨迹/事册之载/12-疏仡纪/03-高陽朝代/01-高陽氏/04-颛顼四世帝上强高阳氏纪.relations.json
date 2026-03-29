@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:上强",
+    "target": "entity:person:焙央",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛顼上元四千有五十岁，天帝焙央之妇生男一于顿丘，名上强，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:上强",
+    "target": "entity:person:焙央",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝焙央既崩，天子上强立"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:person:上强",
+    "target": "entity:tribe:姜姓噎鸣氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝命其典天象，司星辰日月之度"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:tribe:姜姓噎鸣氏",
+    "target": "entity:tribe:鹳兜氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "噎鸣氏遂与鹳兜氏共创大河陶文"
+  },
+  {
+    "id": "rel-005",
+    "type": "descendant_of",
+    "source": "entity:tribe:姜姓噎鸣氏",
+    "target": "entity:identity:炎天",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎天苗裔姜姓噎鸣氏自青海东迁郑邑"
+  }
+]

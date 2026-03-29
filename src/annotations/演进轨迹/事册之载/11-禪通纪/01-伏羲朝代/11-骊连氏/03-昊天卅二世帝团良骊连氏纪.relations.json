@@ -1,0 +1,54 @@
+{
+  "relations": [
+    {
+      "id": "rel-tuanliang-001",
+      "type": "member_of",
+      "source": "entity:person:团良",
+      "target": "entity:tribe:骊连氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良为骊连氏男"
+    },
+    {
+      "id": "rel-tuanliang-002",
+      "type": "relative_of",
+      "source": "entity:person:团良",
+      "target": "entity:person:施公",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良为帝施公甥"
+    },
+    {
+      "id": "rel-tuanliang-003",
+      "type": "succeeds",
+      "source": "entity:person:团良",
+      "target": "entity:person:施公",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "施公崩而团良立"
+    },
+    {
+      "id": "rel-tuanliang-004",
+      "type": "governs",
+      "source": "entity:person:团良",
+      "target": "entity:place:象邑",
+      "evidence": [{"para": "3"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良居象邑"
+    },
+    {
+      "id": "rel-tuanliang-005",
+      "type": "appoints",
+      "source": "entity:person:团良",
+      "target": "entity:person:冠象",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "团良命冠象率氏伐天敌"
+    }
+  ]
+}

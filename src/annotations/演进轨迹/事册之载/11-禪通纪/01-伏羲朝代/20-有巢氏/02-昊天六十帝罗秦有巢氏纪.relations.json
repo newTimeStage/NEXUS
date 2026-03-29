@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "nephew_of",
+    "source": "entity:person:罗秦",
+    "target": "entity:person:汝信",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "罗秦为上帝汝信侄"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:罗秦",
+    "target": "entity:person:汝信",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝汝信崩，侄罗秦立"
+  },
+  {
+    "id": "rel-003",
+    "type": "appoints",
+    "source": "entity:person:罗秦",
+    "target": "entity:person:风诰",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝擢葛天氏酋风诰为摄政"
+  }
+]

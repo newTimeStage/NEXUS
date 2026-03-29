@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:秦矛",
+    "target": "entity:person:革池",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "母察其贤，立厥为嗣"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:革池",
+    "target": "entity:person:秦矛",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝秦矛崩，嗣革池立"
+  },
+  {
+    "id": "rel-003",
+    "type": "member_of",
+    "source": "entity:person:革池",
+    "target": "entity:tribe:尊卢氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "革池为尊卢氏成员"
+  },
+  {
+    "id": "rel-004",
+    "type": "participates_in",
+    "source": "entity:person:革池",
+    "target": "event:reign:革池继位",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "革池参与继位事件"
+  }
+]

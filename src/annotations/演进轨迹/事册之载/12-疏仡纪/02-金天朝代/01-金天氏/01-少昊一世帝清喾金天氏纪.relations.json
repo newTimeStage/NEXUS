@@ -1,0 +1,212 @@
+[
+  {
+    "id": "rel-001",
+    "type": "same_as",
+    "source": "entity:person:清喾",
+    "target": "entity:person:玄嚣",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "黄天上元三千六百五十九岁，金天氏生男一于兖邑，名清喾，又名玄嚣，己姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:少昊氏",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "清喾少而聪颖，才略超群，年二十为酋，率少昊氏"
+  },
+  {
+    "id": "rel-003",
+    "type": "rivals_with",
+    "source": "entity:person:清喾",
+    "target": "entity:identity:黄天",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "时黄天政衰，贪渎横行，民怨沸腾，氏族内乱。酋清喾以为机不可失，遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部，共伐黄天"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:identity:炎天",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:共工",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:祝融",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:person:夸父",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-008",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:三苗",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-009",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遂联炎天后裔共工、祝融、夸父及蚩尤遗族三苗、九黎等部"
+  },
+  {
+    "id": "rel-010",
+    "type": "rivals_with",
+    "source": "entity:person:清喾",
+    "target": "entity:person:祁号次",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "五载之间，逐末帝祁号次于涿鹿。酋清喾乘胜北伐，围涿鹿，逼黄天帝祁号次逊厥位"
+  },
+  {
+    "id": "rel-011",
+    "type": "succeeds",
+    "source": "entity:person:清喾",
+    "target": "entity:person:祁号次",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "酋清喾乘胜北伐，围涿鹿，逼黄天帝祁号次逊厥位。祁号次知势乃退，酋清喾得入天室，把天纲天纪，掌太极印"
+  },
+  {
+    "id": "rel-012",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:凤鸟氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝从之，乃命凤鸟氏为历正，司天文历法"
+  },
+  {
+    "id": "rel-013",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:玄鸟氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "玄鸟氏为司分，掌春分秋分"
+  },
+  {
+    "id": "rel-014",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:伯劳氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯劳氏为司至，掌夏至冬至"
+  },
+  {
+    "id": "rel-015",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:青鸟氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "青鸟氏为司启，掌立春立夏"
+  },
+  {
+    "id": "rel-016",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:丹鸟氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "丹鸟氏为司闭，掌立秋立冬"
+  },
+  {
+    "id": "rel-017",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:祝鸠氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝鸠氏为司徒，掌民政"
+  },
+  {
+    "id": "rel-018",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:睢鸠氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "睢鸠氏为司马，掌军政"
+  },
+  {
+    "id": "rel-019",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:鸤鸠氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "鸤鸠氏为司空，掌建筑"
+  },
+  {
+    "id": "rel-020",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:爽鸠氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "爽鸠氏为司寇，掌刑律"
+  },
+  {
+    "id": "rel-021",
+    "type": "allies_with",
+    "source": "entity:person:清喾",
+    "target": "entity:tribe:鹘鸠氏",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "鹘鸠氏为司事，掌营造"
+  }
+]

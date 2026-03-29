@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:因康",
+    "target": "entity:person:立路",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝立路崩，帝因康正位"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:因康",
+    "target": "entity:person:墙烁",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝擢朱襄氏酋墙烁摄政，治绩彰著，禅以帝位"
+  }
+]

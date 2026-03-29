@@ -1,0 +1,159 @@
+[
+  {
+    "id": "evt-helo-001",
+    "title": "混沌初判与人兽初分",
+    "type": "science",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [],
+    "places": [],
+    "summary": "上古之世混沌初判，人兽初分，天地之理渐显"
+  },
+  {
+    "id": "evt-helo-002",
+    "title": "巢皇构木为巢",
+    "type": "culture",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "巢皇"
+    ],
+    "places": [],
+    "summary": "巢皇观灵禽之智，构木为巢以避爪牙之害"
+  },
+  {
+    "id": "evt-helo-003",
+    "title": "巢皇立婚制",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "1"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "巢皇"
+    ],
+    "places": [],
+    "summary": "巢皇立婚制以绝血胤之乱，确立伦常秩序"
+  },
+  {
+    "id": "evt-helo-004",
+    "title": "燧皇钻燧取火",
+    "type": "science",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "燧皇察啄木灿火，悟击石流光，钻燧以革腥臊"
+  },
+  {
+    "id": "evt-helo-005",
+    "title": "燧皇揉绳纪星",
+    "type": "science",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "燧皇揉绳以纪星曜，开启结绳记事"
+  },
+  {
+    "id": "evt-helo-006",
+    "title": "燧皇授烹食之术",
+    "type": "culture",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "燧皇立传教之台，授烹食御寒之术"
+  },
+  {
+    "id": "evt-helo-007",
+    "title": "燧皇观象辨太极",
+    "type": "science",
+    "article": "演进轨迹/事册之载\\06-合雒纪\\合雒纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "燧皇设观象之木，辨太极太乙之微，建立天文观测"
+  },
+  {
+    "id": "evt-helo-008",
+    "title": "燧皇造名类立四佐",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "2"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "燧皇造名类别万物，立四佐均食货"
+  },
+  {
+    "id": "evt-helo-009",
+    "title": "巢燧二圣相承",
+    "type": "politics",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [
+      "巢皇",
+      "燧皇"
+    ],
+    "places": [],
+    "summary": "巢皇燧皇相承，历草木廿万易，建立完整的人文秩序"
+  },
+  {
+    "id": "evt-helo-010",
+    "title": "结绳画地圭表测影",
+    "type": "science",
+    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
+    "paragraphs": [
+      "3"
+    ],
+    "time_text": "上古之世",
+    "year": 500000,
+    "people": [],
+    "places": [],
+    "summary": "上古之治采用结绳而治、画地而图、圭表测影、索木求中等方法"
+  }
+]

@@ -24,9 +24,14 @@ const futureCollection = defineCollection({
   schema: baseSchema,
 });
 
+const testCollection = defineCollection({
+  schema: baseSchema,
+});
+
 export const collections = {
   '文明根基': civilizationRootsCollection,
   '演进轨迹': evolutionCollection,
   '制度与创造': systemsCollection,
   '主体与未来': futureCollection,
+  '测试': testCollection,
 };

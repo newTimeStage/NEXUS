@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-shequ-001",
+      "type": "member_of",
+      "source": "entity:person:畲蓄",
+      "target": "entity:tribe:柏皇氏",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "畲蓄为柏皇氏女"
+    },
+    {
+      "id": "rel-shequ-002",
+      "type": "relative_of",
+      "source": "entity:person:畲蓄",
+      "target": "entity:person:郁莟",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "畲蓄为帝郁莟侄"
+    },
+    {
+      "id": "rel-shequ-003",
+      "type": "succeeds",
+      "source": "entity:person:畲蓄",
+      "target": "entity:person:郁莟",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "郁莟崩而畲蓄立"
+    },
+    {
+      "id": "rel-shequ-004",
+      "type": "governs",
+      "source": "entity:person:畲蓄",
+      "target": "entity:place:大邑遂",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "畲蓄居大邑遂"
+    }
+  ]
+}

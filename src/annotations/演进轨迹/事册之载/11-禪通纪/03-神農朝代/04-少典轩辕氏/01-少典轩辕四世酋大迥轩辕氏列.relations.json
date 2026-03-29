@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rel-001",
+    "type": "marries",
+    "source": "entity:person:大迥",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "大迥长成，媾于有蟜氏"
+  },
+  {
+    "id": "rel-002",
+    "type": "leader_of",
+    "source": "entity:person:迥",
+    "target": "entity:tribe:有蟜氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "迥率厥氏，为有蟜氏酋"
+  },
+  {
+    "id": "rel-003",
+    "type": "allies_with",
+    "source": "entity:tribe:有蟜氏",
+    "target": "entity:tribe:少典氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "联于少典氏"
+  }
+]

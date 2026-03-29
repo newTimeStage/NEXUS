@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "daughter_of",
+    "source": "entity:person:矛术",
+    "target": "entity:person:宝",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "有蟜氏妇宝生女矛术于轩辕谷"
+  }
+]

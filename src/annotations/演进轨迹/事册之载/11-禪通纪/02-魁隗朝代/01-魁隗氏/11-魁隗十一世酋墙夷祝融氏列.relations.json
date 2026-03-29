@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:信",
+    "target": "entity:person:墙夷",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "信生墙夷与后土"
+  },
+  {
+    "id": "rel-002",
+    "type": "father_of",
+    "source": "entity:person:信",
+    "target": "entity:person:后土",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "信生墙夷与后土"
+  },
+  {
+    "id": "rel-003",
+    "type": "brother_of",
+    "source": "entity:person:姜墙夷",
+    "target": "entity:person:赤鸠",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋赤鸠薨，弟姜墙夷立"
+  },
+  {
+    "id": "rel-004",
+    "type": "succeeds",
+    "source": "entity:person:姜墙夷",
+    "target": "entity:person:赤鸠",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "祝融氏酋赤鸠薨，弟姜墙夷立"
+  }
+]

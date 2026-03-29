@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:琨",
+    "target": "entity:person:旸珢",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝旸珢，巡狩诸方，至于羲和之城，遇羲和氏女曰伃儿，一见而心契，遂以为妇，赐土于羲和城。未几有娠，至黄天上元三千七百九十六岁，诞天子于羲和城，命之曰琨，己姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "spouse_of",
+    "source": "entity:person:旸珢",
+    "target": "entity:person:伃儿",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遇羲和氏女曰伃儿，一见而心契，遂以为妇，赐土于羲和城"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:琨",
+    "target": "entity:person:旸珢",
+    "evidence": ["para:2", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "然上帝旸珢独命承天位者何？盖自三世上帝箐以降，少昊氏必以羲和所出嗣天位。琨乃羲和血胤，故生而定天宝之属。上帝旸珢崩，天子琨立"
+  },
+  {
+    "id": "rel-004",
+    "type": "allies_with",
+    "source": "entity:person:琨",
+    "target": "entity:tribe:羲和",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "琨乃羲和血胤，故生而定天宝之属"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:tribe:少昊",
+    "target": "entity:identity:黄天",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "初，少昊金天氏膺天命，革黄天旧制，弛纲纪，宽政令"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "relations": [
+    {
+      "id": "rel-haoyun-001",
+      "type": "parent_of",
+      "source": "entity:person:昊义",
+      "target": "entity:person:昊嬟",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义之小女为昊嬟"
+    },
+    {
+      "id": "rel-haoyun-002",
+      "type": "succeeds",
+      "source": "entity:person:昊嬟",
+      "target": "entity:person:昊义",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义崩而昊嬟立"
+    },
+    {
+      "id": "rel-haoyun-003",
+      "type": "governs",
+      "source": "entity:person:昊嬟",
+      "target": "entity:place:宛丘",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊嬟居宛丘"
+    },
+    {
+      "id": "rel-haoyun-004",
+      "type": "participates_in",
+      "source": "entity:person:昊嬟",
+      "target": "event:disaster:大洪泛",
+      "evidence": [{"para": "4"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊嬟亲行筏拯民"
+    }
+  ]
+}

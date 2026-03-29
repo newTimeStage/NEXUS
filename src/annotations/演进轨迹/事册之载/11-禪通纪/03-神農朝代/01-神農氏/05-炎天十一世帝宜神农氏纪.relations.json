@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:宜",
+    "target": "entity:person:明",
+    "evidence": ["para:1", "para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "神农氏生男于伊川，炎帝明之长子也，名曰宜，姜姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:宜",
+    "target": "entity:person:明",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎帝明崩，长子宜立"
+  },
+  {
+    "id": "rel-003",
+    "type": "father_of",
+    "source": "entity:person:宜",
+    "target": "entity:person:来",
+    "evidence": ["para:3", "para:7", "para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝封子来于莱原。帝命子来守来源，防九黎。帝崩，遗命长子来立"
+  },
+  {
+    "id": "rel-004",
+    "type": "ancestor_of",
+    "source": "entity:person:宜",
+    "target": "entity:person:克",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝之玄孙生于太行之西，榆林之地，帝命冠名曰克"
+  },
+  {
+    "id": "rel-005",
+    "type": "rivals_with",
+    "source": "entity:tribe:神农氏",
+    "target": "entity:tribe:九黎",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "九黎酋风虺于河北称帝，都虺城。九黎作强，帝深恐惧，命子来守来源，防九黎"
+  }
+]

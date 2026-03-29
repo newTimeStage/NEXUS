@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:美勾",
+    "target": "entity:person:肖会",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛顼上元四千百七十五岁，天帝肖会之小妇诞男一于干城宫，名美勾，妘姓"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:美勾",
+    "target": "entity:person:肖会",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "天帝肖会崩，天子美勾践祚"
+  }
+]

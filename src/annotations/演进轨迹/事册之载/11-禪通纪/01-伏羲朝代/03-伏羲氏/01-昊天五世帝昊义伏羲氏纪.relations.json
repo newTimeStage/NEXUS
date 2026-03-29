@@ -1,0 +1,164 @@
+{
+  "relations": [
+    {
+      "id": "rel-haoyi-001",
+      "type": "parent_of",
+      "source": "entity:person:师嬟",
+      "target": "entity:person:昊义",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "师嬟生昊义"
+    },
+    {
+      "id": "rel-haoyi-002",
+      "type": "parent_of",
+      "source": "entity:person:昊义",
+      "target": "entity:person:伯重",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义生四子：伯重、仲该、叔修、季熙"
+    },
+    {
+      "id": "rel-haoyi-003",
+      "type": "parent_of",
+      "source": "entity:person:昊义",
+      "target": "entity:person:仲该",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义生仲该"
+    },
+    {
+      "id": "rel-haoyi-004",
+      "type": "parent_of",
+      "source": "entity:person:昊义",
+      "target": "entity:person:叔修",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义生叔修"
+    },
+    {
+      "id": "rel-haoyi-005",
+      "type": "parent_of",
+      "source": "entity:person:昊义",
+      "target": "entity:person:季熙",
+      "evidence": [{"para": "1"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义生季熙"
+    },
+    {
+      "id": "rel-haoyi-006",
+      "type": "succeeds",
+      "source": "entity:person:昊义",
+      "target": "entity:person:师嬟",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "师嬟殁而昊义立"
+    },
+    {
+      "id": "rel-haoyi-007",
+      "type": "appoints",
+      "source": "entity:person:昊义",
+      "target": "entity:person:句芒",
+      "evidence": [{"para": "5"}, {"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义命句芒整定天干地支，为柱下史上相"
+    },
+    {
+      "id": "rel-haoyi-008",
+      "type": "appoints",
+      "source": "entity:person:昊义",
+      "target": "entity:person:伯重",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义命伯重为木正"
+    },
+    {
+      "id": "rel-haoyi-009",
+      "type": "appoints",
+      "source": "entity:person:昊义",
+      "target": "entity:person:仲该",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义命仲该为金正蓐收"
+    },
+    {
+      "id": "rel-haoyi-010",
+      "type": "appoints",
+      "source": "entity:person:昊义",
+      "target": "entity:person:叔修",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义命叔修为玄冥"
+    },
+    {
+      "id": "rel-haoyi-011",
+      "type": "appoints",
+      "source": "entity:person:昊义",
+      "target": "entity:person:季熙",
+      "evidence": [{"para": "7"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义命季熙为玄冥"
+    },
+    {
+      "id": "rel-haoyi-012",
+      "type": "establishes",
+      "source": "entity:person:昊义",
+      "target": "entity:astronomy:天干地支",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义定天干地支"
+    },
+    {
+      "id": "rel-haoyi-013",
+      "type": "establishes",
+      "source": "entity:person:昊义",
+      "target": "entity:ritual:昊天之祀",
+      "evidence": [{"para": "6"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义立昊天之祀"
+    },
+    {
+      "id": "rel-haoyi-014",
+      "type": "governs",
+      "source": "entity:person:昊义",
+      "target": "entity:place:汶上",
+      "evidence": [{"para": "2"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义居汶上"
+    },
+    {
+      "id": "rel-haoyi-015",
+      "type": "governs",
+      "source": "entity:person:昊义",
+      "target": "entity:place:宛丘",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义迁宛丘"
+    },
+    {
+      "id": "rel-haoyi-016",
+      "type": "influences",
+      "source": "entity:person:昊义",
+      "target": "entity:concept:天干地支之道",
+      "evidence": [{"para": "5"}],
+      "status": "asserted",
+      "confidence": "high",
+      "note": "昊义明天生地长、天干地支之道"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rel-001",
+    "type": "appoints",
+    "source": "entity:person:归纹",
+    "target": "entity:person:伏秧",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝归纹察其能，遂告于昊天，咨于多酋群牧，立为嗣"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:伏秧",
+    "target": "entity:person:归纹",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝归纹疾不治，殁没，嗣伏秧立"
+  },
+  {
+    "id": "rel-003",
+    "type": "member_of",
+    "source": "entity:person:伏秧",
+    "target": "entity:tribe:赫胥氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伏秧为赫胥氏成员"
+  },
+  {
+    "id": "rel-004",
+    "type": "participates_in",
+    "source": "entity:person:伏秧",
+    "target": "event:reign:伏秧继位",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伏秧参与继位事件"
+  },
+  {
+    "id": "rel-005",
+    "type": "participates_in",
+    "source": "entity:person:伏秧",
+    "target": "event:death:伏秧坠崖而亡",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伏秧参与坠崖死亡事件"
+  }
+]

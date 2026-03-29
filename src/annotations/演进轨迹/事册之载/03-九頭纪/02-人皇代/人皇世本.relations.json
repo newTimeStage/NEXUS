@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rel-hm-001",
+    "type": "founder_of",
+    "source": "entity:person:提挺",
+    "target": "entity:tribe:中央氏",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "提挺自居中央，故号中央氏"
+  },
+  {
+    "id": "rel-hm-002",
+    "type": "established",
+    "source": "entity:person:提挺",
+    "target": "entity:institution:九头分民制度",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "提挺分民九头，以流八方，建立新的统治制度"
+  },
+  {
+    "id": "rel-hm-003",
+    "type": "part_of",
+    "source": "entity:tribe:中央氏",
+    "target": "entity:tribe:人皇时代",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "中央氏是人皇时代的统治氏族"
+  },
+  {
+    "id": "rel-hm-004",
+    "type": "occupies",
+    "source": "entity:tribe:中央氏",
+    "target": "entity:place:中央",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "中央氏自居中央，成为中央权力中心"
+  },
+  {
+    "id": "rel-hm-005",
+    "type": "occupies",
+    "source": "entity:tribe:居方氏",
+    "target": "entity:place:八方",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "居方氏各居八方及四海之外"
+  },
+  {
+    "id": "rel-hm-006",
+    "type": "caused_by",
+    "source": "entity:person:民众",
+    "target": "entity:disaster:水没无食",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "水没无食导致强弱相迫，民众陷入困境"
+  },
+  {
+    "id": "rel-hm-007",
+    "type": "affected_by",
+    "source": "entity:person:民众",
+    "target": "entity:disaster:寒",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "严寒和群兽伤害，民众被迫穴居"
+  },
+  {
+    "id": "rel-hm-008",
+    "type": "adaptation_of",
+    "source": "entity:artifact:缀叶兽衣",
+    "target": "entity:disaster:寒",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "民众缀叶为衣，适应严寒环境"
+  },
+  {
+    "id": "rel-hm-009",
+    "type": "followed_by",
+    "source": "entity:tribe:中央氏",
+    "target": "entity:tribe:居方氏",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "medium",
+    "note": "中央氏建立后，各方氏族分化形成"
+  },
+  {
+    "id": "rel-hm-010",
+    "type": "predecessor_of",
+    "source": "entity:person:提挺",
+    "target": "entity:tribe:人皇时代",
+    "evidence": [
+      "para:1"
+    ],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "提挺是人皇时代的开创者"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:长幅",
+    "target": "entity:person:控卯",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次十八祀，生四子于亳，名曰长幅"
+  },
+  {
+    "id": "rel-002",
+    "type": "brother_of",
+    "source": "entity:person:长幅",
+    "target": "entity:person:川壻",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝沟次十七祀，生子川壻。帝沟次十八祀，生四子于亳，名曰长幅。乃封子上帝川壻于西拓壻邑，弟长幅于东居亳邑，以弭阋墙"
+  },
+  {
+    "id": "rel-003",
+    "type": "spouse_of",
+    "source": "entity:person:长幅",
+    "target": "entity:person:蛟",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "弟长幅之亳，北巡河朔，遇九黎蚩尤裔女蛟。女骁勇，持金钺，击溃长幅。斗而相知，遂婚于沁阳"
+  },
+  {
+    "id": "rel-004",
+    "type": "son_of",
+    "source": "entity:person:美",
+    "target": "entity:person:长幅",
+    "evidence": ["para:2", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "明岁甲午春，产子于沁阳。弟长幅闻星驰往视。子肖父，蛟呼小美，因名之美，姜姓云阳氏。封子美居沁阳，监河朔东土"
+  },
+  {
+    "id": "rel-005",
+    "type": "succeeds",
+    "source": "entity:person:长幅",
+    "target": "entity:person:川壻",
+    "evidence": ["para:3", "para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝控卯崩于枵宫，遗诏传上帝立。弟长幅恚曰：兄才武不逮我，安得窃神器！乃以矫诏为辞，举兵伐天。长幅使间入壻邑，贿庖人投缓毒。帝川壻不备，中毒而崩。弟长幅闻丧，佯吊唁，率甲士入壻邑。群臣慑其威，共推嗣位"
+  },
+  {
+    "id": "rel-006",
+    "type": "spouse_of",
+    "source": "entity:person:美",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:5", "para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子美娶轩辕氏女。子妇轩辕氏生子斯绩"
+  },
+  {
+    "id": "rel-007",
+    "type": "son_of",
+    "source": "entity:person:斯绩",
+    "target": "entity:person:美",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "子妇轩辕氏生子斯绩"
+  },
+  {
+    "id": "rel-008",
+    "type": "same_as",
+    "source": "entity:person:长幅",
+    "target": "entity:person:挚",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "世名天帝挚"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:person:荷曲",
+    "target": "entity:person:达河",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝达河崩，群臣奉酋荷曲践祚"
+  },
+  {
+    "id": "rel-002",
+    "type": "appoints",
+    "source": "entity:person:荷曲",
+    "target": "entity:person:达耳",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝嗣立姪达耳"
+  }
+]

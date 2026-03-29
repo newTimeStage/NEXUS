@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:斯遂",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝斯遂，娶陈锋氏女庆都为妇，居丹陵。斯遂廿四祀，妇庆都生尧于丹陵"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:庆都",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇庆都生尧于丹陵"
+  },
+  {
+    "id": "rel-003",
+    "type": "same_as",
+    "source": "entity:person:斯遂",
+    "target": "entity:person:喾",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "斯遂者，号帝喾"
+  },
+  {
+    "id": "rel-004",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾生四子：长鸷、次弃、次契、次尧"
+  },
+  {
+    "id": "rel-005",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:弃",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾生四子：长鸷、次弃、次契、次尧"
+  },
+  {
+    "id": "rel-006",
+    "type": "brother_of",
+    "source": "entity:person:尧",
+    "target": "entity:person:契",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝喾生四子：长鸷、次弃、次契、次尧"
+  },
+  {
+    "id": "rel-007",
+    "type": "succeeds",
+    "source": "entity:person:尧",
+    "target": "entity:person:鸷",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "诸氏多酋迫退帝鸷。鸷不敢抗，乃禅位于尧。帝尧立，徙都平阳"
+  },
+  {
+    "id": "rel-008",
+    "type": "spouse_of",
+    "source": "entity:person:放勋",
+    "target": "entity:person:女英",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝悦其才，妻以女英，赘以为婿"
+  },
+  {
+    "id": "rel-009",
+    "type": "son_in_law_of",
+    "source": "entity:person:放勋",
+    "target": "entity:person:尧",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝悦其才，妻以女英，赘以为婿，召入。放勋谦恭勤事，帝命摄政"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rel-001",
+    "type": "father_of",
+    "source": "entity:person:夸父",
+    "target": "entity:person:西岳",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "夸父生西岳"
+  }
+]

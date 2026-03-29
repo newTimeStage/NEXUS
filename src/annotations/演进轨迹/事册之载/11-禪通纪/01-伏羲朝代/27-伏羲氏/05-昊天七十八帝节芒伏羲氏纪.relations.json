@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:节芒",
+    "target": "entity:person:大耀",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "节芒父曰大耀"
+  },
+  {
+    "id": "rel-002",
+    "type": "grandson_of",
+    "source": "entity:person:节芒",
+    "target": "entity:person:太河",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "节芒祖曰太河"
+  },
+  {
+    "id": "rel-003",
+    "type": "succeeds",
+    "source": "entity:person:节芒",
+    "target": "entity:person:大耀",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝大耀崩而子节芒立"
+  },
+  {
+    "id": "rel-004",
+    "type": "conflicts_with",
+    "source": "entity:tribe:炎天氏",
+    "target": "entity:person:节芒",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "炎天上帝率部起于陇陕，势延江河，乃挥戈东向，伐厥昊天。节芒既殁，炎天上帝魁隗入天室，炎天肇兴，昊天绝亡"
+  }
+]

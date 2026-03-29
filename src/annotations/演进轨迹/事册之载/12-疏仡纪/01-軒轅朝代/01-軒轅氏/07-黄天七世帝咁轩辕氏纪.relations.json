@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "son_of",
+    "source": "entity:person:咁",
+    "target": "entity:person:号",
+    "evidence": ["para:3", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "此洞中所诞者，即咁也，帝号之子，姬姓。帝号崩，子咁立"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:咁",
+    "target": "entity:person:号",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝号崩，子咁立，都霍山，册立有熊氏女为妇"
+  },
+  {
+    "id": "rel-003",
+    "type": "father_of",
+    "source": "entity:person:咁",
+    "target": "entity:person:转茸",
+    "evidence": ["para:6", "para:7", "para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "是岁，妇诞长子转茸。子转茸三龄，其母忤水土多疾，请归有熊故地。子转茸长成，帝封之于渑池"
+  },
+  {
+    "id": "rel-004",
+    "type": "father_of",
+    "source": "entity:person:转茸",
+    "target": "entity:person:贯俞",
+    "evidence": ["para:10"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "转茸妇生男一于渑池，名曰贯俞"
+  },
+  {
+    "id": "rel-005",
+    "type": "allies_with",
+    "source": "entity:person:咁",
+    "target": "entity:tribe:有熊氏",
+    "evidence": ["para:4", "para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "咁年二十娶有熊氏女。帝号崩，子咁立，都霍山，册立有熊氏女为妇"
+  },
+  {
+    "id": "rel-006",
+    "type": "allies_with",
+    "source": "entity:person:转茸",
+    "target": "entity:tribe:神农氏",
+    "evidence": ["para:9"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "转茸娶姜姓神农氏女为妇"
+  },
+  {
+    "id": "rel-007",
+    "type": "allies_with",
+    "source": "entity:person:号",
+    "target": "entity:tribe:荆山氏",
+    "evidence": ["para:1", "para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昔在上帝姬号，娶荆山氏少女为妇，才色殊绝，帝宠渥甚，欲使常侍宫闱。然妃性倔强，固辞不离故土，帝遂筑别都于荆山之阳，以安其居"
+  }
+]

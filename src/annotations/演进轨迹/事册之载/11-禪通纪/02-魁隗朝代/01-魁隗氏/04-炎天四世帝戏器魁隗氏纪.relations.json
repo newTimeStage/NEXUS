@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rel-001",
+    "type": "grandson_of",
+    "source": "entity:person:戏器",
+    "target": "entity:person:节并",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "魁隗氏生男于固川之原，姓姜，上帝节并孙子，得名戏器"
+  },
+  {
+    "id": "rel-002",
+    "type": "succeeds",
+    "source": "entity:person:戏器",
+    "target": "entity:person:节并",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "帝节并崩，孙子戏器立"
+  }
+]

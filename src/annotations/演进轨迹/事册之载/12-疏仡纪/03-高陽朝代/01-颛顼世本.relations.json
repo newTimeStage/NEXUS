@@ -1,0 +1,192 @@
+[
+  {
+    "id": "rel-001",
+    "type": "descendant_of",
+    "source": "entity:tribe:高阳氏",
+    "target": "entity:tribe:轩辕氏",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "曰若稽古高阳氏，黄天上帝轩辕氏肇基"
+  },
+  {
+    "id": "rel-002",
+    "type": "son_of",
+    "source": "entity:person:昌意",
+    "target": "entity:person:芒",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上帝芒惟念西土之重，乃降元子昌意处若水之阳"
+  },
+  {
+    "id": "rel-003",
+    "type": "son_of",
+    "source": "entity:person:妘莽",
+    "target": "entity:person:昌意",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "其后赘入朝云司彘方，生莽，是为妘莽"
+  },
+  {
+    "id": "rel-004",
+    "type": "descendant_of",
+    "source": "entity:tribe:高阳氏",
+    "target": "entity:person:妘莽",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妘莽诞膺天命，为高阳氏初祖"
+  },
+  {
+    "id": "rel-005",
+    "type": "son_of",
+    "source": "entity:person:妘相",
+    "target": "entity:person:妘莽",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "莅事廿有五祀而崩，子妘相嗣位"
+  },
+  {
+    "id": "rel-006",
+    "type": "son_of",
+    "source": "entity:person:魁矛",
+    "target": "entity:person:妘相",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "传子魁矛"
+  },
+  {
+    "id": "rel-007",
+    "type": "brother_of",
+    "source": "entity:person:魁粤",
+    "target": "entity:person:魁矛",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遗命弟魁粤继立"
+  },
+  {
+    "id": "rel-008",
+    "type": "succeeds",
+    "source": "entity:person:魁粤",
+    "target": "entity:person:魁矛",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "遗命弟魁粤继立"
+  },
+  {
+    "id": "rel-009",
+    "type": "nephew_of",
+    "source": "entity:person:韩流",
+    "target": "entity:person:魁粤",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "卅岁践祚，历廿四祀付侄韩流"
+  },
+  {
+    "id": "rel-010",
+    "type": "uncle_of",
+    "source": "entity:person:魁粤",
+    "target": "entity:person:韩流",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "韩流少孤，叔父摄政"
+  },
+  {
+    "id": "rel-011",
+    "type": "succeeds",
+    "source": "entity:person:韩流",
+    "target": "entity:person:魁粤",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "卅岁践祚，历廿四祀付侄韩流"
+  },
+  {
+    "id": "rel-012",
+    "type": "spouse_of",
+    "source": "entity:person:韩流",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "及长，赘少昊族，以帝女昌仆为妇"
+  },
+  {
+    "id": "rel-013",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:韩流",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇昌仆封蜀山，韩流往赘，生于若水，名曰颛聆"
+  },
+  {
+    "id": "rel-014",
+    "type": "son_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:昌仆",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "妇昌仆封蜀山，韩流往赘，生于若水，名曰颛聆"
+  },
+  {
+    "id": "rel-015",
+    "type": "same_as",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:颛顼",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛聆即祚，更号颛顼"
+  },
+  {
+    "id": "rel-016",
+    "type": "nephew_of",
+    "source": "entity:person:颛聆",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛聆十岁入辅舅氏匠敬"
+  },
+  {
+    "id": "rel-017",
+    "type": "uncle_of",
+    "source": "entity:person:匠敬",
+    "target": "entity:person:颛聆",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "颛聆十岁入辅舅氏匠敬"
+  },
+  {
+    "id": "rel-018",
+    "type": "succeeds",
+    "source": "entity:person:颛顼",
+    "target": "entity:person:匠敬",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少昊七世上帝匠敬钦其明德，禅以天位。颛聆即祚，更号颛顼"
+  },
+  {
+    "id": "rel-019",
+    "type": "rivals_with",
+    "source": "entity:person:颛顼",
+    "target": "entity:tribe:少昊",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "一曰正官常：革少昊鸟司之繁，立天地民神物之五官，各有攸司"
+  }
+]
