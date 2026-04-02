@@ -1,0 +1,192 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:time:摄提",
+    "target": "entity:time:五龍纪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "摄提之世，承五龍纪之绪"
+  },
+  {
+    "id": "rel-002",
+    "type": "precedes",
+    "source": "entity:time:摄提",
+    "target": "entity:time:合雒纪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "摄提之世，启合雒纪之端"
+  },
+  {
+    "id": "rel-003",
+    "type": "related_to",
+    "source": "entity:tribe:容成氏",
+    "target": "entity:artifact:历法",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "容成氏仰观天象，俯察地理，创制历法"
+  },
+  {
+    "id": "rel-004",
+    "type": "related_to",
+    "source": "entity:tribe:朱襄氏",
+    "target": "entity:artifact:五弦琴",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "朱襄氏性好乐，制五弦琴"
+  },
+  {
+    "id": "rel-005",
+    "type": "related_to",
+    "source": "entity:tribe:葛天氏",
+    "target": "entity:artifact:乐舞",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "葛天氏作乐舞，用于祭祀"
+  },
+  {
+    "id": "rel-006",
+    "type": "related_to",
+    "source": "entity:tribe:昆連氏",
+    "target": "entity:action:冶金",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "昆連氏兴冶金之术"
+  },
+  {
+    "id": "rel-007",
+    "type": "related_to",
+    "source": "entity:tribe:方雷氏",
+    "target": "entity:action:畜牧",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "方雷氏改良畜牧之法"
+  },
+  {
+    "id": "rel-008",
+    "type": "related_to",
+    "source": "entity:tribe:合方氏",
+    "target": "entity:institution:联盟",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "合方氏协和氏族，弭争端，促合作，联盟渐成"
+  },
+  {
+    "id": "rel-009",
+    "type": "related_to",
+    "source": "entity:tribe:宰父氏",
+    "target": "entity:institution:规约",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "宰父氏管理内务，制规约，定赏罚"
+  },
+  {
+    "id": "rel-010",
+    "type": "related_to",
+    "source": "entity:tribe:史桑氏",
+    "target": "entity:action:记录史事",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "史桑氏记录史事，传经验，授知识"
+  },
+  {
+    "id": "rel-011",
+    "type": "related_to",
+    "source": "entity:tribe:形方氏",
+    "target": "entity:action:营筑聚居",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "形方氏营筑聚居，营城郭，建宫室"
+  },
+  {
+    "id": "rel-012",
+    "type": "related_to",
+    "source": "entity:tribe:赫胥氏",
+    "target": "entity:action:熟食",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "赫胥氏教民熟食"
+  },
+  {
+    "id": "rel-013",
+    "type": "related_to",
+    "source": "entity:tribe:阴康氏",
+    "target": "entity:action:养生",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "阴康氏教民养生"
+  },
+  {
+    "id": "rel-014",
+    "type": "related_to",
+    "source": "entity:tribe:武都氏",
+    "target": "entity:action:营筑",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "武都氏教民营筑"
+  },
+  {
+    "id": "rel-015",
+    "type": "related_to",
+    "source": "entity:tribe:泰運氏",
+    "target": "entity:action:交通",
+    "evidence": ["para:7"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "泰運氏教民交通"
+  },
+  {
+    "id": "rel-016",
+    "type": "related_to",
+    "source": "entity:tribe:青鳥氏",
+    "target": "entity:action:观察鸟类",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "青鳥氏观察鸟类，以测风雨"
+  },
+  {
+    "id": "rel-017",
+    "type": "related_to",
+    "source": "entity:tribe:金天氏",
+    "target": "entity:action:冶金",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "金天氏究金属之性，改良冶金"
+  },
+  {
+    "id": "rel-018",
+    "type": "related_to",
+    "source": "entity:tribe:陆终氏",
+    "target": "entity:action:探索地理",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "陆终氏探索地理，寻资源，察地形"
+  },
+  {
+    "id": "rel-019",
+    "type": "related_to",
+    "source": "entity:tribe:豕韋氏",
+    "target": "entity:action:皮革之工",
+    "evidence": ["para:8"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "豕韋氏兴皮革之工"
+  }
+]

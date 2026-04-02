@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rel-001",
+    "type": "succeeds",
+    "source": "entity:time:五龍",
+    "target": "entity:time:九头纪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "五龍之世，承九头纪之绪"
+  },
+  {
+    "id": "rel-002",
+    "type": "precedes",
+    "source": "entity:time:五龍",
+    "target": "entity:time:摄提纪",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "五龍之世，启摄提纪之端"
+  },
+  {
+    "id": "rel-003",
+    "type": "same_as",
+    "source": "entity:tribe:伯角氏",
+    "target": "entity:identity:木正",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "伯角氏尊为东方之主，号曰木正"
+  },
+  {
+    "id": "rel-004",
+    "type": "same_as",
+    "source": "entity:tribe:仲徵氏",
+    "target": "entity:identity:火正",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "仲徵氏尊为南方之主，号曰火正"
+  },
+  {
+    "id": "rel-005",
+    "type": "same_as",
+    "source": "entity:tribe:叔商氏",
+    "target": "entity:identity:金正",
+    "evidence": ["para:4"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "叔商氏尊为西方之主，号曰金正"
+  },
+  {
+    "id": "rel-006",
+    "type": "same_as",
+    "source": "entity:tribe:季羽氏",
+    "target": "entity:identity:水正",
+    "evidence": ["para:5"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "季羽氏尊为北方之主，号曰水正"
+  },
+  {
+    "id": "rel-007",
+    "type": "same_as",
+    "source": "entity:tribe:少宫氏",
+    "target": "entity:identity:土正",
+    "evidence": ["para:6"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "少宫氏尊为中央之主，号曰土正"
+  }
+]
