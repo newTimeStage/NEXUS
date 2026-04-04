@@ -56,6 +56,97 @@
         color: #000;
       }
 
+      /* 媒体查看器模态框 */
+      .media-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .media-modal.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .media-modal-content {
+        width: 90%;
+        height: 90%;
+        max-width: 1200px;
+        max-height: 90vh;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .media-modal-header {
+        padding: 15px 20px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .media-modal-title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .media-modal-close {
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #666;
+        padding: 0 5px;
+        line-height: 1;
+        margin-left: 15px;
+      }
+
+      .media-modal-close:hover {
+        color: #000;
+      }
+
+      .media-modal-body {
+        flex: 1;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .media-modal-body iframe,
+      .media-modal-body video,
+      .media-modal-body audio {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .media-modal-body audio {
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
       /* 事件和关系列表样式 */
       .events-list, .relations-list {
         margin-top: 15px;
@@ -89,6 +180,10 @@
         .cc-modal-content {
           max-width: 90%;
           max-height: 90vh;
+        }
+        .media-modal-content {
+          width: 95%;
+          height: 95%;
         }
       }
     </style>
@@ -128,6 +223,7 @@
     </footer>
 
     <script>
+      // @ts-nocheck
       // 主题切换逻辑
       const themeToggle = document.getElementById('themeToggle');
       if (themeToggle) {
@@ -150,118 +246,254 @@
         }
       }
 
-      // 链接处理逻辑
-      document.addEventListener('DOMContentLoaded', function() {
-        // 检查是否在PDF查看器页面
-        if (window.location.pathname === '/pdf-viewer') {
-          return; // 跳过PDF查看器页面的链接处理
+      // 媒体查看器模态框管理
+      let mediaModal = null;
+      let currentMediaElement = null;
+
+      function ensureMediaModal() {
+        if (mediaModal) return mediaModal;
+
+        mediaModal = document.createElement('div');
+        mediaModal.id = 'media-modal';
+        mediaModal.className = 'media-modal';
+        mediaModal.innerHTML = `
+          <div class="media-modal-content">
+            <div class="media-modal-header">
+              <h3 class="media-modal-title" id="media-modal-title"></h3>
+              <button class="media-modal-close" id="media-modal-close" aria-label="关闭">×</button>
+            </div>
+            <div class="media-modal-body" id="media-modal-body"></div>
+          </div>
+        `;
+        document.body.appendChild(mediaModal);
+
+        const closeBtn = mediaModal.querySelector('#media-modal-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMediaModal);
         }
 
-        // 获取所有链接
+        mediaModal.addEventListener('click', (e) => {
+          if (e.target === mediaModal) closeMediaModal();
+        });
+
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeMediaModal();
+        });
+
+        return mediaModal;
+      }
+
+      function closeMediaModal() {
+        if (!mediaModal) return;
+
+        if (currentMediaElement) {
+          if (currentMediaElement.tagName === 'VIDEO' || currentMediaElement.tagName === 'AUDIO') {
+            currentMediaElement.pause();
+          }
+          currentMediaElement = null;
+        }
+
+        const body = document.getElementById('media-modal-body');
+        if (body) body.innerHTML = '';
+
+        mediaModal.classList.remove('show');
+      }
+
+      function showMediaModal(title, content, mediaElement) {
+        const modal = ensureMediaModal();
+        const titleEl = document.getElementById('media-modal-title');
+        const bodyEl = document.getElementById('media-modal-body');
+
+        if (titleEl) titleEl.textContent = title;
+        if (bodyEl) bodyEl.innerHTML = content;
+
+        currentMediaElement = mediaElement || null;
+        modal.classList.add('show');
+      }
+
+      // 处理PDF链接
+      // @ts-ignore
+      function handlePdfLink(url, title) {
+        const container = document.createElement('div');
+        container.style.cssText = 'width: 100%; height: 100%; display: flex; flex-direction: column;';
+
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.style.cssText = 'width: 100%; flex: 1; border: none;';
+
+        const fallbackDiv = document.createElement('div');
+        fallbackDiv.style.cssText = 'display: none; padding: 40px; text-align: center; background: #fff; color: #333; flex: 1;';
+        fallbackDiv.innerHTML = `
+          <h3 style="margin-bottom: 20px;">无法直接嵌入显示</h3>
+          <p style="margin-bottom: 20px;">由于浏览器安全限制，该资源无法直接在页面中嵌入显示。</p>
+          <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="${url}" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 4px;">在新标签页中打开</a>
+            <a href="${url}" download style="display: inline-block; padding: 10px 20px; background-color: #27ae60; color: white; text-decoration: none; border-radius: 4px;">下载文件</a>
+          </div>
+        `;
+
+        container.appendChild(iframe);
+        container.appendChild(fallbackDiv);
+
+        iframe.onerror = function() {
+          iframe.style.display = 'none';
+          fallbackDiv.style.display = 'flex';
+          fallbackDiv.style.flexDirection = 'column';
+          fallbackDiv.style.justifyContent = 'center';
+        };
+
+        let loadTimeout = setTimeout(() => {
+          iframe.style.display = 'none';
+          fallbackDiv.style.display = 'flex';
+          fallbackDiv.style.flexDirection = 'column';
+          fallbackDiv.style.justifyContent = 'center';
+        }, 5000);
+
+        iframe.onload = function() {
+          clearTimeout(loadTimeout);
+        };
+
+        showMediaModal(title, '', iframe);
+        const body = document.getElementById('media-modal-body');
+        if (body) {
+          body.style.backgroundColor = '#000';
+          body.appendChild(container);
+        }
+      }
+
+      // 处理视频链接
+      // @ts-ignore
+      function handleVideoLink(url, title) {
+        const video = document.createElement('video');
+        video.controls = true;
+        video.style.width = '100%';
+        video.style.height = '100%';
+
+        const source = document.createElement('source');
+        source.src = url;
+
+        const extension = url.split('.').pop().toLowerCase();
+        if (extension === 'mp4') {
+          source.type = 'video/mp4';
+        } else if (extension === 'webm') {
+          source.type = 'video/webm';
+        } else if (extension === 'ogg') {
+          source.type = 'video/ogg';
+        } else {
+          source.type = 'video/mp4';
+        }
+
+        video.appendChild(source);
+        video.innerHTML += '您的浏览器不支持视频标签。';
+
+        showMediaModal(title, '', video);
+        const body = document.getElementById('media-modal-body');
+        if (body) body.appendChild(video);
+
+        video.play().catch(err => {
+          console.log('视频需要用户交互才能播放');
+        });
+      }
+
+      // 处理音频链接
+      // @ts-ignore
+      function handleAudioLink(url, title) {
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        audio.style.width = '100%';
+
+        const source = document.createElement('source');
+        source.src = url;
+
+        const extension = url.split('.').pop().toLowerCase();
+        if (extension === 'mp3') {
+          source.type = 'audio/mpeg';
+        } else if (extension === 'wav') {
+          source.type = 'audio/wav';
+        } else if (extension === 'flac') {
+          source.type = 'audio/flac';
+        } else if (extension === 'ogg') {
+          source.type = 'audio/ogg';
+        } else if (extension === 'm4a') {
+          source.type = 'audio/mp4';
+        } else {
+          source.type = 'audio/mpeg';
+        }
+
+        audio.appendChild(source);
+        audio.innerHTML += '您的浏览器不支持音频标签。';
+
+        showMediaModal(title, '', audio);
+        const body = document.getElementById('media-modal-body');
+        if (body) {
+          body.style.backgroundColor = '#fff';
+          body.style.display = 'flex';
+          body.style.alignItems = 'center';
+          body.style.justifyContent = 'center';
+          body.style.padding = '40px';
+          body.appendChild(audio);
+        }
+
+        audio.play().catch(err => {
+          console.log('音频需要用户交互才能播放');
+        });
+      }
+
+      // 将HTTP链接升级为HTTPS
+      // @ts-ignore
+      function upgradeToHttps(url) {
+        if (url && url.startsWith('http://')) {
+          return url.replace('http://', 'https://');
+        }
+        return url;
+      }
+
+      // 链接处理逻辑
+      document.addEventListener('DOMContentLoaded', function() {
         const links = document.querySelectorAll('a');
 
         links.forEach(link => {
           const href = link.getAttribute('href');
-          if (href) {
-            // 将HTTP链接升级为HTTPS
-            let processedHref = href;
-            if (processedHref.startsWith('http://')) {
-              processedHref = processedHref.replace('http://', 'https://');
-              link.setAttribute('href', processedHref);
-            }
-            
-            // 检查是否是PDF链接
-            const isPdf = processedHref.toLowerCase().endsWith('.pdf');
-            // 检查是否是音频链接
-            const isAudio = /\.(mp3|wav|flac|ogg|m4a|wma)$/i.test(processedHref);
-            // 检查是否是外部链接
-            const isExternal = /^https?:\/\//i.test(processedHref) && !processedHref.includes(window.location.hostname);
+          if (!href) return;
 
-            if ((isPdf || isExternal) && !isAudio) {
-              // 阻止默认点击行为
-              link.addEventListener('click', function(e) {
-                e.preventDefault();
-                // 获取链接文本作为标题
-                let title = link.textContent.trim() || '外部链接';
-                // 移除"打开："前缀（包括多个）
-                title = title.replace(/^打开：+/g, '');
-                // 构建查看器URL
-                let targetUrl = processedHref;
-                // 如果是相对路径，转换为绝对路径
-                if (!/^https?:\/\//i.test(processedHref) && !processedHref.startsWith('/')) {
-                  targetUrl = '/' + processedHref;
-                }
-                const viewerUrl = `/pdf-viewer?url=${encodeURIComponent(targetUrl)}&title=${encodeURIComponent(title)}`;
-                // 打开查看器页面
-                window.location.href = viewerUrl;
-              });
-            } else if (isAudio) {
-              // 处理音频链接，在页面内播放
-              link.addEventListener('click', function(e) {
-                e.preventDefault();
-                // 创建音频播放器
-                const audio = document.createElement('audio');
-                audio.controls = true;
-                audio.src = processedHref;
-                
-                // 获取当前主题
-                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-                const isDarkTheme = currentTheme === 'dark';
-                
-                // 创建播放容器
-                const audioContainer = document.createElement('div');
-                audioContainer.style.cssText = `
-                  position: fixed;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background: ${isDarkTheme ? '#333' : 'white'};
-                  color: ${isDarkTheme ? 'white' : 'black'};
-                  padding: 20px;
-                  border-radius: 8px;
-                  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                  z-index: 1000;
-                  max-width: 400px;
-                  width: 90%;
-                `;
-                
-                // 创建标题
-                const title = document.createElement('h3');
-                title.textContent = link.textContent.trim() || '音频播放';
-                title.style.marginTop = '0';
-                title.style.color = isDarkTheme ? 'white' : 'black';
-                
-                // 创建关闭按钮
-                const closeButton = document.createElement('button');
-                closeButton.textContent = '关闭';
-                closeButton.style.cssText = `
-                  margin-top: 10px;
-                  padding: 8px 16px;
-                  background: ${isDarkTheme ? '#555' : '#f0f0f0'};
-                  color: ${isDarkTheme ? 'white' : 'black'};
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;
-                `;
-                closeButton.addEventListener('click', function() {
-                  document.body.removeChild(audioContainer);
-                  audio.pause();
-                });
-                
-                // 组装容器
-                audioContainer.appendChild(title);
-                audioContainer.appendChild(audio);
-                audioContainer.appendChild(closeButton);
-                
-                // 添加到页面
-                document.body.appendChild(audioContainer);
-                
-                // 自动播放
-                audio.play().catch(err => {
-                  console.error('无法自动播放音频:', err);
-                });
-              });
-            }
+          const processedHref = upgradeToHttps(href);
+          if (processedHref !== href) {
+            link.setAttribute('href', processedHref);
+          }
+
+          const isPdf = processedHref.toLowerCase().endsWith('.pdf');
+          const isVideo = /\.(mp4|webm|ogg|mov|avi|wmv)$/i.test(processedHref);
+          const isAudio = /\.(mp3|wav|flac|ogg|m4a|wma)$/i.test(processedHref);
+          const isExternal = /^https?:\/\//i.test(processedHref) && !processedHref.includes(window.location.hostname);
+
+          if (isPdf) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              let title = link.textContent.trim() || 'PDF文档';
+              title = title.replace(/^打开：+/g, '');
+              handlePdfLink(processedHref, title);
+            });
+          } else if (isVideo) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              let title = link.textContent.trim() || '视频';
+              title = title.replace(/^打开：+/g, '');
+              handleVideoLink(processedHref, title);
+            });
+          } else if (isAudio) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              let title = link.textContent.trim() || '音频';
+              title = title.replace(/^打开：+/g, '');
+              handleAudioLink(processedHref, title);
+            });
+          } else if (isExternal) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              let title = link.textContent.trim() || '外部链接';
+              title = title.replace(/^打开：+/g, '');
+              handlePdfLink(processedHref, title);
+            });
           }
         });
       });
