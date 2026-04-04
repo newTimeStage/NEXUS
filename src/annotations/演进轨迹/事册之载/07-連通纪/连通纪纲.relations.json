@@ -1,0 +1,272 @@
+[
+  {
+    "id": "rel-001",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:biology:啄木",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇察啄木之灿火"
+  },
+  {
+    "id": "rel-002",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:钻燧",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇钻燧以革腥臊"
+  },
+  {
+    "id": "rel-003",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:揉绳",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇揉绳以纪星曜"
+  },
+  {
+    "id": "rel-004",
+    "type": "related_to",
+    "source": "entity:action:揉绳",
+    "target": "entity:astronomy:星曜",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "揉绳以纪星曜"
+  },
+  {
+    "id": "rel-005",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:烹食御寒之术",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇授烹食御寒之术"
+  },
+  {
+    "id": "rel-006",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:astronomy:观象之木",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇设观象之木"
+  },
+  {
+    "id": "rel-007",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:astronomy:太极太乙",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇辨太极太乙之微"
+  },
+  {
+    "id": "rel-008",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:造名类",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇造名类以别万物"
+  },
+  {
+    "id": "rel-009",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:institution:立四佐",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇立四佐以均食货"
+  },
+  {
+    "id": "rel-010",
+    "type": "related_to",
+    "source": "entity:artifact:绳纹",
+    "target": "entity:concept:天道",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "绳纹既成，天道乃显"
+  },
+  {
+    "id": "rel-011",
+    "type": "related_to",
+    "source": "entity:artifact:符篆",
+    "target": "entity:concept:文明",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "符篆初刻，文明始彰"
+  },
+  {
+    "id": "rel-012",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:伐悖天之匍尤",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇伐悖天之匍尤"
+  },
+  {
+    "id": "rel-013",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:放炙人之凶族",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇放炙人之凶族"
+  },
+  {
+    "id": "rel-014",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:concept:火德",
+    "evidence": ["para:1"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇火德光被"
+  },
+  {
+    "id": "rel-015",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:烹爨之源",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇开烹爨之源"
+  },
+  {
+    "id": "rel-016",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:astronomy:天文之极",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇立天文之极"
+  },
+  {
+    "id": "rel-017",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:结绳而治",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇结绳而治"
+  },
+  {
+    "id": "rel-018",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:画地而图",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇画地而图"
+  },
+  {
+    "id": "rel-019",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:astronomy:圭表测影",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇圭表测影"
+  },
+  {
+    "id": "rel-020",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:action:索木求中",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇索木求中"
+  },
+  {
+    "id": "rel-021",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:concept:天地之道",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇平秩天地之道"
+  },
+  {
+    "id": "rel-022",
+    "type": "related_to",
+    "source": "entity:person:燧皇",
+    "target": "entity:concept:心性命之本",
+    "evidence": ["para:2"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧皇正心性命之本"
+  },
+  {
+    "id": "rel-023",
+    "type": "same_as",
+    "source": "entity:person:燧",
+    "target": "entity:person:燧皇",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧即燧皇"
+  },
+  {
+    "id": "rel-024",
+    "type": "related_to",
+    "source": "entity:person:燧",
+    "target": "entity:concept:文明",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧钻火而文明生"
+  },
+  {
+    "id": "rel-025",
+    "type": "related_to",
+    "source": "entity:person:燧",
+    "target": "entity:astronomy:阴阳",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧德配阴阳"
+  },
+  {
+    "id": "rel-026",
+    "type": "related_to",
+    "source": "entity:concept:燧之道",
+    "target": "entity:astronomy:日月",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "燧之道如日月之代明"
+  },
+  {
+    "id": "rel-027",
+    "type": "related_to",
+    "source": "entity:time:上古之政",
+    "target": "entity:concept:燧之道",
+    "evidence": ["para:3"],
+    "status": "asserted",
+    "confidence": "high",
+    "note": "上古之政若江河之始达，燧之道垂宪万世"
+  }
+]

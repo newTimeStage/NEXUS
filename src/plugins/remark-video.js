@@ -9,6 +9,12 @@ export default function remarkVideo() {
         node.url.toLowerCase().endsWith(ext)
       );
 
+      // 检查是否是音频文件
+      const audioExtensions = ['.mp3', '.wav', '.flac', '.ogg', '.m4a', '.wma'];
+      const isAudio = audioExtensions.some(ext =>
+        node.url.toLowerCase().endsWith(ext)
+      );
+
       if (isVideo) {
         // 提取文件扩展名
         const extension = node.url.split('.').pop();
@@ -24,6 +30,25 @@ export default function remarkVideo() {
             <source src="${node.url}" type="${mimeType}">
             您的浏览器不支持视频标签。
           </video>
+        `;
+      } else if (isAudio) {
+        // 提取文件扩展名
+        const extension = node.url.split('.').pop();
+        // 确定MIME类型
+        let mimeType = 'audio/mpeg';
+        if (extension === 'wav') mimeType = 'audio/wav';
+        if (extension === 'flac') mimeType = 'audio/flac';
+        if (extension === 'ogg') mimeType = 'audio/ogg';
+        if (extension === 'm4a') mimeType = 'audio/mp4';
+        if (extension === 'wma') mimeType = 'audio/x-ms-wma';
+
+        // 将image节点转换为html节点，包含audio标签
+        node.type = 'html';
+        node.value = `
+          <audio controls class="markdown-audio">
+            <source src="${node.url}" type="${mimeType}">
+            您的浏览器不支持音频标签。
+          </audio>
         `;
       }
     });

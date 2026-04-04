@@ -1,159 +1,67 @@
 [
   {
-    "id": "evt-helo-001",
-    "title": "混沌初判与人兽初分",
-    "type": "science",
+    "id": "evt-001",
+    "title": "上古之世民北徙河汾",
+    "type": "migration",
     "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "1"
-    ],
+    "paragraphs": ["1"],
     "time_text": "上古之世",
-    "year": 500000,
+    "year": -45000,
     "people": [],
-    "places": [],
-    "summary": "上古之世混沌初判，人兽初分，天地之理渐显"
+    "tribes": [],
+    "places": ["河汾", "朔方"],
+    "summary": "上古之世，民少禽多，屡罹其害，又遭凶疠，北徙河汾，斸土为窟，患乃稍戢。然朔方苦寒，民多弗南徙。"
   },
   {
-    "id": "evt-helo-002",
-    "title": "巢皇构木为巢",
+    "id": "evt-002",
+    "title": "有巢氏教民构木为巢",
     "type": "culture",
     "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "1"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "巢皇"
-    ],
-    "places": [],
-    "summary": "巢皇观灵禽之智，构木为巢以避爪牙之害"
+    "paragraphs": ["2"],
+    "time_text": "有巢氏之时",
+    "year": -45000,
+    "people": ["有巢氏"],
+    "tribes": [],
+    "places": ["苍梧九嶷之阳", "石楼"],
+    "summary": "有巢氏生苍梧九嶷之阳，观玄鸟营巢，教民构木为巢，以避禽兽，聚食以济生民，天下归之，号曰巢皇，都于石楼，凿岩为室，治世长久。"
   },
   {
-    "id": "evt-helo-003",
-    "title": "巢皇立婚制",
-    "type": "politics",
+    "id": "evt-003",
+    "title": "有巢氏立族外群婚之制",
+    "type": "institution",
     "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "1"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "巢皇"
-    ],
+    "paragraphs": ["3"],
+    "time_text": "有巢之时",
+    "year": -45000,
+    "people": ["有巢氏"],
+    "tribes": [],
     "places": [],
-    "summary": "巢皇立婚制以绝血胤之乱，确立伦常秩序"
+    "summary": "有巢之时，禁同姓婚配，立族外群婚之制，民知母不知父，人伦大进。"
   },
   {
-    "id": "evt-helo-004",
-    "title": "燧皇钻燧取火",
-    "type": "science",
+    "id": "evt-004",
+    "title": "有巢氏末民广行猎兽",
+    "type": "survival",
     "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "2"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "燧皇"
-    ],
+    "paragraphs": ["4"],
+    "time_text": "有巢氏末",
+    "year": -45000,
+    "people": ["有巢氏"],
+    "tribes": [],
     "places": [],
-    "summary": "燧皇察啄木灿火，悟击石流光，钻燧以革腥臊"
+    "summary": "及有巢氏末，天寒食乏，民广行四方以猎兽。"
   },
   {
-    "id": "evt-helo-005",
-    "title": "燧皇揉绳纪星",
-    "type": "science",
+    "id": "evt-005",
+    "title": "有巢氏德被万世",
+    "type": "legacy",
     "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "2"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "燧皇"
-    ],
+    "paragraphs": ["5"],
+    "time_text": "有巢氏时期",
+    "year": -45000,
+    "people": ["有巢氏"],
+    "tribes": [],
     "places": [],
-    "summary": "燧皇揉绳以纪星曜，开启结绳记事"
-  },
-  {
-    "id": "evt-helo-006",
-    "title": "燧皇授烹食之术",
-    "type": "culture",
-    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "2"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "燧皇"
-    ],
-    "places": [],
-    "summary": "燧皇立传教之台，授烹食御寒之术"
-  },
-  {
-    "id": "evt-helo-007",
-    "title": "燧皇观象辨太极",
-    "type": "science",
-    "article": "演进轨迹/事册之载\\06-合雒纪\\合雒纪纲",
-    "paragraphs": [
-      "2"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "燧皇"
-    ],
-    "places": [],
-    "summary": "燧皇设观象之木，辨太极太乙之微，建立天文观测"
-  },
-  {
-    "id": "evt-helo-008",
-    "title": "燧皇造名类立四佐",
-    "type": "politics",
-    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "2"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "燧皇"
-    ],
-    "places": [],
-    "summary": "燧皇造名类别万物，立四佐均食货"
-  },
-  {
-    "id": "evt-helo-009",
-    "title": "巢燧二圣相承",
-    "type": "politics",
-    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "3"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [
-      "巢皇",
-      "燧皇"
-    ],
-    "places": [],
-    "summary": "巢皇燧皇相承，历草木廿万易，建立完整的人文秩序"
-  },
-  {
-    "id": "evt-helo-010",
-    "title": "结绳画地圭表测影",
-    "type": "science",
-    "article": "演进轨迹/事册之载/06-合雒纪/合雒纪纲",
-    "paragraphs": [
-      "3"
-    ],
-    "time_text": "上古之世",
-    "year": 500000,
-    "people": [],
-    "places": [],
-    "summary": "上古之治采用结绳而治、画地而图、圭表测影、索木求中等方法"
+    "summary": "有巢氏构巢庇民，立人伦之序，德被万世，功垂千古。"
   }
 ]

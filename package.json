@@ -18,6 +18,7 @@
     "chinese-lunar-calendar": "^1.0.1",
     "date-chinese": "^2.1.4",
     "katex": "^0.16.27",
+    "pdfjs-dist": "^5.6.205",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "unist-util-visit": "^5.0.0",

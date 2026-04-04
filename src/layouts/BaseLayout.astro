@@ -152,6 +152,11 @@
 
       // 链接处理逻辑
       document.addEventListener('DOMContentLoaded', function() {
+        // 检查是否在PDF查看器页面
+        if (window.location.pathname === '/pdf-viewer') {
+          return; // 跳过PDF查看器页面的链接处理
+        }
+
         // 获取所有链接
         const links = document.querySelectorAll('a');
 
@@ -160,15 +165,19 @@
           if (href) {
             // 检查是否是PDF链接
             const isPdf = href.toLowerCase().endsWith('.pdf');
+            // 检查是否是音频链接
+            const isAudio = /\.(mp3|wav|flac|ogg|m4a|wma)$/i.test(href);
             // 检查是否是外部链接
             const isExternal = /^https?:\/\//i.test(href) && !href.includes(window.location.hostname);
 
-            if (isPdf || isExternal) {
+            if ((isPdf || isExternal) && !isAudio) {
               // 阻止默认点击行为
               link.addEventListener('click', function(e) {
                 e.preventDefault();
                 // 获取链接文本作为标题
-                const title = link.textContent.trim() || '外部链接';
+                let title = link.textContent.trim() || '外部链接';
+                // 移除"打开："前缀（包括多个）
+                title = title.replace(/^打开：+/g, '');
                 // 构建查看器URL
                 let targetUrl = href;
                 // 如果是相对路径，转换为绝对路径
@@ -178,6 +187,72 @@
                 const viewerUrl = `/pdf-viewer?url=${encodeURIComponent(targetUrl)}&title=${encodeURIComponent(title)}`;
                 // 打开查看器页面
                 window.location.href = viewerUrl;
+              });
+            } else if (isAudio) {
+              // 处理音频链接，在页面内播放
+              link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 创建音频播放器
+                const audio = document.createElement('audio');
+                audio.controls = true;
+                audio.src = href;
+                
+                // 获取当前主题
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const isDarkTheme = currentTheme === 'dark';
+                
+                // 创建播放容器
+                const audioContainer = document.createElement('div');
+                audioContainer.style.cssText = `
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background: ${isDarkTheme ? '#333' : 'white'};
+                  color: ${isDarkTheme ? 'white' : 'black'};
+                  padding: 20px;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                  z-index: 1000;
+                  max-width: 400px;
+                  width: 90%;
+                `;
+                
+                // 创建标题
+                const title = document.createElement('h3');
+                title.textContent = link.textContent.trim() || '音频播放';
+                title.style.marginTop = '0';
+                title.style.color = isDarkTheme ? 'white' : 'black';
+                
+                // 创建关闭按钮
+                const closeButton = document.createElement('button');
+                closeButton.textContent = '关闭';
+                closeButton.style.cssText = `
+                  margin-top: 10px;
+                  padding: 8px 16px;
+                  background: ${isDarkTheme ? '#555' : '#f0f0f0'};
+                  color: ${isDarkTheme ? 'white' : 'black'};
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                `;
+                closeButton.addEventListener('click', function() {
+                  document.body.removeChild(audioContainer);
+                  audio.pause();
+                });
+                
+                // 组装容器
+                audioContainer.appendChild(title);
+                audioContainer.appendChild(audio);
+                audioContainer.appendChild(closeButton);
+                
+                // 添加到页面
+                document.body.appendChild(audioContainer);
+                
+                // 自动播放
+                audio.play().catch(err => {
+                  console.error('无法自动播放音频:', err);
+                });
               });
             }
           }
@@ -304,7 +379,7 @@
             try {
               // 解析JSON内容
               const data = JSON.parse(file.content);
-              
+
               if (file.path.endsWith('.events.json')) {
                 // 检查事件文件
                 for (const event of data) {
