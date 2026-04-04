@@ -13,8 +13,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <script>
     // 从 URL 参数中获取 PDF 链接和标题
     const urlParams = new URLSearchParams(window.location.search);
-    const pdfUrl = urlParams.get('url');
+    let pdfUrl = urlParams.get('url');
     const pdfTitle = urlParams.get('title');
+
+    // 将HTTP链接升级为HTTPS
+    if (pdfUrl && pdfUrl.startsWith('http://')) {
+      pdfUrl = pdfUrl.replace('http://', 'https://');
+    }
 
     // 设置标题
     const titleElement = document.getElementById('pdf-title');

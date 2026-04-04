@@ -163,12 +163,19 @@
         links.forEach(link => {
           const href = link.getAttribute('href');
           if (href) {
+            // 将HTTP链接升级为HTTPS
+            let processedHref = href;
+            if (processedHref.startsWith('http://')) {
+              processedHref = processedHref.replace('http://', 'https://');
+              link.setAttribute('href', processedHref);
+            }
+            
             // 检查是否是PDF链接
-            const isPdf = href.toLowerCase().endsWith('.pdf');
+            const isPdf = processedHref.toLowerCase().endsWith('.pdf');
             // 检查是否是音频链接
-            const isAudio = /\.(mp3|wav|flac|ogg|m4a|wma)$/i.test(href);
+            const isAudio = /\.(mp3|wav|flac|ogg|m4a|wma)$/i.test(processedHref);
             // 检查是否是外部链接
-            const isExternal = /^https?:\/\//i.test(href) && !href.includes(window.location.hostname);
+            const isExternal = /^https?:\/\//i.test(processedHref) && !processedHref.includes(window.location.hostname);
 
             if ((isPdf || isExternal) && !isAudio) {
               // 阻止默认点击行为
@@ -179,10 +186,10 @@
                 // 移除"打开："前缀（包括多个）
                 title = title.replace(/^打开：+/g, '');
                 // 构建查看器URL
-                let targetUrl = href;
+                let targetUrl = processedHref;
                 // 如果是相对路径，转换为绝对路径
-                if (!/^https?:\/\//i.test(href) && !href.startsWith('/')) {
-                  targetUrl = '/' + href;
+                if (!/^https?:\/\//i.test(processedHref) && !processedHref.startsWith('/')) {
+                  targetUrl = '/' + processedHref;
                 }
                 const viewerUrl = `/pdf-viewer?url=${encodeURIComponent(targetUrl)}&title=${encodeURIComponent(title)}`;
                 // 打开查看器页面
@@ -195,7 +202,7 @@
                 // 创建音频播放器
                 const audio = document.createElement('audio');
                 audio.controls = true;
-                audio.src = href;
+                audio.src = processedHref;
                 
                 // 获取当前主题
                 const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';

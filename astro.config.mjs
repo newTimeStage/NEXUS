@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkVideo from './src/plugins/remark-video.js';
 import remarkEntityAnnotation from './src/plugins/remark-entity-annotation-fixed.js';
 import remarkMdLinks from './src/plugins/remark-md-links.js';
+import remarkHttpToHttps from './src/plugins/remark-http-to-https.js';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -14,7 +15,7 @@ export default defineConfig({
   adapter: cloudflare(),
   integrations: [],
   markdown: {
-    remarkPlugins: [remarkEntityAnnotation, remarkMath, remarkVideo, remarkMdLinks],
+    remarkPlugins: [remarkHttpToHttps, remarkEntityAnnotation, remarkMath, remarkVideo, remarkMdLinks],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: 'github-dark',

@@ -3,6 +3,11 @@ import { visit } from 'unist-util-visit';
 export default function remarkVideo() {
   return (tree) => {
     visit(tree, 'image', (node) => {
+      // 将HTTP链接升级为HTTPS
+      if (node.url && node.url.startsWith('http://')) {
+        node.url = node.url.replace('http://', 'https://');
+      }
+
       // 检查是否是视频文件
       const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.wmv'];
       const isVideo = videoExtensions.some(ext =>
