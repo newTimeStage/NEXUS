@@ -11,20 +11,18 @@
         overflow: hidden;
       }
 
-      .proxy-container {
+      .content-container {
         width: 100vw;
         height: 100vh;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow: auto;
       }
 
-      .proxy-iframe {
+      object, embed, video, audio, iframe {
         width: 100%;
         height: 100%;
         border: none;
-        margin: 0;
-        padding: 0;
       }
 
       .error-message {
@@ -36,8 +34,8 @@
     </style>
   </head>
   <body>
-    <div class="proxy-container">
-      <iframe id="proxy-iframe" class="proxy-iframe" src="" title="外部链接内容"></iframe>
+    <div class="content-container" id="content-container">
+      <!-- 内容将通过 JavaScript 动态添加 -->
     </div>
 
     <script>
@@ -46,15 +44,14 @@
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('url');
       }
-      
+
       function getEncodedTitle() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('title');
       }
-      
+
       function decodeUrl(encodedUrl: string) {
         try {
-          // 直接 URL 解码
           const urlDecoded = decodeURIComponent(encodedUrl);
           return urlDecoded;
         } catch (error) {
@@ -62,10 +59,9 @@
           return null;
         }
       }
-      
+
       function decodeTitle(encodedTitle: string) {
         try {
-          // 直接 URL 解码
           const titleDecoded = decodeURIComponent(encodedTitle);
           return titleDecoded;
         } catch (error) {
@@ -73,36 +69,74 @@
           return '外部链接';
         }
       }
-      
-      function initProxy() {
+
+      function initContent() {
         const encodedUrl = getEncodedUrl();
         if (!encodedUrl) {
           document.body.innerHTML = '<h1 class="error-message">错误：缺少链接参数</h1>';
           return;
         }
-        
+
         const originalUrl = decodeUrl(encodedUrl);
         if (!originalUrl) {
           document.body.innerHTML = '<h1 class="error-message">错误：链接解码失败</h1>';
           return;
         }
-        
+
         // 解码标题并设置页面标题
         const encodedTitle = getEncodedTitle();
         if (encodedTitle) {
           const decodedTitle = decodeTitle(encodedTitle);
           document.title = decodedTitle + ' - NEXUS';
         }
-        
-        const iframe = document.getElementById('proxy-iframe') as HTMLIFrameElement;
-        if (iframe) {
-          // 直接使用原始链接，不使用代理
+
+        const container = document.getElementById('content-container');
+        if (!container) {
+          document.body.innerHTML = '<h1 class="error-message">错误：容器元素未找到</h1>';
+          return;
+        }
+
+        // 根据文件类型选择显示方式
+        const lowerUrl = originalUrl.toLowerCase();
+        if (lowerUrl.endsWith('.pdf')) {
+          // PDF 文件
+          const object = document.createElement('object');
+          object.data = originalUrl;
+          object.type = 'application/pdf';
+          object.style.width = '100%';
+          object.style.height = '100%';
+          container.appendChild(object);
+        } else if (lowerUrl.endsWith('.mp4') || lowerUrl.endsWith('.avi') || lowerUrl.endsWith('.mov') || lowerUrl.endsWith('.wmv')) {
+          // 视频文件
+          const video = document.createElement('video');
+          video.src = originalUrl;
+          video.controls = true;
+          video.autoplay = false;
+          video.style.width = '100%';
+          video.style.height = '100%';
+          container.appendChild(video);
+        } else if (lowerUrl.endsWith('.mp3') || lowerUrl.endsWith('.wav') || lowerUrl.endsWith('.ogg') || lowerUrl.endsWith('.flac')) {
+          // 音频文件
+          const audio = document.createElement('audio');
+          audio.src = originalUrl;
+          audio.controls = true;
+          audio.autoplay = false;
+          audio.style.width = '100%';
+          audio.style.height = '100px';
+          container.appendChild(audio);
+        } else {
+          // 其他文件类型，使用 iframe
+          const iframe = document.createElement('iframe');
           iframe.src = originalUrl;
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.border = '0';
+          container.appendChild(iframe);
         }
       }
 
       // 初始化
-      initProxy();
+      initContent();
     </script>
   </body>
 </html>
