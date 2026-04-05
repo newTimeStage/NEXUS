@@ -76,32 +76,38 @@
           document.body.innerHTML = '<h1 class="error-message">错误：缺少链接参数</h1>';
           return;
         }
-
+        
         const originalUrl = decodeUrl(encodedUrl);
         if (!originalUrl) {
           document.body.innerHTML = '<h1 class="error-message">错误：链接解码失败</h1>';
           return;
         }
-
+        
         // 解码标题并设置页面标题
         const encodedTitle = getEncodedTitle();
         if (encodedTitle) {
           const decodedTitle = decodeTitle(encodedTitle);
           document.title = decodedTitle + ' - NEXUS';
         }
-
+        
         const container = document.getElementById('content-container');
         if (!container) {
           document.body.innerHTML = '<h1 class="error-message">错误：容器元素未找到</h1>';
           return;
         }
-
+        
+        // 检测是否在本地开发环境
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        
+        // 根据环境选择使用代理或原始链接
+        const resourceUrl = isLocal ? originalUrl : `/api/proxy?url=${encodeURIComponent(originalUrl)}`;
+        
         // 根据文件类型选择显示方式
         const lowerUrl = originalUrl.toLowerCase();
         if (lowerUrl.endsWith('.pdf')) {
           // PDF 文件
           const object = document.createElement('object');
-          object.data = originalUrl;
+          object.data = resourceUrl;
           object.type = 'application/pdf';
           object.style.width = '100%';
           object.style.height = '100%';
@@ -109,7 +115,7 @@
         } else if (lowerUrl.endsWith('.mp4') || lowerUrl.endsWith('.avi') || lowerUrl.endsWith('.mov') || lowerUrl.endsWith('.wmv')) {
           // 视频文件
           const video = document.createElement('video');
-          video.src = originalUrl;
+          video.src = resourceUrl;
           video.controls = true;
           video.autoplay = false;
           video.style.width = '100%';
@@ -118,7 +124,7 @@
         } else if (lowerUrl.endsWith('.mp3') || lowerUrl.endsWith('.wav') || lowerUrl.endsWith('.ogg') || lowerUrl.endsWith('.flac')) {
           // 音频文件
           const audio = document.createElement('audio');
-          audio.src = originalUrl;
+          audio.src = resourceUrl;
           audio.controls = true;
           audio.autoplay = false;
           audio.style.width = '100%';
@@ -127,7 +133,7 @@
         } else {
           // 其他文件类型，使用 iframe
           const iframe = document.createElement('iframe');
-          iframe.src = originalUrl;
+          iframe.src = resourceUrl;
           iframe.style.width = '100%';
           iframe.style.height = '100%';
           iframe.style.border = '0';
