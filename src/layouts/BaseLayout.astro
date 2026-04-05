@@ -92,98 +92,6 @@
         }
       }
 
-      /* 外部链接 iframe 模态框样式 */
-      .external-link-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2000;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
-      }
-
-      .external-link-modal.show {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .external-link-modal-content {
-        background-color: var(--bg-color, #fff);
-        border-radius: 12px;
-        width: 95%;
-        height: 90%;
-        max-width: 1400px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-      }
-
-      .external-link-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 20px;
-        border-bottom: 1px solid var(--border-color, #e0e0e0);
-        background: var(--header-bg, #f8f9fa);
-      }
-
-      .external-link-modal-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text-color, #333);
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        flex: 1;
-      }
-
-      .external-link-modal-close {
-        background: none;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
-        color: var(--text-color, #666);
-        padding: 0 8px;
-        line-height: 1;
-        transition: color 0.2s;
-      }
-
-      .external-link-modal-close:hover {
-        color: var(--accent-color, #e74c3c);
-      }
-
-      .external-link-modal-body {
-        flex: 1;
-        overflow: hidden;
-        background: var(--bg-color, #fff);
-      }
-
-      .external-link-modal-body iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      [data-theme="dark"] .external-link-modal-content {
-        --bg-color: #1a1a2e;
-        --header-bg: #16213e;
-        --border-color: #2d3748;
-        --text-color: #e2e8f0;
-      }
-
-      [data-theme="dark"] .external-link-modal-close:hover {
-        --accent-color: #f87171;
-      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chinese-lunar-calendar@1.0.1/dist/index.js"></script>
   </head>
@@ -240,82 +148,20 @@
         }
       }
 
-      // 外部链接模态框函数
-      function showExternalLinkModal(url: string, title: string) {
-        console.log('showExternalLinkModal called with:', url, title);
+      // 外部链接处理函数 - 在新窗口打开，不暴露链接地址
+      function openExternalLinkInNewWindow(url: string, title: string) {
+        console.log('openExternalLinkInNewWindow called with:', url, title);
 
-        // 只对 HTTP 链接进行代理
-        let iframeSrc = url;
-        if (window.location.protocol === 'https:' && url.indexOf('http://') === 0) {
-          // 使用 Cloudflare Pages Function 代理
-          console.log('Using Cloudflare Pages Function proxy for HTTP content');
-          iframeSrc = '/api/proxy?url=' + encodeURIComponent(url);
-          console.log('Setting iframe src to:', iframeSrc);
-        }
+        // 对 URL 进行 Base64 编码，避免在地址栏暴露原始链接
+        const base64Url = btoa(url);
+        const encodedUrl = encodeURIComponent(base64Url);
 
-        let modal = document.getElementById('external-link-modal') as HTMLDivElement | null;
-        console.log('Existing modal:', modal);
+        // 构建中间页面 URL
+        const proxyUrl = `/external-link?url=${encodedUrl}`;
+        console.log('Opening external link through proxy:', proxyUrl);
 
-        if (!modal) {
-          const newModal = document.createElement('div');
-          newModal.id = 'external-link-modal';
-          newModal.className = 'external-link-modal';
-          newModal.setAttribute('data-astro-cid-37fxchfa', '');
-          newModal.innerHTML = '<div class="external-link-modal-content" data-astro-cid-37fxchfa>' +
-            '<div class="external-link-modal-header" data-astro-cid-37fxchfa>' +
-            '<h3 class="external-link-modal-title" data-astro-cid-37fxchfa></h3>' +
-            '<button class="external-link-modal-close" data-astro-cid-37fxchfa aria-label="关闭">&times;</button>' +
-            '</div>' +
-            '<div class="external-link-modal-body" data-astro-cid-37fxchfa>' +
-            '<iframe scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" data-astro-cid-37fxchfa></iframe>' +
-            '</div></div>';
-          document.body.appendChild(newModal);
-          modal = newModal;
-          console.log('Created new modal:', modal);
-
-          const closeBtn = modal.querySelector('.external-link-modal-close') as HTMLButtonElement | null;
-          if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-              modal!.classList.remove('show');
-              const iframe = modal!.querySelector('iframe') as HTMLIFrameElement | null;
-              if (iframe) iframe.src = '';
-            });
-          }
-
-          modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-              modal!.classList.remove('show');
-              const iframe = modal!.querySelector('iframe') as HTMLIFrameElement | null;
-              if (iframe) iframe.src = '';
-            }
-          });
-
-          window.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-              const m = document.getElementById('external-link-modal');
-              if (m) {
-                m.classList.remove('show');
-                const iframe = m.querySelector('iframe') as HTMLIFrameElement | null;
-                if (iframe) iframe.src = '';
-              }
-            }
-          });
-        }
-
-        const titleEl = modal.querySelector('.external-link-modal-title') as HTMLElement | null;
-        const iframe = modal.querySelector('iframe') as HTMLIFrameElement | null;
-        console.log('titleEl:', titleEl, 'iframe:', iframe);
-
-        if (titleEl) titleEl.textContent = title;
-        if (iframe) {
-          console.log('Setting iframe src to:', iframeSrc);
-          iframe.src = iframeSrc;
-        }
-
-        console.log('Adding show class to modal');
-        modal.classList.add('show');
-        console.log('Modal classes after add:', modal.className);
-        console.log('Modal computed style:', window.getComputedStyle(modal).display, window.getComputedStyle(modal).visibility, window.getComputedStyle(modal).opacity);
+        // 在新窗口打开
+        window.open(proxyUrl, '_blank', 'width=1024,height=768,scrollbars=yes,toolbar=yes,menubar=yes,location=yes');
       }
 
       // 链接处理逻辑 - 使用立即执行或 DOMContentLoaded
@@ -348,7 +194,7 @@
                 if (!/^https?:\/\//i.test(href) && href.indexOf('/') !== 0) {
                   targetUrl = '/' + href;
                 }
-                showExternalLinkModal(targetUrl, title);
+                openExternalLinkInNewWindow(targetUrl, title);
               });
             }
           }

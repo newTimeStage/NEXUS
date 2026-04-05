@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外部链接 - NEXUS</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .proxy-container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .proxy-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .error-message {
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="proxy-container">
+      <iframe id="proxy-iframe" class="proxy-iframe" src="" title="外部链接内容"></iframe>
+    </div>
+
+    <script>
+      // 解码 URL 参数
+      function getEncodedUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('url');
+      }
+
+      function decodeUrl(encodedUrl: string) {
+        try {
+          // 先 URL 解码，再 Base64 解码
+          const urlDecoded = decodeURIComponent(encodedUrl);
+          const base64Decoded = atob(urlDecoded);
+          return base64Decoded;
+        } catch (error) {
+          console.error('URL 解码失败:', error);
+          return null;
+        }
+      }
+
+      function initProxy() {
+        const encodedUrl = getEncodedUrl();
+        if (!encodedUrl) {
+          document.body.innerHTML = '<h1 class="error-message">错误：缺少链接参数</h1>';
+          return;
+        }
+
+        const originalUrl = decodeUrl(encodedUrl);
+        if (!originalUrl) {
+          document.body.innerHTML = '<h1 class="error-message">错误：链接解码失败</h1>';
+          return;
+        }
+
+        const iframe = document.getElementById('proxy-iframe') as HTMLIFrameElement;
+        if (iframe) {
+          let iframeSrc = originalUrl;
+
+          // 检查是否需要代理（HTTPS 页面加载 HTTP 内容）
+          if (window.location.protocol === 'https:' && originalUrl.indexOf('http://') === 0) {
+            // 使用 Cloudflare Pages Function 代理
+            iframeSrc = '/api/proxy?url=' + encodeURIComponent(originalUrl);
+          }
+
+          iframe.src = iframeSrc;
+        }
+      }
+
+      // 初始化
+      initProxy();
+    </script>
+  </body>
+</html>
