@@ -247,10 +247,9 @@
         // 只对 HTTP 链接进行代理
         let iframeSrc = url;
         if (window.location.protocol === 'https:' && url.indexOf('http://') === 0) {
-          // 使用 allorigins.win 代理服务
-          console.log('Using allorigins.win proxy for HTTP content');
-          // 正确编码 URL
-          iframeSrc = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+          // 使用 Cloudflare Pages Function 代理
+          console.log('Using Cloudflare Pages Function proxy for HTTP content');
+          iframeSrc = '/api/proxy?url=' + encodeURIComponent(url);
           console.log('Setting iframe src to:', iframeSrc);
         }
 
