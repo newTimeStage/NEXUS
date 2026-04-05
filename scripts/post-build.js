@@ -21,60 +21,69 @@ if (fs.existsSync(routesPath)) {
 const workerIndexPath = path.join(distDir, '_worker.js/index.js');
 if (fs.existsSync(workerIndexPath)) {
   let workerContent = fs.readFileSync(workerIndexPath, 'utf-8');
-  
+
   const proxyCode = `
 
 // 代理请求处理
 async function handleProxyRequest(request) {
   const url = new URL(request.url);
   const targetUrl = url.searchParams.get('url');
-  
+
   if (!targetUrl) {
     return new Response(JSON.stringify({ error: 'Missing url parameter' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     });
   }
-  
+
   if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
     return new Response(JSON.stringify({ error: 'Invalid URL' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     });
   }
-  
+
   try {
+    // 直接使用 targetUrl，不修改协议
     const response = await fetch(targetUrl, {
       method: request.method,
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': '*/*',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        // 移除可能导致问题的 headers
+        'Connection': 'close'
       },
       redirect: 'follow',
+      // 禁用缓存以确保获取最新内容
+      cache: 'no-cache'
     });
-    
-    const contentType = response.headers.get('Content-Type') || 'application/octet-stream';
-    const contentLength = response.headers.get('Content-Length');
-    
-    const headers = new Headers({
-      'Content-Type': contentType,
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': '*',
-      'Cache-Control': 'public, max-age=3600',
-    });
-    
-    if (contentLength) {
-      headers.set('Content-Length', contentLength);
+
+    // 复制响应头，但排除可能导致问题的头
+    const headers = new Headers();
+    for (const [key, value] of response.headers.entries()) {
+      // 排除可能导致问题的头
+      if (!['content-security-policy', 'x-frame-options', 'strict-transport-security'].includes(key.toLowerCase())) {
+        headers.set(key, value);
+      }
     }
-    
+
+    // 添加 CORS 头
+    headers.set('Access-Control-Allow-Origin', '*');
+    headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    headers.set('Access-Control-Allow-Headers', '*');
+
     return new Response(response.body, {
       status: response.status,
       headers,
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error('Proxy error:', error);
+    return new Response(JSON.stringify({
+      error: error.message,
+      stack: error.stack,
+      targetUrl: targetUrl
+    }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
@@ -85,25 +94,25 @@ async function handleProxyRequest(request) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    
+
     // 处理代理请求
     if (url.pathname === '/proxy') {
       return handleProxyRequest(request);
     }
-    
+
     // 其他请求交给 Astro 处理
     return __astrojsSsrVirtualEntry(request, env, ctx);
   }
 };
 
 export { pageMap };`;
-  
+
   // 替换最后的导出语句
   workerContent = workerContent.replace(
     /export \{ __astrojsSsrVirtualEntry as default, pageMap \};/,
     proxyCode
   );
-  
+
   fs.writeFileSync(workerIndexPath, workerContent);
   console.log('Updated _worker.js/index.js with proxy handler');
 }
