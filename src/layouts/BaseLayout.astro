@@ -243,6 +243,15 @@
       // 外部链接模态框函数
       function showExternalLinkModal(url: string, title: string) {
         console.log('showExternalLinkModal called with:', url, title);
+
+        // 只对 HTTP 链接进行代理
+        let iframeSrc = url;
+        if (window.location.protocol === 'https:' && url.indexOf('http://') === 0) {
+          // 使用代理来加载 HTTP 内容
+          iframeSrc = '/proxy?url=' + encodeURIComponent(url);
+          console.log('Using proxy for HTTP content:', iframeSrc);
+        }
+
         let modal = document.getElementById('external-link-modal') as HTMLDivElement | null;
         console.log('Existing modal:', modal);
 
@@ -298,12 +307,6 @@
 
         if (titleEl) titleEl.textContent = title;
         if (iframe) {
-          let iframeSrc = url;
-          if (url.indexOf('http://') === 0) {
-            iframeSrc = '//' + url.substring(7);
-          } else if (url.indexOf('https://') === 0) {
-            iframeSrc = '//' + url.substring(8);
-          }
           console.log('Setting iframe src to:', iframeSrc);
           iframe.src = iframeSrc;
         }
