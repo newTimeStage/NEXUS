@@ -247,9 +247,17 @@
         // 只对 HTTP 链接进行代理
         let iframeSrc = url;
         if (window.location.protocol === 'https:' && url.indexOf('http://') === 0) {
-          // 使用代理来加载 HTTP 内容
-          iframeSrc = '/proxy?url=' + encodeURIComponent(url);
-          console.log('Using proxy for HTTP content:', iframeSrc);
+          // 使用公共 CORS 代理服务来加载 HTTP 内容
+          // 尝试多个代理服务以提高可靠性
+          const proxyServices = [
+            'https://api.allorigins.win/raw?url=',
+            'https://cors-anywhere.herokuapp.com/',
+            'https://proxy.cors.sh/'
+          ];
+          // 随机选择一个代理服务
+          const randomProxy = proxyServices[Math.floor(Math.random() * proxyServices.length)];
+          iframeSrc = randomProxy + encodeURIComponent(url);
+          console.log('Using public CORS proxy for HTTP content:', iframeSrc);
         }
 
         let modal = document.getElementById('external-link-modal') as HTMLDivElement | null;
