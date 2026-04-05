@@ -148,20 +148,49 @@
         }
       }
 
-      // 外部链接处理函数 - 在新窗口打开，不暴露链接地址
+      // 外部链接处理函数 - 在新窗口中显示内容，不下载
       function openExternalLinkInNewWindow(url: string, title: string) {
         console.log('openExternalLinkInNewWindow called with:', url, title);
         
-        // 对 URL 和标题进行编码，避免在地址栏暴露原始链接
-        const encodedUrl = encodeURIComponent(url);
-        const encodedTitle = encodeURIComponent(title);
+        // 创建新窗口
+        const newWindow = window.open('', '_blank', 'width=1024,height=768,scrollbars=yes,toolbar=yes,menubar=yes,location=yes');
         
-        // 构建中间页面 URL
-        const proxyUrl = `/external-link?url=${encodedUrl}&title=${encodedTitle}`;
-        console.log('Opening external link through proxy:', proxyUrl);
-        
-        // 在新窗口打开
-        window.open(proxyUrl, '_blank', 'width=1024,height=768,scrollbars=yes,toolbar=yes,menubar=yes,location=yes');
+        if (newWindow) {
+          // 设置新窗口标题
+          newWindow.document.title = title + ' - NEXUS';
+          
+          // 构建HTML内容，使用iframe来显示资源
+          const html = `
+            <!DOCTYPE html>
+            <html lang="zh-CN">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>${title} - NEXUS</title>
+              <style>
+                body {
+                  margin: 0;
+                  padding: 0;
+                  height: 100vh;
+                  overflow: hidden;
+                }
+                iframe {
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                }
+              </style>
+            </head>
+            <body>
+              <iframe src="${url}" title="${title}"></iframe>
+            </body>
+            </html>
+          `;
+          
+          // 写入新窗口内容
+          newWindow.document.write(html);
+          newWindow.document.close();
+        }
       }
 
       // 链接处理逻辑 - 使用立即执行或 DOMContentLoaded
