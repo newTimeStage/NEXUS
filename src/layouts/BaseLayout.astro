@@ -151,15 +151,15 @@
       // 外部链接处理函数 - 在新窗口打开，不暴露链接地址
       function openExternalLinkInNewWindow(url: string, title: string) {
         console.log('openExternalLinkInNewWindow called with:', url, title);
-
-        // 对 URL 进行 Base64 编码，避免在地址栏暴露原始链接
-        const base64Url = btoa(url);
-        const encodedUrl = encodeURIComponent(base64Url);
-
+        
+        // 对 URL 和标题进行编码，避免在地址栏暴露原始链接
+        const encodedUrl = encodeURIComponent(url);
+        const encodedTitle = encodeURIComponent(title);
+        
         // 构建中间页面 URL
-        const proxyUrl = `/external-link?url=${encodedUrl}`;
+        const proxyUrl = `/external-link?url=${encodedUrl}&title=${encodedTitle}`;
         console.log('Opening external link through proxy:', proxyUrl);
-
+        
         // 在新窗口打开
         window.open(proxyUrl, '_blank', 'width=1024,height=768,scrollbars=yes,toolbar=yes,menubar=yes,location=yes');
       }

@@ -46,43 +46,58 @@
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('url');
       }
-
+      
+      function getEncodedTitle() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('title');
+      }
+      
       function decodeUrl(encodedUrl: string) {
         try {
-          // 先 URL 解码，再 Base64 解码
+          // 直接 URL 解码
           const urlDecoded = decodeURIComponent(encodedUrl);
-          const base64Decoded = atob(urlDecoded);
-          return base64Decoded;
+          return urlDecoded;
         } catch (error) {
           console.error('URL 解码失败:', error);
           return null;
         }
       }
-
+      
+      function decodeTitle(encodedTitle: string) {
+        try {
+          // 直接 URL 解码
+          const titleDecoded = decodeURIComponent(encodedTitle);
+          return titleDecoded;
+        } catch (error) {
+          console.error('标题解码失败:', error);
+          return '外部链接';
+        }
+      }
+      
       function initProxy() {
         const encodedUrl = getEncodedUrl();
         if (!encodedUrl) {
           document.body.innerHTML = '<h1 class="error-message">错误：缺少链接参数</h1>';
           return;
         }
-
+        
         const originalUrl = decodeUrl(encodedUrl);
         if (!originalUrl) {
           document.body.innerHTML = '<h1 class="error-message">错误：链接解码失败</h1>';
           return;
         }
-
+        
+        // 解码标题并设置页面标题
+        const encodedTitle = getEncodedTitle();
+        if (encodedTitle) {
+          const decodedTitle = decodeTitle(encodedTitle);
+          document.title = decodedTitle + ' - NEXUS';
+        }
+        
         const iframe = document.getElementById('proxy-iframe') as HTMLIFrameElement;
         if (iframe) {
-          let iframeSrc = originalUrl;
-
-          // 检查是否需要代理（HTTPS 页面加载 HTTP 内容）
-          if (window.location.protocol === 'https:' && originalUrl.indexOf('http://') === 0) {
-            // 使用 Cloudflare Pages Function 代理
-            iframeSrc = '/api/proxy?url=' + encodeURIComponent(originalUrl);
-          }
-
-          iframe.src = iframeSrc;
+          // 直接使用原始链接，不使用代理
+          iframe.src = originalUrl;
         }
       }
 
