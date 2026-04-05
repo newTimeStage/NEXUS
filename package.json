@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && echo _worker.js > dist/.assetsignore",
+    "build": "astro check && astro build && echo _worker.js > dist/.assetsignore && node scripts/post-build.js",
     "preview": "astro preview",
     "astro": "astro",
     "annotations:init": "node scripts/generate-annotations.js",
