@@ -11,7 +11,6 @@ import { resolve } from 'path';
 export default defineConfig({
   site: 'https://nexus-6gs.pages.dev/',
   output: 'static',
-  adapter: cloudflare(),
   integrations: [],
   markdown: {
     remarkPlugins: [remarkEntityAnnotation, remarkMath, remarkVideo, remarkMdLinks],

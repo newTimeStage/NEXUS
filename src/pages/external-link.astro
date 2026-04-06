@@ -97,12 +97,9 @@
           return;
         }
 
-        // 检测是否在本地开发环境
-        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-        // 根据环境选择使用代理或原始链接
-        // 注意：Cloudflare Workers 的路由规则将 /api/proxy 映射到 functions/api/proxy.js
-        const resourceUrl = isLocal ? originalUrl : `/api/proxy?url=${encodeURIComponent(originalUrl)}`;
+        // 静态网站直接使用原始URL
+        // 注意：静态网站无法使用服务器端代理，直接访问外部资源
+        const resourceUrl = originalUrl;
 
         // 根据文件类型选择显示方式
         const lowerUrl = originalUrl.toLowerCase();
