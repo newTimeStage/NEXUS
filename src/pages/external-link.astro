@@ -97,8 +97,32 @@
           return;
         }
 
-        // 静态网站直接使用原始URL
-        // 注意：静态网站无法使用服务器端代理，直接访问外部资源
+        // 检测混合内容
+        const isHttps = window.location.protocol === 'https:';
+        const isHttpResource = originalUrl.startsWith('http:');
+
+        // 处理混合内容
+        if (isHttps && isHttpResource) {
+          // 显示混合内容警告
+          container.innerHTML = `
+            <div class="error-message">
+              <h1>安全警告</h1>
+              <p>您正在尝试从安全连接(HTTPS)访问不安全的资源(HTTP)。</p>
+              <p>这可能会导致安全风险，因为：</p>
+              <ul>
+                <li>浏览器可能会阻止加载不安全的内容</li>
+                <li>数据传输可能被第三方截获</li>
+                <li>网站的安全状态会受到影响</li>
+              </ul>
+              <p>目标资源：${escapeHtml(originalUrl)}</p>
+              <button onclick="window.location.href = '${escapeHtml(originalUrl)}'" style="margin-right: 10px;">直接访问</button>
+              <button onclick="window.close()">关闭窗口</button>
+            </div>
+          `;
+          return;
+        }
+
+        // 使用原始URL
         const resourceUrl = originalUrl;
 
         // 根据文件类型选择显示方式
