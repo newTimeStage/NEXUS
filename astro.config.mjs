@@ -13,8 +13,8 @@ export default defineConfig({
   output: 'static',
   integrations: [],
   markdown: {
-    remarkPlugins: [remarkEntityAnnotation, remarkMath, remarkVideo, remarkMdLinks],
-    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkMath, remarkVideo, remarkMdLinks, remarkEntityAnnotation],
+    rehypePlugins: [[rehypeKatex, { strict: false, throwOnError: false }]],
     shikiConfig: {
       theme: 'github-dark',
     },

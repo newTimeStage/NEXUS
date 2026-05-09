@@ -359,30 +359,49 @@ function convertQuotes(text) {
 }
 
 export default function remarkEntityAnnotation() {
-  return (tree) => {
-    visit(tree, 'text', (node, index, parent) => {
-      if (typeof node.value !== 'string') return;
+    return (tree) => {
+        visit(tree, 'text', (node, index, parent) => {
+            console.log('[remarkEntityAnnotation] Processing text node:', {
+                value: node.value,
+                parentType: parent?.type,
+            });
+            if (typeof node.value !== 'string') return;
 
-      let text = node.value;
-      const hasEntity = /【[^【】]+】/.test(text);
-      const hasParaNum = /\[\d+(?:\.\d+)*\]/.test(text);
-      const hasQuote = /["'「」『』]/.test(text);
+            let text = node.value;
+            
+            // 如果文本中包含任何 LaTeX 常用符号，直接跳过，不处理
+            if (/[&$\\{}^_]/.test(text)) {
+                console.log('[remarkEntityAnnotation] Skipping due to LaTeX symbols');
+                return;
+            }
+            
+            // 如果我们在 math 节点或者 inlineMath 节点内部，直接跳过（双重保险）
+            let current = parent;
+            while (current) {
+                if (current.type === 'math' || current.type === 'inlineMath') {
+                    console.log('[remarkEntityAnnotation] Skipping due to math parent');
+                    return;
+                }
+                current = current.parent;
+            }
+            
+            const hasEntity = /【[^【】]+】/.test(text);
+            const hasParaNum = /\[\d+(?:\.\d+)*\]/.test(text);
 
-      if (!hasEntity && !hasParaNum && !hasQuote) return;
+            if (!hasEntity && !hasParaNum) return;
 
-      text = convertEntities(text);
-      text = convertParagraphNumbers(text);
-      text = convertQuotes(text);
+            text = convertEntities(text);
+            text = convertParagraphNumbers(text);
 
-      if (text !== node.value && /<[a-z][^>]*>/.test(text)) {
-        parent.children[index] = {
-          type: 'html',
-          value: text,
-        };
-      }
-    });
-  };
-}
+            if (text !== node.value && /<[a-z][^>]*>/.test(text)) {
+                parent.children[index] = {
+                    type: 'html',
+                    value: text,
+                };
+            }
+        });
+    }
+};
 
 export function rehypeEntityIndex() {
   return (tree, file) => {

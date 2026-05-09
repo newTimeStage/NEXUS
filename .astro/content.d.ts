@@ -226,11 +226,9 @@ declare module 'astro:content' {
 }>;
 "测试": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
+  body?: string;
   collection: "测试";
-  data: InferEntrySchema<"测试">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
