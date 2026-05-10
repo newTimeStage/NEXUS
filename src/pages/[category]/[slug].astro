@@ -14,7 +14,6 @@ export async function getStaticPaths() {
   const evolutionArticles = await getCollection('演进轨迹');
   const systemsArticles = await getCollection('制度与创造');
   const futureArticles = await getCollection('主体与未来');
-  const testArticles = await getCollection('测试');
 
   // 合并所有文章
   const allArticles = [
@@ -22,7 +21,6 @@ export async function getStaticPaths() {
     ...evolutionArticles,
     ...systemsArticles,
     ...futureArticles,
-    ...testArticles,
   ];
 
   // 生成路径
