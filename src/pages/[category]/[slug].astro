@@ -5,7 +5,7 @@ import fs from 'fs';
 /* @ts-ignore */
 import path from 'path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 // 生成静态路径
 export async function getStaticPaths() {
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const { Content } = await article.render();
+const { Content } = await render(article);
 
 // article.id 是相对于集合根目录的路径，例如：事册之载/06-合雒纪/01-泰壹朝代/01-有巢氏/有巢氏纪.md
 // 集合名称是 article.collection，例如：演进轨迹
