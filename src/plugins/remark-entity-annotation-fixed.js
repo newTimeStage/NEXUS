@@ -361,27 +361,15 @@ function convertQuotes(text) {
 export default function remarkEntityAnnotation() {
     return (tree) => {
         visit(tree, 'text', (node, index, parent) => {
-            console.log('[remarkEntityAnnotation] Processing text node:', {
-                value: node.value,
-                parentType: parent?.type,
-            });
             if (typeof node.value !== 'string') return;
 
             let text = node.value;
             
-            // 如果文本中包含任何 LaTeX 常用符号，直接跳过，不处理
-            if (/[&$\\{}^_]/.test(text)) {
-                console.log('[remarkEntityAnnotation] Skipping due to LaTeX symbols');
-                return;
-            }
+            if (/[&$\\{}^_]/.test(text)) return;
             
-            // 如果我们在 math 节点或者 inlineMath 节点内部，直接跳过（双重保险）
             let current = parent;
             while (current) {
-                if (current.type === 'math' || current.type === 'inlineMath') {
-                    console.log('[remarkEntityAnnotation] Skipping due to math parent');
-                    return;
-                }
+                if (current.type === 'math' || current.type === 'inlineMath') return;
                 current = current.parent;
             }
             
