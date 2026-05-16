@@ -224,14 +224,6 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
-"测试": Record<string, {
-  id: string;
-  body?: string;
-  collection: "测试";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
 "演进轨迹": Record<string, {
   id: string;
   render(): Render[".md"];

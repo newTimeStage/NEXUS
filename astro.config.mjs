@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkVideo from './src/plugins/remark-video.js';
 import remarkEntityAnnotation from './src/plugins/remark-entity-annotation-fixed.js';
 import remarkMdLinks from './src/plugins/remark-md-links.js';
+import remarkMermaid from './src/plugins/remark-mermaid.js';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -13,7 +14,7 @@ export default defineConfig({
   output: 'static',
   integrations: [],
   markdown: {
-    remarkPlugins: [remarkMath, remarkVideo, remarkMdLinks, remarkEntityAnnotation],
+    remarkPlugins: [remarkMath, remarkVideo, remarkMdLinks, remarkEntityAnnotation, remarkMermaid],
     rehypePlugins: [[rehypeKatex, { strict: false, throwOnError: false }]],
     shikiConfig: {
       theme: 'github-dark',

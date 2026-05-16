@@ -92,8 +92,52 @@
         }
       }
 
+      /* Mermaid 图表样式 */
+      .mermaid {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      .mermaid svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* 暗色主题适配 */
+      [data-theme="dark"] .mermaid {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/chinese-lunar-calendar@1.0.1/dist/index.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/chinese-lunar-calendar@1.0.1/dist/index.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script is:inline>
+      function initMermaid() {
+        if (typeof mermaid !== 'undefined') {
+          mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            flowchart: {
+              useMaxWidth: true,
+              htmlLabels: true,
+              curve: 'basis'
+            },
+            securityLevel: 'loose'
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+    </script>
   </head>
   <body>
     <!-- 背景粒子效果 -->
@@ -129,7 +173,7 @@
     </footer>
 
     <script>
-      // 主题切换逻辑
+      // Theme toggle logic
       const themeToggle = document.getElementById('themeToggle');
       if (themeToggle) {
         const themeIcon = themeToggle.querySelector('.theme-icon');
