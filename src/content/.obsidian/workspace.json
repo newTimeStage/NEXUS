@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0ca1989ff97acef3",
+        "id": "d17e62d0fc8febb7",
         "type": "tabs",
         "children": [
           {
-            "id": "74548b7732f8a0c5",
+            "id": "cd1eb57ce468ab6a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "文明根基/自我发展意识/人正论.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "人正论"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -78,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "731aeb8e27f8554c",
@@ -94,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "文明根基/自我发展意识/人正论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "人正论 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -168,6 +164,18 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "74548b7732f8a0c5",
-  "lastOpenFiles": []
+  "active": "cd1eb57ce468ab6a",
+  "lastOpenFiles": [
+    "文明根基/文明生命颂(人类十万年大梦初醒).md",
+    "pdfs/共产党宣言.pdf.md",
+    "pdfs",
+    "文明根基/自觉悟/01-自觉意识论.md",
+    "文明根基/自觉悟/02-人正论.md",
+    "文明根基/自觉悟/03-广义生命论.md",
+    "文明根基/自觉悟/09-劳动生产论.md",
+    "[02-人正论.md",
+    "制度与创造/政典之书/87-共书/01-政典/01-中国共产党章程/13-中国共产党章程(十三).md",
+    "制度与创造/政典之书/87-共书/01-政典/01-中国共产党章程/12-中国共产党章程(十二).md",
+    "文明根基/自觉悟/00-悟学概纲.md"
+  ]
 }
