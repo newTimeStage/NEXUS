@@ -3,7 +3,6 @@ import cloudflare from '@astrojs/cloudflare';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkVideo from './src/plugins/remark-video.js';
-import remarkEntityAnnotation from './src/plugins/remark-entity-annotation-fixed.js';
 import remarkMermaid from './src/plugins/remark-mermaid.js';
 import rehypeMdLinks from './src/plugins/rehype-md-links.js';
 import { writeFileSync } from 'fs';
@@ -14,7 +13,7 @@ export default defineConfig({
   output: 'static',
   integrations: [],
   markdown: {
-    remarkPlugins: [remarkMath, remarkVideo, remarkEntityAnnotation, remarkMermaid],
+    remarkPlugins: [remarkMath, remarkVideo, remarkMermaid],
     rehypePlugins: [
       [rehypeKatex, { strict: false, throwOnError: false }],
       rehypeMdLinks

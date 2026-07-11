@@ -7,9 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build && echo _worker.js > dist/.assetsignore && node scripts/post-build.js",
     "preview": "astro preview",
-    "astro": "astro",
-    "annotations:init": "node scripts/generate-annotations.js",
-    "annotations:refresh": "node scripts/generate-annotations.js"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.0.1",
