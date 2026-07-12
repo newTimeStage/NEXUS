@@ -28,6 +28,9 @@ temp-test.js
 dev_output*.txt
 dev_error*.txt
 
+# Wrangler / Cloudflare
+.wrangler/
+
 # Environment variables
 .env
 .env.local
