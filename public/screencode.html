@@ -8,8 +8,9 @@
     const cE = 2.71828;
     const cPi = 3.1415926;
 
+    const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
     const cTypeScale = 3;
-    const cPartiScale = 1024;
+    const cPartiScale = isLowEnd ? 512 : 1024;
     const cRgbRange = 255;
     const cPartiSize = 2;
 
@@ -197,10 +198,11 @@
         }
     }
 
+    // 页面不可见时暂停动画，节省资源
+    let sPaused = false;
     fUpdate = ()=>{
-        // sPartiTypes = fPartiType(cTypeScale);
+        if (sPaused) return;
         fPartiExechange(cTypeScale);
-
         sBody.clearRect(0,0,cWidth,cHeigh);
         fDraw(0,0,"black", cWidth, cHeigh);
         for(i=0; i<sParticles.length; i++){
@@ -208,12 +210,12 @@
         }
         requestAnimationFrame(fUpdate);
     }
+    document.addEventListener('visibilitychange', () => {
+        sPaused = document.hidden;
+        if (!sPaused) requestAnimationFrame(fUpdate);
+    });
 
     fUpdate();
-
-    // fGenRan = (heat)=>{
-    //     return (0.5 - Math.random())*Math.random()*heat;
-    // }
 
 
 

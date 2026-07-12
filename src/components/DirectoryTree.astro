@@ -1,0 +1,66 @@
+---
+export interface Props {
+  tree: Record<string, any>;
+  category: string;
+}
+
+const { tree, category } = Astro.props;
+---
+
+<div class="directory-tree">
+  <h2 class="articles-list-title">目录结构</h2>
+  <div class="tree-container">
+    <div id="directory-tree-content">
+      {
+        (function renderTree(entries, cat, depth) {
+          if (depth > 8) return [];
+          return Object.entries(entries).sort(([keyA, a], [keyB, b]) => {
+            if (a.type === 'file' && b.type === 'directory') return -1;
+            if (a.type === 'directory' && b.type === 'file') return 1;
+            return keyA.localeCompare(keyB);
+          }).map(([key, item]) => {
+            if (item.type === 'directory' && item.children) {
+              return (
+                <div class="directory-item">
+                  <div class="directory-header" onclick="toggleDirectory(this)">
+                    <span class="toggle-icon">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </span>
+                    <span class="directory-name">{key}</span>
+                  </div>
+                  <div class="directory-children hidden">
+                    {renderTree(item.children, cat, depth + 1)}
+                  </div>
+                </div>
+              );
+            }
+            if (item.type === 'file') {
+              return (
+                <div class="file-item">
+                  <a href={`/${cat}/${key}`}>{key}</a>
+                </div>
+              );
+            }
+            return null;
+          });
+        })(tree, category, 0)
+      }
+    </div>
+
+    <script is:inline>
+      function toggleDirectory(element) {
+        const children = element.nextElementSibling;
+        const icon = element.querySelector('.toggle-icon');
+
+        if (children && children.classList.contains('hidden')) {
+          children.classList.remove('hidden');
+          if (icon) icon.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+        } else if (children) {
+          children.classList.add('hidden');
+          if (icon) icon.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>';
+        }
+      }
+    </script>
+  </div>
+</div>
+

@@ -1,180 +1,67 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import { CATEGORIES } from '../../constants';
+import DirectoryTree from '../../components/DirectoryTree.astro';
 
-// 导出getStaticPaths函数生成静态路径
 export async function getStaticPaths() {
-  const validCategories = ['文明根基', '演进轨迹', '制度与创造', '主体与未来'];
-  return validCategories.map(category => ({
+  return CATEGORIES.map(category => ({
     params: { category },
   }));
 }
 
 const { category } = Astro.params as { category: string };
 
-// 获取该分类下的所有文章
-let articles: any[] = [];
-if (category === '文明根基') {
-  articles = await getCollection('文明根基');
-} else if (category === '演进轨迹') {
-  articles = await getCollection('演进轨迹');
-} else if (category === '制度与创造') {
-  articles = await getCollection('制度与创造');
-} else if (category === '主体与未来') {
-  articles = await getCollection('主体与未来');
-}
+const articles = await getCollection(category as '文明根基' | '演进轨迹' | '制度与创造' | '主体与未来');
 
-// 获取分类介绍文章
 const introductionArticle = articles.find(article => article.id.endsWith('部序.md'));
-// 获取介绍文章的Content组件
-const { Content: IntroductionContent } = introductionArticle ? await introductionArticle.render() : { Content: null };
-// 过滤掉介绍文章，只显示普通文章
+const { Content: IntroductionContent } = introductionArticle ? await render(introductionArticle) : { Content: null };
 const normalArticles = articles.filter(article => !article.id.endsWith('部序.md'));
 
-// 构建目录树结构的函数
-function buildDirectoryTree(articles: any[]) {
-  const tree: any = {};
+interface TreeNode {
+  type: 'directory' | 'file';
+  children?: Record<string, TreeNode>;
+  article?: any;
+}
+
+function buildDirectoryTree(articles: any[]): Record<string, TreeNode> {
+  const tree: Record<string, TreeNode> = {};
 
   articles.forEach(article => {
     const pathParts = article.id.split('/');
     let currentLevel = tree;
 
-    // 构建目录结构
     for (let i = 0; i < pathParts.length - 1; i++) {
       const part = pathParts[i];
       if (!currentLevel[part]) {
-        currentLevel[part] = {
-          type: 'directory',
-          children: {}
-        };
+        currentLevel[part] = { type: 'directory', children: {} };
       }
-      currentLevel = currentLevel[part].children;
+      currentLevel = (currentLevel[part].children as Record<string, TreeNode>);
     }
 
-    // 添加文件
     const fileName = pathParts[pathParts.length - 1];
     const fileNameWithoutExt = fileName.replace('.md', '');
-    currentLevel[fileNameWithoutExt] = {
-      type: 'file',
-      article
-    };
+    currentLevel[fileNameWithoutExt] = { type: 'file', article };
   });
-
-  // 输出构建的目录树，以便调试
-  console.log('Built directory tree:', tree);
 
   return tree;
 }
 
-// 为所有分类构建目录树
-let directoryTree = null;
-
-// 输出文章id信息，以便调试
-console.log(`${category} articles:`, normalArticles.map(a => a.id));
-
-// 构建目录树
-directoryTree = buildDirectoryTree(normalArticles);
-
-// 输出目录树信息，以便调试
-console.log('Directory tree:', directoryTree);
-
-// 检查目录树是否为空
-if (!directoryTree || Object.keys(directoryTree).length === 0) {
-  console.log('Directory tree is empty!');
-} else {
-  console.log('Directory tree has keys:', Object.keys(directoryTree));
-}
+const directoryTree = buildDirectoryTree(normalArticles);
 ---
 
 <BaseLayout>
   <section class="category-index">
-    { introductionArticle && IntroductionContent && (
+    {introductionArticle && IntroductionContent && (
       <div class="category-introduction">
         <IntroductionContent />
       </div>
-    ) }
+    )}
 
-    { directoryTree ? (
-      <div class="directory-tree">
-        <h2 class="articles-list-title">目录结构</h2>
-        <div class="tree-container">
-          <!-- 递归渲染目录树 -->
-          <!-- 直接在HTML中渲染目录树，确保服务器端渲染正确 -->
-          <div id="directory-tree-content">
-            {Object.entries(directoryTree).sort(([keyA, itemA], [keyB, itemB]) => {
-              const typedItemA = itemA as { type: string };
-              const typedItemB = itemB as { type: string };
-              const typeA = typedItemA.type;
-              const typeB = typedItemB.type;
-              // 文件排在文件夹前面
-              if (typeA === 'file' && typeB === 'directory') return -1;
-              if (typeA === 'directory' && typeB === 'file') return 1;
-              // 类型相同则按名称排序
-              return keyA.localeCompare(keyB);
-            }).map(([key, item]) => {
-              // 递归渲染目录节点的函数
-              function renderTreeNode(nodeKey: string, nodeItem: any) {
-                const typedNode = nodeItem as { type: string; children?: any; article?: any };
-                if (typedNode.type === 'directory' && typedNode.children) {
-                  return (
-                    <div class="directory-item">
-                      <div class="directory-header" onclick="toggleDirectory(this)">
-                        <span class="toggle-icon">▶</span>
-                        <span class="directory-name">{nodeKey}</span>
-                      </div>
-                      <div class="directory-children hidden">
-                        {Object.entries(typedNode.children).sort(([childKeyA, childItemA], [childKeyB, childItemB]) => {
-                          const typedChildItemA = childItemA as { type: string };
-                          const typedChildItemB = childItemB as { type: string };
-                          const childTypeA = typedChildItemA.type;
-                          const childTypeB = typedChildItemB.type;
-                          // 文件排在文件夹前面
-                          if (childTypeA === 'file' && childTypeB === 'directory') return -1;
-                          if (childTypeA === 'directory' && childTypeB === 'file') return 1;
-                          // 类型相同则按名称排序
-                          return childKeyA.localeCompare(childKeyB);
-                        }).map(([childKey, childItem]) =>
-                          renderTreeNode(childKey, childItem)
-                        )}
-                      </div>
-                    </div>
-                  );
-                } else if (typedNode.type === 'file' && typedNode.article) {
-                  const articlePath = `/${category}/${nodeKey}`;
-                  return (
-                    <div class="file-item">
-                      <a href={articlePath}>{nodeKey}</a>
-                    </div>
-                  );
-                }
-                return null;
-              }
-
-              return renderTreeNode(key, item);
-            })}
-          </div>
-
-          <script is:inline>
-            function toggleDirectory(element) {
-              const children = element.nextElementSibling;
-              const icon = element.querySelector('.toggle-icon');
-
-              if (children && children.classList.contains('hidden')) {
-                children.classList.remove('hidden');
-                if (icon) icon.textContent = '▼';
-              } else if (children) {
-                children.classList.add('hidden');
-                if (icon) icon.textContent = '▶';
-              }
-            }
-
-            // 确保函数在全局作用域可用
-            window.toggleDirectory = toggleDirectory;
-          </script>
-        </div>
-      </div>
+    {directoryTree ? (
+      <DirectoryTree tree={directoryTree} category={category} />
     ) : (
       <p class="no-articles">该分类下暂无文章</p>
-    ) }
+    )}
   </section>
 </BaseLayout>

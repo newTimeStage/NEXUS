@@ -1,6 +1,5 @@
 import { visit } from 'unist-util-visit';
-
-const knownCollections = ['文明根基', '演进轨迹', '制度与创造', '主体与未来'];
+import { CATEGORIES } from '../constants.js';
 
 export default function rehypeMdLinks() {
   return (tree, file) => {
@@ -50,7 +49,7 @@ export default function rehypeMdLinks() {
             const slug = href.split('/').pop() || href;
             const firstSegment = href.split('/')[0];
             
-            if (knownCollections.includes(firstSegment)) {
+            if (CATEGORIES.includes(firstSegment)) {
               href = '/' + href;
             } else {
               href = '/' + collection + '/' + slug;

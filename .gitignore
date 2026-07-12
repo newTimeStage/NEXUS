@@ -23,6 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# Debug / temp files
+temp-test.js
+dev_output*.txt
+dev_error*.txt
+
 # Environment variables
 .env
 .env.local

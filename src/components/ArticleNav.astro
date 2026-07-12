@@ -1,0 +1,40 @@
+---
+export interface Props {
+  prevArticle: { data: { title?: string }; id: string } | null;
+  nextArticle: { data: { title?: string }; id: string } | null;
+  category: string;
+}
+
+const { prevArticle, nextArticle, category } = Astro.props;
+
+function getSlug(article: { id: string } | null): string | null {
+  if (!article) return null;
+  const slug = (article.id.split('/').pop()?.replace('.md', '') || '')
+    .replace(/[<>:"/\\|?*()]/g, '').replace(/\s+/g, ' ').trim();
+  return slug;
+}
+
+const prevSlug = getSlug(prevArticle);
+const nextSlug = getSlug(nextArticle);
+---
+
+{prevArticle || nextArticle ? (
+  <nav class="article-nav">
+    <div>
+      {prevArticle && prevSlug && (
+        <a href={`/${category}/${prevSlug}`} class="article-nav-link">
+          <div class="article-nav-label">← 上一篇</div>
+          <div class="article-nav-title">{prevArticle.data.title}</div>
+        </a>
+      )}
+    </div>
+    <div class="article-nav-next">
+      {nextArticle && nextSlug && (
+        <a href={`/${category}/${nextSlug}`} class="article-nav-link">
+          <div class="article-nav-label">下一篇 →</div>
+          <div class="article-nav-title">{nextArticle.data.title}</div>
+        </a>
+      )}
+    </div>
+  </nav>
+) : null}

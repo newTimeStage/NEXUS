@@ -3,10 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build && echo _worker.js > dist/.assetsignore && node scripts/post-build.js",
+    "dev": "node scripts/generate-search-index.js && astro dev",
+    "start": "node scripts/generate-search-index.js && astro dev",
+    "build": "node scripts/generate-search-index.js && astro check && astro build",
     "preview": "astro preview",
+    "format": "biome check --write --unsafe src/ scripts/ functions/",
+    "lint": "biome lint src/ scripts/ functions/",
     "astro": "astro"
   },
   "dependencies": {
@@ -16,14 +18,15 @@
     "chinese-lunar-calendar": "^1.0.1",
     "date-chinese": "^2.1.4",
     "katex": "^0.16.27",
-    "pdfjs-dist": "^5.6.205",
+    "mermaid": "^11.16.0",
     "rehype-katex": "^7.0.1",
+    "rehype-slug": "^6.0.0",
     "remark-math": "^6.0.0",
-    "unist-util-visit": "^5.0.0",
-    "yaml": "^2.8.3"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@biomejs/biome": "^2.5.3",
     "@types/node": "^25.5.0",
     "typescript": "^5.3.0"
   }

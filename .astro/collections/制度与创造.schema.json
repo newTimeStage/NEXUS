@@ -1,46 +1,32 @@
 {
-  "$ref": "#/definitions/制度与创造",
-  "definitions": {
-    "制度与创造": {
-      "type": "object",
-      "properties": {
-        "title": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "anyOf": [
+        {
           "type": "string"
         },
-        "author": {
-          "type": "string"
+        {
+          "type": "number"
         },
-        "date": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "category": {
-          "type": "string"
-        },
-        "$schema": {
-          "type": "string"
+        {
+          "type": "string",
+          "format": "date-time"
         }
-      },
-      "required": [
-        "title",
-        "author",
-        "date",
-        "category"
-      ],
-      "additionalProperties": false
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
     }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  }
 }

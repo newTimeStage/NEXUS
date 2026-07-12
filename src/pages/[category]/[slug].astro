@@ -1,26 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { CATEGORIES } from '../../constants';
+import ArticleNav from '../../components/ArticleNav.astro';
+import fs from 'fs';
+import path from 'path';
 
-// 生成静态路径
 export async function getStaticPaths() {
-  // 从所有集合获取文章
-  const civilizationRootsArticles = await getCollection('文明根基');
-  const evolutionArticles = await getCollection('演进轨迹');
-  const systemsArticles = await getCollection('制度与创造');
-  const futureArticles = await getCollection('主体与未来');
+  const allArticles = (await Promise.all(CATEGORIES.map(c => getCollection(c as '文明根基' | '演进轨迹' | '制度与创造' | '主体与未来')))).flat();
 
-  // 合并所有文章
-  const allArticles = [
-    ...civilizationRootsArticles,
-    ...evolutionArticles,
-    ...systemsArticles,
-    ...futureArticles,
-  ];
-
-  // 生成路径
   return allArticles.map(article => {
-    const slug = article.id.split('/').pop()?.replace('.md', '') || '';
+    const slug = (article.id.split('/').pop()?.replace('.md', '') || '')
+      .replace(/[<>:"/\\|?*()]/g, '').replace(/\s+/g, ' ').trim();
     const category = article.collection;
     return {
       params: { category, slug },
@@ -29,17 +20,84 @@ export async function getStaticPaths() {
   });
 }
 
+function extractHeadings(raw: string): { level: number; text: string; slug: string }[] {
+  const headings: { level: number; text: string; slug: string }[] = [];
+  const regex = /^(#{2,4})\s+(.+)$/gm;
+  let match;
+  while ((match = regex.exec(raw)) !== null) {
+    const text = match[2].replace(/[`*_~\[\]]/g, '').trim();
+    const slug = text
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\u4e00-\u9fff\-]/g, '')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+    headings.push({ level: match[1].length, text, slug });
+  }
+  return headings;
+}
+
+function readRawMarkdown(article: any): string {
+  const contentDir = path.join(process.cwd(), 'src', 'content', article.collection);
+  const filePath = path.join(contentDir, article.id);
+  try {
+    return fs.readFileSync(filePath, 'utf-8');
+  } catch {
+    return '';
+  }
+}
+
 const { article } = Astro.props;
 const { Content } = await render(article);
+
+const raw = readRawMarkdown(article);
+const headings = extractHeadings(raw);
+const hasMermaid = /```mermaid\s*\n/i.test(raw);
+
+const category: string = article.collection;
+const collection = await getCollection(category as '文明根基' | '演进轨迹' | '制度与创造' | '主体与未来');
+const sorted = collection
+  .filter(a => !a.id.endsWith('部序.md'))
+  .sort((a, b) => a.id.localeCompare(b.id));
+const currentIndex = sorted.findIndex(a => a.id === article.id);
+const prevArticle = currentIndex > 0 ? sorted[currentIndex - 1] : null;
+const nextArticle = currentIndex < sorted.length - 1 ? sorted[currentIndex + 1] : null;
 ---
 
-<BaseLayout>
+<BaseLayout title={article.data.title} description={article.data.title ? `阅读：${article.data.title} - NEXUS 人类文明记载` : undefined} hasMermaid={hasMermaid} article={{
+  date: article.data.date,
+  author: article.data.author,
+  category: article.collection,
+  headings,
+}}>
   <article class="article-page">
+    <nav class="breadcrumb">
+      <a href="/">首页</a>
+      <span class="sep">›</span>
+      <a href={`/${category}/`}>{category}</a>
+      <span class="sep">›</span>
+      <span>{article.data.title}</span>
+    </nav>
+
     <h1 class="article-title">{article.data.title}</h1>
     <div class="article-meta">
-      <span class="author">作者: {article.data.author}</span>
-      <span class="date">日期: {article.data.date.toLocaleDateString()}</span>
+      {article.data.author && <span class="author">作者: {article.data.author}</span>}
+      {article.data.date && <span class="date">日期: {article.data.date}</span>}
     </div>
+
+    {headings.length > 0 && (
+      <nav class="toc">
+        <div class="toc-title">目录</div>
+        <ul class="toc-list">
+          {headings.map(h => (
+            <li><a href={`#${h.slug}`} class={`toc-h${h.level}`}>{h.text}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
     <Content />
+
+    <ArticleNav {prevArticle} {nextArticle} {category} />
   </article>
 </BaseLayout>

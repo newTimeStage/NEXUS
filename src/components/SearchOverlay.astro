@@ -1,0 +1,180 @@
+---
+---
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span class="search-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="7.5"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></span>
+      <input class="search-input" id="searchInput" type="text" placeholder="搜索文章标题..." autocomplete="off" />
+      <span class="search-shortcut">Esc</span>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">输入关键词开始搜索</div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const searchOverlay = document.getElementById('searchOverlay');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+
+  /** @type {Array<{title: string, path: string, collection: string, content?: string}>} */
+  let searchIndex = [];
+
+  async function loadSearchIndex() {
+    try {
+      const res = await fetch('/search-index.json');
+      if (res.ok) searchIndex = await res.json();
+    } catch (e) {
+      console.warn('Search index not available');
+    }
+  }
+
+  function fuzzyScore(text, query) {
+    const lowerText = text.toLowerCase();
+    const lowerQuery = query.toLowerCase();
+
+    if (lowerQuery.length === 0) return 0;
+
+    const exactIdx = lowerText.indexOf(lowerQuery);
+    if (exactIdx !== -1) {
+      return 100 + (1 - exactIdx / lowerText.length) * 50;
+    }
+
+    let qi = 0;
+    let score = 0;
+    let prevMatch = -1;
+    for (let ti = 0; ti < lowerText.length && qi < lowerQuery.length; ti++) {
+      if (lowerText[ti] === lowerQuery[qi]) {
+        if (prevMatch !== -1 && ti - prevMatch <= 3) {
+          score += 3;
+        } else {
+          score += 1;
+        }
+        score += (1 - ti / lowerText.length) * 2;
+        prevMatch = ti;
+        qi++;
+      }
+    }
+
+    if (qi < lowerQuery.length) return 0;
+
+    return score + (qi / lowerQuery.length) * 10;
+  }
+
+  function highlightExact(text, query) {
+    const idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return text;
+    return text.slice(0, idx) + '<strong style="color:var(--accent-color)">' +
+      text.slice(idx, idx + query.length) + '</strong>' + text.slice(idx + query.length);
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function performSearch(query) {
+    if (!searchResults) return;
+    if (!query.trim() || searchIndex.length === 0) {
+      searchResults.innerHTML = '<div class="search-empty">' +
+        (searchIndex.length === 0 ? '正在加载索引…' : '输入关键词开始搜索') + '</div>';
+      return;
+    }
+
+    const scored = searchIndex.map(item => {
+      const titleScore = fuzzyScore(item.title, query);
+      const contentScore = item.content ? fuzzyScore(item.content, query) * 0.3 : 0;
+      return { item, score: titleScore + contentScore };
+    }).filter(r => r.score > 0);
+
+    scored.sort((a, b) => b.score - a.score);
+    const top = scored.slice(0, 20);
+
+    if (top.length === 0) {
+      searchResults.innerHTML = '<div class="search-empty">未找到匹配结果</div>';
+      return;
+    }
+    searchResults.innerHTML = top.map(function(r) {
+      const item = r.item;
+      const titleHtml = highlightExact(escapeHtml(item.title), query);
+      const preview = item.content ? escapeHtml(item.content).slice(0, 150) : '';
+      const previewHtml = preview ? '<div class="search-result-preview">' + highlightExact(preview, query) + '</div>' : '';
+      return '<a href="' + escapeHtml(item.path) + '" class="search-result-item">' +
+        '<div class="search-result-title">' + titleHtml + '</div>' +
+        '<div class="search-result-path">' + escapeHtml(item.collection || '') + '</div>' +
+        previewHtml + '</a>';
+    }).join('');
+  }
+
+  function openSearch() {
+    if (!searchOverlay || !searchInput) return;
+    searchOverlay.classList.add('open');
+    setTimeout(function() { searchInput.focus(); }, 100);
+    if (searchIndex.length === 0) loadSearchIndex();
+    performSearch(searchInput.value);
+  }
+
+  function closeSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove('open');
+    if (searchInput) searchInput.value = '';
+    if (searchResults) searchResults.innerHTML = '<div class="search-empty">输入关键词开始搜索</div>';
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      performSearch(searchInput.value);
+    });
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSearch();
+      if (e.key === 'Enter') {
+        const firstResult = searchResults && searchResults.querySelector('.search-result-item');
+        const href = firstResult && firstResult.getAttribute('href');
+        if (href) {
+          window.location.href = href;
+          closeSearch();
+        }
+      }
+    });
+  }
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', function(e) {
+      if (e.target === searchOverlay) closeSearch();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('open')) {
+      closeSearch();
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (window.location.pathname === '/pdf-viewer') return;
+    var link = /** @type {Element} */ (e.target).closest('a');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href) return;
+    var isPdf = href.toLowerCase().endsWith('.pdf');
+    var isExternal = /^https?:\/\//i.test(href) && href.indexOf(window.location.hostname) === -1;
+    if (!isPdf && !isExternal) return;
+    e.preventDefault();
+    var title = (link.textContent || '').trim() || '外部链接';
+    title = title.replace(/^打开：+/g, '');
+    var targetUrl = href;
+    if (!/^https?:\/\//i.test(href) && href.indexOf('/') !== 0) {
+      targetUrl = '/' + href;
+    }
+    window.open('/external-link?url=' + encodeURIComponent(targetUrl) + '&title=' + encodeURIComponent(title),
+      '_blank', 'width=1024,height=768');
+  });
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function() { loadSearchIndex(); }, { timeout: 5000 });
+  }
+</script>
